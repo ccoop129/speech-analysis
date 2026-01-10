@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+}
+
+.team-member {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.team-member h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.team-member p {
+    color: #666;
+    line-height: 1.5;
+}
+
+a {
+    color: #333;
+}

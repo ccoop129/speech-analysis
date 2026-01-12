@@ -45,6 +45,11 @@ h1 {
     object-fit: cover;
 }
 
+.mandy-img {
+    width: 250px;
+    height: 250px;
+}
+
 .team-member h2 {
     color: #ffffff;
     margin-top: 0;

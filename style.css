@@ -64,3 +64,36 @@ a:hover {
     color: #a0e7ff;
     text-decoration: underline;
 }
+.visualization-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.viz-container {
+    background-color: #1a1f3a;
+    border: 1px solid #2d3561;
+    padding: 30px;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.viz-container:hover {
+    border-color: #4a5a8f;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.viz-keyword {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    font-weight: 600;
+}

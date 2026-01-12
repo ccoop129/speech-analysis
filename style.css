@@ -64,6 +64,7 @@ a:hover {
     color: #a0e7ff;
     text-decoration: underline;
 }
+
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -103,6 +104,8 @@ a:hover {
   border-radius: 12px;
   display: block;
   margin-bottom: 12px;
+}
+
 .visualization-section {
     display: flex;
     gap: 30px;
@@ -135,6 +138,15 @@ a:hover {
     margin-bottom: 15px;
     font-size: 1.3em;
     font-weight: 600;
+}
+
+.entity-count {
+    color: #6ec8ff;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 1;
 }
 
 .metrics-section {
@@ -170,3 +182,11 @@ a:hover {
     font-size: 1.3em;
     font-weight: 600;
 }
+
+.metric-description {
+    color: #b0b8d4;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+

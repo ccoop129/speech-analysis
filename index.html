@@ -3,6 +3,7 @@
     <head>
         <title>Welcome</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
     <body>
         <h1>Political Leadership Speech Analysis Database</h1>
@@ -10,6 +11,21 @@
         <div class="team-member">
             <h2>Our Project</h2>
             <p>Our mission is to provide comprehensive speech analysis tools and resources that enable researchers and professionals to better understand communication patterns and linguistic trends.</p>
+        </div>
+
+        <div class="visualization-section">
+            <div class="viz-container">
+                <h3 class="viz-keyword">Taiwan</h3>
+                <div id="taiwanChart"></div>
+            </div>
+            <div class="viz-container">
+                <h3 class="viz-keyword">Ukraine</h3>
+                <div id="ukraineChart"></div>
+            </div>
+            <div class="viz-container">
+                <h3 class="viz-keyword">Hong Kong</h3>
+                <div id="hongKongChart"></div>
+            </div>
         </div>
 
         <div class="team-member">
@@ -25,5 +41,7 @@
         <p style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #2d3561;">
             <a href="our-team/index.html">Go to Team Page</a>
         </p>
+
+        <script src="visualization.js"></script>
     </body>
 </html>

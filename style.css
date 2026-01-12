@@ -97,3 +97,37 @@ a:hover {
     font-size: 1.3em;
     font-weight: 600;
 }
+
+.metrics-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.metric-container {
+    background-color: #1a1f3a;
+    border: 1px solid #2d3561;
+    padding: 30px;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 350px;
+    max-width: 500px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.metric-container:hover {
+    border-color: #4a5a8f;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.metric-title {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 600;
+}

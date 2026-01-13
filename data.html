@@ -223,21 +223,23 @@
     <nav id="nav">
         <ul>
             <li><a href="index.html">Explore</a></li>
-            <li><a href="#">Data</a></li>
+            <li><a href="#">Quiz</a></li>
             <li><a href="insights.html">Insights</a></li>
             <li><a href="faq-page.html">FAQ</a></li>
             <li><a href="our-team/index.html">About</a></li>
         </ul>
     </nav>
 
-    <section class="data-hero" style="max-width: 800px; margin: 40px auto 32px auto; text-align: center;">
-      <h1 style="color: #2f9cff; font-size: 2.3rem; margin-bottom: 10px;">Explore the Data</h1>
-      <p style="color: #b0b8d4; font-size: 1.15em; margin-bottom: 18px;">Dive into our interactive database of political speeches. Test your intuition, then scroll down to discover trends, topics, and insights from years of diplomatic language.</p>
-      <hr style="border: none; border-top: 2px solid #2f9cff; width: 60px; margin: 24px auto 32px auto;">
-    </section>
-
-
-    <div id="quiz-stack" style="display: flex; flex-direction: column; gap: 32px; align-items: center; max-width: 700px; margin: 0 auto 40px auto;">
+    <div class="quiz-split" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px; max-width: 1200px; margin: 40px auto 0 auto;">
+      <div class="quiz-left" style="flex: 1 1 350px; min-width: 320px; max-width: 520px;">
+        <section class="data-hero" style="text-align: left; padding-right: 10px;">
+          <h1 style="color: #2f9cff; font-size: 2.6rem; margin-bottom: 10px; font-weight: 800; letter-spacing: -1px; text-shadow: 0 2px 12px rgba(47,156,255,0.10);">Test Your Knowledge</h1>
+          <p style="color: #b0d6ff; font-size: 1.22em; margin-bottom: 22px; font-weight: 500;">Take our interactive quiz to see how well you understand the language of global diplomacy. Each question reveals a new insight!</p>
+          <hr style="border: none; border-top: 2.5px solid #2f9cff; width: 80px; margin: 28px 0 36px 0;">
+        </section>
+      </div>
+      <div class="quiz-right" style="flex: 1 1 350px; min-width: 320px; max-width: 520px; display: flex; flex-direction: column; align-items: center;">
+        <div id="quiz-stack" style="display: flex; flex-direction: column; gap: 32px; align-items: center; width: 100%; margin: 0 0 40px 0;">
       <!-- Quiz Card 1: China (existing) -->
       <div class="quiz-container" id="quiz-card-1" style="box-shadow: 0 8px 32px rgba(47,156,255,0.10); border-top: 5px solid #2f9cff;">
         <button class="close-button" aria-label="Close quiz">&times;</button>
@@ -280,9 +282,9 @@
       </div>
     </div>
 
-    <div style="height:80px;"></div>
+    <div style="height:60px;"></div>
   </body>
-  <footer style="width:100%; text-align:center; margin:0; padding:0 0 32px 0; position:relative; background:transparent;">
+  <footer style="width:100%; text-align:center; margin:0; padding:0 0 32px 0; background:transparent;">
     <a href="index.html" style="display:inline-block; background:linear-gradient(90deg,#2f9cff,#5dd3ff); color:#042033; font-weight:700; padding:14px 36px; border-radius:40px; font-size:1.2em; text-decoration:none; box-shadow:0 4px 16px rgba(47,156,255,0.13);">&larr; Back to Home</a>
   </footer>
 </html>
@@ -302,7 +304,7 @@
             });
             if (button.dataset.answer === correctAnswer) {
               feedback.className = 'show correct';
-              feedback.innerHTML = `🎉 <strong>Congratulations!</strong><br>You’re right — this term appears most frequently in official speeches by <strong>Xi Jinping</strong>.`;
+              feedback.innerHTML = `<span style='color:#111'>🎉 <strong>Congratulations!</strong><br>You’re right — this term appears most frequently in official speeches by <strong>Xi Jinping</strong>.</span>`;
             } else {
               feedback.className = 'show incorrect';
               feedback.innerHTML = `❌ <strong>Sorry!</strong><br>The correct answer is <strong>Xi Jinping</strong>.`;
@@ -334,7 +336,7 @@
             });
             if (button.dataset.answer === correctAnswer) {
               feedback.className = 'show correct';
-              feedback.innerHTML = `🎉 <strong>Correct!</strong><br>Mentions of Taiwan most often appear within broader discussions of <strong>sovereignty and territorial integrity</strong>.`;
+              feedback.innerHTML = `<span style='color:#111'>🎉 <strong>Congratulations!</strong><br>Mentions of Taiwan most often appear within broader discussions of <strong>sovereignty and territorial integrity</strong>.</span>`;
             } else {
               feedback.className = 'show incorrect';
               feedback.innerHTML = `❌ <strong>Sorry!</strong><br>The correct answer is <strong>sovereignty and territorial integrity</strong>.`;
@@ -362,7 +364,7 @@
             });
             if (button.dataset.answer === correctAnswer) {
               feedback.className = 'show correct';
-              feedback.innerHTML = `🎉 <strong>Correct!</strong><br>In Russian political discourse, “security” is frequently paired with <strong>stability</strong>.`;
+              feedback.innerHTML = `<span style='color:#111'>🎉 <strong>Congratulations!</strong><br>In Russian political discourse, “security” is frequently paired with <strong>stability</strong>.</span>`;
             } else {
               feedback.className = 'show incorrect';
               feedback.innerHTML = `❌ <strong>Sorry!</strong><br>The correct answer is <strong>stability</strong>.`;

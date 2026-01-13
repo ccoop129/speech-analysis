@@ -7,7 +7,6 @@
     <style>
       body {
         font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh;
         margin: 0;
         padding: 20px;
@@ -26,6 +25,7 @@
         width: 100%;
         text-align: center;
         position: relative;
+        border-top: 5px solid #2f9cff;
       }
 
       .close-button {
@@ -219,6 +219,7 @@
   </head>
 
   <body>
+
     <nav id="nav">
         <ul>
             <li><a href="index.html">Explore</a></li>
@@ -229,64 +230,147 @@
         </ul>
     </nav>
 
-    <div class="intro-section">
-      <h2>Before diving into the data, take a moment to make a prediction.</h2>
-      <p class="intro-subtitle">Let's test your <strong>INTUITION</strong>?</p>
-      <p class="intro-description">When you're ready, scroll down to explore the findings and interact with searchable data by region, time period, and topic.</p>
-    </div>
+    <section class="data-hero" style="max-width: 800px; margin: 40px auto 32px auto; text-align: center;">
+      <h1 style="color: #2f9cff; font-size: 2.3rem; margin-bottom: 10px;">Explore the Data</h1>
+      <p style="color: #b0b8d4; font-size: 1.15em; margin-bottom: 18px;">Dive into our interactive database of political speeches. Test your intuition, then scroll down to discover trends, topics, and insights from years of diplomatic language.</p>
+      <hr style="border: none; border-top: 2px solid #2f9cff; width: 60px; margin: 24px auto 32px auto;">
+    </section>
 
-    <div class="quiz-container">
-      <button class="close-button" aria-label="Close quiz">&times;</button>
-      <h1>Quick Quiz</h1>
-      <p class="quiz-description">This term is frequently used by which political figure?</p>
-      <div class="quiz-term">“Sovereignty”</div>
 
-      <div class="quiz-options">
-        <button data-answer="xi">A. Xi Jinping (China)</button>
-        <button data-answer="putin">B. Vladimir Putin (Russia)</button>
-        <button data-answer="trump">C. Donald Trump (USA)</button>
+    <div id="quiz-stack" style="display: flex; flex-direction: column; gap: 32px; align-items: center; max-width: 700px; margin: 0 auto 40px auto;">
+      <!-- Quiz Card 1: China (existing) -->
+      <div class="quiz-container" id="quiz-card-1" style="box-shadow: 0 8px 32px rgba(47,156,255,0.10); border-top: 5px solid #2f9cff;">
+        <button class="close-button" aria-label="Close quiz">&times;</button>
+        <h2 style="color:#2f9cff; font-size:2rem; margin-bottom:10px;">Pop Quiz</h2>
+        <p class="quiz-description">This term is frequently used by which political figure?</p>
+        <div class="quiz-term">“Sovereignty”</div>
+        <div class="quiz-options" id="quiz1-options">
+          <button data-answer="xi">A. Xi Jinping (China)</button>
+          <button data-answer="putin">B. Vladimir Putin (Russia)</button>
+          <button data-answer="trump">C. Donald Trump (USA)</button>
+        </div>
+        <div class="quiz-explanation" style="display:none; color:#718096; margin-top:12px; font-size:0.98em;">Mentions of Taiwan most often appear within broader discussions of sovereignty and territorial integrity, rather than as standalone economic or technology policy topics.</div>
+        <div id="quiz1-feedback"></div>
       </div>
 
-      <div id="quiz-feedback"></div>
+      <!-- Quiz Card 2: Taiwan -->
+      <div class="quiz-container" id="quiz-card-2" style="display:none; box-shadow: 0 8px 32px rgba(47,156,255,0.10); border-top: 5px solid #2f9cff;">
+        <h2 style="color:#2f9cff; font-size:2rem; margin-bottom:10px;">Pop Quiz</h2>
+        <p class="quiz-description">Mentions of Taiwan most often appear in which context in Chinese leadership speeches?</p>
+        <div class="quiz-options" id="quiz2-options">
+          <button data-answer="sovereignty">A. Trade and economic cooperation</button>
+          <button data-answer="correct">B. Sovereignty and territorial integrity</button>
+          <button data-answer="climate">C. Climate and technology collaboration</button>
+        </div>
+        <div class="quiz-explanation" style="display:none; color:#718096; margin-top:12px; font-size:0.98em;">Mentions of Taiwan most often appear within broader discussions of sovereignty and territorial integrity, rather than as standalone economic or technology policy topics.</div>
+        <div id="quiz2-feedback"></div>
+      </div>
+
+      <!-- Quiz Card 3: Russia -->
+      <div class="quiz-container" id="quiz-card-3" style="display:none; box-shadow: 0 8px 32px rgba(47,156,255,0.10); border-top: 5px solid #2f9cff;">
+        <h2 style="color:#2f9cff; font-size:2rem; margin-bottom:10px;">Pop Quiz</h2>
+        <p class="quiz-description">Which term most commonly appears alongside “security” in Russian leadership speeches?</p>
+        <div class="quiz-options" id="quiz3-options">
+          <button data-answer="cooperation">A. Cooperation</button>
+          <button data-answer="correct">B. Stability</button>
+          <button data-answer="sanctions">C. Sanctions</button>
+        </div>
+        <div class="quiz-explanation" style="display:none; color:#718096; margin-top:12px; font-size:0.98em;">In Russian political discourse, “security” is frequently paired with “stability,” reflecting how security is framed as a justification for order and continuity.</div>
+        <div id="quiz3-feedback"></div>
+      </div>
     </div>
+
+    <div style="height:80px;"></div>
+  </body>
+  <footer style="width:100%; text-align:center; margin:0; padding:0 0 32px 0; position:relative; background:transparent;">
+    <a href="index.html" style="display:inline-block; background:linear-gradient(90deg,#2f9cff,#5dd3ff); color:#042033; font-weight:700; padding:14px 36px; border-radius:40px; font-size:1.2em; text-decoration:none; box-shadow:0 4px 16px rgba(47,156,255,0.13);">&larr; Back to Home</a>
+  </footer>
+</html>
 
     <!-- Put the script at the end so the buttons exist first -->
     <script>
-      const correctAnswer = "xi"; // change per keyword
-
-      document.querySelectorAll(".quiz-options button").forEach(button => {
-        button.addEventListener("click", () => {
-          const feedback = document.getElementById("quiz-feedback");
-
-          // Disable all buttons after one click and mark correct/wrong
-          document.querySelectorAll(".quiz-options button").forEach(b => {
-            b.disabled = true;
-            if (b.dataset.answer === correctAnswer) b.classList.add("correct");
-            else b.classList.add("wrong");
+      // Quiz 1: China
+      (function() {
+        const correctAnswer = "xi";
+        document.querySelectorAll('#quiz1-options button').forEach(button => {
+          button.addEventListener('click', () => {
+            const feedback = document.getElementById('quiz1-feedback');
+            document.querySelectorAll('#quiz1-options button').forEach(b => {
+              b.disabled = true;
+              if (b.dataset.answer === correctAnswer) b.classList.add('correct');
+              else b.classList.add('wrong');
+            });
+            if (button.dataset.answer === correctAnswer) {
+              feedback.className = 'show correct';
+              feedback.innerHTML = `🎉 <strong>Congratulations!</strong><br>You’re right — this term appears most frequently in official speeches by <strong>Xi Jinping</strong>.`;
+            } else {
+              feedback.className = 'show incorrect';
+              feedback.innerHTML = `❌ <strong>Sorry!</strong><br>The correct answer is <strong>Xi Jinping</strong>.`;
+            }
+            // Show next quiz card after a short delay
+            setTimeout(function() {
+              document.getElementById('quiz-card-2').style.display = 'block';
+              document.getElementById('quiz-card-2').scrollIntoView({behavior: 'smooth', block: 'center'});
+            }, 800);
+            feedback.nextElementSibling.style.display = 'block';
           });
-
-          // Feedback message
-          if (button.dataset.answer === correctAnswer) {
-            feedback.className = "show correct";
-            feedback.innerHTML = `
-              🎉 <strong>Congratulations!</strong><br>
-              You’re right — this term appears most frequently in official speeches by
-              <strong>Xi Jinping</strong>.
-            `;
-          } else {
-            feedback.className = "show incorrect";
-            feedback.innerHTML = `
-              ❌ <strong>Sorry!</strong><br>
-              The correct answer is <strong>Xi Jinping</strong>.
-            `;
-          }
         });
-      });
+        // Close button for first card
+        document.querySelector('#quiz-card-1 .close-button').addEventListener('click', function() {
+          this.parentElement.style.display = 'none';
+        });
+      })();
 
-      // Close button functionality
-      document.querySelector(".close-button").addEventListener("click", () => {
-        document.querySelector(".quiz-container").style.display = "none";
-      });
+      // Quiz 2: Taiwan
+      (function() {
+        const correctAnswer = "correct";
+        document.querySelectorAll('#quiz2-options button').forEach(button => {
+          button.addEventListener('click', () => {
+            const feedback = document.getElementById('quiz2-feedback');
+            document.querySelectorAll('#quiz2-options button').forEach(b => {
+              b.disabled = true;
+              if (b.dataset.answer === correctAnswer) b.classList.add('correct');
+              else b.classList.add('wrong');
+            });
+            if (button.dataset.answer === correctAnswer) {
+              feedback.className = 'show correct';
+              feedback.innerHTML = `🎉 <strong>Correct!</strong><br>Mentions of Taiwan most often appear within broader discussions of <strong>sovereignty and territorial integrity</strong>.`;
+            } else {
+              feedback.className = 'show incorrect';
+              feedback.innerHTML = `❌ <strong>Sorry!</strong><br>The correct answer is <strong>sovereignty and territorial integrity</strong>.`;
+            }
+            // Show next quiz card after a short delay
+            setTimeout(function() {
+              document.getElementById('quiz-card-3').style.display = 'block';
+              document.getElementById('quiz-card-3').scrollIntoView({behavior: 'smooth', block: 'center'});
+            }, 800);
+            feedback.previousElementSibling.style.display = 'block';
+          });
+        });
+      })();
+
+      // Quiz 3: Russia
+      (function() {
+        const correctAnswer = "correct";
+        document.querySelectorAll('#quiz3-options button').forEach(button => {
+          button.addEventListener('click', () => {
+            const feedback = document.getElementById('quiz3-feedback');
+            document.querySelectorAll('#quiz3-options button').forEach(b => {
+              b.disabled = true;
+              if (b.dataset.answer === correctAnswer) b.classList.add('correct');
+              else b.classList.add('wrong');
+            });
+            if (button.dataset.answer === correctAnswer) {
+              feedback.className = 'show correct';
+              feedback.innerHTML = `🎉 <strong>Correct!</strong><br>In Russian political discourse, “security” is frequently paired with <strong>stability</strong>.`;
+            } else {
+              feedback.className = 'show incorrect';
+              feedback.innerHTML = `❌ <strong>Sorry!</strong><br>The correct answer is <strong>stability</strong>.`;
+            }
+            feedback.previousElementSibling.style.display = 'block';
+          });
+        });
+      })();
     </script>
   </body>
 </html>

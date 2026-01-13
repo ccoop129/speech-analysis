@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fun Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 100px;
+      }
+
+      .quiz-container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #718096;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        z-index: 10;
+      }
+
+      .close-button:hover {
+        background: #f7fafc;
+        color: #4a5568;
+        transform: scale(1.1);
+      }
+
+      h1 {
+        color: #2d3748;
+        font-size: 2.5rem;
+        margin-bottom: 2px;
+        font-weight: 700;
+      }
+
+      .quiz-description {
+        color: #718096;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .quiz-term {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 12px 20px;
+        border-radius: 15px;
+        margin: 15px 0;
+        display: inline-block;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .quiz-options {
+        display: grid;
+        gap: 10px;
+        margin: 15px 0;
+      }
+
+      .quiz-options button {
+        background: #f7fafc;
+        border: 2px solid #e2e8f0;
+        padding: 18px 25px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #4a5568;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .quiz-options button:hover {
+        background: #edf2f7;
+        border-color: #cbd5e0;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .quiz-options button:active {
+        transform: translateY(0);
+      }
+
+      .quiz-options button.correct {
+        background: #c6f6d5;
+        border-color: #68d391;
+        color: #22543d;
+        animation: correctPulse 0.6s ease;
+      }
+
+      .quiz-options button.wrong {
+        background: #fed7d7;
+        border-color: #fc8181;
+        color: #742a2a;
+        opacity: 0.8;
+      }
+
+      .quiz-options button.correct::before {
+        content: "✓";
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #22543d;
+      }
+
+      .quiz-options button.wrong::before {
+        content: "✗";
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #742a2a;
+      }
+
+      #quiz-feedback {
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 1rem;
+        line-height: 1.6;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+      }
+
+      #quiz-feedback.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      #quiz-feedback.correct {
+        background: linear-gradient(135deg, #68d391, #48bb78);
+        color: white;
+      }
+
+      #quiz-feedback.incorrect {
+        background: linear-gradient(135deg, #fc8181, #e53e3e);
+        color: white;
+      }
+
+      @keyframes correctPulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+
+      .quiz-options button:disabled {
+        cursor: not-allowed;
+      }
+
+      .intro-section {
+        text-align: center;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .intro-section h2 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        line-height: 1.3;
+      }
+
+      .intro-subtitle {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .intro-description {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="nav">
+        <ul>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Data</a></li>
+            <li><a href="faq-page.html">FAQ</a></li>
+            <li><a href="our-team/index.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="intro-section">
+      <h2>Before diving into the data, take a moment to make a prediction.</h2>
+      <p class="intro-subtitle">Let's test your <strong>INTUITION</strong>?</p>
+      <p class="intro-description">When you're ready, scroll down to explore the findings and interact with searchable data by region, time period, and topic.</p>
+    </div>
+
+    <div class="quiz-container">
+      <button class="close-button" aria-label="Close quiz">&times;</button>
+      <h1>Quick Quiz</h1>
+      <p class="quiz-description">This term is frequently used by which political figure?</p>
+      <div class="quiz-term">“Sovereignty”</div>
+
+      <div class="quiz-options">
+        <button data-answer="xi">A. Xi Jinping (China)</button>
+        <button data-answer="putin">B. Vladimir Putin (Russia)</button>
+        <button data-answer="trump">C. Donald Trump (USA)</button>
+      </div>
+
+      <div id="quiz-feedback"></div>
+    </div>
+
+    <!-- Put the script at the end so the buttons exist first -->
+    <script>
+      const correctAnswer = "xi"; // change per keyword
+
+      document.querySelectorAll(".quiz-options button").forEach(button => {
+        button.addEventListener("click", () => {
+          const feedback = document.getElementById("quiz-feedback");
+
+          // Disable all buttons after one click and mark correct/wrong
+          document.querySelectorAll(".quiz-options button").forEach(b => {
+            b.disabled = true;
+            if (b.dataset.answer === correctAnswer) b.classList.add("correct");
+            else b.classList.add("wrong");
+          });
+
+          // Feedback message
+          if (button.dataset.answer === correctAnswer) {
+            feedback.className = "show correct";
+            feedback.innerHTML = `
+              🎉 <strong>Congratulations!</strong><br>
+              You’re right — this term appears most frequently in official speeches by
+              <strong>Xi Jinping</strong>.
+            `;
+          } else {
+            feedback.className = "show incorrect";
+            feedback.innerHTML = `
+              ❌ <strong>Sorry!</strong><br>
+              The correct answer is <strong>Xi Jinping</strong>.
+            `;
+          }
+        });
+      });
+
+      // Close button functionality
+      document.querySelector(".close-button").addEventListener("click", () => {
+        document.querySelector(".quiz-container").style.display = "none";
+      });
+    </script>
+  </body>
+</html>
+

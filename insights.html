@@ -227,3 +227,100 @@
                 Plotly.newPlot('hotspotsChart', [trace1, trace2, trace3, trace4, trace5, trace6], layout);
             });
         </script>
+        <div class="team-member">
+  <h2>Share of Speeches Mentioning Selected Regions</h2>
+  <p>Percentage of speeches in each period that mention these regions.</p>
+  <div class="visualization-section">
+    <div class="viz-container">
+      <div id="regionShareChart"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Load charts.csv, compute percent of speeches mentioning each region per period
+fetch('charts.csv')
+  .then(r => {
+    if (!r.ok) throw new Error('CSV fetch failed: ' + r.status);
+    return r.text();
+  })
+  .then(csv => {
+    const splitLine = (line) => line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/).map(s => s.replace(/^"|"$/g, ''));
+    const lines = csv.replace(/^\uFEFF/, '').replace(/\r/g,'').trim().split('\n');
+    if (lines.length < 2) throw new Error('charts.csv empty or malformed');
+
+    const header = splitLine(lines[0]).map(h => h.trim());
+    const periodIdx = header.indexOf('period');
+    const keywordIdx = header.indexOf('keyword');
+    const mentionedIdx = header.indexOf('mentioned');
+    if (periodIdx < 0 || keywordIdx < 0 || mentionedIdx < 0) {
+      throw new Error('charts.csv missing expected columns: ' + header.join(','));
+    }
+
+    const regions = ['Hong Kong','South China Sea','Taiwan','Tibet','Ukraine','Xinjiang'];
+    const periods = ['2005–2009','2010–2014','2015–2019','2020–2024'];
+
+    // Aggregate: period -> { rows: number of rows for that period, counts: {keyword: sum(mentioned)} }
+    const keywordsSet = new Set();
+    const periodInfo = {};
+    for (let i = 1; i < lines.length; i++) {
+      const row = lines[i].trim();
+      if (!row) continue;
+      const cols = splitLine(row);
+      const period = cols[periodIdx];
+      const keyword = cols[keywordIdx];
+      const mentioned = parseInt(cols[mentionedIdx], 10) || 0;
+      keywordsSet.add(keyword);
+      if (!periodInfo[period]) periodInfo[period] = { rows: 0, counts: {} };
+      periodInfo[period].rows += 1;
+      periodInfo[period].counts[keyword] = (periodInfo[period].counts[keyword] || 0) + mentioned;
+    }
+
+    const numKeywords = Math.max(1, keywordsSet.size);
+
+    const periodColors = {
+      '2005–2009': '#ef6b6b',
+      '2010–2014': '#7fb33a',
+      '2015–2019': '#08a7a1',
+      '2020–2024': '#c687ff'
+    };
+
+    const traces = [];
+    periods.forEach(period => {
+      const info = periodInfo[period];
+      if (!info) return;
+      // total speeches = rows for that period divided by number of keywords (one row per speech-keyword)
+      const totalSpeeches = Math.max(1, info.rows / numKeywords);
+      const vals = regions.map(r => ((info.counts[r] || 0) / totalSpeeches) * 100);
+      traces.push({
+        x: regions,
+        y: vals,
+        name: period,
+        type: 'bar',
+        marker: { color: periodColors[period] || '#888' }
+      });
+    });
+
+    console.log('region share summary:', Object.fromEntries(
+      Object.entries(periodInfo).map(([p,v]) => [p, { rows: v.rows, counts: v.counts }])
+    ));
+
+    const layout = {
+      title: 'Share of Speeches Mentioning Selected Regions',
+      xaxis: { title: 'Region' },
+      yaxis: { title: '% of Speeches', ticksuffix: '%', range: [0, 16] },
+      barmode: 'group',
+      margin: { b: 120, l: 60, r: 40, t: 60 },
+      legend: { orientation: 'v', x: 1.02, xanchor: 'left' },
+      autosize: true,
+      responsive: true
+    };
+
+    Plotly.newPlot('regionShareChart', traces, layout);
+  })
+  .catch(err => {
+    console.error('charts.csv load/parse error:', err);
+    const el = document.getElementById('regionShareChart');
+    if (el) el.innerHTML = '<div style="color:#f66;padding:18px">Error loading charts.csv — see console for details.</div>';
+  });
+</script>

@@ -1,0 +1,35 @@
+<div class="team-member">
+    <h2>Top Keywords in Dataset</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead>
+            <tr style="border-bottom: 2px solid #2d3561;">
+                <th style="text-align: left; padding: 10px;">Keyword</th>
+                <th style="text-align: center; padding: 10px;">Count</th>
+            </tr>
+        </thead>
+        <tbody id="keywordsTable">
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+// Load and parse CSV data
+fetch('data/china/china_keywords.csv')
+    .then(response => response.text())
+    .then(data => {
+        const rows = data.trim().split('\n').slice(1, 6); // Get first 5 rows
+        const tableBody = document.getElementById('keywordsTable');
+        
+        rows.forEach(row => {
+            const [keyword, count] = row.split(',');
+            const tr = document.createElement('tr');
+            tr.style.borderBottom = '1px solid #eee';
+            tr.innerHTML = `
+                <td style="padding: 10px;">${keyword}</td>
+                <td style="text-align: center; padding: 10px;">${count}</td>
+            `;
+            tableBody.appendChild(tr);
+        });
+    });
+</script>

@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Welcome</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
+
     <body>
+        <nav id="nav">
+            <ul>
+                <li><a href="#">Explore</a></li>
+                <li><a href="data/">Data</a></li>
+                <li><a href="faq-page.html">FAQ</a></li>
+                <li><a href="our-team/index.html">About</a></li>
+            </ul>
+        </nav>
+      
         <h1>Political Leadership Speech Analysis Database</h1>
         
         <div class="team-member">
@@ -28,14 +39,6 @@
             </div>
         </div>
 
-        <div class="metrics-section">
-            <div class="metric-container">
-                <h3 class="metric-title">Entities</h3>
-                <p class="metric-description">This section displays the total count of speeches analyzed for each political entity in our database.</p>
-                <div id="entityCountChart"></div>
-            </div>
-        </div>
-
         <div class="team-member">
             <h2>About Us</h2>
             <p>We are a team of graduate students compiling a database of speeches and public appearances of the leaders of the United States, Russian Federation, and People's Republic of China. <a href="our-team/index.html">You can learn more about us here</a></p>
@@ -45,10 +48,6 @@
             <h2>FAQs</h2>
             <p>Questions? Here is a link to our <a href="faq-page.html">FAQs</a>.</p>
         </div>
-
-        <p style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #2d3561;">
-            <a href="our-team/index.html">Go to Team Page</a>
-        </p>
 
         <script src="visualization.js"></script>
     </body>

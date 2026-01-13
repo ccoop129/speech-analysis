@@ -5,6 +5,51 @@ body {
     color: #e0e0e0;
 }
 
+/* Hero / Landing styles */
+.hero {
+    position: relative;
+    max-width: 1200px;
+    min-height: 400px;
+    margin: 22px auto 36px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(2,6,23,0.5);
+    background: linear-gradient(180deg, rgba(10,14,39,0.6), rgba(10,14,39,0.75));
+}
+
+.hero-bg-wrap { position: absolute; inset: 0; z-index: 0; }
+.hero-bg { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; display: block; filter: brightness(0.6) contrast(1.05); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,36,0.45) 10%, rgba(8,12,36,0.7) 65%); }
+
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    padding: 40px 30px;
+    color: #e9eef8;
+}
+
+.hero-eyebrow { color: #9fb0d9; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 10px; }
+.hero-title { font-size: 4rem; line-height: 1.08; margin: 0 0 12px 0; font-weight: 800; color: #ffffff; }
+.hero-desc { color: #c9d6ee; font-size: 0.98rem; max-width: 640px; margin-bottom: 100px; }
+
+.hero-ctas { display: flex; gap: 14px; margin-bottom: 0px; }
+.btn { display: inline-block; padding: 12px 20px; border-radius: 800px; font-weight: 600; background: rgba(255,255,255,0.08); color: #eaf3ff; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; }
+.btn.primary { background: linear-gradient(90deg,#2f9cff,#5dd3ff); color: #042033; border: none; box-shadow: 0 6px 18px rgba(47,156,255,0.22); }
+.btn:hover { transform: translateY(-2px); }
+
+
+@media (max-width: 900px) {
+    .hero-inner { padding: 28px 20px; }
+    .hero-title { font-size: 1.6rem; }
+    .hero { min-height: 280px; max-width: 94%; }
+}
+
+@media (max-width: 520px) {
+    .hero-inner { padding: 40px 18px; }
+    .hero-title { font-size: 1.6rem; }
+    .hero-desc { font-size: 0.95rem; }
+}
+
 h1 {
     color: #ffffff;
     text-align: center;
@@ -113,6 +158,39 @@ a:hover {
     flex-wrap: wrap;
     margin: 30px auto;
     max-width: 1200px;
+}
+
+/* Split layout: left image and right overlapping card */
+.split-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 30px auto;
+    position: relative;
+}
+.split-image { flex: 0 0 48%; }
+.split-image img { width: 140%; height: auto; border-radius: 12px; display: block; filter: brightness(0.98); }
+.split-content { flex: 0 0 52%; display: flex; align-items: center; }
+.team-member.floating {
+    margin-left: -80px; /* pulls the card left to overlap the image */
+    z-index: 2;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.5);
+    border-radius: 12px;
+    padding: 22px;
+    background: rgba(55, 61, 101, 0.9);
+    border: 1px solid rgba(255,255,255,0.04);
+    max-width: 520px;
+}
+    
+/* reversed variant: image on right, card overlaps from the left */
+.split-section.reverse { flex-direction: row-reverse; }
+.split-section.reverse .team-member.floating { margin-left: 0; margin-right: -80px; }
+
+@media (max-width: 900px) {
+  .split-section { flex-direction: column; gap: 18px; padding: 0 12px; }
+  .split-image, .split-content { flex-basis: 100%; }
+  .team-member.floating { margin-left: 0; max-width: 100%; }
 }
 
 .viz-container {

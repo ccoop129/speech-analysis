@@ -31,11 +31,6 @@
         </div>
 
         <div class="team-member">
-            <h2>Understanding the Data</h2>
-            <p>These entities represent the key geopolitical actors, regions, and organizations that have been central to Chinese diplomatic discourse over the past two decades. Their frequency indicates their importance in shaping policy communication and international relationships. "China" and "Chinese" were listed as the top two in the dataset, but have been excluded from this visualization.</p>
-        </div>
-
-        <div class="team-member">
             <h2>Hotspot Keywords Over Time</h2>
             <p>Tracking the frequency of strategically important keywords across Chinese Foreign Ministry speeches from 2005-2023:</p>
             <div class="visualization-section">
@@ -44,10 +39,6 @@
                 </div>
             </div>
         </div>
-
-        <p style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #2d3561;">
-            <a href="index.html">Back to Home</a>
-        </p>
 
         <script>
         // Load and parse entities CSV data
@@ -324,3 +315,13 @@ fetch('charts.csv')
     if (el) el.innerHTML = '<div style="color:#f66;padding:18px">Error loading charts.csv — see console for details.</div>';
   });
 </script>
+
+<div class="team-member">
+            <h2>Where is our data from?</h2>
+            <p>Our data was scraped from all speeches delivered by Chinese officials and uploaded to the website of the Ministry of Foreign Affairs of the People's Republic of China. It spans from 2005 to 2024. It has been analyzed with NLTK and SpaCy libraries. The source can be found below.</p>
+<p>https://www.fmprc.gov.cn/eng/xw/zyjh/</p>
+        </div>
+
+ <p style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #2d3561;">
+            <a href="index.html">Back to Home</a>
+        </p>

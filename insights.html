@@ -18,7 +18,7 @@
             </ul>
         </nav>
 
-        <h1>Key Insights from Speech Analysis</h1>
+        <h1>China Insights</h1>
 
         <div class="team-member">
             <h2>Top 10 Entities in Chinese Foreign Ministry Dataset</h2>
@@ -33,6 +33,16 @@
         <div class="team-member">
             <h2>Understanding the Data</h2>
             <p>These entities represent the key geopolitical actors, regions, and organizations that have been central to Chinese diplomatic discourse over the past two decades. Their frequency indicates their importance in shaping policy communication and international relationships. "China" and "Chinese" were listed as the top two in the dataset, but have been excluded from this visualization.</p>
+        </div>
+
+        <div class="team-member">
+            <h2>Hotspot Keywords Over Time</h2>
+            <p>Tracking the frequency of strategically important keywords across Chinese Foreign Ministry speeches from 2005-2023:</p>
+            <div class="visualization-section">
+                <div class="viz-container">
+                    <div id="hotspotsChart"></div>
+                </div>
+            </div>
         </div>
 
         <p style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #2d3561;">
@@ -89,11 +99,131 @@
                         tickangle: -45
                     },
                     yaxis: { title: 'Total Frequency Count' },
-                    margin: { b: 150, l: 60, r: 40, t: 60 }
+                    margin: { b: 150, l: 60, r: 40, t: 60 },
+                    autosize: true,
+                    responsive: true
                 };
                 
                 Plotly.newPlot('entitiesChart', [trace], layout);
             });
         </script>
-    </body>
-</html>
+
+        <script>
+        // Load and parse hotspots CSV data
+        fetch('data/china/yearly_keyword_counts.csv')
+            .then(response => response.text())
+            .then(data => {
+                // Parse CSV
+                const lines = data.trim().split('\n');
+                const headers = lines[0].split(',').map(h => h.replace(/"/g, ''));
+                
+                // Find the column indices for all keywords
+                const yearIdx = headers.indexOf('year');
+                const hongKongIdx = headers.indexOf('count_Hong_Kong');
+                const taiwanIdx = headers.indexOf('count_Taiwan');
+                const ukraineIdx = headers.indexOf('count_Ukraine');
+                const tibetIdx = headers.indexOf('count_Tibet');
+                const xinjiangIdx = headers.indexOf('count_Xinjiang');
+                const southChinaSeaIdx = headers.indexOf('count_South_China_Sea');
+                
+                // Extract data for each keyword
+                const years = [];
+                const hongKongCounts = [];
+                const taiwanCounts = [];
+                const ukraineCounts = [];
+                const tibetCounts = [];
+                const xinjiangCounts = [];
+                const southChinaSeaCounts = [];
+                
+                for (let i = 1; i < lines.length; i++) {
+                    const values = lines[i].split(',').map(v => v.replace(/"/g, ''));
+                    const year = parseInt(values[yearIdx]);
+                    const hk = parseInt(values[hongKongIdx]) || 0;
+                    const tw = parseInt(values[taiwanIdx]) || 0;
+                    const ua = parseInt(values[ukraineIdx]) || 0;
+                    const tb = parseInt(values[tibetIdx]) || 0;
+                    const xj = parseInt(values[xinjiangIdx]) || 0;
+                    const scs = parseInt(values[southChinaSeaIdx]) || 0;
+                    
+                    years.push(year);
+                    hongKongCounts.push(hk);
+                    taiwanCounts.push(tw);
+                    ukraineCounts.push(ua);
+                    tibetCounts.push(tb);
+                    xinjiangCounts.push(xj);
+                    southChinaSeaCounts.push(scs);
+                }
+                
+                // Create Plotly line chart with all keywords
+                const trace1 = {
+                    x: years,
+                    y: hongKongCounts,
+                    name: 'Hong Kong',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: '#2d3561', width: 2 }
+                };
+                
+                const trace2 = {
+                    x: years,
+                    y: taiwanCounts,
+                    name: 'Taiwan',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: '#e74c3c', width: 2 }
+                };
+                
+                const trace3 = {
+                    x: years,
+                    y: ukraineCounts,
+                    name: 'Ukraine',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: '#3498db', width: 2 }
+                };
+                
+                const trace4 = {
+                    x: years,
+                    y: tibetCounts,
+                    name: 'Tibet',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: '#f39c12', width: 2 }
+                };
+                
+                const trace5 = {
+                    x: years,
+                    y: xinjiangCounts,
+                    name: 'Xinjiang',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: '#27ae60', width: 2 }
+                };
+                
+                const trace6 = {
+                    x: years,
+                    y: southChinaSeaCounts,
+                    name: 'South China Sea',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    line: { color: '#9b59b6', width: 2 }
+                };
+                
+                const layout = {
+                    title: 'Hotspot Keywords Frequency Over Time (2005-2025)',
+                    xaxis: { 
+                        title: 'Year',
+                        type: 'linear',
+                        dtick: 1,
+                        tickangle: -45
+                    },
+                    yaxis: { title: 'Frequency Count' },
+                    hovermode: 'x unified',
+                    margin: { b: 120, l: 60, r: 40, t: 60 },
+                    autosize: true,
+                    responsive: true
+                };
+                
+                Plotly.newPlot('hotspotsChart', [trace1, trace2, trace3, trace4, trace5, trace6], layout);
+            });
+        </script>

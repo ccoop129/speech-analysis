@@ -54,8 +54,8 @@
                     const values = lines[i].split(',').map(v => v.replace(/"/g, ''));
                     const entity = values[0];
                     
-                    // Skip "China" and "Chinese"
-                    if (entity === 'China' || entity === 'Chinese') {
+                    // Skip "China", "Chinese", and "Xi Jinping"
+                    if (entity === 'China' || entity === 'Chinese' || entity === 'Xi Jinping') {
                         continue;
                     }
                     

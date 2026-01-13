@@ -1,35 +1,99 @@
-<div class="team-member">
-    <h2>Top Keywords in Dataset</h2>
-    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
-        <thead>
-            <tr style="border-bottom: 2px solid #2d3561;">
-                <th style="text-align: left; padding: 10px;">Keyword</th>
-                <th style="text-align: center; padding: 10px;">Count</th>
-            </tr>
-        </thead>
-        <tbody id="keywordsTable">
-            <!-- Data will be inserted here -->
-        </tbody>
-    </table>
-</div>
+<!DOCTYPE html>
+<html>
 
-<script>
-// Load and parse CSV data
-fetch('data/china/china_keywords.csv')
-    .then(response => response.text())
-    .then(data => {
-        const rows = data.trim().split('\n').slice(1, 6); // Get first 5 rows
-        const tableBody = document.getElementById('keywordsTable');
-        
-        rows.forEach(row => {
-            const [keyword, count] = row.split(',');
-            const tr = document.createElement('tr');
-            tr.style.borderBottom = '1px solid #eee';
-            tr.innerHTML = `
-                <td style="padding: 10px;">${keyword}</td>
-                <td style="text-align: center; padding: 10px;">${count}</td>
-            `;
-            tableBody.appendChild(tr);
-        });
-    });
-</script>
+    <head>
+        <title>Insights</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+
+    <body>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Explore</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="faq-page.html">FAQ</a></li>
+                <li><a href="our-team/index.html">About</a></li>
+            </ul>
+        </nav>
+
+        <h1>Key Insights from Speech Analysis</h1>
+
+        <div class="team-member">
+            <h2>Top 10 Entities in Chinese Foreign Ministry Dataset</h2>
+            <p>The most frequently mentioned entities across all speeches from 2005-2025:</p>
+            <div class="visualization-section">
+                <div class="viz-container">
+                    <div id="entitiesChart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <h2>Understanding the Data</h2>
+            <p>These entities represent the key geopolitical actors, regions, and organizations that have been central to Chinese diplomatic discourse over the past two decades. Their frequency indicates their importance in shaping policy communication and international relationships. "China" and "Chinese" were listed as the top two in the dataset, but have been excluded from this visualization.</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #2d3561;">
+            <a href="index.html">Back to Home</a>
+        </p>
+
+        <script>
+        // Load and parse entities CSV data
+        fetch('data/china/entities.csv')
+            .then(response => response.text())
+            .then(data => {
+                // Parse CSV
+                const lines = data.trim().split('\n');
+                const headers = lines[0].split(',').map(h => h.replace(/"/g, ''));
+                
+                // Get entities and calculate total counts
+                const entities = [];
+                for (let i = 1; i < lines.length; i++) {
+                    const values = lines[i].split(',').map(v => v.replace(/"/g, ''));
+                    const entity = values[0];
+                    
+                    // Skip "China" and "Chinese"
+                    if (entity === 'China' || entity === 'Chinese') {
+                        continue;
+                    }
+                    
+                    // Sum all count columns (from count05 onwards)
+                    let totalCount = 0;
+                    for (let j = 1; j < values.length; j++) {
+                        totalCount += parseInt(values[j]) || 0;
+                    }
+                    
+                    entities.push({ name: entity, total: totalCount });
+                }
+                
+                // Sort by total count and get top 10
+                const top10 = entities.sort((a, b) => b.total - a.total).slice(0, 10);
+                
+                // Create Plotly bar chart
+                const names = top10.map(e => e.name);
+                const counts = top10.map(e => e.total);
+                
+                const trace = {
+                    x: names,
+                    y: counts,
+                    type: 'bar',
+                    marker: { color: '#2d3561' }
+                };
+                
+                const layout = {
+                    title: 'Top 10 Most Frequent Entities',
+                    xaxis: { 
+                        title: 'Entity',
+                        tickangle: -45
+                    },
+                    yaxis: { title: 'Total Frequency Count' },
+                    margin: { b: 150, l: 60, r: 40, t: 60 }
+                };
+                
+                Plotly.newPlot('entitiesChart', [trace], layout);
+            });
+        </script>
+    </body>
+</html>

@@ -57,9 +57,6 @@
           <div id="keywords-list" class="keywords-list"></div>
         </div>
 
-        <div class="control-row">
-          <button id="update-btn" class="dropdown">Update chart</button>
-        </div>
         <div style="font-size:.85rem;color:#cfe9ff;margin-top:10px">
           Data: data/speech_keyword_hits.csv, data/keywords.csv, data/speeches_processed.csv
         </div>
@@ -204,7 +201,6 @@ async function initKeywordViz() {
   createKeywordsCheckboxes(keywordMap);
 
   const countrySelect = document.getElementById('country-select');
-  const updateBtn = document.getElementById('update-btn');
 
   function refresh() {
     const country = countrySelect.value;
@@ -212,23 +208,22 @@ async function initKeywordViz() {
     if (selectedKs.length === 0) {
       // draw empty chart
       Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style=\"color:#cfe9ff;padding:20px\">Select one or more keywords to show trend</div>';
+      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords to show trend</div>';
       return;
     }
     const { years, countsByKw } = buildCounts(hits, idToCountry, country, selectedKs);
     if (years.length === 0) {
       Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style=\"color:#cfe9ff;padding:20px\">No data for this selection</div>';
+      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
       return;
     }
     drawPlot(years, countsByKw, keywordMap);
   }
 
-  updateBtn.addEventListener('click', refresh);
-  // auto-update when any keyword checkbox changes
-document.getElementById('keywords-list').addEventListener('change', refresh);
   // handy: update when country changes
   countrySelect.addEventListener('change', refresh);
+  // auto-update when any keyword checkbox changes
+  document.getElementById('keywords-list').addEventListener('change', refresh);
 
   // initial helpful selection: select top 6 keywords (first ones)
   const boxes = Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]'));

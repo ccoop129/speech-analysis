@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geopolitical Speech Lab</title>
 
-  <!-- Your single stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Plotly -->
+  <!-- Plotly (only include if you actually use it on this page) -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
@@ -16,116 +15,50 @@
   <!-- Header / Nav -->
   <header class="site-header">
     <nav class="nav">
-      <!-- Brand (2 lines) -->
       <a class="brand" href="index.html">
         <span class="brand-main">Geopolitical Speech Lab</span>
-        <span class="brand-sub"> Navigating Great Power Rhetoric </span>
+        <span class="brand-sub">Navigating Great Power Rhetoric</span>
       </a>
 
-      <!-- Right-side nav -->
       <ul class="nav-links">
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="insights.html">Insights</a></li>
-        <li><a href="data.html">Data</a></li>
+        <li><a href="alldata.html">Data</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="our-team/">About</a></li>
+        <li><a href="our-team/">The Team</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-bg-wrap" aria-hidden="true">
-        <img src="Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg" />
-        <div class="hero-overlay"></div>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg-wrap" aria-hidden="true">
+      <img src="Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-inner">
+      <h1 class="hero-title">What governments say—and don’t say—matters.</h1>
+      <h3 class="hero-desc">
+        We turn official speeches from the U.S., China, and Russia into searchable data and visual insights—so you can track keywords,
+        entities, and narrative shifts over time.
+      </h3>
+
+      <div class="hero-ctas">
+        <a class="btn primary" href="insights.html">First Insights →</a>
       </div>
+    </div>
+  </header>
 
-     <div class="hero-inner">
-  <div class="hero-eyebrow">DPI 691</div>
+  <!-- Overview Cards -->
+  <section class="landing-cards" id="overview">
+    <div class="section-header">
+      <h2>At a Glance</h2>
+      <p class="muted">Quick facts about what’s inside the corpus.</p>
+    </div>
 
-  <h1 class="hero-title">
-    What governments say—and don’t say—matters.
-  </h1>
-
-  <p class="hero-desc">
-    We turn official speeches from the U.S., China, and Russia into searchable data and visual insights—so you can track keywords, entities, and narrative shifts over time.
-  </p>
-
-
-
-  <div class="hero-ctas">
-    <a class="btn primary" href="data.html">Explore insights →</a>
-    <a class="btn" href="insights.html">Data & methodology</a>
-  </div>
-</div>
-
-
-    </section>
-
-    <!-- Split section 1 -->
-    <section class="split-section">
-      <div class="split-image">
-        <img src="party.jpg" alt="Dataset illustration" />
-      </div>
-
-      <div class="split-content">
-        <div class="card floating">
-          <h2>The Dataset</h2>
-          <p>
-            We gathered and analyzed 1000+ speeches made by leaders of the United States, Russian Federation, and People's Republic of China
-            from 2005 to 2025. We aim to empower policymakers, researchers, journalists, and students
-            with an authentic, unpoliticized understanding of how official discourse evolves.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Split section 2 (reverse) -->
-    <section class="split-section reverse">
-      <div class="split-image">
-        <img src="wordcloud.png" alt="Keyword word cloud illustration" />
-      </div>
-
-      <div class="split-content">
-        <div class="card floating">
-          <h2>Findings</h2>
-          <p>
-            Highlights from our corpus, including trends over time and shifts in emphasis.
-            Visit Insights to explore themes, excerpts, and source links.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section title -->
-    <section class="section">
-      <h2 class="section-title">Political Leadership Speech Analysis Database</h2>
-      <p class="section-subtitle">
-        Explore keyword frequency and comparative patterns across your selected topics.
-      </p>
-    </section>
-
-    <!-- Charts -->
-    <section class="visualization-section">
-      <div class="viz-container">
-        <h3 class="viz-keyword">Taiwan</h3>
-        <div id="taiwanChart"></div>
-      </div>
-
-      <div class="viz-container">
-        <h3 class="viz-keyword">Ukraine</h3>
-        <div id="ukraineChart"></div>
-      </div>
-
-      <div class="viz-container">
-        <h3 class="viz-keyword">Hong Kong</h3>
-        <div id="hongKongChart"></div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Your existing chart JS -->
-  <script src="visualization.js"></script>
-</body>
-</html>
+    <div class="glance-grid">
+      <div class="glance-card">
+        <div class="glance-number">3</div>
+        <div class="glance-label">Regions</div>
+        <div class="glance-sub">China · Russia · Uni

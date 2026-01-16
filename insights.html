@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geopolitical Speech Lab</title>
+  <title>Geopolitical Speech Lab - Insights</title>
 
   <!-- Your single stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -24,131 +24,195 @@
 
       <!-- Right-side nav -->
       <ul class="nav-links">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="insights.html">Insights</a></li>
-        <li><a href="data.html">Data</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="insights.html">Insights</a></li>
+        <li><a href="alldata.html">Data</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="our-team/">About</a></li>
+        <li><a href="our-team/index.html">The Team</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-bg-wrap" aria-hidden="true">
-        <img src="Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg" />
-        <div class="hero-overlay"></div>
-      </div>
+  <main class="main-content">
+    <h1>Insights</h1>
 
-      <div class="hero-inner">
-        <div class="hero-eyebrow">A PUBLIC-INTEREST TRANSPARENCY PROJECT</div>
-        <h1 class="hero-title">Understand China in its own words.</h1>
-        <p class="hero-desc">
-          Governments choose their words carefully. Learn the words, places, and topics that
-          shape Chinese foreign policy.
-        </p>
-
-        <div class="hero-ctas">
-          <a class="btn primary" href="data.html">Explore the database →</a>
-          <a class="btn" href="insights.html">How it works</a>
-<html>
-
-    <head>
-        <title>Insights</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    </head>
-
-    <body>
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html">Explore</a></li>
-                <li><a href="data.html">Quiz</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="faq-page.html">FAQ</a></li>
-                <li><a href="china/china_speeches.csv">China Data</a></li>
-                <li><a href="our-team/index.html">About</a></li>
-            </ul>
-        </nav>
-
-        <h1>China Insights</h1>
-
-        <div class="team-member">
-            <h2>Top 10 Entities in Chinese Foreign Ministry Dataset</h2>
-            <p>The most frequently mentioned entities across all speeches from 2005-2025:</p>
-            <div class="visualization-section">
-                <div class="viz-container">
-                    <div id="entitiesChart"></div>
-                </div>
-            </div>
+    <!-- First Interactive Chart -->
+    <section class="chart-section">
+      <div class="chart-card">
+        <h2>Trend 1</h2>
+        <div class="controls">
+          <select id="keyword-select-1" class="dropdown">
+            <option value="data1">Metric 1</option>
+            <option value="data2">Metric 2</option>
+            <option value="data3">Metric 3</option>
+          </select>
         </div>
+        <div id="chart-1" class="plotly-chart"></div>
       </div>
     </section>
 
-    <!-- Split section 1 -->
-    <section class="split-section">
-      <div class="split-image">
-        <img src="party.jpg" alt="Dataset illustration" />
-      </div>
-
-      <div class="split-content">
-        <div class="card floating">
-          <h2>The Dataset</h2>
-          <p>
-            We gathered and analyzed 1000+ speeches made by leaders of the People's Republic of China
-            from 2005 to 2025. We aim to empower policymakers, researchers, journalists, and students
-            with an authentic, unpoliticized understanding of how official discourse evolves.
-          </p>
+    <!-- Second Interactive Chart -->
+    <section class="chart-section">
+      <div class="chart-card">
+        <h2>Trend 2</h2>
+        <div class="controls">
+          <select id="entity-select-2" class="dropdown">
+            <option value="data1">Metric 1</option>
+            <option value="data2">Metric 2</option>
+            <option value="data3">Metric 3</option>
+          </select>
         </div>
-      </div>
-    </section>
-
-    <!-- Split section 2 (reverse) -->
-    <section class="split-section reverse">
-      <div class="split-image">
-        <img src="wordcloud.png" alt="Keyword word cloud illustration" />
-      </div>
-
-      <div class="split-content">
-        <div class="card floating">
-          <h2>Findings</h2>
-          <p>
-            Highlights from our corpus, including trends over time and shifts in emphasis.
-            Visit Insights to explore themes, excerpts, and source links.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section title -->
-    <section class="section">
-      <h2 class="section-title">Political Leadership Speech Analysis Database</h2>
-      <p class="section-subtitle">
-        Explore keyword frequency and comparative patterns across your selected topics.
-      </p>
-    </section>
-
-    <!-- Charts -->
-    <section class="visualization-section">
-      <div class="viz-container">
-        <h3 class="viz-keyword">Taiwan</h3>
-        <div id="taiwanChart"></div>
-      </div>
-
-      <div class="viz-container">
-        <h3 class="viz-keyword">Ukraine</h3>
-        <div id="ukraineChart"></div>
-      </div>
-
-      <div class="viz-container">
-        <h3 class="viz-keyword">Hong Kong</h3>
-        <div id="hongKongChart"></div>
+        <div id="chart-2" class="plotly-chart"></div>
       </div>
     </section>
   </main>
 
-  <!-- Your existing chart JS -->
-  <script src="visualization.js"></script>
+  <script>
+    // Simple sample data
+    const data1 = {
+      data1: { x: [2020, 2021, 2022, 2023, 2024, 2025], y: [10, 15, 20, 25, 30, 35] },
+      data2: { x: [2020, 2021, 2022, 2023, 2024, 2025], y: [5, 8, 12, 18, 25, 32] },
+      data3: { x: [2020, 2021, 2022, 2023, 2024, 2025], y: [20, 22, 24, 26, 28, 30] }
+    };
+
+    const data2 = {
+      data1: { x: [2020, 2021, 2022, 2023, 2024, 2025], y: [15, 18, 22, 26, 31, 36] },
+      data2: { x: [2020, 2021, 2022, 2023, 2024, 2025], y: [8, 12, 16, 20, 25, 30] },
+      data3: { x: [2020, 2021, 2022, 2023, 2024, 2025], y: [12, 14, 16, 18, 20, 22] }
+    };
+
+    function drawChart1(dataKey = 'data1') {
+      const d = data1[dataKey];
+      const trace = {
+        x: d.x,
+        y: d.y,
+        mode: 'lines+markers',
+        line: { color: '#2f9cff', width: 2 },
+        marker: { size: 5 }
+      };
+
+      const layout = {
+        title: 'Trend 1',
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Count' },
+        hovermode: 'x unified',
+        plot_bgcolor: 'rgba(26, 31, 58, 0.5)',
+        paper_bgcolor: 'transparent',
+        font: { color: '#cfe9ff' },
+        margin: { b: 50, l: 50, r: 40, t: 50 },
+        autosize: true
+      };
+
+      Plotly.newPlot('chart-1', [trace], layout, { responsive: true });
+    }
+
+    function drawChart2(dataKey = 'data1') {
+      const d = data2[dataKey];
+      const trace = {
+        x: d.x,
+        y: d.y,
+        mode: 'lines+markers',
+        line: { color: '#5dd3ff', width: 2 },
+        marker: { size: 5 }
+      };
+
+      const layout = {
+        title: 'Trend 2',
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Count' },
+        hovermode: 'x unified',
+        plot_bgcolor: 'rgba(26, 31, 58, 0.5)',
+        paper_bgcolor: 'transparent',
+        font: { color: '#cfe9ff' },
+        margin: { b: 50, l: 50, r: 40, t: 50 },
+        autosize: true
+      };
+
+      Plotly.newPlot('chart-2', [trace], layout, { responsive: true });
+    }
+
+    document.getElementById('keyword-select-1').addEventListener('change', function(e) {
+      drawChart1(e.target.value);
+    });
+
+    document.getElementById('entity-select-2').addEventListener('change', function(e) {
+      drawChart2(e.target.value);
+    });
+
+    window.addEventListener('load', function() {
+      drawChart1('data1');
+      drawChart2('data1');
+    });
+  </script>
+
+  <style>
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .main-content h1 {
+      color: #8fd3ff;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .chart-section {
+      margin-bottom: 50px;
+    }
+
+    .chart-card {
+      background: rgba(26, 31, 58, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(2, 6, 23, 0.3);
+    }
+
+    .chart-card h2 {
+      color: #8fd3ff;
+      margin: 0 0 20px 0;
+      font-size: 1.3rem;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .dropdown {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(47, 156, 255, 0.1);
+      color: #cfe9ff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .dropdown:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .dropdown option {
+      background: #0a0e1a;
+      color: #cfe9ff;
+    }
+
+    .plotly-chart {
+      width: 100%;
+      height: 400px;
+    }
+
+    @media (max-width: 900px) {
+      .main-content {
+        padding: 20px 15px;
+      }
+
+      .plotly-chart {
+        height: 300px;
+      }
+    }
+  </style>
 </body>
 </html>

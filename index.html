@@ -33,54 +33,81 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-bg-wrap" aria-hidden="true">
-        <img src="Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg" />
-        <div class="hero-overlay"></div>
-      </div>
+  <!DOCTYPE html>
+<html>
 
-     <div class="hero-inner">
-  <div class="hero-eyebrow">DPI 691</div>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
 
-  <h1 class="hero-title">
-    What governments say—and don’t say—matters.
-  </h1>
+    <body>
+        <header class="hero">
+            <div class="hero-bg-wrap" aria-hidden="true">
+                <!-- Place an appropriately licensed photo at images/xi_speech.jpg -->
+                <img src="Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-inner">
+                <div class="hero-eyebrow"></div>
+                <h1 class="hero-title">What governments say—and don’t say—matters.</h1>
+                <h3 class="hero-desc">We turn official speeches from the U.S., China, and Russia into searchable data and visual insights—so you can track keywords, entities, and narrative shifts over time.</h3>
 
-  <p class="hero-desc">
-    We turn official speeches from the U.S., China, and Russia into searchable data and visual insights—so you can track keywords, entities, and narrative shifts over time.
-  </p>
+                <div class="hero-ctas">
+                    <a class="btn primary" href="insights.html">First Insights→</a>
+                </div>
+            </header>
+
+    
+
+        <section class="split-section">
+            <div class="split-image">
+                <!-- add your left-side illustration/photo at images/dataset_left.jpg -->
+                <img src="party.jpg" alt="Dataset illustration" />
+            </div>
+
+            <div class="split-content">
+                <div class="team-member floating">
+                    <h2>The Dataset</h2>
+                    <p>We gathered and analyzed 1000+ speeches made by leaders of the People's Republic of China from 2005 to 2025. We hope to empower policymakers, researchers, journalists, and students with an authentic, unpoliticized understanding of how the Chinese Communist Party communicates with the world and its citizens.</p>
+                </div>
+            </div>
+        </section>
 
 
+        <!-- Reversed split-section: image on right, overlapping card on left -->
+        <section class="split-section reverse">
+            <div class="split-image">
+                <!-- add your right-side illustration/photo at images/dataset_right.jpg -->
+                <img src="wordcloud.png" alt="Dataset illustration" />
+            </div>
 
-  <div class="hero-ctas">
-    <a class="btn primary" href="data.html">Explore insights →</a>
-    <a class="btn" href="insights.html">Data & methodology</a>
-  </div>
-</div>
-
-
-    </section>
-
-    <!-- Split section 1 -->
-    <section class="split-section">
-      <div class="split-image">
-        <img src="party.jpg" alt="Dataset illustration" />
-      </div>
-
-      <div class="split-content">
-        <div class="card floating">
-          <h2>The Dataset</h2>
-          <p>
-            We gathered and analyzed 1000+ speeches made by leaders of the United States, Russian Federation, and People's Republic of China
-            from 2005 to 2025. We aim to empower policymakers, researchers, journalists, and students
-            with an authentic, unpoliticized understanding of how official discourse evolves.
-          </p>
+            <div class="split-content">
+                <div class="team-member floating">
+                    <h2>Findings</h2>
+                    <p>Key findings and highlights from our corpus, including trends over time and major shifts in emphasis. Click through to see contextual excerpts and source citations.</p>
+                </div>
+            </div>
+        </section>
+      
+        <h1>Political Leadership Speech Analysis Database</h1>
+        
+        <div class="team-member">
+            <h2>Our Project</h2>
+            <p>Our mission is to provide comprehensive speech analysis tools and resources that enable researchers and professionals to better understand communication patterns and linguistic trends.</p>
         </div>
-      </div>
-    </section>
 
+        <div class="team-member">
+            <h2>About Us</h2>
+            <p>We are a team of graduate students compiling a database of speeches and public appearances of the leaders of the United States, Russian Federation, and People's Republic of China. <a href="our-team/index.html">You can learn more about us here</a></p>
+        </div>
 
-</body>
+        <div class="team-member">
+            <h2>FAQs</h2>
+            <p>Questions? Here is a link to our <a href="faq-page.html">FAQs</a>.</p>
+        </div>
+
+        <script src="visualization.js"></script>
+    </body>
 </html>

@@ -58,7 +58,7 @@
         </div>
 
         <div style="font-size:.85rem;color:#cfe9ff;margin-top:10px">
-          Data: data/speech_keyword_hits.csv, data/keywords.csv, data/speeches_processed.csv
+          Data: data/viz_cache.json
         </div>
       </aside>
     </div>
@@ -66,59 +66,13 @@
 </section>
 
 <script>
-/* Small CSV parser that respects quoted fields */
-function splitCSVLine(line) {
-  const parts = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
-  return parts.map(s => {
-    s = s.trim();
-    if (s.startsWith('"') && s.endsWith('"')) s = s.slice(1, -1);
-    return s.replace(/\r$/, '');
-  });
-}
-
-async function loadCSV(url) {
-  const txt = await fetch(url).then(r => r.text());
-  
-  // Proper CSV parser that respects quoted fields with newlines
-  const lines = [];
-  let currentLine = '';
-  let inQuotes = false;
-  
-  for (let i = 0; i < txt.length; i++) {
-    const char = txt[i];
-    const nextChar = txt[i + 1];
-    
-    if (char === '"') {
-      inQuotes = !inQuotes;
-      currentLine += char;
-    } else if ((char === '\n' || char === '\r') && !inQuotes) {
-      if (currentLine.trim()) lines.push(currentLine);
-      currentLine = '';
-      if (char === '\r' && nextChar === '\n') i++; // skip \r\n
-    } else {
-      currentLine += char;
-    }
-  }
-  if (currentLine.trim()) lines.push(currentLine);
-  
-  const header = splitCSVLine(lines[0]);
-  const rows = lines.slice(1).map(l => {
-    const cols = splitCSVLine(l);
-    const obj = {};
-    for (let i = 0; i < header.length; i++) obj[header[i]] = cols[i] ?? '';
-    return obj;
-  });
-  return { header, rows };
-}
-
-function uniqSorted(arr) {
-  return Array.from(new Set(arr)).sort((a,b) => +a - +b);
+async function loadCache(url) {
+  return fetch(url).then(r => r.json());
 }
 
 function createKeywordsCheckboxes(keywordMap) {
   const container = document.getElementById('keywords-list');
   container.innerHTML = '';
-  // render as checkboxes
   Object.entries(keywordMap).forEach(([id, label]) => {
     const idSafe = 'kw_' + id;
     const row = document.createElement('div');
@@ -142,29 +96,20 @@ function getSelectedKeywordIds() {
   return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
 }
 
-function buildCounts(hitsRows, idToCountry, selectedCountry, selectedKeywordIds) {
-  // hitsRows: {id,keyword,year}
+function buildCounts(countRows, idToCountry, selectedCountry, selectedKeywordIds) {
+  // countRows: {year, keyword, country, count}
   const yearSet = new Set();
   const countsByKw = {};
   selectedKeywordIds.forEach(k => countsByKw[k] = {});
   
-  let totalMatched = 0, totalCountryMatched = 0, totalKeywordMatched = 0;
-  
-  for (const r of hitsRows) {
-    const sid = r.id;
-    const country = idToCountry[sid];
-    if (!country) continue;
-    totalCountryMatched++;
-    if (country !== selectedCountry) continue;
+  for (const r of countRows) {
+    if (r.country !== selectedCountry) continue;
     if (!selectedKeywordIds.includes(r.keyword)) continue;
-    totalKeywordMatched++;
     const y = String(Math.floor(parseFloat(r.year)));
     yearSet.add(y);
-    countsByKw[r.keyword][y] = (countsByKw[r.keyword][y] || 0) + 1;
-    totalMatched++;
+    countsByKw[r.keyword][y] = (countsByKw[r.keyword][y] || 0) + r.count;
   }
   const years = Array.from(yearSet).map(y=>+y).sort((a,b)=>a-b);
-  console.log(`buildCounts for ${selectedCountry}: total=${hitsRows.length}, countryMatched=${totalCountryMatched}, keywordMatched=${totalKeywordMatched}, final=${totalMatched}, years=${years.join(',')}`);
   return { years, countsByKw };
 }
 
@@ -193,42 +138,11 @@ function drawPlot(years, countsByKw, keywordMap) {
 }
 
 async function initKeywordViz() {
-  const [hitsCsv, kwCsv, speechesCsv] = await Promise.all([
-    loadCSV('data/speech_keyword_hits.csv'),
-    loadCSV('data/keywords.csv'),
-    loadCSV('data/speeches_processed.csv')
-  ]);
+  const cache = await loadCache('data/viz_cache.json');
 
-  // build keyword map: keywords.csv has header like "",x  or first column is id
-  const keywordMap = {};
-  for (const r of kwCsv.rows) {
-    // some files have header names ambiguous; try to pick id by the first header column
-    const keys = Object.keys(r);
-    const id = r[keys[0]];
-    const label = r[keys[1]] || r[keys[0]];
-    if (id) keywordMap[id] = label;
-  }
-
-  // build id -> country map from speeches_processed.csv (id column and country column)
-  const idToCountry = {};
-  for (const r of speechesCsv.rows) {
-    // header names: id,country,...
-    const sid = (r['id'] ?? r['"id"'] ?? r['ID'] ?? r[Object.keys(r)[0]] ?? '').trim();
-    const country = (r['country'] ?? r['"country"'] ?? r['Country'] ?? r[Object.keys(r)[1]] ?? '').trim();
-    if (sid) idToCountry[sid] = country;
-  }
-  console.log(`idToCountry map size: ${Object.keys(idToCountry).length}, sample entries:`, Object.entries(idToCountry).slice(0, 5));
-  console.log(`speechesCsv header:`, speechesCsv.header);
-  console.log(`speechesCsv first row:`, speechesCsv.rows[0]);
-
-  // normalize hits rows: ensure we have id,keyword,year keys
-  const hits = hitsCsv.rows.map(r => {
-    const keys = Object.keys(r);
-    const id = (r['id'] ?? r[keys[0]] ?? '').trim();
-    const keyword = (r['keyword'] ?? r[keys[1]] ?? '').trim();
-    const year = (r['year'] ?? r[keys[2]] ?? '').trim();
-    return { id: String(id), keyword: String(keyword), year: year };
-  });
+  const keywordMap = cache.keywords;
+  const idToCountry = cache.id_country;
+  const countRows = cache.counts;
 
   createKeywordsCheckboxes(keywordMap);
 
@@ -243,7 +157,7 @@ async function initKeywordViz() {
       document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords to show trend</div>';
       return;
     }
-    const { years, countsByKw } = buildCounts(hits, idToCountry, country, selectedKs);
+    const { years, countsByKw } = buildCounts(countRows, idToCountry, country, selectedKs);
     if (years.length === 0) {
       Plotly.purge('kw-chart');
       document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';

@@ -1,12 +1,63 @@
 /* =========================
-   Base
+   Base & Header Navigation
+========================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #0a0e1a;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+  padding: 12px 24px;
+}
 
-  .nav-links {
-    gap: 18px;
-    margin-right: 12px;
-  }
+.site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .nav-links a { font-size: 1rem; }
+.brand {
+  text-decoration: none;
+  color: #8fd3ff;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.brand-main {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #8fd3ff;
+}
+
+.brand-sub {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #cfe9ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #8fd3ff;
 }
 
 /* =========================
@@ -224,18 +275,14 @@
 
 .site-header .brand {
   display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-
-  padding-left: 32px;          /* space from left edge */
+  flex-direction: row !important;
+  align-items: center !important;
   text-decoration: none;
-  line-height: 1.05;
 }
 
 /* MAIN TITLE — BIG */
 .brand-main {
-  display: block;
-  font-size: 2.6rem;           /* 👈 MUCH larger */
+  font-size: 1.4rem;
   font-weight: 900;
   color: #8fd3ff;
   letter-spacing: -1px;
@@ -244,28 +291,18 @@
 
 /* SUBTITLE — CLEARLY SECONDARY */
 .brand-sub {
-  display: block;
-  font-size: 0.85rem;          /* clearly smaller */
-  font-weight: 700;
-  color: #cfe9ff;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-top: 4px;
+  display: none;
 }
 
 /* ===== FINAL HEADER SPACING (more breathing room) ===== */
 .site-header nav {
-  height: 108px !important;   /* taller header */
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.site-header .brand {
-  line-height: 1.1;               /* more air between lines */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 12px 24px;
 }
 
-.site-header .brand-sub {
-  margin-top: 6px;                /* push subtitle down slightly */
-}
 body {
-  padding-top: 140px !important;  /* matches taller header */
+  padding-top: 72px !important;
 }

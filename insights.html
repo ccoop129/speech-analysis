@@ -78,7 +78,29 @@ function splitCSVLine(line) {
 
 async function loadCSV(url) {
   const txt = await fetch(url).then(r => r.text());
-  const lines = txt.split(/\r?\n/).filter(l => l.trim() !== '');
+  
+  // Proper CSV parser that respects quoted fields with newlines
+  const lines = [];
+  let currentLine = '';
+  let inQuotes = false;
+  
+  for (let i = 0; i < txt.length; i++) {
+    const char = txt[i];
+    const nextChar = txt[i + 1];
+    
+    if (char === '"') {
+      inQuotes = !inQuotes;
+      currentLine += char;
+    } else if ((char === '\n' || char === '\r') && !inQuotes) {
+      if (currentLine.trim()) lines.push(currentLine);
+      currentLine = '';
+      if (char === '\r' && nextChar === '\n') i++; // skip \r\n
+    } else {
+      currentLine += char;
+    }
+  }
+  if (currentLine.trim()) lines.push(currentLine);
+  
   const header = splitCSVLine(lines[0]);
   const rows = lines.slice(1).map(l => {
     const cols = splitCSVLine(l);
@@ -125,17 +147,24 @@ function buildCounts(hitsRows, idToCountry, selectedCountry, selectedKeywordIds)
   const yearSet = new Set();
   const countsByKw = {};
   selectedKeywordIds.forEach(k => countsByKw[k] = {});
+  
+  let totalMatched = 0, totalCountryMatched = 0, totalKeywordMatched = 0;
+  
   for (const r of hitsRows) {
     const sid = r.id;
     const country = idToCountry[sid];
     if (!country) continue;
+    totalCountryMatched++;
     if (country !== selectedCountry) continue;
     if (!selectedKeywordIds.includes(r.keyword)) continue;
-    const y = String(r.year).replace('.0','');
+    totalKeywordMatched++;
+    const y = String(Math.floor(parseFloat(r.year)));
     yearSet.add(y);
     countsByKw[r.keyword][y] = (countsByKw[r.keyword][y] || 0) + 1;
+    totalMatched++;
   }
   const years = Array.from(yearSet).map(y=>+y).sort((a,b)=>a-b);
+  console.log(`buildCounts for ${selectedCountry}: total=${hitsRows.length}, countryMatched=${totalCountryMatched}, keywordMatched=${totalKeywordMatched}, final=${totalMatched}, years=${years.join(',')}`);
   return { years, countsByKw };
 }
 
@@ -184,17 +213,20 @@ async function initKeywordViz() {
   const idToCountry = {};
   for (const r of speechesCsv.rows) {
     // header names: id,country,...
-    const sid = r['id'] ?? r['"id"'] ?? r['ID'] ?? r[Object.keys(r)[0]];
-    const country = r['country'] ?? r['"country"'] ?? r['Country'] ?? r[Object.keys(r)[1]];
+    const sid = (r['id'] ?? r['"id"'] ?? r['ID'] ?? r[Object.keys(r)[0]] ?? '').trim();
+    const country = (r['country'] ?? r['"country"'] ?? r['Country'] ?? r[Object.keys(r)[1]] ?? '').trim();
     if (sid) idToCountry[sid] = country;
   }
+  console.log(`idToCountry map size: ${Object.keys(idToCountry).length}, sample entries:`, Object.entries(idToCountry).slice(0, 5));
+  console.log(`speechesCsv header:`, speechesCsv.header);
+  console.log(`speechesCsv first row:`, speechesCsv.rows[0]);
 
   // normalize hits rows: ensure we have id,keyword,year keys
   const hits = hitsCsv.rows.map(r => {
     const keys = Object.keys(r);
-    const id = r['id'] ?? r[keys[0]];
-    const keyword = r['keyword'] ?? r[keys[1]];
-    const year = r['year'] ?? r[keys[2]];
+    const id = (r['id'] ?? r[keys[0]] ?? '').trim();
+    const keyword = (r['keyword'] ?? r[keys[1]] ?? '').trim();
+    const year = (r['year'] ?? r[keys[2]] ?? '').trim();
     return { id: String(id), keyword: String(keyword), year: year };
   });
 
@@ -225,9 +257,10 @@ async function initKeywordViz() {
   // auto-update when any keyword checkbox changes
   document.getElementById('keywords-list').addEventListener('change', refresh);
 
-  // initial helpful selection: select top 6 keywords (first ones)
+  // initial helpful selection: all continents checked
   const boxes = Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]'));
-  boxes.slice(0,6).forEach(cb => cb.checked = true);
+  const continentIds = ['1', '2', '3', '4', '5']; // Asia, Africa, North America, South America, Europe
+  boxes.filter(b => continentIds.includes(b.value)).forEach(cb => cb.checked = true);
   refresh();
 }
 

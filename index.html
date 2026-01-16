@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geopolitical Speech Lab - Insights</title>
+  <title>Geopolitical Speech Lab</title>
 
   <link rel="stylesheet" href="style.css" />
 
@@ -21,220 +21,102 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="insights.html">Insights</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="insights.html">Insights</a></li>
         <li><a href="alldata.html">Data</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="our-team/index.html">The Team</a></li>
+        <li><a href="our-team/">The Team</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="main-content">
-    <h1>Insights</h1>
-
-<!-- Keyword-per-year visualization tool -->
-<section class="chart-section">
-  <div class="chart-card viz-card">
-    <h2>Speeches Containing Selected Keywords (per year)</h2>
-    <div class="viz-container">
-      <div id="kw-chart" class="plotly-chart"></div>
-
-      <aside class="viz-controls">
-        <div class="control-row">
-          <label for="country-select"><strong>Country</strong></label>
-          <select id="country-select" class="dropdown">
-            <option value="China">China</option>
-            <option value="Russia">Russia</option>
-          </select>
-        </div>
-
-        <div class="control-row">
-          <label><strong>Keywords</strong></label>
-          <div id="keywords-list" class="keywords-list"></div>
-        </div>
-
-        <div class="control-row">
-          <button id="update-btn" class="dropdown">Update chart</button>
-        </div>
-        <div style="font-size:.85rem;color:#cfe9ff;margin-top:10px">
-          Data: data/speech_keyword_hits.csv, data/keywords.csv, data/speeches_processed.csv
-        </div>
-      </aside>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg-wrap" aria-hidden="true">
+      <img src="Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg">
+      <div class="hero-overlay"></div>
     </div>
-  </div>
-</section>
 
-<script>
-/* Small CSV parser that respects quoted fields */
-function splitCSVLine(line) {
-  const parts = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
-  return parts.map(s => {
-    s = s.trim();
-    if (s.startsWith('"') && s.endsWith('"')) s = s.slice(1, -1);
-    return s.replace(/\r$/, '');
-  });
-}
+    <div class="hero-inner">
+      <h1 class="hero-title">What governments say—and don’t say—matters.</h1>
+      <h3 class="hero-desc">
+        We turn official speeches from the U.S., China, and Russia into searchable data and visual insights—so you can track keywords,
+        entities, and narrative shifts over time.
+      </h3>
 
-async function loadCSV(url) {
-  const txt = await fetch(url).then(r => r.text());
-  const lines = txt.split(/\r?\n/).filter(l => l.trim() !== '');
-  const header = splitCSVLine(lines[0]);
-  const rows = lines.slice(1).map(l => {
-    const cols = splitCSVLine(l);
-    const obj = {};
-    for (let i = 0; i < header.length; i++) obj[header[i]] = cols[i] ?? '';
-    return obj;
-  });
-  return { header, rows };
-}
+      <div class="hero-ctas">
+        <a class="btn primary" href="insights.html">Explore Insights →</a>
+        <a class="btn ghost" href="alldata.html">See the Data →</a>
+      </div>
+    </div>
+  </header>
 
-function uniqSorted(arr) {
-  return Array.from(new Set(arr)).sort((a,b) => +a - +b);
-}
+  <!-- Overview Cards -->
+  <section class="landing-cards" id="overview">
+    <div class="section-header">
+      <h2>At a Glance</h2>
+      <p class="muted">Quick facts about what’s inside the corpus.</p>
+    </div>
 
-function createKeywordsCheckboxes(keywordMap) {
-  const container = document.getElementById('keywords-list');
-  container.innerHTML = '';
-  // render as checkboxes
-  Object.entries(keywordMap).forEach(([id, label]) => {
-    const idSafe = 'kw_' + id;
-    const row = document.createElement('div');
-    row.style.marginBottom = '6px';
-    const cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.id = idSafe;
-    cb.value = id;
-    cb.checked = false;
-    const lab = document.createElement('label');
-    lab.htmlFor = idSafe;
-    lab.style.marginLeft = '6px';
-    lab.textContent = label;
-    row.appendChild(cb);
-    row.appendChild(lab);
-    container.appendChild(row);
-  });
-}
+    <div class="glance-grid">
+      <div class="glance-card">
+        <div class="glance-number">3</div>
+        <div class="glance-label">Regions</div>
+        <div class="glance-sub">China · Russia · United States</div>
+      </div>
 
-function getSelectedKeywordIds() {
-  return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
-}
+      <div class="glance-card">
+        <div class="glance-number">2005–2025</div>
+        <div class="glance-label">Coverage</div>
+        <div class="glance-sub">Two decades of official rhetoric</div>
+      </div>
 
-function buildCounts(hitsRows, idToCountry, selectedCountry, selectedKeywordIds) {
-  // hitsRows: {id,keyword,year}
-  const yearSet = new Set();
-  const countsByKw = {};
-  selectedKeywordIds.forEach(k => countsByKw[k] = {});
-  for (const r of hitsRows) {
-    const sid = r.id;
-    const country = idToCountry[sid];
-    if (!country) continue;
-    if (country !== selectedCountry) continue;
-    if (!selectedKeywordIds.includes(r.keyword)) continue;
-    const y = String(r.year).replace('.0','');
-    yearSet.add(y);
-    countsByKw[r.keyword][y] = (countsByKw[r.keyword][y] || 0) + 1;
-  }
-  const years = Array.from(yearSet).map(y=>+y).sort((a,b)=>a-b);
-  return { years, countsByKw };
-}
+      <a class="glance-card glance-card-link" href="china-data.html#sources" aria-label="See speech sources">
+        <div class="glance-number">1,000+</div>
+        <div class="glance-label">Speeches</div>
+        <div class="glance-sub tooltip">
+          Hover to see sources
+          <span class="tooltip-text">
+            Sources: official government archives.<br/>
+            Click to view links.
+          </span>
+        </div>
+      </a>
+    </div>
 
-function drawPlot(years, countsByKw, keywordMap) {
-  const traces = Object.keys(countsByKw).map(kid => {
-    const counts = years.map(y => countsByKw[kid][String(y)] || 0);
-    return {
-      x: years,
-      y: counts,
-      mode: 'lines+markers',
-      name: keywordMap[kid] || kid,
-      line: { width: 2 },
-      marker: { size: 6 }
-    };
-  });
-  const layout = {
-    title: 'Number of speeches per year containing selected keywords',
-    xaxis: { title: 'Year' },
-    yaxis: { title: 'Number of speeches' },
-    hovermode: 'x unified',
-    margin: { b: 50, l: 60, r: 20, t: 60 },
-    legend: { orientation: 'v', xanchor: 'left', x: 1.02 },
-    autosize: true
-  };
-  Plotly.react('kw-chart', traces, layout, { responsive: true });
-}
+    <div class="info-card" id="why-language-matters">
+      <h2>Why language matters</h2>
+      <p>
+        Governments communicate strategy not only through actions, but through words. Official speeches reveal how states
+        frame power, security, and legitimacy—yet these signals are often buried in long texts and scattered across sources.
+      </p>
+    </div>
 
-async function initKeywordViz() {
-  const [hitsCsv, kwCsv, speechesCsv] = await Promise.all([
-    loadCSV('data/speech_keyword_hits.csv'),
-    loadCSV('data/keywords.csv'),
-    loadCSV('data/speeches_processed.csv')
-  ]);
+    <div class="info-card" id="what-this-does">
+      <h2>What this platform does</h2>
+      <p>
+        Geopolitical Speech Lab brings together over 1,000 official speeches from Russia, China, and the United States
+        (2005–2025) and turns them into searchable, structured data. The platform enables users to track keywords, entities,
+        and narrative shifts over time.
+      </p>
+    </div>
 
-  // build keyword map: keywords.csv has header like "",x  or first column is id
-  const keywordMap = {};
-  for (const r of kwCsv.rows) {
-    // some files have header names ambiguous; try to pick id by the first header column
-    const keys = Object.keys(r);
-    const id = r[keys[0]];
-    const label = r[keys[1]] || r[keys[0]];
-    if (id) keywordMap[id] = label;
-  }
+    <div class="info-card" id="how-to-use">
+      <h2>How to use it</h2>
+      <p>
+        Explore high-level insights or examine the data directly to form your own conclusions. The project aims to make
+        great-power rhetoric easier to analyze, compare, and understand.
+      </p>
 
-  // build id -> country map from speeches_processed.csv (id column and country column)
-  const idToCountry = {};
-  for (const r of speechesCsv.rows) {
-    // header names: id,country,...
-    const sid = r['id'] ?? r['"id"'] ?? r['ID'] ?? r[Object.keys(r)[0]];
-    const country = r['country'] ?? r['"country"'] ?? r['Country'] ?? r[Object.keys(r)[1]];
-    if (sid) idToCountry[sid] = country;
-  }
+      <div class="cta-row">
+        <a class="cta-btn" href="insights.html">Explore Insights</a>
+        <a class="cta-btn ghost" href="alldata.html">Go to Data</a>
+      </div>
+    </div>
+  </section>
 
-  // normalize hits rows: ensure we have id,keyword,year keys
-  const hits = hitsCsv.rows.map(r => {
-    const keys = Object.keys(r);
-    const id = r['id'] ?? r[keys[0]];
-    const keyword = r['keyword'] ?? r[keys[1]];
-    const year = r['year'] ?? r[keys[2]];
-    return { id: String(id), keyword: String(keyword), year: year };
-  });
-
-  createKeywordsCheckboxes(keywordMap);
-
-  const countrySelect = document.getElementById('country-select');
-  const updateBtn = document.getElementById('update-btn');
-
-  function refresh() {
-    const country = countrySelect.value;
-    const selectedKs = getSelectedKeywordIds();
-    if (selectedKs.length === 0) {
-      // draw empty chart
-      Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords to show trend</div>';
-      return;
-    }
-    const { years, countsByKw } = buildCounts(hits, idToCountry, country, selectedKs);
-    if (years.length === 0) {
-      Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
-      return;
-    }
-    drawPlot(years, countsByKw, keywordMap);
-  }
-
-  updateBtn.addEventListener('click', refresh);
-  // handy: update when country changes
-  countrySelect.addEventListener('change', refresh);
-  // auto-update when any keyword checkbox changes
-  document.getElementById('keywords-list').addEventListener('change', refresh);
-
-  // initial helpful selection: select top 6 keywords (first ones)
-  const boxes = Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]'));
-  boxes.slice(0,6).forEach(cb => cb.checked = true);
-  refresh();
-}
-
-window.addEventListener('load', initKeywordViz);
-</script>
+  <!-- Dataset Section -->
  
+
 </body>
 </html>

@@ -57,9 +57,6 @@
           <div id="keywords-list" class="keywords-list"></div>
         </div>
 
-        <div class="control-row">
-          <button id="update-btn" class="dropdown">Update chart</button>
-        </div>
         <div style="font-size:.85rem;color:#cfe9ff;margin-top:10px">
           Data: data/speech_keyword_hits.csv, data/keywords.csv, data/speeches_processed.csv
         </div>
@@ -81,7 +78,29 @@ function splitCSVLine(line) {
 
 async function loadCSV(url) {
   const txt = await fetch(url).then(r => r.text());
-  const lines = txt.split(/\r?\n/).filter(l => l.trim() !== '');
+  
+  // Proper CSV parser that respects quoted fields with newlines
+  const lines = [];
+  let currentLine = '';
+  let inQuotes = false;
+  
+  for (let i = 0; i < txt.length; i++) {
+    const char = txt[i];
+    const nextChar = txt[i + 1];
+    
+    if (char === '"') {
+      inQuotes = !inQuotes;
+      currentLine += char;
+    } else if ((char === '\n' || char === '\r') && !inQuotes) {
+      if (currentLine.trim()) lines.push(currentLine);
+      currentLine = '';
+      if (char === '\r' && nextChar === '\n') i++; // skip \r\n
+    } else {
+      currentLine += char;
+    }
+  }
+  if (currentLine.trim()) lines.push(currentLine);
+  
   const header = splitCSVLine(lines[0]);
   const rows = lines.slice(1).map(l => {
     const cols = splitCSVLine(l);
@@ -128,17 +147,24 @@ function buildCounts(hitsRows, idToCountry, selectedCountry, selectedKeywordIds)
   const yearSet = new Set();
   const countsByKw = {};
   selectedKeywordIds.forEach(k => countsByKw[k] = {});
+  
+  let totalMatched = 0, totalCountryMatched = 0, totalKeywordMatched = 0;
+  
   for (const r of hitsRows) {
     const sid = r.id;
     const country = idToCountry[sid];
     if (!country) continue;
+    totalCountryMatched++;
     if (country !== selectedCountry) continue;
     if (!selectedKeywordIds.includes(r.keyword)) continue;
-    const y = String(r.year).replace('.0','');
+    totalKeywordMatched++;
+    const y = String(Math.floor(parseFloat(r.year)));
     yearSet.add(y);
     countsByKw[r.keyword][y] = (countsByKw[r.keyword][y] || 0) + 1;
+    totalMatched++;
   }
   const years = Array.from(yearSet).map(y=>+y).sort((a,b)=>a-b);
+  console.log(`buildCounts for ${selectedCountry}: total=${hitsRows.length}, countryMatched=${totalCountryMatched}, keywordMatched=${totalKeywordMatched}, final=${totalMatched}, years=${years.join(',')}`);
   return { years, countsByKw };
 }
 
@@ -187,24 +213,26 @@ async function initKeywordViz() {
   const idToCountry = {};
   for (const r of speechesCsv.rows) {
     // header names: id,country,...
-    const sid = r['id'] ?? r['"id"'] ?? r['ID'] ?? r[Object.keys(r)[0]];
-    const country = r['country'] ?? r['"country"'] ?? r['Country'] ?? r[Object.keys(r)[1]];
+    const sid = (r['id'] ?? r['"id"'] ?? r['ID'] ?? r[Object.keys(r)[0]] ?? '').trim();
+    const country = (r['country'] ?? r['"country"'] ?? r['Country'] ?? r[Object.keys(r)[1]] ?? '').trim();
     if (sid) idToCountry[sid] = country;
   }
+  console.log(`idToCountry map size: ${Object.keys(idToCountry).length}, sample entries:`, Object.entries(idToCountry).slice(0, 5));
+  console.log(`speechesCsv header:`, speechesCsv.header);
+  console.log(`speechesCsv first row:`, speechesCsv.rows[0]);
 
   // normalize hits rows: ensure we have id,keyword,year keys
   const hits = hitsCsv.rows.map(r => {
     const keys = Object.keys(r);
-    const id = r['id'] ?? r[keys[0]];
-    const keyword = r['keyword'] ?? r[keys[1]];
-    const year = r['year'] ?? r[keys[2]];
+    const id = (r['id'] ?? r[keys[0]] ?? '').trim();
+    const keyword = (r['keyword'] ?? r[keys[1]] ?? '').trim();
+    const year = (r['year'] ?? r[keys[2]] ?? '').trim();
     return { id: String(id), keyword: String(keyword), year: year };
   });
 
   createKeywordsCheckboxes(keywordMap);
 
   const countrySelect = document.getElementById('country-select');
-  const updateBtn = document.getElementById('update-btn');
 
   function refresh() {
     const country = countrySelect.value;
@@ -212,107 +240,32 @@ async function initKeywordViz() {
     if (selectedKs.length === 0) {
       // draw empty chart
       Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style=\"color:#cfe9ff;padding:20px\">Select one or more keywords to show trend</div>';
+      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords to show trend</div>';
       return;
     }
     const { years, countsByKw } = buildCounts(hits, idToCountry, country, selectedKs);
     if (years.length === 0) {
       Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style=\"color:#cfe9ff;padding:20px\">No data for this selection</div>';
+      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
       return;
     }
     drawPlot(years, countsByKw, keywordMap);
   }
 
-  updateBtn.addEventListener('click', refresh);
   // handy: update when country changes
   countrySelect.addEventListener('change', refresh);
+  // auto-update when any keyword checkbox changes
+  document.getElementById('keywords-list').addEventListener('change', refresh);
 
-  // initial helpful selection: select top 6 keywords (first ones)
+  // initial helpful selection: all continents checked
   const boxes = Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]'));
-  boxes.slice(0,6).forEach(cb => cb.checked = true);
+  const continentIds = ['1', '2', '3', '4', '5']; // Asia, Africa, North America, South America, Europe
+  boxes.filter(b => continentIds.includes(b.value)).forEach(cb => cb.checked = true);
   refresh();
 }
 
 window.addEventListener('load', initKeywordViz);
 </script>
-
-<style>
-.viz-container { display:flex; gap:20px; align-items:flex-start; justify-content:center; flex-wrap:wrap; }
-#kw-chart { flex: 1 1 720px; min-width:420px; height:520px; }
-.viz-controls { width:300px; background:rgba(10,14,26,0.3); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.06); }
-.viz-controls .control-row { margin-bottom:12px; }
-.keywords-list { max-height:380px; overflow:auto; padding:6px; border-radius:6px; border:1px solid rgba(255,255,255,0.04); background: rgba(0,0,0,0.06); }
-.viz-card { display:block; }\n</style>
-
-  <style>
-    .main-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .main-content h1 {
-      color: #8fd3ff;
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-
-    .chart-section {
-      margin-bottom: 50px;
-    }
-
-    .chart-card {
-      background: rgba(26, 31, 58, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 8px 20px rgba(2, 6, 23, 0.3);
-    }
-
-    .chart-card h2 {
-      color: #8fd3ff;
-      margin: 0 0 20px 0;
-      font-size: 1.3rem;
-    }
-
-    .controls {
-      margin-bottom: 20px;
-    }
-
-    .dropdown {
-      padding: 8px 12px;
-      border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(47, 156, 255, 0.1);
-      color: #cfe9ff;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    .dropdown:hover {
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .dropdown option {
-      background: #0a0e1a;
-      color: #cfe9ff;
-    }
-
-    .plotly-chart {
-      width: 100%;
-      height: 400px;
-    }
-
-    @media (max-width: 900px) {
-      .main-content {
-        padding: 20px 15px;
-      }
-
-      .plotly-chart {
-        height: 300px;
-      }
-    }
-  </style>
+ 
 </body>
 </html>

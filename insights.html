@@ -45,11 +45,17 @@
 
       <aside class="viz-controls">
         <div class="control-row">
-          <label for="country-select"><strong>Country</strong></label>
-          <select id="country-select" class="dropdown">
-            <option value="China">China</option>
-            <option value="Russia">Russia</option>
-          </select>
+          <label><strong>Countries</strong></label>
+          <div style="display:flex;gap:15px;margin-bottom:12px">
+            <div>
+              <input type="checkbox" id="country-china" value="China" checked>
+              <label for="country-china" style="margin-left:6px">China</label>
+            </div>
+            <div>
+              <input type="checkbox" id="country-russia" value="Russia">
+              <label for="country-russia" style="margin-left:6px">Russia</label>
+            </div>
+          </div>
         </div>
 
         <div class="control-row">
@@ -96,35 +102,53 @@ function getSelectedKeywordIds() {
   return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
 }
 
-function buildCounts(countRows, idToCountry, selectedCountry, selectedKeywordIds) {
+function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
   // countRows: {year, keyword, country, count}
   const yearSet = new Set();
-  const countsByKw = {};
-  selectedKeywordIds.forEach(k => countsByKw[k] = {});
+  const countsByKwAndCountry = {}; // {keyword: {country: {year: count}}}
+  
+  selectedKeywordIds.forEach(k => {
+    countsByKwAndCountry[k] = {};
+    selectedCountries.forEach(c => {
+      countsByKwAndCountry[k][c] = {};
+    });
+  });
   
   for (const r of countRows) {
-    if (r.country !== selectedCountry) continue;
+    if (!selectedCountries.includes(r.country)) continue;
     if (!selectedKeywordIds.includes(r.keyword)) continue;
     const y = String(Math.floor(parseFloat(r.year)));
     yearSet.add(y);
-    countsByKw[r.keyword][y] = (countsByKw[r.keyword][y] || 0) + r.count;
+    if (!countsByKwAndCountry[r.keyword][r.country][y]) {
+      countsByKwAndCountry[r.keyword][r.country][y] = 0;
+    }
+    countsByKwAndCountry[r.keyword][r.country][y] += r.count;
   }
+  
   const years = Array.from(yearSet).map(y=>+y).sort((a,b)=>a-b);
-  return { years, countsByKw };
+  return { years, countsByKwAndCountry };
 }
 
-function drawPlot(years, countsByKw, keywordMap) {
-  const traces = Object.keys(countsByKw).map(kid => {
-    const counts = years.map(y => countsByKw[kid][String(y)] || 0);
-    return {
-      x: years,
-      y: counts,
-      mode: 'lines+markers',
-      name: keywordMap[kid] || kid,
-      line: { width: 2 },
-      marker: { size: 6 }
-    };
+function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries) {
+  const traces = [];
+  const colors = { 'China': '#EF553B', 'Russia': '#636EFA' };
+  
+  Object.keys(countsByKwAndCountry).forEach(kid => {
+    selectedCountries.forEach(country => {
+      const counts = years.map(y => countsByKwAndCountry[kid][country][String(y)] || 0);
+      traces.push({
+        x: years,
+        y: counts,
+        mode: 'lines+markers',
+        name: `${keywordMap[kid]} (${country})`,
+        line: { width: 2 },
+        marker: { size: 6 },
+        legendgroup: kid,
+        legendgrouptitle: { text: keywordMap[kid] }
+      });
+    });
   });
+  
   const layout = {
     title: 'Number of speeches per year containing selected keywords',
     xaxis: { title: 'Year' },
@@ -141,33 +165,33 @@ async function initKeywordViz() {
   const cache = await loadCache('data/viz_cache.json');
 
   const keywordMap = cache.keywords;
-  const idToCountry = cache.id_country;
   const countRows = cache.counts;
 
   createKeywordsCheckboxes(keywordMap);
 
-  const countrySelect = document.getElementById('country-select');
-
   function refresh() {
-    const country = countrySelect.value;
+    const selectedCountries = [];
+    if (document.getElementById('country-china').checked) selectedCountries.push('China');
+    if (document.getElementById('country-russia').checked) selectedCountries.push('Russia');
+    
     const selectedKs = getSelectedKeywordIds();
-    if (selectedKs.length === 0) {
-      // draw empty chart
+    if (selectedKs.length === 0 || selectedCountries.length === 0) {
       Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords to show trend</div>';
+      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords and countries to show trend</div>';
       return;
     }
-    const { years, countsByKw } = buildCounts(countRows, idToCountry, country, selectedKs);
+    const { years, countsByKwAndCountry } = buildCounts(countRows, selectedCountries, selectedKs);
     if (years.length === 0) {
       Plotly.purge('kw-chart');
       document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
       return;
     }
-    drawPlot(years, countsByKw, keywordMap);
+    drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries);
   }
 
-  // handy: update when country changes
-  countrySelect.addEventListener('change', refresh);
+  // update when country checkboxes change
+  document.getElementById('country-china').addEventListener('change', refresh);
+  document.getElementById('country-russia').addEventListener('change', refresh);
   // auto-update when any keyword checkbox changes
   document.getElementById('keywords-list').addEventListener('change', refresh);
 

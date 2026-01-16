@@ -13,9 +13,9 @@ OUT_COUNTS = "keyword_year_counts.csv"
 # ----------------------------
 def load_keywords(path: str) -> list[str]:
     kdf = pd.read_csv(path)
-    col = "keyword" if "keyword" in kdf.columns else kdf.columns[0]
+    # Load the 'keyword' column (second column, the actual keywords)
     return (
-        kdf[col]
+        kdf["keyword"]
         .astype(str)
         .str.strip()
         .replace({"": pd.NA, "nan": pd.NA})
@@ -93,32 +93,48 @@ import json
 # Build id -> country map
 id_country = df[["id", "country"]].drop_duplicates().set_index("id")["country"].to_dict()
 
-# Build aggregated year/keyword/country counts
-agg = (
-    hits_df
-    .merge(df[["id", "country"]], on="id", how="left")
-    .groupby(["year", "keyword", "country"])["id"]
-    .nunique()
-    .reset_index(name="count")
-)
-
-# Build keyword ID map from keywords.csv
+# Load keyword ID mapping from keywords.csv
 kdf = pd.read_csv(KEYWORDS_PATH)
+kw_name_to_id = {}
 keyword_ids = {}
 for _, row in kdf.iterrows():
     kid = str(row.iloc[0]).strip()
     klabel = str(row.iloc[1]).strip()
     if kid and klabel and kid != "":
+        kw_name_to_id[klabel] = kid
         keyword_ids[kid] = klabel
 
+# Convert keyword names to IDs in hits_df
+hits_df["keyword_id"] = hits_df["keyword"].map(kw_name_to_id)
+
+# Drop rows where keyword wasn't found in mapping
+hits_df = hits_df.dropna(subset=["keyword_id"])
+
+# Merge with country info
+merged = hits_df.merge(df[["id", "country"]], on="id", how="left")
+
+# Build aggregated year/keyword/country counts
+agg = (
+    merged
+    .groupby(["year", "keyword_id", "country"])["id"]
+    .nunique()
+    .reset_index(name="count")
+)
+agg["keyword"] = agg["keyword_id"]
+
+# Prepare cache data
+id_country_dict = {str(k): v for k, v in id_country.items()}
+counts_list = agg[["year", "keyword", "country", "count"]].to_dict("records")
+
+print(f"id_country size: {len(id_country_dict)}")
+print(f"keywords size: {len(keyword_ids)}")
+print(f"counts size: {len(counts_list)}")
+
 cache = {
-    "id_country": {str(k): v for k, v in id_country.items()},
+    "id_country": id_country_dict,
     "keywords": keyword_ids,
-    "counts": agg.to_dict("records")
+    "counts": counts_list
 }
 
 with open("viz_cache.json", "w") as f:
-    json.dump(cache, f)
-
-with open("viz_cache.json", "w") as f:
-    json.dump(cache, f)
+    json.dump(cache, f, indent=2)

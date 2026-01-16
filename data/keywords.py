@@ -83,3 +83,42 @@ counts = (
     .reset_index(name="speech_count")
 )
 counts.to_csv(OUT_COUNTS, index=False)
+# Add this at the end of keywords.py (after the existing outputs)
+
+# ---
+# Create lightweight JSON cache for web visualization
+# ---
+import json
+
+# Build id -> country map
+id_country = df[["id", "country"]].drop_duplicates().set_index("id")["country"].to_dict()
+
+# Build aggregated year/keyword/country counts
+agg = (
+    hits_df
+    .merge(df[["id", "country"]], on="id", how="left")
+    .groupby(["year", "keyword", "country"])["id"]
+    .nunique()
+    .reset_index(name="count")
+)
+
+# Build keyword ID map from keywords.csv
+kdf = pd.read_csv(KEYWORDS_PATH)
+keyword_ids = {}
+for _, row in kdf.iterrows():
+    kid = str(row.iloc[0]).strip()
+    klabel = str(row.iloc[1]).strip()
+    if kid and klabel and kid != "":
+        keyword_ids[kid] = klabel
+
+cache = {
+    "id_country": {str(k): v for k, v in id_country.items()},
+    "keywords": keyword_ids,
+    "counts": agg.to_dict("records")
+}
+
+with open("viz_cache.json", "w") as f:
+    json.dump(cache, f)
+
+with open("viz_cache.json", "w") as f:
+    json.dump(cache, f)

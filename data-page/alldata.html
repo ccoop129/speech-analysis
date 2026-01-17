@@ -26,58 +26,118 @@
         </nav>
     </header>
 
-        <section style="max-width: 800px; margin: 40px auto 32px auto; text-align: center;">
-            <h1 style="color: #2f9cff; font-size: 2.3rem; margin-bottom: 10px;"><a href="index.html" style="color: #2f9cff; text-decoration: none;">Data</a></h1>
+        <section class="data-page-header">
+            <h1 class="data-page-title"><a href="index.html">Data</a></h1>
         </section>
 
-        <div class="team-member">
-            <h2>About Our Data</h2>
+        <div class="team-member data-overview">
+            <h2>Our Data</h2>
             <p> Our data includes speeches and public appearances from the Ministry of Foreign Affairs of the People's Republic of China and Russian Federation. Our dataset spans from 2005 to 2025, depending on the country, and provides coverage of major and minor diplomatic statements and addresses.</p>
             
-            <h3 style="color: #ffffff; margin-top: 20px; margin-bottom: 15px; font-size: 1.3em; font-weight: 600;">What You'll Find</h3>
-            <p>Our platform provides tools to explore:</p>
-            <ul>
-                <li><strong>Keywords and Terms:</strong> The most frequently used concepts in diplomatic speeches</li>
-                <li><strong>Named Entities:</strong> Countries, organizations, and key figures mentioned across speeches</li>
-                <li><strong>Temporal Trends:</strong> How language and emphasis have evolved over time</li>
-                <li><strong>Comparative Analysis:</strong> Differences in messaging across countries and leaders</li>
-                <li><strong>Source Documents:</strong> Full text and context for every speech in our collection</li>
-            </ul>
+            <h3>Data Preview</h3>
+            <div class="data-preview-container">
+                <table class="data-preview-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Country</th>
+                            <th>Title</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>China</td>
+                            <td>Carrying Forward the Spirit of the Beijing World Conference on Women and Promoting the New and Accelerated Process for Women's All-Round Development</td>
+                            <td>2025-10-13</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>China</td>
+                            <td>Remarks at the Reception Marking the 76th Anniversary of the Founding of the People's Republic of China</td>
+                            <td>2025-09-30</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>China</td>
+                            <td>Statement by Chinese Premier Li Qiang at the General Debate of the 80th Session of the United Nations General Assembly</td>
+                            <td>2025-09-27</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>China</td>
+                            <td>Honoring Commitments with Concrete Actions and Jointly Writing a New Chapter in Global Climate Governance</td>
+                            <td>2025-09-25</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>China</td>
+                            <td>AI+ International Cooperation Initiative</td>
+                            <td>2025-09-24</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
         </div>
 
-        <header class="hero">
-            <div class="hero-bg-wrap" aria-hidden="true">
-                <!-- Place an appropriately licensed photo at images/xi_speech.jpg -->
-                <img src="../Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="hero-inner">
-                <div class="hero-eyebrow"></div>
-                <h1 class="hero-title">Understand China in its own words.</h1>
-                <h3 class="hero-desc">Governments choose their words carefully. Learn the words, places, and topics that shape Chinese foreign policy.</h3>
+        <div class="hero-container">
+            <header class="hero hero-card">
+                <div class="hero-bg-wrap" aria-hidden="true">
+                    <!-- Place an appropriately licensed photo at images/xi_speech.jpg -->
+                    <img src="../Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-inner">
+                    <div class="hero-eyebrow"></div>
+                    <h1 class="hero-title">Understand China in its own words.</h1>
+                    <h3 class="hero-desc">Governments choose their words carefully. Learn the words, places, and topics that shape Chinese foreign policy.</h3>
 
-                <div class="hero-ctas">
+                    <div class="hero-downloads">
+                        <a href="../data/china_speeches_processed.csv" class="hero-download-link">Download Our China Data CSV</a>
+                        <a href="../data/china_speeches_processed.json" class="hero-download-link">Download Our China Data JSON</a>
+                    </div>
                 </div>
             </header>
 
-        <header class="hero">
-            <div class="hero-bg-wrap" aria-hidden="true">
-                <img src="LandP.jpg" alt="Sergei Lavrov making a speech" class="hero-bg">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="hero-inner">
-                <div class="hero-eyebrow"></div>
-                <h1 class="hero-title">Russia's Foreign Minister Sergei Lavrov</h1>
-                <h3 class="hero-desc">Understand the strategic messaging and diplomatic priorities of Russian foreign policy through the words of its key spokesperson.</h3>
+            <header class="hero hero-card">
+                <div class="hero-bg-wrap" aria-hidden="true">
+                    <img src="LandP.jpg" alt="Sergei Lavrov making a speech" class="hero-bg">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-inner">
+                    <div class="hero-eyebrow"></div>
+                    <h1 class="hero-title">Russia's Foreign Minister Lavrov</h1>
+                    <h3 class="hero-desc">Understand the strategic messaging and diplomatic priorities of Russian foreign policy through the words of its key spokesperson.</h3>
 
-                <div class="hero-ctas">
+                    <div class="hero-downloads">
+                        <a href="../data/russia_speeches_processed.csv" class="hero-download-link">Download Our Russia Data CSV</a>
+                        <a href="../data/russia_speeches_processed.json" class="hero-download-link">Download Our Russia Data JSON</a>
+                    </div>
                 </div>
             </header>
+
+            <header class="hero hero-card">
+                <div class="hero-bg-wrap" aria-hidden="true">
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-inner">
+                    <div class="hero-eyebrow"></div>
+                    <h1 class="hero-title">The Combined Data Set</h1>
+                    <h3 class="hero-desc">Access our unified database combining diplomatic speeches from China and Russia, spanning 2005-2025. Perfect for comparative analysis of great power rhetoric.</h3>
+
+                    <div class="hero-downloads">
+                        <a href="../data/CH_RU.csv" class="hero-download-link">Download Combined CSV</a>
+                        <a href="../data/CH_RU.json" class="hero-download-link">Download Combined Data JSON</a>
+                    </div>
+                </div>
+            </header>
+        </div>
 
         <div class="team-member">
-            <h2>Download our data</h2>
-            <p>You can download our combined database <a href="data/CH_RU.csv">here</a>.</p>
-            <p> Download our data dictionary and keywords <a href="data/Data_Dictionary_011626.pdf">here</a>.</p>
+            <h2>Download our data dictionary. </h2>
+            <p> Download our data dictionary and keywords <a href="data/Data_Dictionary_011626.pdf" class="data-dictionary-link">here</a>.</p>
         </div>
 
     </body>

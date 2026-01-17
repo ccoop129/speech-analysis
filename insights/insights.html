@@ -6,7 +6,7 @@
   <title>Geopolitical Speech Lab - Insights</title>
 
   <!-- Your single stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 
   <!-- Plotly -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -24,11 +24,11 @@
 
       <!-- Right-side nav -->
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a class="active" href="insights.html">Insights</a></li>
-        <li><a href="alldata.html">Data</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="our-team/index.html">The Team</a></li>
+        <li><a href="../data-page/alldata.html">Data</a></li>
+        <li><a href="../faq/faq.html">FAQ</a></li>
+        <li><a href="../our-team/our-team.html">The Team</a></li>
       </ul>
     </nav>
   </header>
@@ -255,7 +255,7 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
 }
 
 async function initKeywordViz() {
-  const cache = await loadCache('data/viz_cache.json');
+  const cache = await loadCache('../data/viz_cache.json');
 
   const keywordMap = cache.keywords;
   const countRows = cache.counts;

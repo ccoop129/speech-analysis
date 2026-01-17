@@ -13073,5 +13073,182 @@
       "country": "Russia",
       "count": 1
     }
+  ],
+  "total_speeches": [
+    {
+      "year": 2005.0,
+      "country": "China",
+      "total_speeches": 25
+    },
+    {
+      "year": 2006.0,
+      "country": "China",
+      "total_speeches": 36
+    },
+    {
+      "year": 2007.0,
+      "country": "China",
+      "total_speeches": 38
+    },
+    {
+      "year": 2008.0,
+      "country": "China",
+      "total_speeches": 45
+    },
+    {
+      "year": 2009.0,
+      "country": "China",
+      "total_speeches": 52
+    },
+    {
+      "year": 2010.0,
+      "country": "China",
+      "total_speeches": 60
+    },
+    {
+      "year": 2011.0,
+      "country": "China",
+      "total_speeches": 59
+    },
+    {
+      "year": 2012.0,
+      "country": "China",
+      "total_speeches": 71
+    },
+    {
+      "year": 2013.0,
+      "country": "China",
+      "total_speeches": 52
+    },
+    {
+      "year": 2013.0,
+      "country": "Russia",
+      "total_speeches": 176
+    },
+    {
+      "year": 2014.0,
+      "country": "China",
+      "total_speeches": 66
+    },
+    {
+      "year": 2014.0,
+      "country": "Russia",
+      "total_speeches": 257
+    },
+    {
+      "year": 2015.0,
+      "country": "China",
+      "total_speeches": 88
+    },
+    {
+      "year": 2015.0,
+      "country": "Russia",
+      "total_speeches": 228
+    },
+    {
+      "year": 2016.0,
+      "country": "China",
+      "total_speeches": 37
+    },
+    {
+      "year": 2016.0,
+      "country": "Russia",
+      "total_speeches": 229
+    },
+    {
+      "year": 2017.0,
+      "country": "China",
+      "total_speeches": 20
+    },
+    {
+      "year": 2017.0,
+      "country": "Russia",
+      "total_speeches": 338
+    },
+    {
+      "year": 2018.0,
+      "country": "China",
+      "total_speeches": 22
+    },
+    {
+      "year": 2018.0,
+      "country": "Russia",
+      "total_speeches": 309
+    },
+    {
+      "year": 2019.0,
+      "country": "China",
+      "total_speeches": 40
+    },
+    {
+      "year": 2019.0,
+      "country": "Russia",
+      "total_speeches": 367
+    },
+    {
+      "year": 2020.0,
+      "country": "China",
+      "total_speeches": 57
+    },
+    {
+      "year": 2020.0,
+      "country": "Russia",
+      "total_speeches": 149
+    },
+    {
+      "year": 2021.0,
+      "country": "China",
+      "total_speeches": 44
+    },
+    {
+      "year": 2021.0,
+      "country": "Russia",
+      "total_speeches": 182
+    },
+    {
+      "year": 2022.0,
+      "country": "China",
+      "total_speeches": 50
+    },
+    {
+      "year": 2022.0,
+      "country": "Russia",
+      "total_speeches": 166
+    },
+    {
+      "year": 2023.0,
+      "country": "China",
+      "total_speeches": 46
+    },
+    {
+      "year": 2023.0,
+      "country": "Russia",
+      "total_speeches": 230
+    },
+    {
+      "year": 2024.0,
+      "country": "China",
+      "total_speeches": 53
+    },
+    {
+      "year": 2024.0,
+      "country": "Russia",
+      "total_speeches": 253
+    },
+    {
+      "year": 2025.0,
+      "country": "China",
+      "total_speeches": 27
+    },
+    {
+      "year": 2025.0,
+      "country": "Russia",
+      "total_speeches": 319
+    },
+    {
+      "year": 2026.0,
+      "country": "Russia",
+      "total_speeches": 1
+    }
   ]
 }

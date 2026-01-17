@@ -122,18 +122,29 @@ agg = (
 )
 agg["keyword"] = agg["keyword_id"]
 
+# Calculate total unique speeches per year/country
+total_speeches = (
+    df
+    .groupby(["year", "country"])["id"]
+    .nunique()
+    .reset_index(name="total_speeches")
+)
+
 # Prepare cache data
 id_country_dict = {str(k): v for k, v in id_country.items()}
 counts_list = agg[["year", "keyword", "country", "count"]].to_dict("records")
+totals_list = total_speeches.to_dict("records")
 
 print(f"id_country size: {len(id_country_dict)}")
 print(f"keywords size: {len(keyword_ids)}")
 print(f"counts size: {len(counts_list)}")
+print(f"totals size: {len(totals_list)}")
 
 cache = {
     "id_country": id_country_dict,
     "keywords": keyword_ids,
-    "counts": counts_list
+    "counts": counts_list,
+    "total_speeches": totals_list
 }
 
 with open("viz_cache.json", "w") as f:

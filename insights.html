@@ -40,6 +40,10 @@
 <section class="chart-section">
   <div class="chart-card viz-card">
     <h2>Speeches Containing Selected Keywords (per year)</h2>
+    <div style="display:flex;gap:10px;margin-bottom:12px;justify-content:center">
+      <button id="mode-raw-btn" type="button" style="padding:8px 16px;background:#2a3f5f;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">Raw Count</button>
+      <button id="mode-adjusted-btn" type="button" style="padding:8px 16px;background:#3a4a5f;color:#cfe9ff;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s;opacity:0.6">Adjusted* (% of speeches)</button>
+    </div>
     <div class="viz-container">
       <div id="kw-chart" class="plotly-chart"></div>
 
@@ -49,7 +53,7 @@
           <div style="font-size:0.85rem;color:#aaa;margin-bottom:8px">Select one or both</div>
           <div style="display:flex;gap:10px;margin-bottom:12px">
             <button id="country-china-btn" type="button" style="flex:1;padding:8px 12px;background:#2a3f5f;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">China</button>
-            <button id="country-russia-btn" type="button" style="flex:1;padding:8px 12px;background:#3a4a5f;color:#cfe9ff;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">Russia</button>
+            <button id="country-russia-btn" type="button" style="flex:1;padding:8px 12px;background:#3a4a5f;color:#cfe9ff;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">Russia**</button>
           </div>
         </div>
 
@@ -82,16 +86,14 @@
             </details>
           </div>
         </div>
-
-        <div style="font-size:.85rem;color:#cfe9ff;margin-top:10px">
-          Data: data/viz_cache.json
-        </div>
       </aside>
     </div>
     
     <!-- Technical Notes -->
     <div style="padding:12px 14px;background:#1a3a4a;border-left:4px solid #4a9ba7;margin-top:16px;font-size:0.85rem;color:#aee;border-radius:2px">
-      <strong>Data Limitations:</strong> Russia data only available from 2014 onwards. Earlier years (≤2013) contain incomplete records and are excluded from visualizations. Year 2026 excluded from all analyses.
+      <strong>Usage Notes:</strong> 
+      <br>*As Russia's MOFA publishes articles with greater frequency, using the Adjusted button is recommended for comparative analysis. This demonstrates the number of speeches containing the keyword as a a percent of total speeches from that year.</br>
+      <br>**Collection of Russian data begins at 2014.</br>
     </div>
   </div>
 </section>
@@ -201,7 +203,7 @@ function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
   return { years, countsByKwAndCountry };
 }
 
-function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries) {
+function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, totalSpeechesByYearCountry, normalized) {
   const traces = [];
   const colors = { 'China': '#EF553B', 'Russia': '#636EFA' };
   
@@ -209,7 +211,14 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries) {
     selectedCountries.forEach(country => {
       // For Russia, only plot years where it has actual data to avoid gaps
       let xData = years;
-      let yData = years.map(y => countsByKwAndCountry[kid][country][String(y)] || 0);
+      let yData = years.map(y => {
+        let count = countsByKwAndCountry[kid][country][String(y)] || 0;
+        if (normalized && totalSpeechesByYearCountry[country] && totalSpeechesByYearCountry[country][String(y)]) {
+          const total = totalSpeechesByYearCountry[country][String(y)];
+          return total > 0 ? (count / total) * 100 : 0;
+        }
+        return count;
+      });
       
       if (country === 'Russia') {
         // Filter to only include years with data
@@ -234,9 +243,9 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries) {
   });
   
   const layout = {
-    title: 'Number of speeches per year containing selected keywords',
+    title: normalized ? 'Percentage of speeches per year mentioning selected keywords' : 'Number of speeches per year containing selected keywords',
     xaxis: { title: 'Year' },
-    yaxis: { title: 'Number of speeches' },
+    yaxis: { title: normalized ? 'Percentage of speeches (%)' : 'Number of speeches' },
     hovermode: 'x unified',
     margin: { b: 50, l: 60, r: 20, t: 60 },
     legend: { orientation: 'v', xanchor: 'left', x: 1.02 },
@@ -253,11 +262,25 @@ async function initKeywordViz() {
 
   createKeywordsCheckboxes(keywordMap);
 
-  // Track selected countries
+  // Build total speeches per year per country from cache
+  const totalSpeechesByYearCountry = { China: {}, Russia: {} };
+  for (const t of cache.total_speeches) {
+    const year = Math.floor(parseFloat(t.year));
+    if (year === 2026) continue;
+    if (t.country === 'Russia' && year <= 2013) continue;
+    
+    const y = String(year);
+    totalSpeechesByYearCountry[t.country][y] = t.total_speeches;
+  }
+
+  // Track selected countries and mode
   let selectedCountries = { China: true, Russia: false };
+  let normalizedMode = false;
   
   const chinaBtn = document.getElementById('country-china-btn');
   const russiaBtn = document.getElementById('country-russia-btn');
+  const rawBtn = document.getElementById('mode-raw-btn');
+  const adjustedBtn = document.getElementById('mode-adjusted-btn');
   
   function updateButtonStyles() {
     if (selectedCountries.China) {
@@ -279,6 +302,22 @@ async function initKeywordViz() {
       russiaBtn.style.color = '#cfe9ff';
       russiaBtn.style.opacity = '0.6';
     }
+    
+    if (normalizedMode) {
+      rawBtn.style.background = '#3a4a5f';
+      rawBtn.style.color = '#cfe9ff';
+      rawBtn.style.opacity = '0.6';
+      adjustedBtn.style.background = '#2a3f5f';
+      adjustedBtn.style.color = 'white';
+      adjustedBtn.style.opacity = '1';
+    } else {
+      rawBtn.style.background = '#2a3f5f';
+      rawBtn.style.color = 'white';
+      rawBtn.style.opacity = '1';
+      adjustedBtn.style.background = '#3a4a5f';
+      adjustedBtn.style.color = '#cfe9ff';
+      adjustedBtn.style.opacity = '0.6';
+    }
   }
   
   chinaBtn.addEventListener('click', () => {
@@ -289,6 +328,18 @@ async function initKeywordViz() {
   
   russiaBtn.addEventListener('click', () => {
     selectedCountries.Russia = !selectedCountries.Russia;
+    updateButtonStyles();
+    refresh();
+  });
+  
+  rawBtn.addEventListener('click', () => {
+    normalizedMode = false;
+    updateButtonStyles();
+    refresh();
+  });
+  
+  adjustedBtn.addEventListener('click', () => {
+    normalizedMode = true;
     updateButtonStyles();
     refresh();
   });
@@ -310,7 +361,7 @@ async function initKeywordViz() {
       document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
       return;
     }
-    drawPlot(years, countsByKwAndCountry, keywordMap, countriesToShow);
+    drawPlot(years, countsByKwAndCountry, keywordMap, countriesToShow, totalSpeechesByYearCountry, normalizedMode);
   }
 
   // auto-update when any keyword checkbox changes

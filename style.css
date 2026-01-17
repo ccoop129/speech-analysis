@@ -182,11 +182,41 @@ html {
 .data-dictionary-link {
     color: #ffffff !important;
     font-weight: 600;
+    text-decoration: underline;
 }
 
 .data-dictionary-link:hover {
     color: #8fd3ff !important;
     text-decoration: underline;
+}
+
+.data-dictionary-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 22px auto 36px auto;
+    padding: 40px 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(2,6,23,0.5);
+    background: linear-gradient(180deg, rgba(10,14,39,0.6), rgba(10,14,39,0.75));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.data-dictionary-section h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.data-dictionary-section p {
+    margin: 0;
+    color: #c9d6ee;
+    font-size: 0.98rem;
 }
 
 .data-preview-container {

@@ -1,13 +1,11 @@
+<!-- index.html (replace your entire file with this) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geopolitical Speech Lab</title>
-
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Plotly (only include if you actually use it on this page) -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
@@ -39,10 +37,10 @@
 
     <div class="hero-inner">
       <h1 class="hero-title">What governments say—and don’t say—matters.</h1>
-      <h3 class="hero-desc">
-        We turn official speeches from the U.S., China, and Russia into searchable data and visual insights—so you can track keywords,
+      <p class="hero-desc">
+        We turn official speeches from China and Russia into searchable data and visual insights—so you can track keywords,
         entities, and narrative shifts over time.
-      </h3>
+      </p>
 
       <div class="hero-ctas">
         <a class="btn primary" href="insights/insights.html">Explore Insights →</a>
@@ -51,51 +49,72 @@
     </div>
   </header>
 
-  <!-- Overview Cards -->
-  <section class="landing-cards" id="overview">
-    <div class="section-header">
-      <h2>At a Glance</h2>
-      <p class="muted">What’s inside the data?</p>
-    </div>
-
-    <div class="glance-grid">
-      <div class="glance-card">
-        <div class="glance-number">2</div>
-        <div class="glance-label">Nations</div>
-        <div class="glance-sub">People's Republic of China · Russian Federation </div>
+  <!-- At a Glance -->
+  <main>
+    <section class="landing-cards" id="overview">
+      <div class="section-header">
+        <h2>At a Glance</h2>
+        <p class="muted">What’s inside the data?</p>
       </div>
 
-      <div class="glance-card">
-        <div class="glance-number">2005–2025</div>
-        <div class="glance-label">Covered</div>
-        <div class="glance-sub">Two decades of official rhetoric from China. Twelve Years from Russia.</div>
+      <!-- ONE grid: 3 cards on top, 2 cards on bottom -->
+      <div class="glance-grid">
+        <!-- Top row -->
+        <div class="glance-card">
+          <div class="glance-number">Nations</div>
+          <p>People's Republic of China</p>
+          <p>Russian Federation</p>
+        </div>
+
+        <div class="glance-card">
+          <div class="glance-number">Years Covered</div>
+          <p>2005–2025</p>
+        </div>
+
+        <div class="glance-card">
+          <div class="glance-number">Scope</div>
+          <p>
+            This project is scoped to <strong>China and Russia</strong> to enable focused comparative analysis.
+            Other countries are outside the current scope.
+          </p>
+        </div>
+
+        <!-- Bottom row -->
+        <div class="info-card" id="what-this-does">
+          <h2>What this platform does</h2>
+          <p>
+            Geopolitical Speech Lab brings together over 1,000 official speeches from Russia and China (2005–2025) and turns
+            them into searchable, structured data. The platform enables users to track keywords, entities, and narrative shifts over time.
+          </p>
+        </div>
+
+       <div class="info-card" id="how-to-use">
+  <h2>How to use it</h2>
+
+  <p class="howto-intro">Choose how you want to explore:</p>
+
+  <div class="howto-paths">
+    <a href="insights/insights.html" class="howto-item howto-link">
+      <div class="howto-title">Insights tab</div>
+      <div class="howto-desc">
+        Curated insights with interactive tables for guided exploration.
       </div>
+    </a>
 
-    <div class="info-card" id="what-this-does">
-      <h2>What this platform does</h2>
-      <p>
-        Geopolitical Speech Lab brings together over 1,000 official speeches from Russia and China
-        (2005–2025) and turns them into searchable, structured data. The platform enables users to track keywords, entities,
-        and narrative shifts over time.
-      </p>
-    </div>
-
-    <div class="info-card" id="how-to-use">
-      <h2>How to use it</h2>
-      <p>
-        Explore high-level insights or examine the data directly to form your own conclusions. The project aims to make
-        great-power rhetoric easier to analyze, compare, and understand.
-      </p>
-
-      <div class="cta-row">
-        <a class="cta-btn" href="insights/insights.html">Explore Insights</a>
-        <a class="cta-btn ghost" href="data-page/alldata.html">Go to Data</a>
+    <a href="data-page/alldata.html" class="howto-item howto-link">
+      <div class="howto-title">Data tab</div>
+      <div class="howto-desc">
+        Downloadable datasets for further analysis and reuse.
       </div>
-    </div>
-  </section>
+    </a>
+  </div>
+</div>
 
-  <!-- Dataset Section -->
- 
-
+    
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

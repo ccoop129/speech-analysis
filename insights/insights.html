@@ -36,13 +36,84 @@
   <main class="main-content">
     <h1>Insights</h1>
 
+<!-- Dataset Description -->
+<section class="chart-section">
+  <div class="chart-card info-card">
+    <h2>About This Dataset</h2>
+    <p>
+      This tool analyzes speeches from China and Russia to track how geopolitical keywords and themes evolve over time. 
+      The dataset includes official speeches from Chinese government representatives (2005-2025) and Russian Ministry of Foreign Affairs 
+      statements (2014-2025). By visualizing keyword frequency relative to total speech volume, you can identify how great powers 
+      prioritize and discuss key geopolitical issues in response to global events.
+    </p>
+  </div>
+</section>
+
+<!-- Sample Configurations -->
+<section class="chart-section">
+  <h2>Example Explorations</h2>
+  
+  <!-- Sample 1 -->
+  <div class="explorations-grid">
+    <div class="chart-card exploration-card">
+      <h3>Regional Tensions</h3>
+      <p class="exploration-label">
+        <strong>Try selecting:</strong> Taiwan, Hong Kong, Ukraine, and Strategic Stability
+      </p>
+      <p class="exploration-desc">
+        Track how frequently great powers discuss contested territories and strategic concerns. 
+        Notice how mentions spike during specific crises (2019 Hong Kong protests, 2021 Taiwan tensions, 
+        2022 Ukraine invasion). This reveals how international incidents reshape diplomatic discourse.
+      </p>
+    </div>
+    
+    <div class="chart-card exploration-card">
+      <h3>Institutional Focus</h3>
+      <p class="exploration-label">
+        <strong>Try selecting:</strong> UN, ASEAN, Shanghai Cooperation Organization
+      </p>
+      <p class="exploration-desc">
+        Compare how China and Russia reference different international bodies. 
+        Russia's emphasis on the SCO versus China's focus on regional multilateralism reflects 
+        distinct strategic priorities and alliance-building approaches.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sample 2 -->
+  <div class="explorations-grid">
+    <div class="chart-card exploration-card">
+      <h3>Geographic Scope</h3>
+      <p class="exploration-label">
+        <strong>Try selecting:</strong> Asia, Europe, Americas (continents)
+      </p>
+      <p class="exploration-desc">
+        Analyze which regions dominate great power discourse. The relative frequency of regional mentions 
+        indicates where each country concentrates its diplomatic attention and where strategic competition is most intense.
+      </p>
+    </div>
+    
+    <div class="chart-card exploration-card">
+      <h3>Rhetorical Patterns</h3>
+      <p class="exploration-label">
+        <strong>Try selecting:</strong> Sovereignty, Multipolarity, Rules-based order
+      </p>
+      <p class="exploration-desc">
+        Explore how each country frames its policy positions through key rhetorical concepts. 
+        Rising frequency of certain terms reflects shifts in how powers justify their actions 
+        and attempt to shape international narratives.
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- Keyword-per-year visualization tool -->
 <section class="chart-section">
   <div class="chart-card viz-card">
     <h2>Speeches Containing Selected Keywords (per year)</h2>
-    <div style="display:flex;gap:10px;margin-bottom:12px;justify-content:center">
-      <button id="mode-raw-btn" type="button" style="padding:8px 16px;background:#2a3f5f;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">Raw Count</button>
-      <button id="mode-adjusted-btn" type="button" style="padding:8px 16px;background:#3a4a5f;color:#cfe9ff;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s;opacity:0.6">Adjusted* (% of speeches)</button>
+    <div class="mode-buttons">
+      <button id="mode-raw-btn" type="button" class="mode-btn">Raw Count</button>
+      <button id="mode-adjusted-btn" type="button" class="mode-btn inactive">Adjusted* (% of speeches)</button>
     </div>
     <div class="viz-container">
       <div id="kw-chart" class="plotly-chart"></div>
@@ -50,43 +121,43 @@
       <aside class="viz-controls">
         <div class="control-row">
           <label><strong>Countries</strong></label>
-          <div style="font-size:0.85rem;color:#aaa;margin-bottom:8px">Select one or both</div>
-          <div style="display:flex;gap:10px;margin-bottom:12px">
-            <button id="country-china-btn" type="button" style="flex:1;padding:8px 12px;background:#2a3f5f;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">China</button>
-            <button id="country-russia-btn" type="button" style="flex:1;padding:8px 12px;background:#3a4a5f;color:#cfe9ff;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">Russia**</button>
+          <div class="country-label">Select one or both</div>
+          <div class="country-buttons">
+            <button id="country-china-btn" type="button" class="country-btn">China</button>
+            <button id="country-russia-btn" type="button" class="country-btn inactive">Russia**</button>
           </div>
         </div>
 
         <div class="control-row">
           <label><strong>Keywords</strong></label>
           <div id="keywords-list" class="keywords-list">
-            <details style="margin-bottom:12px" open>
-              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Suggested Topics</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
-              <div id="kw-suggested" style="margin-left:12px;margin-top:6px"></div>
+            <details class="details-section" open>
+              <summary class="details-summary"><span>Suggested Topics</span><span class="details-summary-count">(0 selected)</span></summary>
+              <div id="kw-suggested" class="details-content"></div>
             </details>
-            <details style="margin-bottom:12px" open>
-              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Continents</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
-              <div id="kw-continents" style="margin-left:12px;margin-top:6px"></div>
+            <details class="details-section" open>
+              <summary class="details-summary"><span>Continents</span><span class="details-summary-count">(0 selected)</span></summary>
+              <div id="kw-continents" class="details-content"></div>
             </details>
-            <details style="margin-bottom:12px">
-              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Areas/Countries</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
-              <div id="kw-areas" style="margin-left:12px;margin-top:6px"></div>
+            <details class="details-section">
+              <summary class="details-summary"><span>Areas/Countries</span><span class="details-summary-count">(0 selected)</span></summary>
+              <div id="kw-areas" class="details-content"></div>
             </details>
-            <details style="margin-bottom:12px">
-              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>International Organizations</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
-              <div id="kw-organizations" style="margin-left:12px;margin-top:6px"></div>
+            <details class="details-section">
+              <summary class="details-summary"><span>International Organizations</span><span class="details-summary-count">(0 selected)</span></summary>
+              <div id="kw-organizations" class="details-content"></div>
             </details>
-            <details style="margin-bottom:12px">
-              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Topics</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
-              <div id="kw-topics" style="margin-left:12px;margin-top:6px"></div>
+            <details class="details-section">
+              <summary class="details-summary"><span>Topics</span><span class="details-summary-count">(0 selected)</span></summary>
+              <div id="kw-topics" class="details-content"></div>
             </details>
-            <details style="margin-bottom:12px">
-              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Rhetorical Devices</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
-              <div id="kw-rhetorical" style="margin-left:12px;margin-top:6px"></div>
+            <details class="details-section">
+              <summary class="details-summary"><span>Rhetorical Devices</span><span class="details-summary-count">(0 selected)</span></summary>
+              <div id="kw-rhetorical" class="details-content"></div>
             </details>
-            <details style="margin-bottom:12px">
-              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Chinese Concepts</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
-              <div id="kw-chineseConcepts" style="margin-left:12px;margin-top:6px"></div>
+            <details class="details-section">
+              <summary class="details-summary"><span>Chinese Concepts</span><span class="details-summary-count">(0 selected)</span></summary>
+              <div id="kw-chineseConcepts" class="details-content"></div>
             </details>
           </div>
         </div>
@@ -94,7 +165,7 @@
     </div>
     
     <!-- Technical Notes -->
-    <div style="padding:12px 14px;background:#1a3a4a;border-left:4px solid #4a9ba7;margin-top:16px;font-size:0.85rem;color:#aee;border-radius:2px">
+    <div class="usage-notes">
       <strong>Usage Notes:</strong> 
       <br>*As Russia's MOFA publishes articles with greater frequency, using the Adjusted button is recommended for comparative analysis. This demonstrates the number of speeches containing the keyword as a a percent of total speeches from that year.</br>
       <br>**Collection of Russian data begins at 2014.</br>
@@ -102,379 +173,7 @@
   </div>
 </section>
 
-<script>
-async function loadCache(url) {
-  return fetch(url).then(r => r.json());
-}
-
-function parseEventsCsv(csvText) {
-  // Parse CSV and return array of {keyword, year, event}
-  const lines = csvText.trim().split('\n');
-  const events = [];
-  for (let i = 1; i < lines.length; i++) {
-    const line = lines[i];
-    if (!line.trim()) continue;
-    // Simple CSV parsing: "id","keyword","year","event"
-    const matches = line.match(/"[^"]*"|[^,]+/g);
-    if (matches && matches.length >= 4) {
-      const keyword = matches[1].replace(/"/g, '').trim();
-      const year = parseInt(matches[2].replace(/"/g, '').trim());
-      const event = matches[3].replace(/"/g, '').trim();
-      events.push({ keyword, year, event });
-    }
-  }
-  return events;
-}
-
-function createKeywordsCheckboxes(keywordMap, eventLines) {
-  // Define keyword categories by ID
-  const categories = {
-    continents: ['1', '2', '3', '4', '5'],
-    areas: ['42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60'],
-    organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
-    topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
-    rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
-    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
-  };
-
-  // Build suggested topics from event keywords
-  const suggestedKeywords = new Set();
-  eventLines.forEach(evt => {
-    // Find the ID for this keyword
-    Object.entries(keywordMap).forEach(([id, name]) => {
-      if (name === evt.keyword) {
-        suggestedKeywords.add(id);
-      }
-    });
-  });
-  categories.suggested = Array.from(suggestedKeywords);
-
-  function createCheckbox(id, label) {
-    const idSafe = 'kw_' + id;
-    const row = document.createElement('div');
-    row.style.marginBottom = '6px';
-    const cb = document.createElement('input');
-    cb.type = 'checkbox';
-    cb.id = idSafe;
-    cb.value = id;
-    cb.checked = false;
-    const lab = document.createElement('label');
-    lab.htmlFor = idSafe;
-    lab.style.marginLeft = '6px';
-    lab.textContent = label;
-    row.appendChild(cb);
-    row.appendChild(lab);
-    return row;
-  }
-
-  // Populate each category
-  Object.entries(categories).forEach(([catKey, ids]) => {
-    const container = document.getElementById(`kw-${catKey}`);
-    if (!container) return;
-    ids.forEach(id => {
-      if (keywordMap[id]) {
-        container.appendChild(createCheckbox(id, keywordMap[id]));
-      }
-    });
-  });
-}
-
-function getSelectedKeywordIds() {
-  return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
-}
-
-function updateSelectionCounts() {
-  const categories = {
-    suggested: [],  // Will be populated dynamically
-    continents: ['1', '2', '3', '4', '5'],
-    areas: ['42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60'],
-    organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
-    topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
-    rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
-    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
-  };
-
-  Object.entries(categories).forEach(([catKey, ids]) => {
-    const container = document.getElementById(`kw-${catKey}`);
-    if (!container) return;
-    const summary = container.parentElement.querySelector('summary');
-    if (!summary) return;
-    const checked = container.querySelectorAll('input[type=checkbox]:checked').length;
-    const countSpan = summary.querySelector('.count');
-    if (countSpan) {
-      countSpan.textContent = `(${checked} selected)`;
-    }
-  });
-}
-
-function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
-  // countRows: {year, keyword, country, count}
-  const yearSet = new Set();
-  const countsByKwAndCountry = {}; // {keyword: {country: {year: count}}}
-  
-  selectedKeywordIds.forEach(k => {
-    countsByKwAndCountry[k] = {};
-    selectedCountries.forEach(c => {
-      countsByKwAndCountry[k][c] = {};
-    });
-  });
-  
-  for (const r of countRows) {
-    // Exclude 2026 and Russia data from 2013 and earlier
-    const year = Math.floor(parseFloat(r.year));
-    if (year === 2026) continue;
-    if (r.country === 'Russia' && year <= 2013) continue;
-    
-    if (!selectedCountries.includes(r.country)) continue;
-    if (!selectedKeywordIds.includes(r.keyword)) continue;
-    const y = String(year);
-    yearSet.add(y);
-    if (!countsByKwAndCountry[r.keyword][r.country][y]) {
-      countsByKwAndCountry[r.keyword][r.country][y] = 0;
-    }
-    countsByKwAndCountry[r.keyword][r.country][y] += r.count;
-  }
-  
-  const years = Array.from(yearSet).map(y=>+y).sort((a,b)=>a-b);
-  return { years, countsByKwAndCountry };
-}
-
-function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, totalSpeechesByYearCountry, normalized, selectedKeywordIds, eventLines) {
-  const traces = [];
-  const colors = { 'China': '#EF553B', 'Russia': '#636EFA' };
-  
-  Object.keys(countsByKwAndCountry).forEach(kid => {
-    selectedCountries.forEach(country => {
-      // For Russia, only plot years where it has actual data to avoid gaps
-      let xData = years;
-      let yData = years.map(y => {
-        let count = countsByKwAndCountry[kid][country][String(y)] || 0;
-        if (normalized && totalSpeechesByYearCountry[country] && totalSpeechesByYearCountry[country][String(y)]) {
-          const total = totalSpeechesByYearCountry[country][String(y)];
-          return total > 0 ? (count / total) * 100 : 0;
-        }
-        return count;
-      });
-      
-      if (country === 'Russia') {
-        // Filter to only include years with data
-        const dataPoints = years
-          .map((y, i) => ({ year: y, count: yData[i] }))
-          .filter(p => p.count > 0);
-        xData = dataPoints.map(p => p.year);
-        yData = dataPoints.map(p => p.count);
-      }
-      
-      traces.push({
-        x: xData,
-        y: yData,
-        mode: 'lines+markers',
-        name: `${keywordMap[kid]} (${country})`,
-        line: { width: 2 },
-        marker: { size: 6 },
-        legendgroup: kid,
-        legendgrouptitle: { text: keywordMap[kid] }
-      });
-    });
-  });
-  
-  // Build shapes and annotations for event lines
-  const shapes = [];
-  const annotations = [];
-  selectedKeywordIds.forEach(kid => {
-    const keywordText = keywordMap[kid];
-    const matchingEvents = eventLines.filter(e => e.keyword === keywordText);
-    matchingEvents.forEach((evt, eventIndex) => {
-      shapes.push({
-        type: 'line',
-        x0: evt.year,
-        x1: evt.year,
-        y0: 0,
-        y1: 1,
-        yref: 'paper',
-        line: {
-          color: '#888',
-          width: 2,
-          dash: 'dash'
-        }
-      });
-      
-      // Stagger events horizontally to avoid overlap, keep below title
-      let xAnchor = eventIndex % 2 === 0 ? 'left' : 'right';
-      let xOffset = eventIndex % 2 === 0 ? 40 : -40;
-      
-      annotations.push({
-        x: evt.year,
-        y: 0.95,
-        yref: 'paper',
-        xanchor: xAnchor,
-        text: evt.event,
-        showarrow: true,
-        arrowhead: 2,
-        arrowsize: 1,
-        arrowwidth: 1,
-        arrowcolor: '#888',
-        ax: xOffset,
-        ay: -50,
-        bgcolor: '#2a3f5f',
-        bordercolor: '#888',
-        borderwidth: 1,
-        font: { color: '#cfe9ff', size: 11 },
-        align: 'center'
-      });
-    });
-  });
-  
-  const layout = {
-    title: normalized ? 'Percentage of speeches per year mentioning selected keywords' : 'Number of speeches per year containing selected keywords',
-    xaxis: { title: 'Year' },
-    yaxis: { title: normalized ? 'Percentage of speeches (%)' : 'Number of speeches' },
-    hovermode: 'x unified',
-    margin: { b: 50, l: 60, r: 20, t: 140 },
-    legend: { orientation: 'v', xanchor: 'left', x: 1.02 },
-    autosize: true,
-    shapes: shapes,
-    annotations: annotations
-  };
-  Plotly.react('kw-chart', traces, layout, { responsive: true });
-}
-
-async function initKeywordViz() {
-  const cache = await loadCache('../data/viz_cache.json');
-
-  const keywordMap = cache.keywords;
-  const countRows = cache.counts;
-
-  // Load events data
-  const eventsResponse = await fetch('./events.csv').then(r => r.text());
-  const eventLines = parseEventsCsv(eventsResponse);
-
-  createKeywordsCheckboxes(keywordMap, eventLines);
-
-  // Build total speeches per year per country from cache
-  const totalSpeechesByYearCountry = { China: {}, Russia: {} };
-  for (const t of cache.total_speeches) {
-    const year = Math.floor(parseFloat(t.year));
-    if (year === 2026) continue;
-    if (t.country === 'Russia' && year <= 2013) continue;
-    
-    const y = String(year);
-    totalSpeechesByYearCountry[t.country][y] = t.total_speeches;
-  }
-
-  // Track selected countries and mode
-  let selectedCountries = { China: true, Russia: true };
-  let normalizedMode = true;
-  
-  const chinaBtn = document.getElementById('country-china-btn');
-  const russiaBtn = document.getElementById('country-russia-btn');
-  const rawBtn = document.getElementById('mode-raw-btn');
-  const adjustedBtn = document.getElementById('mode-adjusted-btn');
-  
-  function updateButtonStyles() {
-    if (selectedCountries.China) {
-      chinaBtn.style.background = '#2a3f5f';
-      chinaBtn.style.color = 'white';
-      chinaBtn.style.opacity = '1';
-    } else {
-      chinaBtn.style.background = '#3a4a5f';
-      chinaBtn.style.color = '#cfe9ff';
-      chinaBtn.style.opacity = '0.6';
-    }
-    
-    if (selectedCountries.Russia) {
-      russiaBtn.style.background = '#2a3f5f';
-      russiaBtn.style.color = 'white';
-      russiaBtn.style.opacity = '1';
-    } else {
-      russiaBtn.style.background = '#3a4a5f';
-      russiaBtn.style.color = '#cfe9ff';
-      russiaBtn.style.opacity = '0.6';
-    }
-    
-    if (normalizedMode) {
-      rawBtn.style.background = '#3a4a5f';
-      rawBtn.style.color = '#cfe9ff';
-      rawBtn.style.opacity = '0.6';
-      adjustedBtn.style.background = '#2a3f5f';
-      adjustedBtn.style.color = 'white';
-      adjustedBtn.style.opacity = '1';
-    } else {
-      rawBtn.style.background = '#2a3f5f';
-      rawBtn.style.color = 'white';
-      rawBtn.style.opacity = '1';
-      adjustedBtn.style.background = '#3a4a5f';
-      adjustedBtn.style.color = '#cfe9ff';
-      adjustedBtn.style.opacity = '0.6';
-    }
-  }
-  
-  chinaBtn.addEventListener('click', () => {
-    selectedCountries.China = !selectedCountries.China;
-    updateButtonStyles();
-    refresh();
-  });
-  
-  russiaBtn.addEventListener('click', () => {
-    selectedCountries.Russia = !selectedCountries.Russia;
-    updateButtonStyles();
-    refresh();
-  });
-  
-  rawBtn.addEventListener('click', () => {
-    normalizedMode = false;
-    updateButtonStyles();
-    refresh();
-  });
-  
-  adjustedBtn.addEventListener('click', () => {
-    normalizedMode = true;
-    updateButtonStyles();
-    refresh();
-  });
-
-  function refresh() {
-    const countriesToShow = [];
-    if (selectedCountries.China) countriesToShow.push('China');
-    if (selectedCountries.Russia) countriesToShow.push('Russia');
-    
-    const selectedKs = getSelectedKeywordIds();
-    if (selectedKs.length === 0 || countriesToShow.length === 0) {
-      Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords and countries to show trend</div>';
-      return;
-    }
-    const { years, countsByKwAndCountry } = buildCounts(countRows, countriesToShow, selectedKs);
-    if (years.length === 0) {
-      Plotly.purge('kw-chart');
-      document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
-      return;
-    }
-    drawPlot(years, countsByKwAndCountry, keywordMap, countriesToShow, totalSpeechesByYearCountry, normalizedMode, selectedKs, eventLines);
-  }
-
-  // auto-update when any keyword checkbox changes
-  document.getElementById('keywords-list').addEventListener('change', () => {
-    updateSelectionCounts();
-    refresh();
-  });
-
-  // Check Taiwan by default if it exists
-  const taiwanId = Object.entries(keywordMap).find(([id, name]) => name === 'Taiwan')?.[0];
-  if (taiwanId) {
-    const taiwanCheckbox = document.getElementById('kw_' + taiwanId);
-    if (taiwanCheckbox) {
-      taiwanCheckbox.checked = true;
-    }
-  }
-  
-  updateSelectionCounts();
-  updateButtonStyles();
-  refresh();
-}
-
-window.addEventListener('load', initKeywordViz);
-</script>
+<script src="./insights.js"></script>
  
 </body>
 </html>

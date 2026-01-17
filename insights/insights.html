@@ -144,6 +144,25 @@ function createKeywordsCheckboxes(keywordMap) {
   });
 }
 
+function parseEventsCsv(csvText) {
+  // Parse CSV and return array of {keyword, year, event}
+  const lines = csvText.trim().split('\n');
+  const events = [];
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i];
+    if (!line.trim()) continue;
+    // Simple CSV parsing: "id","keyword","year","event"
+    const matches = line.match(/"[^"]*"|[^,]+/g);
+    if (matches && matches.length >= 4) {
+      const keyword = matches[1].replace(/"/g, '').trim();
+      const year = parseInt(matches[2].replace(/"/g, '').trim());
+      const event = matches[3].replace(/"/g, '').trim();
+      events.push({ keyword, year, event });
+    }
+  }
+  return events;
+}
+
 function getSelectedKeywordIds() {
   return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
 }
@@ -203,7 +222,7 @@ function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
   return { years, countsByKwAndCountry };
 }
 
-function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, totalSpeechesByYearCountry, normalized) {
+function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, totalSpeechesByYearCountry, normalized, selectedKeywordIds, eventLines) {
   const traces = [];
   const colors = { 'China': '#EF553B', 'Russia': '#636EFA' };
   
@@ -242,14 +261,58 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
     });
   });
   
+  // Build shapes and annotations for event lines
+  const shapes = [];
+  const annotations = [];
+  selectedKeywordIds.forEach(kid => {
+    const keywordText = keywordMap[kid];
+    const matchingEvents = eventLines.filter(e => e.keyword === keywordText);
+    matchingEvents.forEach(evt => {
+      shapes.push({
+        type: 'line',
+        x0: evt.year,
+        x1: evt.year,
+        y0: 0,
+        y1: 1,
+        yref: 'paper',
+        line: {
+          color: '#888',
+          width: 2,
+          dash: 'dash'
+        }
+      });
+      
+      annotations.push({
+        x: evt.year,
+        y: 1,
+        yref: 'paper',
+        text: evt.event,
+        showarrow: true,
+        arrowhead: 2,
+        arrowsize: 1,
+        arrowwidth: 1,
+        arrowcolor: '#888',
+        ax: 0,
+        ay: -30,
+        bgcolor: '#2a3f5f',
+        bordercolor: '#888',
+        borderwidth: 1,
+        font: { color: '#cfe9ff', size: 11 },
+        align: 'center'
+      });
+    });
+  });
+  
   const layout = {
     title: normalized ? 'Percentage of speeches per year mentioning selected keywords' : 'Number of speeches per year containing selected keywords',
     xaxis: { title: 'Year' },
     yaxis: { title: normalized ? 'Percentage of speeches (%)' : 'Number of speeches' },
     hovermode: 'x unified',
-    margin: { b: 50, l: 60, r: 20, t: 60 },
+    margin: { b: 50, l: 60, r: 20, t: 100 },
     legend: { orientation: 'v', xanchor: 'left', x: 1.02 },
-    autosize: true
+    autosize: true,
+    shapes: shapes,
+    annotations: annotations
   };
   Plotly.react('kw-chart', traces, layout, { responsive: true });
 }
@@ -259,6 +322,10 @@ async function initKeywordViz() {
 
   const keywordMap = cache.keywords;
   const countRows = cache.counts;
+  
+  // Load events data
+  const eventsResponse = await fetch('./events.csv').then(r => r.text());
+  const eventLines = parseEventsCsv(eventsResponse);
 
   createKeywordsCheckboxes(keywordMap);
 
@@ -361,7 +428,7 @@ async function initKeywordViz() {
       document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
       return;
     }
-    drawPlot(years, countsByKwAndCountry, keywordMap, countriesToShow, totalSpeechesByYearCountry, normalizedMode);
+    drawPlot(years, countsByKwAndCountry, keywordMap, countriesToShow, totalSpeechesByYearCountry, normalizedMode, selectedKs, eventLines);
   }
 
   // auto-update when any keyword checkbox changes

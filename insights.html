@@ -46,27 +46,52 @@
       <aside class="viz-controls">
         <div class="control-row">
           <label><strong>Countries</strong></label>
-          <div style="display:flex;gap:15px;margin-bottom:12px">
-            <div>
-              <input type="checkbox" id="country-china" value="China" checked>
-              <label for="country-china" style="margin-left:6px">China</label>
-            </div>
-            <div>
-              <input type="checkbox" id="country-russia" value="Russia">
-              <label for="country-russia" style="margin-left:6px">Russia</label>
-            </div>
+          <div style="font-size:0.85rem;color:#aaa;margin-bottom:8px">Select one or both</div>
+          <div style="display:flex;gap:10px;margin-bottom:12px">
+            <button id="country-china-btn" type="button" style="flex:1;padding:8px 12px;background:#2a3f5f;color:white;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">China</button>
+            <button id="country-russia-btn" type="button" style="flex:1;padding:8px 12px;background:#3a4a5f;color:#cfe9ff;border:none;border-radius:4px;cursor:pointer;font-weight:600;transition:opacity 0.2s">Russia</button>
           </div>
         </div>
 
         <div class="control-row">
           <label><strong>Keywords</strong></label>
-          <div id="keywords-list" class="keywords-list"></div>
+          <div id="keywords-list" class="keywords-list">
+            <details style="margin-bottom:12px" open>
+              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Continents</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
+              <div id="kw-continents" style="margin-left:12px;margin-top:6px"></div>
+            </details>
+            <details style="margin-bottom:12px">
+              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Areas/Countries</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
+              <div id="kw-areas" style="margin-left:12px;margin-top:6px"></div>
+            </details>
+            <details style="margin-bottom:12px">
+              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>International Organizations</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
+              <div id="kw-organizations" style="margin-left:12px;margin-top:6px"></div>
+            </details>
+            <details style="margin-bottom:12px">
+              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Topics</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
+              <div id="kw-topics" style="margin-left:12px;margin-top:6px"></div>
+            </details>
+            <details style="margin-bottom:12px">
+              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Rhetorical Devices</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
+              <div id="kw-rhetorical" style="margin-left:12px;margin-top:6px"></div>
+            </details>
+            <details style="margin-bottom:12px">
+              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Chinese Concepts</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
+              <div id="kw-chineseConcepts" style="margin-left:12px;margin-top:6px"></div>
+            </details>
+          </div>
         </div>
 
         <div style="font-size:.85rem;color:#cfe9ff;margin-top:10px">
           Data: data/viz_cache.json
         </div>
       </aside>
+    </div>
+    
+    <!-- Technical Notes -->
+    <div style="padding:12px 14px;background:#1a3a4a;border-left:4px solid #4a9ba7;margin-top:16px;font-size:0.85rem;color:#aee;border-radius:2px">
+      <strong>Data Limitations:</strong> Russia data only available from 2014 onwards. Earlier years (≤2013) contain incomplete records and are excluded from visualizations. Year 2026 excluded from all analyses.
     </div>
   </div>
 </section>
@@ -77,9 +102,17 @@ async function loadCache(url) {
 }
 
 function createKeywordsCheckboxes(keywordMap) {
-  const container = document.getElementById('keywords-list');
-  container.innerHTML = '';
-  Object.entries(keywordMap).forEach(([id, label]) => {
+  // Define keyword categories by ID
+  const categories = {
+    continents: ['1', '2', '3', '4', '5'],
+    areas: ['42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60'],
+    organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
+    topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
+    rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
+    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
+  };
+
+  function createCheckbox(id, label) {
     const idSafe = 'kw_' + id;
     const row = document.createElement('div');
     row.style.marginBottom = '6px';
@@ -94,12 +127,46 @@ function createKeywordsCheckboxes(keywordMap) {
     lab.textContent = label;
     row.appendChild(cb);
     row.appendChild(lab);
-    container.appendChild(row);
+    return row;
+  }
+
+  // Populate each category
+  Object.entries(categories).forEach(([catKey, ids]) => {
+    const container = document.getElementById(`kw-${catKey}`);
+    if (!container) return;
+    ids.forEach(id => {
+      if (keywordMap[id]) {
+        container.appendChild(createCheckbox(id, keywordMap[id]));
+      }
+    });
   });
 }
 
 function getSelectedKeywordIds() {
   return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
+}
+
+function updateSelectionCounts() {
+  const categories = {
+    continents: ['1', '2', '3', '4', '5'],
+    areas: ['42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60'],
+    organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
+    topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
+    rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
+    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
+  };
+
+  Object.entries(categories).forEach(([catKey, ids]) => {
+    const container = document.getElementById(`kw-${catKey}`);
+    if (!container) return;
+    const summary = container.parentElement.querySelector('summary');
+    if (!summary) return;
+    const checked = container.querySelectorAll('input[type=checkbox]:checked').length;
+    const countSpan = summary.querySelector('.count');
+    if (countSpan) {
+      countSpan.textContent = `(${checked} selected)`;
+    }
+  });
 }
 
 function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
@@ -115,9 +182,14 @@ function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
   });
   
   for (const r of countRows) {
+    // Exclude 2026 and Russia data from 2013 and earlier
+    const year = Math.floor(parseFloat(r.year));
+    if (year === 2026) continue;
+    if (r.country === 'Russia' && year <= 2013) continue;
+    
     if (!selectedCountries.includes(r.country)) continue;
     if (!selectedKeywordIds.includes(r.keyword)) continue;
-    const y = String(Math.floor(parseFloat(r.year)));
+    const y = String(year);
     yearSet.add(y);
     if (!countsByKwAndCountry[r.keyword][r.country][y]) {
       countsByKwAndCountry[r.keyword][r.country][y] = 0;
@@ -135,10 +207,22 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries) {
   
   Object.keys(countsByKwAndCountry).forEach(kid => {
     selectedCountries.forEach(country => {
-      const counts = years.map(y => countsByKwAndCountry[kid][country][String(y)] || 0);
+      // For Russia, only plot years where it has actual data to avoid gaps
+      let xData = years;
+      let yData = years.map(y => countsByKwAndCountry[kid][country][String(y)] || 0);
+      
+      if (country === 'Russia') {
+        // Filter to only include years with data
+        const dataPoints = years
+          .map((y, i) => ({ year: y, count: yData[i] }))
+          .filter(p => p.count > 0);
+        xData = dataPoints.map(p => p.year);
+        yData = dataPoints.map(p => p.count);
+      }
+      
       traces.push({
-        x: years,
-        y: counts,
+        x: xData,
+        y: yData,
         mode: 'lines+markers',
         name: `${keywordMap[kid]} (${country})`,
         line: { width: 2 },
@@ -169,36 +253,78 @@ async function initKeywordViz() {
 
   createKeywordsCheckboxes(keywordMap);
 
+  // Track selected countries
+  let selectedCountries = { China: true, Russia: false };
+  
+  const chinaBtn = document.getElementById('country-china-btn');
+  const russiaBtn = document.getElementById('country-russia-btn');
+  
+  function updateButtonStyles() {
+    if (selectedCountries.China) {
+      chinaBtn.style.background = '#2a3f5f';
+      chinaBtn.style.color = 'white';
+      chinaBtn.style.opacity = '1';
+    } else {
+      chinaBtn.style.background = '#3a4a5f';
+      chinaBtn.style.color = '#cfe9ff';
+      chinaBtn.style.opacity = '0.6';
+    }
+    
+    if (selectedCountries.Russia) {
+      russiaBtn.style.background = '#2a3f5f';
+      russiaBtn.style.color = 'white';
+      russiaBtn.style.opacity = '1';
+    } else {
+      russiaBtn.style.background = '#3a4a5f';
+      russiaBtn.style.color = '#cfe9ff';
+      russiaBtn.style.opacity = '0.6';
+    }
+  }
+  
+  chinaBtn.addEventListener('click', () => {
+    selectedCountries.China = !selectedCountries.China;
+    updateButtonStyles();
+    refresh();
+  });
+  
+  russiaBtn.addEventListener('click', () => {
+    selectedCountries.Russia = !selectedCountries.Russia;
+    updateButtonStyles();
+    refresh();
+  });
+
   function refresh() {
-    const selectedCountries = [];
-    if (document.getElementById('country-china').checked) selectedCountries.push('China');
-    if (document.getElementById('country-russia').checked) selectedCountries.push('Russia');
+    const countriesToShow = [];
+    if (selectedCountries.China) countriesToShow.push('China');
+    if (selectedCountries.Russia) countriesToShow.push('Russia');
     
     const selectedKs = getSelectedKeywordIds();
-    if (selectedKs.length === 0 || selectedCountries.length === 0) {
+    if (selectedKs.length === 0 || countriesToShow.length === 0) {
       Plotly.purge('kw-chart');
       document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">Select one or more keywords and countries to show trend</div>';
       return;
     }
-    const { years, countsByKwAndCountry } = buildCounts(countRows, selectedCountries, selectedKs);
+    const { years, countsByKwAndCountry } = buildCounts(countRows, countriesToShow, selectedKs);
     if (years.length === 0) {
       Plotly.purge('kw-chart');
       document.getElementById('kw-chart').innerHTML = '<div style="color:#cfe9ff;padding:20px">No data for this selection</div>';
       return;
     }
-    drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries);
+    drawPlot(years, countsByKwAndCountry, keywordMap, countriesToShow);
   }
 
-  // update when country checkboxes change
-  document.getElementById('country-china').addEventListener('change', refresh);
-  document.getElementById('country-russia').addEventListener('change', refresh);
   // auto-update when any keyword checkbox changes
-  document.getElementById('keywords-list').addEventListener('change', refresh);
+  document.getElementById('keywords-list').addEventListener('change', () => {
+    updateSelectionCounts();
+    refresh();
+  });
 
-  // initial helpful selection: all continents checked
+  // initial helpful selection: continents only
   const boxes = Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]'));
-  const continentIds = ['1', '2', '3', '4', '5']; // Asia, Africa, North America, South America, Europe
+  const continentIds = ['1', '2', '3', '4', '5'];
   boxes.filter(b => continentIds.includes(b.value)).forEach(cb => cb.checked = true);
+  updateSelectionCounts();
+  updateButtonStyles();
   refresh();
 }
 

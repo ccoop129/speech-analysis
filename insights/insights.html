@@ -61,6 +61,10 @@
           <label><strong>Keywords</strong></label>
           <div id="keywords-list" class="keywords-list">
             <details style="margin-bottom:12px" open>
+              <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Suggested Topics</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
+              <div id="kw-suggested" style="margin-left:12px;margin-top:6px"></div>
+            </details>
+            <details style="margin-bottom:12px" open>
               <summary style="cursor:pointer;font-weight:600;color:#cfe9ff;user-select:none;padding:8px 12px;background:#2a3f5f;border-radius:4px;display:flex;justify-content:space-between;align-items:center"><span>Continents</span><span class="count" style="font-size:0.9em;color:#aaa">(0 selected)</span></summary>
               <div id="kw-continents" style="margin-left:12px;margin-top:6px"></div>
             </details>
@@ -103,7 +107,26 @@ async function loadCache(url) {
   return fetch(url).then(r => r.json());
 }
 
-function createKeywordsCheckboxes(keywordMap) {
+function parseEventsCsv(csvText) {
+  // Parse CSV and return array of {keyword, year, event}
+  const lines = csvText.trim().split('\n');
+  const events = [];
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i];
+    if (!line.trim()) continue;
+    // Simple CSV parsing: "id","keyword","year","event"
+    const matches = line.match(/"[^"]*"|[^,]+/g);
+    if (matches && matches.length >= 4) {
+      const keyword = matches[1].replace(/"/g, '').trim();
+      const year = parseInt(matches[2].replace(/"/g, '').trim());
+      const event = matches[3].replace(/"/g, '').trim();
+      events.push({ keyword, year, event });
+    }
+  }
+  return events;
+}
+
+function createKeywordsCheckboxes(keywordMap, eventLines) {
   // Define keyword categories by ID
   const categories = {
     continents: ['1', '2', '3', '4', '5'],
@@ -113,6 +136,18 @@ function createKeywordsCheckboxes(keywordMap) {
     rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
     chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
   };
+
+  // Build suggested topics from event keywords
+  const suggestedKeywords = new Set();
+  eventLines.forEach(evt => {
+    // Find the ID for this keyword
+    Object.entries(keywordMap).forEach(([id, name]) => {
+      if (name === evt.keyword) {
+        suggestedKeywords.add(id);
+      }
+    });
+  });
+  categories.suggested = Array.from(suggestedKeywords);
 
   function createCheckbox(id, label) {
     const idSafe = 'kw_' + id;
@@ -144,31 +179,13 @@ function createKeywordsCheckboxes(keywordMap) {
   });
 }
 
-function parseEventsCsv(csvText) {
-  // Parse CSV and return array of {keyword, year, event}
-  const lines = csvText.trim().split('\n');
-  const events = [];
-  for (let i = 1; i < lines.length; i++) {
-    const line = lines[i];
-    if (!line.trim()) continue;
-    // Simple CSV parsing: "id","keyword","year","event"
-    const matches = line.match(/"[^"]*"|[^,]+/g);
-    if (matches && matches.length >= 4) {
-      const keyword = matches[1].replace(/"/g, '').trim();
-      const year = parseInt(matches[2].replace(/"/g, '').trim());
-      const event = matches[3].replace(/"/g, '').trim();
-      events.push({ keyword, year, event });
-    }
-  }
-  return events;
-}
-
 function getSelectedKeywordIds() {
   return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
 }
 
 function updateSelectionCounts() {
   const categories = {
+    suggested: [],  // Will be populated dynamically
     continents: ['1', '2', '3', '4', '5'],
     areas: ['42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60'],
     organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
@@ -267,7 +284,7 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
   selectedKeywordIds.forEach(kid => {
     const keywordText = keywordMap[kid];
     const matchingEvents = eventLines.filter(e => e.keyword === keywordText);
-    matchingEvents.forEach(evt => {
+    matchingEvents.forEach((evt, eventIndex) => {
       shapes.push({
         type: 'line',
         x0: evt.year,
@@ -282,18 +299,23 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
         }
       });
       
+      // Stagger events horizontally to avoid overlap, keep below title
+      let xAnchor = eventIndex % 2 === 0 ? 'left' : 'right';
+      let xOffset = eventIndex % 2 === 0 ? 40 : -40;
+      
       annotations.push({
         x: evt.year,
-        y: 1,
+        y: 0.95,
         yref: 'paper',
+        xanchor: xAnchor,
         text: evt.event,
         showarrow: true,
         arrowhead: 2,
         arrowsize: 1,
         arrowwidth: 1,
         arrowcolor: '#888',
-        ax: 0,
-        ay: -30,
+        ax: xOffset,
+        ay: -50,
         bgcolor: '#2a3f5f',
         bordercolor: '#888',
         borderwidth: 1,
@@ -308,7 +330,7 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
     xaxis: { title: 'Year' },
     yaxis: { title: normalized ? 'Percentage of speeches (%)' : 'Number of speeches' },
     hovermode: 'x unified',
-    margin: { b: 50, l: 60, r: 20, t: 100 },
+    margin: { b: 50, l: 60, r: 20, t: 140 },
     legend: { orientation: 'v', xanchor: 'left', x: 1.02 },
     autosize: true,
     shapes: shapes,
@@ -322,12 +344,12 @@ async function initKeywordViz() {
 
   const keywordMap = cache.keywords;
   const countRows = cache.counts;
-  
+
   // Load events data
   const eventsResponse = await fetch('./events.csv').then(r => r.text());
   const eventLines = parseEventsCsv(eventsResponse);
 
-  createKeywordsCheckboxes(keywordMap);
+  createKeywordsCheckboxes(keywordMap, eventLines);
 
   // Build total speeches per year per country from cache
   const totalSpeechesByYearCountry = { China: {}, Russia: {} };
@@ -341,8 +363,8 @@ async function initKeywordViz() {
   }
 
   // Track selected countries and mode
-  let selectedCountries = { China: true, Russia: false };
-  let normalizedMode = false;
+  let selectedCountries = { China: true, Russia: true };
+  let normalizedMode = true;
   
   const chinaBtn = document.getElementById('country-china-btn');
   const russiaBtn = document.getElementById('country-russia-btn');
@@ -437,10 +459,15 @@ async function initKeywordViz() {
     refresh();
   });
 
-  // initial helpful selection: continents only
-  const boxes = Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]'));
-  const continentIds = ['1', '2', '3', '4', '5'];
-  boxes.filter(b => continentIds.includes(b.value)).forEach(cb => cb.checked = true);
+  // Check Taiwan by default if it exists
+  const taiwanId = Object.entries(keywordMap).find(([id, name]) => name === 'Taiwan')?.[0];
+  if (taiwanId) {
+    const taiwanCheckbox = document.getElementById('kw_' + taiwanId);
+    if (taiwanCheckbox) {
+      taiwanCheckbox.checked = true;
+    }
+  }
+  
   updateSelectionCounts();
   updateButtonStyles();
   refresh();

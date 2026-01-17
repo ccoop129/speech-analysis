@@ -277,13 +277,13 @@ a:hover {
 
 .mode-btn {
   padding: 8px 16px;
-  background: #2a3f5f;
-  color: white;
+  background: #2f9cff;
+  color: #042033;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  transition: opacity 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .mode-btn.inactive {
@@ -307,13 +307,13 @@ a:hover {
 .country-btn {
   flex: 1;
   padding: 8px 12px;
-  background: #2a3f5f;
-  color: white;
+  background: #2f9cff;
+  color: #042033;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  transition: opacity 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .country-btn.inactive {

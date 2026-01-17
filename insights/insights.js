@@ -279,11 +279,11 @@ async function initKeywordViz() {
     }
     
     if (normalizedMode) {
-      rawBtn.classList.remove('inactive');
-      adjustedBtn.classList.add('inactive');
-    } else {
       rawBtn.classList.add('inactive');
       adjustedBtn.classList.remove('inactive');
+    } else {
+      rawBtn.classList.remove('inactive');
+      adjustedBtn.classList.add('inactive');
     }
   }
   

@@ -41,10 +41,11 @@
   <div class="chart-card info-card">
     <h2>About This Dataset</h2>
     <p>
-      This tool analyzes speeches from China and Russia to track how geopolitical keywords and themes evolve over time. 
-      The dataset includes official speeches from Chinese government representatives (2005-2025) and Russian Ministry of Foreign Affairs 
-      statements (2014-2025). By visualizing keyword frequency relative to total speech volume, you can identify how great powers 
-      prioritize and discuss key geopolitical issues in response to global events.
+      <p>This tool enables visualization of diplomatic speech trends over time. </p>
+      <p>It illustrates our dataset of speeches scraped from the Chinese and Russian Ministries of Foreign Affairs and tagged with keywords of geopolitical relevance selected by our team.</p>
+      <p>The graph below illustrates the number of speeches per year that contain selected keywords for each country. </p>
+      <p>China contains 1,000 speeches from 2005-2025; Russia contains 2000 speeches from 2014-2025. Adjusted analysis allows for comparison of tagged speeches as a percent of total speeches given that year.</p>
+      <p>By visualizing keyword frequency relative to total speech volume, you can identify how the two great powers prioritize and discuss key geopolitical issues in context with global events.</p>
     </p>
   </div>
 </section>
@@ -112,13 +113,27 @@
   <div class="chart-card viz-card">
     <h2>Speeches Containing Selected Keywords (per year)</h2>
     <div class="mode-buttons">
-      <button id="mode-raw-btn" type="button" class="mode-btn">Raw Count</button>
-      <button id="mode-adjusted-btn" type="button" class="mode-btn inactive">Adjusted* (% of speeches)</button>
+      <button id="mode-raw-btn" type="button" class="mode-btn inactive">Raw Count</button>
+      <button id="mode-adjusted-btn" type="button" class="mode-btn">Adjusted* (% of speeches)</button>
     </div>
     <div class="viz-container">
       <div id="kw-chart" class="plotly-chart"></div>
 
       <aside class="viz-controls">
+        <div class="control-row">
+          <label><strong>Year Range</strong></label>
+          <div class="year-range-inputs">
+            <div class="year-input-group">
+              <label for="year-min">From:</label>
+              <input type="number" id="year-min" class="year-input" min="2005" max="2025" value="2005">
+            </div>
+            <div class="year-input-group">
+              <label for="year-max">To:</label>
+              <input type="number" id="year-max" class="year-input" min="2005" max="2025" value="2025">
+            </div>
+          </div>
+        </div>
+
         <div class="control-row">
           <label><strong>Countries</strong></label>
           <div class="country-label">Select one or both</div>

@@ -426,13 +426,10 @@ a:hover {
 
 .exploration-card {
   flex: 1;
-  background: #1a3a4a;
-  border-left: 4px solid #4a9ba7;
-}
-
-.exploration-card h3 {
-  margin-top: 0;
-  color: #cfe9ff;
+  background: #4794ba;
+  border: 15px solid #4a9ba700;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .exploration-label {
@@ -640,6 +637,99 @@ a:hover {
 
 .viz-card { 
   display: block; 
+}
+
+/* Visualization split layout with overlapping glass box */
+.viz-split-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 40px auto;
+  width: calc(100% - 40px);
+  max-width: calc(80vw - 40px);
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.viz-split-container.reversed {
+  flex-direction: row-reverse;
+}
+
+.viz-chart-wrapper {
+  flex: 10;
+  width: relative;
+}
+
+.viz-chart-wrapper #kw-chart {
+  width: 100%;
+  height: 500px;
+}
+
+.chart1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.viz-controls-glass {
+  flex: 0 0 360px;
+  position: relative;
+  z-index: 10;
+  margin-left: -80px;
+  margin-right: 20px;
+  margin-top: 80px;
+  right: 100px;
+  top: 80px;
+}
+
+.viz-split-container.reversed .viz-controls-glass {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.glass-box {
+  background: rgba(26, 31, 58, 0.6);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(74, 155, 167, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.glass-box .control-row {
+  margin-bottom: 0;
+}
+
+.glass-box .control-row:first-child {
+  padding-top: 0;
+}
+
+.glass-box label {
+  display: block;
+  font-weight: 600;
+  color: #cfe9ff;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* Exploration cards glass box styling */
+.exploration-glass {
+  min-height: auto;
+  padding: 20px;
+  background: rgba(26, 31, 58, 0.7);
+}
+
+.exploration-glass .chart-card {
+  margin: 0;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 1000px) {
@@ -970,105 +1060,4 @@ a:hover {
 .mandy-img {
   width: 200px;
   height: 200px;
-}
-/* =========================
-   How to use it: feature tiles
-   Scoped to only the "howto" module
-   ========================= */
-
-.howto-features {
-  margin-top: 12px;
-  display: grid;
-  gap: 12px;
-}
-
-.howto-feature {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-
-  padding: 14px 14px;
-  border-radius: 14px;
-
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-
-  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
-}
-
-.howto-feature:hover,
-.howto-feature:focus-visible {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(140, 210, 255, 0.35);
-  outline: none;
-}
-
-.howto-feature__top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.howto-feature__icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(140, 210, 255, 0.14);
-  border: 1px solid rgba(140, 210, 255, 0.20);
-}
-
-.howto-feature__title {
-  font-size: 1.05rem;
-  font-weight: 750;
-  color: #9ad7ff;
-  letter-spacing: 0.2px;
-}
-
-.howto-feature__cta {
-  margin-left: auto;
-  opacity: 0.75;
-  transform: translateX(0);
-  transition: transform 160ms ease, opacity 160ms ease;
-}
-
-.howto-feature:hover .howto-feature__cta,
-.howto-feature:focus-visible .howto-feature__cta {
-  opacity: 1;
-  transform: translateX(3px);
-}
-
-.howto-feature__desc {
-  margin-top: 8px;
-  line-height: 1.45;
-  color: rgba(207, 233, 255, 0.92);
-}
-/* Emphasize primary action card */
-.card-howto {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(140, 210, 255, 0.25);
-}
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.card-wide {
-  grid-column: span 2;
-}
-
-/* Add to speech-analysis/style.css (scoped to this new card only) */
-#why-this-matters p {
-  margin-top: 10px;
-  line-height: 1.55;
-}
-
-.faq-card {
-  text-align: left;
 }

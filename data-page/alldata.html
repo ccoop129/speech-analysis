@@ -80,6 +80,46 @@
                 </table>
             </div>
             
+            <h3>Search and Filter Keywords</h3>
+            <div class="search-filter-container">
+                <div class="search-input-group">
+                    <input 
+                        type="text" 
+                        id="keywordSearch" 
+                        class="keyword-search-input" 
+                        placeholder="Enter keywords to search (e.g., 'development', 'peace', 'cooperation')"
+                        aria-label="Search for keywords"
+                    />
+                    <button id="clearSearchBtn" class="clear-search-btn">Clear</button>
+                </div>
+                <div class="filter-controls">
+                    <label>
+                        <input type="checkbox" id="caseSensitiveCheckbox" />
+                        Case Sensitive
+                    </label>
+                    <label>
+                        <input type="checkbox" id="wholeWordCheckbox" />
+                        Whole Word Only
+                    </label>
+                </div>
+                <div class="country-filter">
+                    <label>Filter by Country:</label>
+                    <label>
+                        <input type="radio" name="countryFilter" value="all" checked />
+                        All Countries
+                    </label>
+                    <label>
+                        <input type="radio" name="countryFilter" value="China" />
+                        China
+                    </label>
+                    <label>
+                        <input type="radio" name="countryFilter" value="Russia" />
+                        Russia
+                    </label>
+                </div>
+                <div id="searchResults" class="search-results-container"></div>
+            </div>
+            
         </div>
 
         <div class="hero-container">
@@ -139,6 +179,161 @@
         <div class="data-dictionary-section">
             <h2>Download our data dictionary <a href="data/Data_Dictionary_011626.pdf" class="data-dictionary-link">here</a>.</h2>
         </div>
+
+        <script>
+            let allData = [];
+
+            // Load data from CH_RU.json
+            async function loadData() {
+                try {
+                    const response = await fetch('../data/CH_RU.json');
+                    allData = await response.json();
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    document.getElementById('searchResults').innerHTML = '<p class="error-message">Error loading data. Please refresh the page.</p>';
+                }
+            }
+
+            // Search and filter functionality
+            function performSearch() {
+                const searchTerm = document.getElementById('keywordSearch').value.trim();
+                const caseSensitive = document.getElementById('caseSensitiveCheckbox').checked;
+                const wholeWord = document.getElementById('wholeWordCheckbox').checked;
+                const selectedCountry = document.querySelector('input[name="countryFilter"]:checked').value;
+                const resultsContainer = document.getElementById('searchResults');
+
+                if (!searchTerm) {
+                    resultsContainer.innerHTML = '';
+                    return;
+                }
+
+                let searchRegex;
+                try {
+                    if (wholeWord) {
+                        const pattern = `\\b${searchTerm}\\b`;
+                        searchRegex = new RegExp(pattern, caseSensitive ? 'g' : 'gi');
+                    } else {
+                        searchRegex = new RegExp(searchTerm, caseSensitive ? 'g' : 'gi');
+                    }
+                } catch (error) {
+                    resultsContainer.innerHTML = '<p class="error-message">Invalid search pattern.</p>';
+                    return;
+                }
+
+                let results = allData.filter(item => {
+                    const content = (item.title + ' ' + item.content).toLowerCase();
+                    const pattern = caseSensitive ? searchTerm : searchTerm.toLowerCase();
+                    const matchesKeyword = caseSensitive ? 
+                        (item.title + ' ' + item.content).includes(pattern) : 
+                        content.includes(pattern);
+                    
+                    const matchesCountry = selectedCountry === 'all' || item.country === selectedCountry;
+                    
+                    return matchesKeyword && matchesCountry;
+                });
+
+                displayResults(results, searchTerm, caseSensitive);
+            }
+
+            // Display search results
+            function displayResults(results, searchTerm, caseSensitive) {
+                const resultsContainer = document.getElementById('searchResults');
+
+                if (results.length === 0) {
+                    resultsContainer.innerHTML = `<p class="no-results">No results found for "${searchTerm}". Try different keywords.</p>`;
+                    return;
+                }
+
+                let html = `<p class="results-count">Found <strong>${results.length}</strong> speech(es) containing "${searchTerm}"</p>`;
+                html += '<div class="results-list">';
+
+                results.forEach((item, index) => {
+                    const title = escapeHtml(item.title);
+                    const country = escapeHtml(item.country);
+                    const date = escapeHtml(item.date);
+                    const content = escapeHtml(item.content);
+                    
+                    // Count occurrences
+                    const contentLower = item.content.toLowerCase();
+                    const searchLower = searchTerm.toLowerCase();
+                    const count = (contentLower.match(new RegExp(searchLower, 'g')) || []).length;
+
+                    html += `
+                        <div class="result-item">
+                            <div class="result-header">
+                                <h4 class="result-title">${title}</h4>
+                                <span class="result-country">${country}</span>
+                            </div>
+                            <p class="result-date">Date: ${date}</p>
+                            <p class="result-count">Keyword appears <strong>${count}</strong> time(s)</p>
+                            <details class="result-preview">
+                                <summary>View Content Preview</summary>
+                                <div class="preview-content">${getPreview(content, searchTerm, caseSensitive)}</div>
+                            </details>
+                        </div>
+                    `;
+                });
+
+                html += '</div>';
+                resultsContainer.innerHTML = html;
+            }
+
+            // Get preview of content with keyword highlighted
+            function getPreview(content, searchTerm, caseSensitive) {
+                const words = content.split(' ');
+                const preview = words.slice(0, 100).join(' ');
+                
+                let highlightedPreview = preview;
+                if (caseSensitive) {
+                    highlightedPreview = preview.replace(
+                        new RegExp(`(${searchTerm})`, 'g'),
+                        '<mark>$1</mark>'
+                    );
+                } else {
+                    highlightedPreview = preview.replace(
+                        new RegExp(`(${searchTerm})`, 'gi'),
+                        '<mark>$1</mark>'
+                    );
+                }
+                
+                return highlightedPreview + (words.length > 100 ? '...' : '');
+            }
+
+            // Escape HTML special characters
+            function escapeHtml(text) {
+                const map = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                };
+                return text.replace(/[&<>"']/g, m => map[m]);
+            }
+
+            // Event listeners
+            document.getElementById('keywordSearch').addEventListener('input', performSearch);
+            document.getElementById('keywordSearch').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') performSearch();
+            });
+
+            document.getElementById('caseSensitiveCheckbox').addEventListener('change', performSearch);
+            document.getElementById('wholeWordCheckbox').addEventListener('change', performSearch);
+
+            document.querySelectorAll('input[name="countryFilter"]').forEach(radio => {
+                radio.addEventListener('change', performSearch);
+            });
+
+            document.getElementById('clearSearchBtn').addEventListener('click', () => {
+                document.getElementById('keywordSearch').value = '';
+                document.getElementById('caseSensitiveCheckbox').checked = false;
+                document.getElementById('wholeWordCheckbox').checked = false;
+                document.getElementById('searchResults').innerHTML = '';
+            });
+
+            // Load data on page load
+            loadData();
+        </script>
 
     </body>
 </html>

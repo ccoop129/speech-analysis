@@ -11,22 +11,42 @@ OUT_COUNTS = "keyword_year_counts.csv"
 # ----------------------------
 # Helpers
 # ----------------------------
-def load_keywords(path: str) -> list[str]:
+def load_keywords(path: str) -> tuple[list[str], dict]:
+    """Load keywords and their aliases from CSV.
+    Returns: (list of keywords, dict of {keyword: aliases})
+    """
     kdf = pd.read_csv(path)
-    # Load the 'keyword' column (second column, the actual keywords)
-    return (
+    keywords = (
         kdf["keyword"]
         .astype(str)
         .str.strip()
-        .replace({"": pd.NA, "nan": pd.NA})
+        .replace({"":pd.NA, "nan": pd.NA})
         .dropna()
         .unique()
         .tolist()
     )
+    
+    # Build aliases dict
+    aliases_dict = {}
+    if 'aliases' in kdf.columns:
+        for _, row in kdf.iterrows():
+            kw = str(row['keyword']).strip()
+            if kw:
+                aliases_dict[kw] = str(row['aliases']).strip() if pd.notna(row['aliases']) else ""
+    
+    return keywords, aliases_dict
 
-def make_pattern(keyword: str) -> re.Pattern:
-    escaped = re.escape(keyword.strip())
-    return re.compile(rf"\b{escaped}\b", flags=re.IGNORECASE)
+def make_pattern(keyword: str, aliases: str = "") -> re.Pattern:
+    # Combine keyword with any aliases
+    terms = [keyword.strip()]
+    if aliases and str(aliases) != 'nan' and str(aliases).strip():
+        alias_list = [a.strip() for a in str(aliases).split(',') if a.strip()]
+        terms.extend(alias_list)
+    
+    # Escape and join with OR
+    escaped_terms = [re.escape(t) for t in terms]
+    pattern = r"\b(" + "|".join(escaped_terms) + r")\b"
+    return re.compile(pattern, flags=re.IGNORECASE)
 
 def slugify(keyword: str) -> str:
     return "kw_" + re.sub(r"[^\w]+", "_", keyword.lower()).strip("_")
@@ -46,8 +66,8 @@ df["year"] = df["date"].dt.year
 df["content"] = df["content"].astype(str).fillna("")
 df["_scan_text"] = df["content"]
 
-keywords = load_keywords(KEYWORDS_PATH)
-patterns = {k: make_pattern(k) for k in keywords}
+keywords, aliases_dict = load_keywords(KEYWORDS_PATH)
+patterns = {k: make_pattern(k, aliases_dict.get(k, "")) for k in keywords}
 
 # ----------------------------
 # Keyword detection

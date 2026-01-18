@@ -1,5 +1,5 @@
 year,keyword,speech_count
-2005.0,ASEAN,7
+2005.0,ASEAN,8
 2005.0,Africa,8
 2005.0,Asia,12
 2005.0,China,25
@@ -12,28 +12,28 @@ year,keyword,speech_count
 2005.0,North America,1
 2005.0,Peaceful Reunification,2
 2005.0,Russia,2
-2005.0,SCO,1
+2005.0,SCO,2
 2005.0,South China Sea,2
 2005.0,Taiwan,3
 2005.0,Taiwan independence,1
-2005.0,UN,13
-2005.0,United Nations,13
-2005.0,United States,3
+2005.0,United Nations,14
+2005.0,United States,16
 2005.0,WTO,1
 2005.0,armed forces,2
 2005.0,border,3
 2005.0,civilization,6
 2005.0,great rejuvenation of the Chinese nation,1
+2005.0,internal affair,3
 2005.0,military,3
 2005.0,mutual respect,5
 2005.0,reunification,2
 2005.0,security,20
 2005.0,sovereignty,3
 2005.0,stability and development,4
-2005.0,strategic partnership,4
+2005.0,strategic partnership,9
 2005.0,strategic stability,1
 2005.0,war of resistance,1
-2006.0,ASEAN,4
+2006.0,ASEAN,5
 2006.0,Africa,10
 2006.0,Asia,18
 2006.0,CIS,1
@@ -41,35 +41,36 @@ year,keyword,speech_count
 2006.0,Common Prosperity,16
 2006.0,Cuba,2
 2006.0,Europe,5
-2006.0,G8,1
+2006.0,G7,1
 2006.0,Hong Kong,1
 2006.0,India,2
 2006.0,Iran,4
 2006.0,Israel,2
 2006.0,Japan,1
+2006.0,LNG,3
 2006.0,Palestine,1
 2006.0,Peaceful Reunification,4
-2006.0,Russia,2
-2006.0,SCO,4
+2006.0,Russia,4
+2006.0,SCO,5
 2006.0,South America,1
 2006.0,South China Sea,1
 2006.0,Taiwan,4
-2006.0,Taiwan independence,1
+2006.0,Taiwan independence,2
 2006.0,Tibet,1
-2006.0,UN,15
-2006.0,United Nations,15
-2006.0,United States,4
-2006.0,WTO,9
+2006.0,United Nations,18
+2006.0,United States,23
+2006.0,WTO,12
 2006.0,border,4
-2006.0,civilization,9
+2006.0,civilization,10
 2006.0,great rejuvenation of the Chinese nation,2
+2006.0,internal affair,1
 2006.0,military,2
 2006.0,mutual respect,5
 2006.0,reunification,4
 2006.0,security,22
 2006.0,sovereignty,8
 2006.0,stability and development,3
-2006.0,strategic partnership,12
+2006.0,strategic partnership,21
 2007.0,ASEAN,8
 2007.0,Africa,7
 2007.0,Asia,22
@@ -77,20 +78,19 @@ year,keyword,speech_count
 2007.0,Common Prosperity,12
 2007.0,Community of Common Destiny,1
 2007.0,Europe,3
-2007.0,G8,1
+2007.0,G7,1
 2007.0,India,3
 2007.0,Iran,3
 2007.0,Japan,7
 2007.0,Palestine,1
 2007.0,Peaceful Reunification,2
 2007.0,Russia,3
-2007.0,SCO,4
+2007.0,SCO,5
 2007.0,South China Sea,2
 2007.0,Taiwan,5
 2007.0,Taiwan independence,3
-2007.0,UN,11
-2007.0,United Nations,19
-2007.0,United States,8
+2007.0,United Nations,20
+2007.0,United States,23
 2007.0,WTO,4
 2007.0,armed forces,1
 2007.0,border,3
@@ -102,14 +102,14 @@ year,keyword,speech_count
 2007.0,security,21
 2007.0,sovereignty,7
 2007.0,stability and development,7
-2007.0,strategic partnership,8
+2007.0,strategic partnership,15
 2008.0,ASEAN,3
 2008.0,Africa,4
 2008.0,Asia,21
 2008.0,China,44
 2008.0,Common Prosperity,14
 2008.0,Europe,8
-2008.0,G8,5
+2008.0,G7,5
 2008.0,India,6
 2008.0,Japan,10
 2008.0,Multipolar,1
@@ -119,27 +119,27 @@ year,keyword,speech_count
 2008.0,Taiwan,3
 2008.0,Taiwan independence,1
 2008.0,Tibet,2
-2008.0,UN,11
-2008.0,United Nations,14
-2008.0,United States,4
-2008.0,WTO,2
+2008.0,United Nations,18
+2008.0,United States,22
+2008.0,WTO,4
 2008.0,border,4
 2008.0,civilization,5
 2008.0,great rejuvenation of the Chinese nation,2
+2008.0,internal affair,3
 2008.0,international law,1
 2008.0,military,2
 2008.0,mutual respect,7
 2008.0,security,27
 2008.0,sovereignty,3
 2008.0,stability and development,5
-2008.0,strategic partnership,4
+2008.0,strategic partnership,18
 2009.0,ASEAN,5
 2009.0,Africa,8
 2009.0,Asia,13
 2009.0,China,52
 2009.0,Common Prosperity,17
 2009.0,Europe,12
-2009.0,G8,2
+2009.0,G7,2
 2009.0,Hong Kong,5
 2009.0,India,1
 2009.0,Iran,1
@@ -148,17 +148,17 @@ year,keyword,speech_count
 2009.0,One China Principle,3
 2009.0,Peaceful Reunification,1
 2009.0,Russia,8
-2009.0,SCO,3
+2009.0,SCO,4
 2009.0,Taiwan,8
 2009.0,Taiwan independence,3
 2009.0,Tibet,5
-2009.0,UN,22
-2009.0,United Nations,25
-2009.0,United States,11
-2009.0,WTO,4
+2009.0,United Nations,32
+2009.0,United States,43
+2009.0,WTO,5
 2009.0,armed forces,1
 2009.0,border,7
 2009.0,civilization,10
+2009.0,internal affair,4
 2009.0,international law,3
 2009.0,military,4
 2009.0,mutual respect,9
@@ -166,33 +166,35 @@ year,keyword,speech_count
 2009.0,security,38
 2009.0,sovereignty,8
 2009.0,stability and development,6
-2009.0,strategic partnership,10
+2009.0,strategic partnership,18
 2009.0,strategic stability,1
-2010.0,ASEAN,9
+2010.0,ASEAN,10
 2010.0,Africa,14
 2010.0,Asia,27
 2010.0,CIS,1
+2010.0,CSTO,1
 2010.0,China,60
 2010.0,Common Prosperity,18
 2010.0,Europe,12
 2010.0,India,6
 2010.0,Iran,1
 2010.0,Japan,11
+2010.0,LNG,1
 2010.0,North America,1
 2010.0,Russia,6
-2010.0,SCO,3
+2010.0,SCO,4
 2010.0,South America,1
 2010.0,South China Sea,1
 2010.0,Taiwan,4
 2010.0,Tibet,3
-2010.0,UN,21
-2010.0,United Nations,19
-2010.0,United States,12
+2010.0,United Nations,29
+2010.0,United States,44
 2010.0,Venezuela,1
-2010.0,WTO,1
+2010.0,WTO,3
 2010.0,Xinjiang,1
 2010.0,border,7
 2010.0,civilization,16
+2010.0,internal affair,5
 2010.0,international law,1
 2010.0,military,5
 2010.0,mutual respect,16
@@ -200,7 +202,7 @@ year,keyword,speech_count
 2010.0,security,38
 2010.0,sovereignty,12
 2010.0,stability and development,14
-2010.0,strategic partnership,15
+2010.0,strategic partnership,27
 2011.0,ASEAN,14
 2011.0,Africa,14
 2011.0,Asia,34
@@ -213,22 +215,23 @@ year,keyword,speech_count
 2011.0,Iran,1
 2011.0,Israel,2
 2011.0,Japan,18
+2011.0,LNG,1
 2011.0,Multipolar,1
 2011.0,Palestine,2
 2011.0,Peaceful Reunification,2
 2011.0,Russia,11
-2011.0,SCO,3
+2011.0,SCO,8
 2011.0,South China Sea,3
 2011.0,Syria,1
 2011.0,Taiwan,3
 2011.0,Tibet,2
-2011.0,UN,14
-2011.0,United Nations,12
-2011.0,United States,21
+2011.0,United Nations,18
+2011.0,United States,52
 2011.0,WTO,10
 2011.0,Xinjiang,1
 2011.0,border,6
 2011.0,civilization,13
+2011.0,internal affair,9
 2011.0,international law,2
 2011.0,military,9
 2011.0,mutual respect,30
@@ -236,7 +239,7 @@ year,keyword,speech_count
 2011.0,security,36
 2011.0,sovereignty,24
 2011.0,stability and development,15
-2011.0,strategic partnership,18
+2011.0,strategic partnership,38
 2012.0,ASEAN,11
 2012.0,Africa,16
 2012.0,Arctic,1
@@ -250,76 +253,78 @@ year,keyword,speech_count
 2012.0,Iran,4
 2012.0,Israel,1
 2012.0,Japan,7
+2012.0,LNG,3
 2012.0,North America,1
 2012.0,Palestine,1
 2012.0,Russia,8
-2012.0,SCO,6
+2012.0,SCO,7
 2012.0,South China Sea,2
 2012.0,Syria,4
 2012.0,Taiwan,9
 2012.0,Taiwan independence,2
 2012.0,Tibet,8
-2012.0,UN,21
-2012.0,United Nations,16
-2012.0,United States,16
+2012.0,United Nations,27
+2012.0,United States,56
 2012.0,WTO,8
 2012.0,Xinjiang,4
 2012.0,border,12
 2012.0,civilization,11
 2012.0,great patriotic war,1
+2012.0,internal affair,8
 2012.0,military,6
 2012.0,mutual respect,29
 2012.0,noninterference,1
 2012.0,security,41
 2012.0,sovereignty,14
 2012.0,stability and development,16
-2012.0,strategic partnership,25
+2012.0,strategic partnership,47
 2012.0,traditional values,1
+2013.0,AIIB,3
 2013.0,ASEAN,26
 2013.0,Africa,61
 2013.0,Arctic,10
 2013.0,Asia,71
 2013.0,BRICS,24
-2013.0,CIS,30
-2013.0,CSTO,16
+2013.0,CIS,31
+2013.0,CSTO,17
 2013.0,China,85
-2013.0,Chinese Dream,21
+2013.0,China Dream,21
 2013.0,Common Prosperity,8
 2013.0,Community of Common Destiny,10
 2013.0,Crimea,2
 2013.0,Cuba,3
 2013.0,Europe,66
-2013.0,G7,1
-2013.0,G8,27
+2013.0,G7,27
 2013.0,Hong Kong,1
 2013.0,India,17
 2013.0,Iran,58
 2013.0,Israel,27
 2013.0,Japan,16
+2013.0,LNG,5
 2013.0,Multipolar,3
 2013.0,NATO,39
 2013.0,North America,5
 2013.0,OSCE,38
 2013.0,Palestine,16
 2013.0,Peaceful Reunification,1
-2013.0,Russia,167
-2013.0,SCO,24
+2013.0,Russia,171
+2013.0,SCO,28
 2013.0,South China Sea,7
 2013.0,Syria,107
 2013.0,Taiwan,2
-2013.0,UN,127
 2013.0,Ukraine,21
-2013.0,United Nations,34
-2013.0,United States,67
+2013.0,United Nations,135
+2013.0,United States,190
 2013.0,Venezuela,3
-2013.0,WTO,31
+2013.0,WTO,32
 2013.0,Xinjiang,2
 2013.0,armed forces,8
 2013.0,border,40
-2013.0,civilization,17
+2013.0,civilization,19
 2013.0,equal partner,1
 2013.0,great patriotic war,4
 2013.0,great rejuvenation of the Chinese nation,1
+2013.0,internal affair,24
 2013.0,international law,66
 2013.0,military,90
 2013.0,mutual respect,45
@@ -327,56 +332,54 @@ year,keyword,speech_count
 2013.0,security,146
 2013.0,sovereignty,49
 2013.0,stability and development,10
-2013.0,strategic partnership,44
+2013.0,strategic partnership,96
 2013.0,strategic stability,9
 2013.0,traditional values,7
-2014.0,AIIB,1
+2014.0,AIIB,8
 2014.0,ASEAN,15
 2014.0,Africa,102
 2014.0,Arctic,9
 2014.0,Asia,79
 2014.0,BRICS,32
-2014.0,CIS,44
+2014.0,CIS,45
 2014.0,CSTO,23
 2014.0,China,102
-2014.0,Chinese Dream,19
+2014.0,China Dream,19
 2014.0,Common Prosperity,12
 2014.0,Community of Common Destiny,7
 2014.0,Crimea,35
 2014.0,Cuba,9
 2014.0,Europe,126
-2014.0,G7,4
-2014.0,G8,27
+2014.0,G7,29
 2014.0,Hong Kong,3
 2014.0,India,32
 2014.0,Iran,49
 2014.0,Israel,22
 2014.0,Japan,19
-2014.0,LNG,1
+2014.0,LNG,4
 2014.0,Multipolar,8
-2014.0,NATO,66
+2014.0,NATO,67
 2014.0,North America,3
 2014.0,OSCE,110
 2014.0,One China Principle,1
 2014.0,Palestine,16
-2014.0,Russia,246
-2014.0,SCO,23
+2014.0,Russia,254
+2014.0,SCO,26
 2014.0,South America,1
 2014.0,South China Sea,3
 2014.0,Syria,100
 2014.0,Taiwan,3
 2014.0,Tibet,1
-2014.0,UN,166
 2014.0,Ukraine,152
-2014.0,United Nations,60
-2014.0,United States,113
+2014.0,United Nations,181
+2014.0,United States,239
 2014.0,Venezuela,8
-2014.0,WTO,19
+2014.0,WTO,21
 2014.0,armed forces,21
 2014.0,border,62
-2014.0,civilization,24
+2014.0,civilization,33
 2014.0,great patriotic war,15
-2014.0,internal affair,1
+2014.0,internal affair,35
 2014.0,international law,88
 2014.0,military,136
 2014.0,mutual respect,48
@@ -384,57 +387,56 @@ year,keyword,speech_count
 2014.0,security,198
 2014.0,sovereignty,45
 2014.0,stability and development,9
-2014.0,strategic partnership,53
+2014.0,strategic partnership,108
 2014.0,strategic stability,4
 2014.0,traditional values,7
-2015.0,AIIB,18
-2015.0,ASEAN,30
+2015.0,AIIB,25
+2015.0,ASEAN,31
 2015.0,Africa,113
 2015.0,Arctic,3
 2015.0,Asia,80
 2015.0,BRICS,35
-2015.0,CIS,25
-2015.0,CSTO,16
+2015.0,CIS,30
+2015.0,CSTO,17
 2015.0,China,125
-2015.0,Chinese Dream,19
+2015.0,China Dream,19
 2015.0,Common Prosperity,14
 2015.0,Community of Common Destiny,11
 2015.0,Crimea,20
 2015.0,Cuba,16
 2015.0,Europe,101
-2015.0,G7,1
-2015.0,G8,2
+2015.0,G7,3
 2015.0,Hong Kong,7
 2015.0,India,34
 2015.0,Iran,59
 2015.0,Israel,13
 2015.0,Japan,28
+2015.0,LNG,3
 2015.0,Multipolar,4
 2015.0,NATO,31
 2015.0,North America,5
 2015.0,OSCE,63
-2015.0,Palestine,9
+2015.0,Palestine,10
 2015.0,Peaceful Reunification,1
-2015.0,Russia,193
-2015.0,SCO,32
+2015.0,Russia,204
+2015.0,SCO,37
 2015.0,South America,1
 2015.0,South China Sea,13
 2015.0,Syria,97
 2015.0,Taiwan,4
 2015.0,Taiwan independence,1
-2015.0,UN,178
 2015.0,Ukraine,98
-2015.0,United Nations,93
-2015.0,United States,91
+2015.0,United Nations,202
+2015.0,United States,231
 2015.0,Venezuela,11
-2015.0,WTO,17
+2015.0,WTO,18
 2015.0,Xinjiang,1
 2015.0,armed forces,20
 2015.0,border,44
-2015.0,civilization,25
+2015.0,civilization,36
 2015.0,great patriotic war,31
 2015.0,great rejuvenation of the Chinese nation,1
-2015.0,internal affair,1
+2015.0,internal affair,29
 2015.0,international law,92
 2015.0,military,120
 2015.0,mutual respect,45
@@ -442,54 +444,53 @@ year,keyword,speech_count
 2015.0,security,200
 2015.0,sovereignty,52
 2015.0,stability and development,10
-2015.0,strategic partnership,41
+2015.0,strategic partnership,107
 2015.0,strategic stability,3
 2015.0,traditional values,3
 2015.0,war of resistance,11
-2016.0,AIIB,5
+2016.0,AIIB,15
 2016.0,ASEAN,34
 2016.0,Africa,63
 2016.0,Arctic,5
 2016.0,Asia,52
 2016.0,BRICS,25
-2016.0,CIS,16
+2016.0,CIS,17
 2016.0,CSTO,16
 2016.0,China,76
-2016.0,Chinese Dream,12
+2016.0,China Dream,12
 2016.0,Common Prosperity,9
 2016.0,Crimea,12
 2016.0,Cuba,6
 2016.0,Europe,76
-2016.0,G7,2
-2016.0,G8,3
+2016.0,G7,4
 2016.0,Hong Kong,2
 2016.0,India,22
 2016.0,Iran,32
 2016.0,Israel,13
 2016.0,Japan,17
+2016.0,LNG,7
 2016.0,Multipolar,9
 2016.0,NATO,39
 2016.0,OSCE,45
 2016.0,Palestine,9
-2016.0,Russia,193
-2016.0,SCO,24
+2016.0,Russia,196
+2016.0,SCO,26
 2016.0,South China Sea,15
 2016.0,Syria,113
 2016.0,Taiwan,4
 2016.0,Taiwan independence,1
 2016.0,Tibet,2
-2016.0,UN,151
 2016.0,Ukraine,61
-2016.0,United Nations,29
-2016.0,United States,87
+2016.0,United Nations,153
+2016.0,United States,177
 2016.0,Venezuela,3
 2016.0,WTO,6
 2016.0,Xinjiang,2
 2016.0,armed forces,13
 2016.0,border,42
-2016.0,civilization,16
+2016.0,civilization,21
 2016.0,great patriotic war,7
-2016.0,internal affair,4
+2016.0,internal affair,26
 2016.0,international law,58
 2016.0,military,85
 2016.0,mutual respect,31
@@ -498,19 +499,19 @@ year,keyword,speech_count
 2016.0,security,147
 2016.0,sovereignty,34
 2016.0,stability and development,6
-2016.0,strategic partnership,34
+2016.0,strategic partnership,89
 2016.0,strategic stability,10
 2016.0,war of resistance,2
-2017.0,AIIB,2
+2017.0,AIIB,4
 2017.0,ASEAN,36
 2017.0,Africa,96
 2017.0,Arctic,9
 2017.0,Asia,49
 2017.0,BRICS,41
-2017.0,CIS,40
+2017.0,CIS,43
 2017.0,CSTO,28
-2017.0,China,62
-2017.0,Chinese Dream,4
+2017.0,China,63
+2017.0,China Dream,4
 2017.0,Common Prosperity,5
 2017.0,Crimea,18
 2017.0,Cuba,5
@@ -521,33 +522,32 @@ year,keyword,speech_count
 2017.0,Iran,79
 2017.0,Israel,23
 2017.0,Japan,22
-2017.0,LNG,1
+2017.0,LNG,3
 2017.0,Multipolar,13
 2017.0,NATO,50
 2017.0,North America,2
 2017.0,OSCE,70
 2017.0,Palestine,10
-2017.0,Russia,281
-2017.0,SCO,38
+2017.0,Russia,294
+2017.0,SCO,41
 2017.0,South America,2
 2017.0,South China Sea,7
 2017.0,Syria,137
 2017.0,Taiwan,4
 2017.0,Taiwan independence,2
 2017.0,Tibet,2
-2017.0,UN,209
 2017.0,Ukraine,83
-2017.0,United Nations,39
-2017.0,United States,103
+2017.0,United Nations,215
+2017.0,United States,222
 2017.0,Venezuela,8
-2017.0,WTO,11
+2017.0,WTO,12
 2017.0,Xinjiang,2
 2017.0,armed forces,23
 2017.0,border,47
-2017.0,civilization,7
+2017.0,civilization,12
 2017.0,equal partner,2
 2017.0,great patriotic war,8
-2017.0,internal affair,2
+2017.0,internal affair,27
 2017.0,international law,71
 2017.0,military,112
 2017.0,mutual respect,41
@@ -555,7 +555,7 @@ year,keyword,speech_count
 2017.0,security,207
 2017.0,sovereignty,44
 2017.0,stability and development,2
-2017.0,strategic partnership,43
+2017.0,strategic partnership,94
 2017.0,strategic stability,9
 2017.0,traditional values,6
 2017.0,war of resistance,1
@@ -564,47 +564,46 @@ year,keyword,speech_count
 2018.0,Arctic,4
 2018.0,Asia,66
 2018.0,BRICS,42
-2018.0,CIS,39
+2018.0,CIS,40
 2018.0,CSTO,31
 2018.0,China,88
-2018.0,Chinese Dream,2
+2018.0,China Dream,2
 2018.0,Common Prosperity,6
 2018.0,Crimea,23
 2018.0,Cuba,6
 2018.0,Europe,121
-2018.0,G7,6
-2018.0,G8,1
+2018.0,G7,7
 2018.0,Hong Kong,4
 2018.0,India,32
 2018.0,Iran,86
 2018.0,Israel,25
 2018.0,Japan,26
-2018.0,LNG,4
+2018.0,LNG,8
 2018.0,Multipolar,11
 2018.0,NATO,61
 2018.0,OSCE,75
 2018.0,Palestine,20
 2018.0,Peaceful Reunification,1
-2018.0,Russia,270
-2018.0,SCO,58
+2018.0,Russia,281
+2018.0,SCO,60
 2018.0,South America,3
 2018.0,South China Sea,4
 2018.0,Syria,122
 2018.0,Taiwan,2
 2018.0,Taiwan independence,1
 2018.0,Tibet,1
-2018.0,UN,201
 2018.0,Ukraine,75
-2018.0,United Nations,49
-2018.0,United States,111
+2018.0,United Nations,209
+2018.0,United States,228
 2018.0,Venezuela,4
 2018.0,WTO,21
 2018.0,Xinjiang,2
 2018.0,armed forces,29
 2018.0,border,47
-2018.0,civilization,5
+2018.0,civilization,10
 2018.0,equal partner,2
 2018.0,great patriotic war,12
+2018.0,internal affair,29
 2018.0,international law,87
 2018.0,military,132
 2018.0,mutual respect,44
@@ -612,56 +611,55 @@ year,keyword,speech_count
 2018.0,security,211
 2018.0,sovereignty,70
 2018.0,stability and development,3
-2018.0,strategic partnership,51
+2018.0,strategic partnership,104
 2018.0,strategic stability,27
 2018.0,traditional values,8
-2019.0,ASEAN,34
+2019.0,AIIB,1
+2019.0,ASEAN,36
 2019.0,Africa,95
 2019.0,Arctic,16
 2019.0,Asia,75
 2019.0,BRICS,38
 2019.0,CIS,36
 2019.0,CSTO,38
-2019.0,China,104
-2019.0,Chinese Dream,5
+2019.0,China,105
+2019.0,China Dream,5
 2019.0,Common Prosperity,13
 2019.0,Crimea,18
 2019.0,Cuba,18
 2019.0,Europe,103
 2019.0,G7,10
-2019.0,G8,4
 2019.0,Hong Kong,7
 2019.0,India,24
 2019.0,Iran,76
 2019.0,Israel,34
 2019.0,Japan,36
-2019.0,LNG,3
+2019.0,LNG,10
 2019.0,Multipolar,15
 2019.0,NATO,62
 2019.0,OSCE,63
 2019.0,Palestine,18
 2019.0,Peaceful Reunification,1
-2019.0,Russia,288
-2019.0,SCO,50
+2019.0,Russia,302
+2019.0,SCO,54
 2019.0,South America,2
 2019.0,South China Sea,5
 2019.0,Syria,114
 2019.0,Taiwan,5
 2019.0,Taiwan independence,1
 2019.0,Tibet,3
-2019.0,UN,260
 2019.0,Ukraine,71
-2019.0,United Nations,43
-2019.0,United States,101
+2019.0,United Nations,263
+2019.0,United States,245
 2019.0,Venezuela,44
 2019.0,WTO,31
 2019.0,Xinjiang,6
 2019.0,armed forces,25
 2019.0,border,52
-2019.0,civilization,13
+2019.0,civilization,22
 2019.0,great patriotic war,16
 2019.0,great rejuvenation of the Chinese nation,2
-2019.0,internal affair,2
+2019.0,internal affair,45
 2019.0,international law,122
 2019.0,military,139
 2019.0,mutual respect,57
@@ -670,7 +668,7 @@ year,keyword,speech_count
 2019.0,security,224
 2019.0,sovereignty,67
 2019.0,stability and development,8
-2019.0,strategic partnership,53
+2019.0,strategic partnership,115
 2019.0,strategic stability,49
 2019.0,traditional values,4
 2019.0,war of resistance,1
@@ -682,20 +680,19 @@ year,keyword,speech_count
 2020.0,BRICS,26
 2020.0,CIS,21
 2020.0,CSTO,19
-2020.0,China,91
-2020.0,Chinese Dream,2
+2020.0,China,92
+2020.0,China Dream,2
 2020.0,Common Prosperity,7
 2020.0,Crimea,7
 2020.0,Cuba,4
 2020.0,Europe,58
 2020.0,G7,8
-2020.0,G8,1
 2020.0,Hong Kong,8
 2020.0,India,19
 2020.0,Iran,28
 2020.0,Israel,12
 2020.0,Japan,13
-2020.0,LNG,2
+2020.0,LNG,3
 2020.0,Multipolar,10
 2020.0,NATO,38
 2020.0,North America,1
@@ -703,27 +700,26 @@ year,keyword,speech_count
 2020.0,One China Principle,1
 2020.0,Palestine,6
 2020.0,Peaceful Reunification,1
-2020.0,Russia,127
-2020.0,SCO,34
+2020.0,Russia,138
+2020.0,SCO,35
 2020.0,South America,2
 2020.0,South China Sea,3
 2020.0,Syria,37
 2020.0,Taiwan,6
 2020.0,Taiwan independence,1
 2020.0,Tibet,3
-2020.0,UN,121
 2020.0,Ukraine,25
-2020.0,United Nations,56
-2020.0,United States,55
+2020.0,United Nations,131
+2020.0,United States,142
 2020.0,Venezuela,7
-2020.0,WTO,18
+2020.0,WTO,21
 2020.0,Xinjiang,6
 2020.0,armed forces,11
 2020.0,border,46
-2020.0,civilization,14
+2020.0,civilization,16
 2020.0,great patriotic war,14
 2020.0,great rejuvenation of the Chinese nation,1
-2020.0,internal affair,2
+2020.0,internal affair,30
 2020.0,international law,62
 2020.0,military,63
 2020.0,mutual respect,27
@@ -731,11 +727,11 @@ year,keyword,speech_count
 2020.0,security,140
 2020.0,sovereignty,33
 2020.0,stability and development,6
-2020.0,strategic partnership,31
+2020.0,strategic partnership,75
 2020.0,strategic stability,23
 2020.0,traditional values,1
 2020.0,war of resistance,1
-2021.0,ASEAN,34
+2021.0,ASEAN,36
 2021.0,Africa,65
 2021.0,Arctic,15
 2021.0,Asia,62
@@ -743,13 +739,12 @@ year,keyword,speech_count
 2021.0,CIS,27
 2021.0,CSTO,27
 2021.0,China,101
-2021.0,Chinese Dream,2
+2021.0,China Dream,2
 2021.0,Common Prosperity,6
 2021.0,Crimea,21
 2021.0,Cuba,9
 2021.0,Europe,66
 2021.0,G7,6
-2021.0,G8,1
 2021.0,Hong Kong,9
 2021.0,India,30
 2021.0,Iran,42
@@ -763,26 +758,25 @@ year,keyword,speech_count
 2021.0,One China Principle,1
 2021.0,Palestine,16
 2021.0,Peaceful Reunification,2
-2021.0,Russia,170
-2021.0,SCO,40
+2021.0,Russia,173
+2021.0,SCO,43
 2021.0,South China Sea,5
 2021.0,Syria,39
 2021.0,Taiwan,8
 2021.0,Taiwan independence,1
 2021.0,Tibet,4
-2021.0,UN,154
 2021.0,Ukraine,50
-2021.0,United Nations,46
-2021.0,United States,88
+2021.0,United Nations,161
+2021.0,United States,170
 2021.0,Venezuela,7
-2021.0,WTO,17
+2021.0,WTO,24
 2021.0,Xinjiang,9
 2021.0,armed forces,26
 2021.0,border,45
-2021.0,civilization,13
+2021.0,civilization,19
 2021.0,great patriotic war,11
 2021.0,great rejuvenation of the Chinese nation,2
-2021.0,internal affair,1
+2021.0,internal affair,29
 2021.0,international law,77
 2021.0,military,92
 2021.0,mutual respect,42
@@ -790,16 +784,17 @@ year,keyword,speech_count
 2021.0,security,146
 2021.0,sovereignty,45
 2021.0,stability and development,2
-2021.0,strategic partnership,30
+2021.0,strategic partnership,92
 2021.0,strategic stability,19
 2021.0,traditional values,1
 2021.0,war of resistance,1
-2022.0,ASEAN,40
+2022.0,AIIB,1
+2022.0,ASEAN,41
 2022.0,Africa,53
 2022.0,Arctic,3
 2022.0,Asia,62
 2022.0,BRICS,30
-2022.0,CIS,27
+2022.0,CIS,30
 2022.0,CSTO,22
 2022.0,China,105
 2022.0,Common Prosperity,11
@@ -807,14 +802,13 @@ year,keyword,speech_count
 2022.0,Cuba,5
 2022.0,Europe,73
 2022.0,G7,7
-2022.0,G8,1
 2022.0,Global Majority,1
 2022.0,Hong Kong,8
 2022.0,India,33
 2022.0,Iran,36
 2022.0,Israel,7
 2022.0,Japan,17
-2022.0,LNG,2
+2022.0,LNG,5
 2022.0,Multipolar,25
 2022.0,NATO,77
 2022.0,North America,1
@@ -822,26 +816,26 @@ year,keyword,speech_count
 2022.0,One China Principle,1
 2022.0,Palestine,4
 2022.0,Peaceful Reunification,2
-2022.0,Russia,159
-2022.0,SCO,35
+2022.0,Russia,163
+2022.0,SCO,38
 2022.0,South America,1
 2022.0,South China Sea,20
 2022.0,Syria,31
 2022.0,Taiwan,13
 2022.0,Taiwan independence,1
 2022.0,Tibet,2
-2022.0,UN,139
 2022.0,Ukraine,121
-2022.0,United Nations,53
-2022.0,United States,89
+2022.0,United Nations,152
+2022.0,United States,165
 2022.0,Venezuela,5
-2022.0,WTO,25
+2022.0,WTO,28
 2022.0,Xinjiang,5
 2022.0,armed forces,36
 2022.0,border,31
-2022.0,civilization,12
+2022.0,civilization,22
 2022.0,great patriotic war,8
 2022.0,great rejuvenation of the Chinese nation,4
+2022.0,internal affair,22
 2022.0,international law,80
 2022.0,military,119
 2022.0,mutual respect,39
@@ -850,10 +844,11 @@ year,keyword,speech_count
 2022.0,security,163
 2022.0,sovereignty,54
 2022.0,stability and development,5
-2022.0,strategic partnership,36
+2022.0,strategic partnership,86
 2022.0,strategic stability,11
 2022.0,traditional values,1
-2023.0,ASEAN,41
+2023.0,AIIB,1
+2023.0,ASEAN,42
 2023.0,Africa,95
 2023.0,Arctic,1
 2023.0,Asia,84
@@ -873,7 +868,7 @@ year,keyword,speech_count
 2023.0,Iran,41
 2023.0,Israel,22
 2023.0,Japan,17
-2023.0,LNG,2
+2023.0,LNG,8
 2023.0,Multipolar,59
 2023.0,NATO,73
 2023.0,North America,1
@@ -881,35 +876,34 @@ year,keyword,speech_count
 2023.0,One China Principle,1
 2023.0,Palestine,19
 2023.0,Peaceful Reunification,4
-2023.0,Russia,191
-2023.0,SCO,50
+2023.0,Russia,203
+2023.0,SCO,52
 2023.0,South America,1
 2023.0,South China Sea,5
 2023.0,Syria,34
 2023.0,Taiwan,14
 2023.0,Taiwan independence,3
 2023.0,Tibet,1
-2023.0,UN,144
 2023.0,Ukraine,117
-2023.0,United Nations,57
-2023.0,United States,106
+2023.0,United Nations,157
+2023.0,United States,185
 2023.0,Venezuela,11
-2023.0,WTO,12
+2023.0,WTO,13
 2023.0,Xinjiang,2
 2023.0,armed forces,13
 2023.0,border,31
-2023.0,civilization,23
+2023.0,civilization,31
 2023.0,equal partner,1
 2023.0,great patriotic war,11
 2023.0,great rejuvenation of the Chinese nation,6
-2023.0,internal affair,1
+2023.0,internal affair,28
 2023.0,international law,69
 2023.0,military,100
 2023.0,mutual respect,39
 2023.0,reunification,8
 2023.0,security,161
 2023.0,sovereignty,57
-2023.0,strategic partnership,39
+2023.0,strategic partnership,88
 2023.0,strategic stability,11
 2023.0,traditional values,4
 2024.0,ASEAN,57
@@ -917,9 +911,9 @@ year,keyword,speech_count
 2024.0,Arctic,2
 2024.0,Asia,82
 2024.0,BRICS,91
-2024.0,CIS,37
+2024.0,CIS,38
 2024.0,CSTO,29
-2024.0,China,126
+2024.0,China,127
 2024.0,Common Prosperity,7
 2024.0,Crimea,46
 2024.0,Cuba,12
@@ -932,33 +926,32 @@ year,keyword,speech_count
 2024.0,Iran,47
 2024.0,Israel,41
 2024.0,Japan,27
-2024.0,LNG,4
+2024.0,LNG,11
 2024.0,Multipolar,84
 2024.0,NATO,80
 2024.0,North America,4
 2024.0,OSCE,38
 2024.0,Palestine,41
 2024.0,Peaceful Reunification,2
-2024.0,Russia,227
-2024.0,SCO,59
+2024.0,Russia,235
+2024.0,SCO,64
 2024.0,South America,1
 2024.0,South China Sea,18
 2024.0,Syria,36
 2024.0,Taiwan,21
 2024.0,Taiwan independence,3
-2024.0,UN,137
 2024.0,Ukraine,124
-2024.0,United Nations,74
-2024.0,United States,102
+2024.0,United Nations,163
+2024.0,United States,209
 2024.0,Venezuela,19
-2024.0,WTO,19
+2024.0,WTO,22
 2024.0,armed forces,30
 2024.0,border,39
-2024.0,civilization,28
+2024.0,civilization,34
 2024.0,equal partner,1
 2024.0,great patriotic war,25
 2024.0,great rejuvenation of the Chinese nation,5
-2024.0,internal affair,1
+2024.0,internal affair,22
 2024.0,international law,69
 2024.0,military,114
 2024.0,mutual respect,51
@@ -967,25 +960,24 @@ year,keyword,speech_count
 2024.0,security,166
 2024.0,sovereignty,52
 2024.0,stability and development,3
-2024.0,strategic partnership,42
+2024.0,strategic partnership,132
 2024.0,strategic stability,19
 2024.0,traditional values,7
 2024.0,war of resistance,1
-2025.0,AIIB,1
+2025.0,AIIB,2
 2025.0,ASEAN,48
 2025.0,Africa,96
 2025.0,Arctic,13
 2025.0,Asia,80
 2025.0,BRICS,93
-2025.0,CIS,68
-2025.0,CSTO,42
+2025.0,CIS,73
+2025.0,CSTO,43
 2025.0,China,108
 2025.0,Common Prosperity,1
 2025.0,Crimea,51
 2025.0,Cuba,12
 2025.0,Europe,103
 2025.0,G7,10
-2025.0,G8,2
 2025.0,Global Majority,37
 2025.0,Global South,68
 2025.0,Hong Kong,1
@@ -993,31 +985,31 @@ year,keyword,speech_count
 2025.0,Iran,64
 2025.0,Israel,50
 2025.0,Japan,33
-2025.0,LNG,2
+2025.0,LNG,6
 2025.0,Multipolar,79
 2025.0,NATO,96
 2025.0,North America,2
 2025.0,OSCE,52
 2025.0,One China Principle,2
 2025.0,Palestine,23
-2025.0,Russia,275
-2025.0,SCO,79
+2025.0,Russia,283
+2025.0,SCO,84
 2025.0,South China Sea,21
 2025.0,Syria,29
 2025.0,Taiwan,24
 2025.0,Taiwan independence,1
-2025.0,UN,180
 2025.0,Ukraine,142
-2025.0,United Nations,97
-2025.0,United States,106
+2025.0,United Nations,212
+2025.0,United States,217
 2025.0,Venezuela,25
-2025.0,WTO,18
+2025.0,WTO,20
 2025.0,Xinjiang,1
 2025.0,armed forces,33
 2025.0,border,39
-2025.0,civilization,15
+2025.0,civilization,31
 2025.0,great patriotic war,67
 2025.0,great rejuvenation of the Chinese nation,3
+2025.0,internal affair,24
 2025.0,international law,78
 2025.0,military,147
 2025.0,mutual respect,48
@@ -1026,7 +1018,7 @@ year,keyword,speech_count
 2025.0,reunification,11
 2025.0,security,184
 2025.0,sovereignty,66
-2025.0,strategic partnership,60
+2025.0,strategic partnership,137
 2025.0,strategic stability,12
 2025.0,traditional values,7
 2025.0,war of resistance,10
@@ -1040,5 +1032,7 @@ year,keyword,speech_count
 2026.0,Russia,1
 2026.0,Ukraine,1
 2026.0,United Nations,1
+2026.0,United States,1
 2026.0,military,1
 2026.0,security,1
+2026.0,strategic partnership,1

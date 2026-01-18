@@ -111,6 +111,10 @@ html {
     min-height: 450px;
 }
 
+.hero-buttons {
+  margin-top: 12px;
+}
+
 .hero-bg-wrap { position: absolute; inset: 0; z-index: 0; }
 .hero-bg { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; display: block; filter: brightness(0.6) contrast(1.05); }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,36,0.45) 10%, rgba(8,12,36,0.7) 65%); }
@@ -124,8 +128,15 @@ html {
 
 .hero-eyebrow { color: #9fb0d9; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 10px; }
 .hero-title { font-size: 3rem; line-height: 1.08; margin: 0 0 12px 0; font-weight: 800; color: #ffffff; word-wrap: break-word; overflow-wrap: break-word; }
-.hero-desc { color: #c9d6ee; font-size: 0.98rem; max-width: 640px; margin-bottom: 100px; }
-
+.hero-desc {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.35rem;     /* bigger */
+  line-height: 1.55;      /* more readable */
+  max-width: 100%;        /* spread across the hero */
+  margin: 18px 0 34px;    /* less empty space than 100px */
+  margin-bottom: 48px;
+  font-weight: 500;
+}
 .hero-ctas { display: flex; gap: 14px; margin-bottom: 0px; }
 .btn { display: inline-block; padding: 12px 20px; border-radius: 800px; font-weight: 600; background: rgba(255,255,255,0.08); color: #eaf3ff; border: 1px solid rgba(255,255,255,0.06); text-decoration: none; }
 .btn.primary { background: linear-gradient(90deg,#2f9cff,#5dd3ff); color: #042033; border: none; box-shadow: 0 6px 18px rgba(47,156,255,0.22); }

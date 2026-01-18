@@ -1031,7 +1031,7 @@ a:hover {
 .team-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;  /* ✅ makes card heights line up */
   gap: 32px;
   flex-wrap: wrap;
   width: 100%;
@@ -1039,17 +1039,22 @@ a:hover {
   max-width: 80vw;
 }
 
-.team-member {
+
+.team-member{
   background-color: rgba(26, 31, 58, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 22px;
-  flex: 1 1 300px;
-  min-width: 270px;
-  max-width: calc(80vw - 64px);
-  margin: 20px auto;
+
+  width: 340px;          /* 🔒 same width */
+  height: 520px;         /* 🔒 same height */
+
   border-radius: 14px;
-  transition: all 0.3s ease;
   box-shadow: 0 10px 22px rgba(2, 6, 23, 0.35);
+  transition: all 0.3s ease;
+
+  /* layout inside card */
+  display: flex;
+  flex-direction: column;
 }
 
 .team-member:hover {
@@ -1078,7 +1083,7 @@ a:hover {
 .team-member p {
   color: #eaf4ff;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
 }
 
 .mandy-img {

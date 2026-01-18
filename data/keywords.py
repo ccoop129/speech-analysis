@@ -1,12 +1,9 @@
 import re
 import pandas as pd
+import json
 
 SPEECHES_PATH = "CH_RU.csv"
 KEYWORDS_PATH = "keywords.csv"
-
-OUT_SPEECHES_WIDE = "speeches_processed.csv"
-OUT_HITS_LONG = "speech_keyword_hits.csv"
-OUT_COUNTS = "keyword_year_counts.csv"
 
 # ----------------------------
 # Helpers
@@ -48,16 +45,10 @@ def make_pattern(keyword: str, aliases: str = "") -> re.Pattern:
     pattern = r"\b(" + "|".join(escaped_terms) + r")\b"
     return re.compile(pattern, flags=re.IGNORECASE)
 
-def slugify(keyword: str) -> str:
-    return "kw_" + re.sub(r"[^\w]+", "_", keyword.lower()).strip("_")
-
 # ----------------------------
 # Load data
 # ----------------------------
 df = pd.read_csv(SPEECHES_PATH, encoding="latin1")
-
-
-
 
 df["date"] = pd.to_datetime(df["date"], errors="coerce")
 df["year"] = df["date"].dt.year
@@ -75,40 +66,14 @@ patterns = {k: make_pattern(k, aliases_dict.get(k, "")) for k in keywords}
 hits = []
 
 for k in keywords:
-    col = slugify(k)
-    df[col] = df["_scan_text"].apply(lambda t: bool(patterns[k].search(t)))
-
-    for speech_id in df.loc[df[col], "id"]:
+    for speech_id in df[df["_scan_text"].apply(lambda t: bool(patterns[k].search(t)))]["id"]:
         hits.append({"id": speech_id, "keyword": k})
 
-df["keywords_found"] = df.apply(
-    lambda r: ";".join([k for k in keywords if r[slugify(k)]]),
-    axis=1
-)
-
-# ----------------------------
-# Outputs
-# ----------------------------
-kw_cols = [slugify(k) for k in keywords]
-
-df[["id", "country", "title", "date", "year", "content", "keywords_found"] + kw_cols] \
-    .to_csv(OUT_SPEECHES_WIDE, index=False)
-
 hits_df = pd.DataFrame(hits).merge(df[["id", "year"]], on="id", how="left")
-hits_df.to_csv(OUT_HITS_LONG, index=False)
-
-counts = (
-    hits_df.groupby(["year", "keyword"])["id"]
-    .nunique()
-    .reset_index(name="speech_count")
-)
-counts.to_csv(OUT_COUNTS, index=False)
-# Add this at the end of keywords.py (after the existing outputs)
 
 # ---
 # Create lightweight JSON cache for web visualization
 # ---
-import json
 
 # Build id -> country map
 id_country = df[["id", "country"]].drop_duplicates().set_index("id")["country"].to_dict()
@@ -169,3 +134,5 @@ cache = {
 
 with open("viz_cache.json", "w") as f:
     json.dump(cache, f, indent=2)
+
+print("viz_cache.json generated successfully")

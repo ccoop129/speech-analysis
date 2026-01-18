@@ -691,7 +691,7 @@ a:hover {
 }
 
 .glass-box {
-  background: rgba(26, 31, 58, 0.6);
+  background: #1a3a4a;
   backdrop-filter: blur(20px);
   border: 2px solid rgba(74, 155, 167, 0.6);
   border-radius: 16px;
@@ -734,17 +734,15 @@ a:hover {
 /* Second glass box - Reunification Per-Country Analysis */
 .glass-box-2 {
   /* Customize positioning and styling for second glass box */
-  display: block;
-  position: relative;  /* or absolute, fixed, sticky */
+  position: relative;
   left: 120px;
-  display: block;
-}}
+}
 
 .exploration-glass .chart-card {
   margin: 0;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #10535d;
+  border: 2px solid #2d5f66;
 }
 
 @media (max-width: 1000px) {

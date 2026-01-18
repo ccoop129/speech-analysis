@@ -1372,3 +1372,97 @@ a:hover {
     gap: 12px;
   }
 }
+/* =========================
+   FAQ page overrides
+   (prevents Team/About styles from breaking FAQ)
+========================= */
+.faq-page .faq-container{
+  width: min(900px, 92vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 0 70px;
+}
+
+/* Make FAQ cards full width and centered */
+.faq-page .faq-container .team-member{
+  width: 100%;
+  max-width: none;     /* overrides team card max-width */
+  margin: 0;           /* overrides team card margins */
+}
+
+/* FAQ text formatting */
+.faq-page .faq-container .team-member h2{
+  text-align: left;
+}
+
+.faq-page .faq-container .team-member p{
+  text-align: left;    /* readable FAQ answers */
+}
+/* =========================
+   FAQ card sizing cleanup
+========================= */
+
+/* Make FAQ cards more compact */
+.faq-page .team-member{
+  padding: 18px 20px;          /* reduce padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(2, 6, 23, 0.25);  /* lighter shadow */
+}
+
+/* Tighten question spacing */
+.faq-page .team-member h2{
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* Tighten paragraph spacing */
+.faq-page .team-member p{
+  margin: 6px 0;
+  line-height: 1.55;
+}
+
+/* Tighten list spacing */
+.faq-page .team-member ul{
+  margin: 6px 0 6px 20px;
+}
+
+.faq-page .team-member li{
+  margin: 2px 0;
+}
+.faq-page .team-member{
+  background-color: rgba(26, 31, 58, 0.8);
+}
+/* =========================
+   FAQ: REMOVE CARD HEIGHT
+========================= */
+
+.faq-page .team-member{
+  height: auto !important;
+  min-height: unset !important;
+  flex: unset !important;
+  align-self: stretch;
+
+  padding: 16px 18px;     /* compact */
+}
+
+/* Tighten vertical spacing inside FAQ cards */
+.faq-page .team-member h2{
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.faq-page .team-member p{
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.faq-page .team-member ul{
+  margin: 6px 0 6px 18px;
+}
+
+.faq-page .team-member li{
+  margin: 2px 0;
+}

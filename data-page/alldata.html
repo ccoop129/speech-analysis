@@ -169,8 +169,8 @@
                     <h3 class="hero-desc">Access our combined China and Russia data, which includes speeches from China's Ministry of Foreign Affairs and Sergei Lavrov's speeches and public appearances.</h3>
 
                     <div class="hero-downloads">
-                        <a href="../data/CH_RU.csv" class="hero-download-link">Download Combined CSV</a>
-                        <a href="../data/CH_RU.json" class="hero-download-link">Download Combined Data JSON</a>
+                        <a href="../data/CH_RU_clean.csv" class="hero-download-link">Download Combined CSV</a>
+                        <a href="../data/CH_RU_clean.json" class="hero-download-link">Download Combined Data JSON</a>
                     </div>
                 </div>
             </header>
@@ -187,7 +187,7 @@
             const resultsPerPage = 4;
             async function loadData() {
                 try {
-                    const response = await fetch('../data/CH_RU.json');
+                    const response = await fetch('../data/CH_RU_clean.json');
                     allData = await response.json();
                 } catch (error) {
                     console.error('Error loading data:', error);

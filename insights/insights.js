@@ -29,7 +29,7 @@ function createKeywordsCheckboxes(keywordMap, eventLines) {
     organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
     topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
     rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
-    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
+    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
   };
 
   // Build suggested topics from event keywords
@@ -85,7 +85,7 @@ function updateSelectionCounts() {
     organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
     topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
     rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
-    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
+    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
   };
 
   Object.entries(categories).forEach(([catKey, ids]) => {

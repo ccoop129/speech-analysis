@@ -54,57 +54,69 @@
 <section class="chart-section">
   <h2>Example Explorations</h2>
   
-  <!-- Sample 1 -->
-  <div class="explorations-grid">
-    <div class="chart-card exploration-card">
-      <h3>Regional Tensions</h3>
-      <p class="exploration-label">
-        <strong>Try selecting:</strong> Taiwan, Hong Kong, Ukraine, and Strategic Stability
-      </p>
-      <p class="exploration-desc">
-        Track how frequently great powers discuss contested territories and strategic concerns. 
-        Notice how mentions spike during specific crises (2019 Hong Kong protests, 2021 Taiwan tensions, 
-        2022 Ukraine invasion). This reveals how international incidents reshape diplomatic discourse.
-      </p>
+  <!-- Row 1: Left card regular, Right card glass -->
+  <div class="viz-split-container">
+    <div class="viz-chart-wrapper">
+      <div class="chart-card exploration-card">
+        <h3>Regional Tensions</h3>
+        <p class="exploration-label">
+          <strong>Try selecting:</strong> Taiwan, Hong Kong, Ukraine, and Strategic Stability
+        </p>
+        <p class="exploration-desc">
+          Track how frequently great powers discuss contested territories and strategic concerns. 
+          Notice how mentions spike during specific crises (2019 Hong Kong protests, 2021 Taiwan tensions, 
+          2022 Ukraine invasion). This reveals how international incidents reshape diplomatic discourse.
+        </p>
+      </div>
     </div>
     
-    <div class="chart-card exploration-card">
-      <h3>Institutional Focus</h3>
-      <p class="exploration-label">
-        <strong>Try selecting:</strong> UN, ASEAN, Shanghai Cooperation Organization
-      </p>
-      <p class="exploration-desc">
-        Compare how China and Russia reference different international bodies. 
-        Russia's emphasis on the SCO versus China's focus on regional multilateralism reflects 
-        distinct strategic priorities and alliance-building approaches.
-      </p>
-    </div>
+    <aside class="viz-controls-glass">
+      <div class="glass-box exploration-glass">
+        <div class="chart-card exploration-card">
+          <h3>Institutional Focus</h3>
+          <p class="exploration-label">
+            <strong>Try selecting:</strong> UN, ASEAN, Shanghai Cooperation Organization
+          </p>
+          <p class="exploration-desc">
+            Compare how China and Russia reference different international bodies. 
+            Russia's emphasis on the SCO versus China's focus on regional multilateralism reflects 
+            distinct strategic priorities and alliance-building approaches.
+          </p>
+        </div>
+      </div>
+    </aside>
   </div>
 
-  <!-- Sample 2 -->
-  <div class="explorations-grid">
-    <div class="chart-card exploration-card">
-      <h3>Geographic Scope</h3>
-      <p class="exploration-label">
-        <strong>Try selecting:</strong> Asia, Europe, Americas (continents)
-      </p>
-      <p class="exploration-desc">
-        Analyze which regions dominate great power discourse. The relative frequency of regional mentions 
-        indicates where each country concentrates its diplomatic attention and where strategic competition is most intense.
-      </p>
+  <!-- Row 2: Right card regular, Left card glass (reversed) -->
+  <div class="viz-split-container reversed">
+    <div class="viz-chart-wrapper">
+      <div class="chart-card exploration-card">
+        <h3>Geographic Scope</h3>
+        <p class="exploration-label">
+          <strong>Try selecting:</strong> Asia, Europe, Americas (continents)
+        </p>
+        <p class="exploration-desc">
+          Analyze which regions dominate great power discourse. The relative frequency of regional mentions 
+          indicates where each country concentrates its diplomatic attention and where strategic competition is most intense.
+        </p>
+      </div>
     </div>
     
-    <div class="chart-card exploration-card">
-      <h3>Rhetorical Patterns</h3>
-      <p class="exploration-label">
-        <strong>Try selecting:</strong> Sovereignty, Multipolarity, Rules-based order
-      </p>
-      <p class="exploration-desc">
-        Explore how each country frames its policy positions through key rhetorical concepts. 
-        Rising frequency of certain terms reflects shifts in how powers justify their actions 
-        and attempt to shape international narratives.
-      </p>
-    </div>
+    <aside class="viz-controls-glass">
+      <div class="glass-box exploration-glass">
+        <div class="chart-card exploration-card">
+          <h3>Rhetorical Patterns</h3>
+          <p class="exploration-label">
+            <strong>Try selecting:</strong> Sovereignty, Multipolarity, Rules-based order
+          </p>
+          <p class="exploration-desc">
+            Explore how each country frames its policy positions through key rhetorical concepts. 
+            Rising frequency of certain terms reflects shifts in how powers justify their actions 
+            and attempt to shape international narratives.
+          </p>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -116,6 +128,7 @@
       <button id="mode-raw-btn" type="button" class="mode-btn inactive">Raw Count</button>
       <button id="mode-adjusted-btn" type="button" class="mode-btn">Adjusted* (% of speeches)</button>
     </div>
+    
     <div class="viz-container">
       <div id="kw-chart" class="plotly-chart"></div>
 
@@ -178,7 +191,7 @@
         </div>
       </aside>
     </div>
-    
+
     <!-- Technical Notes -->
     <div class="usage-notes">
       <strong>Usage Notes:</strong> 

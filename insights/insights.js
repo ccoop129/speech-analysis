@@ -101,7 +101,7 @@ function updateSelectionCounts() {
   });
 }
 
-function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
+function buildCounts(countRows, selectedCountries, selectedKeywordIds, minYear, maxYear) {
   // countRows: {year, keyword, country, count}
   const yearSet = new Set();
   const countsByKwAndCountry = {}; // {keyword: {country: {year: count}}}
@@ -118,6 +118,8 @@ function buildCounts(countRows, selectedCountries, selectedKeywordIds) {
     const year = Math.floor(parseFloat(r.year));
     if (year === 2026) continue;
     if (r.country === 'Russia' && year <= 2013) continue;
+    // Filter by year range
+    if (year < minYear || year > maxYear) continue;
     
     if (!selectedCountries.includes(r.country)) continue;
     if (!selectedKeywordIds.includes(r.keyword)) continue;
@@ -259,11 +261,15 @@ async function initKeywordViz() {
   // Track selected countries and mode
   let selectedCountries = { China: true, Russia: true };
   let normalizedMode = true;
+  let minYear = 2005;
+  let maxYear = 2025;
   
   const chinaBtn = document.getElementById('country-china-btn');
   const russiaBtn = document.getElementById('country-russia-btn');
   const rawBtn = document.getElementById('mode-raw-btn');
   const adjustedBtn = document.getElementById('mode-adjusted-btn');
+  const yearMinInput = document.getElementById('year-min');
+  const yearMaxInput = document.getElementById('year-max');
   
   function updateButtonStyles() {
     if (selectedCountries.China) {
@@ -279,11 +285,11 @@ async function initKeywordViz() {
     }
     
     if (normalizedMode) {
-      rawBtn.classList.remove('inactive');
-      adjustedBtn.classList.add('inactive');
-    } else {
       rawBtn.classList.add('inactive');
       adjustedBtn.classList.remove('inactive');
+    } else {
+      rawBtn.classList.remove('inactive');
+      adjustedBtn.classList.add('inactive');
     }
   }
   
@@ -311,6 +317,16 @@ async function initKeywordViz() {
     refresh();
   });
 
+  yearMinInput.addEventListener('change', () => {
+    minYear = parseInt(yearMinInput.value);
+    refresh();
+  });
+
+  yearMaxInput.addEventListener('change', () => {
+    maxYear = parseInt(yearMaxInput.value);
+    refresh();
+  });
+
   function refresh() {
     const countriesToShow = [];
     if (selectedCountries.China) countriesToShow.push('China');
@@ -322,7 +338,7 @@ async function initKeywordViz() {
       document.getElementById('kw-chart').innerHTML = '<div class="kw-viz-note">Select one or more keywords and countries to show trend</div>';
       return;
     }
-    const { years, countsByKwAndCountry } = buildCounts(countRows, countriesToShow, selectedKs);
+    const { years, countsByKwAndCountry } = buildCounts(countRows, countriesToShow, selectedKs, minYear, maxYear);
     if (years.length === 0) {
       Plotly.purge('kw-chart');
       document.getElementById('kw-chart').innerHTML = '<div class="kw-viz-note">No data for this selection</div>';

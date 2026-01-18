@@ -304,6 +304,7 @@ async function initKeywordViz() {
   const adjustedBtn = document.getElementById('mode-adjusted-btn');
   const yearMinInput = document.getElementById('year-min');
   const yearMaxInput = document.getElementById('year-max');
+  const deselectAllBtn = document.getElementById('deselect-all-btn');
   
   function updateButtonStyles() {
     if (selectedCountries.China) {
@@ -358,6 +359,14 @@ async function initKeywordViz() {
 
   yearMaxInput.addEventListener('change', () => {
     maxYear = parseInt(yearMaxInput.value);
+    refresh();
+  });
+
+  deselectAllBtn.addEventListener('click', () => {
+    document.querySelectorAll('#keywords-list input[type=checkbox]').forEach(cb => {
+      cb.checked = false;
+    });
+    updateSelectionCounts();
     refresh();
   });
 

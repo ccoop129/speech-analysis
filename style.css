@@ -691,7 +691,7 @@ a:hover {
 }
 
 .glass-box {
-  background: rgba(26, 31, 58, 0.6);
+  background: #1a3a4a;
   backdrop-filter: blur(20px);
   border: 2px solid rgba(74, 155, 167, 0.6);
   border-radius: 16px;
@@ -725,11 +725,24 @@ a:hover {
   background: rgba(26, 31, 58, 0.7);
 }
 
+/* First glass box - ASEAN Comparative Analysis */
+.glass-box-1 {
+  /* Customize positioning and styling for first glass box */
+  display: block;
+}
+
+/* Second glass box - Reunification Per-Country Analysis */
+.glass-box-2 {
+  /* Customize positioning and styling for second glass box */
+  position: relative;
+  left: 120px;
+}
+
 .exploration-glass .chart-card {
   margin: 0;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #10535d;
+  border: 2px solid #2d5f66;
 }
 
 @media (max-width: 1000px) {
@@ -1218,12 +1231,12 @@ a:hover {
   flex: 1;
 }
 
-.result-countrtransparent;
+.result-country {
+  background: transparent;
   color: #ffffff;
   padding: 4px 12px;
   border-radius: 4px;
   font-size: 0.75rem;
-  font-weight: normalem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -1235,17 +1248,19 @@ a:hover {
   font-weight: normal;
 }
 
-.result-c#ffffff;
+.result-country {
+  color: #ffffff;
   font-size: 0.75rem;
   margin: 4px 0 12px 0;
-  font-weight: normal
-  margin: 4px 0 12px 0;
+  font-weight: normal;
 }
 
 .result-preview {
   cursor: pointer;
 }
-ffffff;
+
+.result-preview summary {
+  color: #ffffff;
   font-weight: normal;
   padding: 8px 0;
   user-select: none;
@@ -1255,10 +1270,10 @@ ffffff;
 }
 
 .result-preview summary:hover {
-  color: #cccccc
-.result-preview summary:hover {
   color: #7bc0e8;
-}transparent;
+}
+
+.preview-content {
   color: #ffffff;
   padding: 12px;
   border-radius: 4px;

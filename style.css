@@ -509,6 +509,23 @@ a:hover {
   opacity: 0.6;
 }
 
+.deselect-btn {
+  width: 100%;
+  padding: 8px 12px;
+  background: #d63030a0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  font-size: 14px;
+}
+
+.deselect-btn:hover {
+  background: #c23030;
+}
+
 .year-range-inputs {
   display: flex;
   gap: 12px;

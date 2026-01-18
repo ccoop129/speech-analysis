@@ -25,11 +25,11 @@ function createKeywordsCheckboxes(keywordMap, eventLines) {
   // Define keyword categories by ID
   const categories = {
     continents: ['1', '2', '3', '4', '5'],
-    areas: ['42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60'],
-    organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
-    topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
-    rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
-    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
+    areas: ['6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
+    organizations: ['25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
+    topics: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52'],
+    rhetorical: ['53'],
+    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
   };
 
   // Build suggested topics from event keywords
@@ -81,11 +81,11 @@ function updateSelectionCounts() {
   const categories = {
     suggested: [],  // Will be populated dynamically
     continents: ['1', '2', '3', '4', '5'],
-    areas: ['42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60'],
-    organizations: ['6', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41'],
-    topics: ['7', '9', '10', '12', '13', '14', '17', '19', '20', '21', '22', '23'],
-    rhetorical: ['8', '11', '15', '16', '18', '24', '25', '26', '27', '28', '29', '30'],
-    chineseConcepts: ['61', '62', '63', '64', '65', '66', '67', '68', '69', '70']
+    areas: ['6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
+    organizations: ['25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
+    topics: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52'],
+    rhetorical: ['53'],
+    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
   };
 
   Object.entries(categories).forEach(([catKey, ids]) => {
@@ -304,6 +304,7 @@ async function initKeywordViz() {
   const adjustedBtn = document.getElementById('mode-adjusted-btn');
   const yearMinInput = document.getElementById('year-min');
   const yearMaxInput = document.getElementById('year-max');
+  const deselectAllBtn = document.getElementById('deselect-all-btn');
   
   function updateButtonStyles() {
     if (selectedCountries.China) {
@@ -358,6 +359,14 @@ async function initKeywordViz() {
 
   yearMaxInput.addEventListener('change', () => {
     maxYear = parseInt(yearMaxInput.value);
+    refresh();
+  });
+
+  deselectAllBtn.addEventListener('click', () => {
+    document.querySelectorAll('#keywords-list input[type=checkbox]').forEach(cb => {
+      cb.checked = false;
+    });
+    updateSelectionCounts();
     refresh();
   });
 

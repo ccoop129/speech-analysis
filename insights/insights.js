@@ -137,7 +137,39 @@ function buildCounts(countRows, selectedCountries, selectedKeywordIds, minYear, 
 
 function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, totalSpeechesByYearCountry, normalized, selectedKeywordIds, eventLines) {
   const traces = [];
-  const colors = { 'China': '#EF553B', 'Russia': '#636EFA' };
+  
+  // Color palette for keywords - will vary by country
+  const baseColors = ['#EF553B', '#636EFA', '#00CC96', '#AB63FA', '#FFA15A', '#00BCD4', '#FF6B9D', '#C5D86D', '#FF6692', '#00B4D8'];
+  
+  // Create a color map for each keyword
+  const keywordColorMap = {};
+  selectedKeywordIds.forEach((kid, index) => {
+    keywordColorMap[kid] = baseColors[index % baseColors.length];
+  });
+  
+  function getLineColor(keywordId, country) {
+    const baseColor = keywordColorMap[keywordId];
+    // Parse RGB from hex
+    const hex = baseColor.replace('#', '');
+    const r = parseInt(hex.substring(0, 2), 16);
+    const g = parseInt(hex.substring(2, 4), 16);
+    const b = parseInt(hex.substring(4, 6), 16);
+    
+    // China gets lighter shade (increase brightness), Russia gets darker
+    if (country === 'China') {
+      // Lighten: move towards white
+      const lighter_r = Math.min(255, Math.floor(r + (255 - r) * 0.4));
+      const lighter_g = Math.min(255, Math.floor(g + (255 - g) * 0.4));
+      const lighter_b = Math.min(255, Math.floor(b + (255 - b) * 0.4));
+      return `rgb(${lighter_r}, ${lighter_g}, ${lighter_b})`;
+    } else {
+      // Darken: move towards black
+      const darker_r = Math.floor(r * 0.6);
+      const darker_g = Math.floor(g * 0.6);
+      const darker_b = Math.floor(b * 0.6);
+      return `rgb(${darker_r}, ${darker_g}, ${darker_b})`;
+    }
+  }
   
   Object.keys(countsByKwAndCountry).forEach(kid => {
     selectedCountries.forEach(country => {
@@ -161,13 +193,15 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
         yData = dataPoints.map(p => p.count);
       }
       
+      const lineColor = getLineColor(kid, country);
+      
       traces.push({
         x: xData,
         y: yData,
         mode: 'lines+markers',
         name: `${keywordMap[kid]} (${country})`,
-        line: { width: 2 },
-        marker: { size: 6 },
+        line: { width: 2, color: lineColor },
+        marker: { size: 6, color: lineColor },
         legendgroup: kid,
         legendgrouptitle: { text: keywordMap[kid] }
       });

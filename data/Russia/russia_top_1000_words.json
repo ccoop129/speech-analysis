@@ -1,0 +1,5002 @@
+[
+  {
+    "rank": 1,
+    "word": "russia",
+    "frequency": 37336
+  },
+  {
+    "rank": 2,
+    "word": "country",
+    "frequency": 17126
+  },
+  {
+    "rank": 3,
+    "word": "ukraine",
+    "frequency": 13203
+  },
+  {
+    "rank": 4,
+    "word": "dialogue",
+    "frequency": 12977
+  },
+  {
+    "rank": 5,
+    "word": "international",
+    "frequency": 11301
+  },
+  {
+    "rank": 6,
+    "word": "agreement",
+    "frequency": 10812
+  },
+  {
+    "rank": 7,
+    "word": "president",
+    "frequency": 10435
+  },
+  {
+    "rank": 8,
+    "word": "state",
+    "frequency": 10016
+  },
+  {
+    "rank": 9,
+    "word": "security",
+    "frequency": 10009
+  },
+  {
+    "rank": 10,
+    "word": "cooperate",
+    "frequency": 9690
+  },
+  {
+    "rank": 11,
+    "word": "include",
+    "frequency": 9356
+  },
+  {
+    "rank": 12,
+    "word": "united nations",
+    "frequency": 9227
+  },
+  {
+    "rank": 13,
+    "word": "question",
+    "frequency": 8846
+  },
+  {
+    "rank": 14,
+    "word": "syria",
+    "frequency": 8667
+  },
+  {
+    "rank": 15,
+    "word": "foreign",
+    "frequency": 8304
+  },
+  {
+    "rank": 16,
+    "word": "year",
+    "frequency": 8056
+  },
+  {
+    "rank": 17,
+    "word": "issue",
+    "frequency": 7531
+  },
+  {
+    "rank": 18,
+    "word": "europe",
+    "frequency": 7519
+  },
+  {
+    "rank": 19,
+    "word": "lavrov",
+    "frequency": 7299
+  },
+  {
+    "rank": 20,
+    "word": "develop",
+    "frequency": 7279
+  },
+  {
+    "rank": 21,
+    "word": "work",
+    "frequency": 7047
+  },
+  {
+    "rank": 22,
+    "word": "relation",
+    "frequency": 6984
+  },
+  {
+    "rank": 23,
+    "word": "sergey",
+    "frequency": 6744
+  },
+  {
+    "rank": 24,
+    "word": "meeting",
+    "frequency": 6744
+  },
+  {
+    "rank": 25,
+    "word": "people",
+    "frequency": 6729
+  },
+  {
+    "rank": 26,
+    "word": "say",
+    "frequency": 6681
+  },
+  {
+    "rank": 27,
+    "word": "partnership",
+    "frequency": 6152
+  },
+  {
+    "rank": 28,
+    "word": "time",
+    "frequency": 6106
+  },
+  {
+    "rank": 29,
+    "word": "situation",
+    "frequency": 6090
+  },
+  {
+    "rank": 30,
+    "word": "minister",
+    "frequency": 6046
+  },
+  {
+    "rank": 31,
+    "word": "council",
+    "frequency": 5987
+  },
+  {
+    "rank": 32,
+    "word": "united",
+    "frequency": 5915
+  },
+  {
+    "rank": 33,
+    "word": "region",
+    "frequency": 5694
+  },
+  {
+    "rank": 34,
+    "word": "world",
+    "frequency": 5681
+  },
+  {
+    "rank": 35,
+    "word": "discuss",
+    "frequency": 5628
+  },
+  {
+    "rank": 36,
+    "word": "interest",
+    "frequency": 5500
+  },
+  {
+    "rank": 37,
+    "word": "support",
+    "frequency": 5478
+  },
+  {
+    "rank": 38,
+    "word": "economic",
+    "frequency": 5455
+  },
+  {
+    "rank": 39,
+    "word": "military",
+    "frequency": 5385
+  },
+  {
+    "rank": 40,
+    "word": "today",
+    "frequency": 5120
+  },
+  {
+    "rank": 41,
+    "word": "new",
+    "frequency": 5103
+  },
+  {
+    "rank": 42,
+    "word": "political",
+    "frequency": 5079
+  },
+  {
+    "rank": 43,
+    "word": "colleague",
+    "frequency": 5025
+  },
+  {
+    "rank": 44,
+    "word": "effort",
+    "frequency": 4953
+  },
+  {
+    "rank": 45,
+    "word": "states",
+    "frequency": 4895
+  },
+  {
+    "rank": 46,
+    "word": "continue",
+    "frequency": 4888
+  },
+  {
+    "rank": 47,
+    "word": "hold",
+    "frequency": 4879
+  },
+  {
+    "rank": 48,
+    "word": "need",
+    "frequency": 4787
+  },
+  {
+    "rank": 49,
+    "word": "process",
+    "frequency": 4562
+  },
+  {
+    "rank": 50,
+    "word": "take",
+    "frequency": 4529
+  },
+  {
+    "rank": 51,
+    "word": "right",
+    "frequency": 4341
+  },
+  {
+    "rank": 52,
+    "word": "government",
+    "frequency": 4281
+  },
+  {
+    "rank": 53,
+    "word": "agree",
+    "frequency": 4143
+  },
+  {
+    "rank": 54,
+    "word": "important",
+    "frequency": 4125
+  },
+  {
+    "rank": 55,
+    "word": "way",
+    "frequency": 4102
+  },
+  {
+    "rank": 56,
+    "word": "western",
+    "frequency": 4084
+  },
+  {
+    "rank": 57,
+    "word": "know",
+    "frequency": 4011
+  },
+  {
+    "rank": 58,
+    "word": "putin",
+    "frequency": 4005
+  },
+  {
+    "rank": 59,
+    "word": "africa",
+    "frequency": 3951
+  },
+  {
+    "rank": 60,
+    "word": "member",
+    "frequency": 3914
+  },
+  {
+    "rank": 61,
+    "word": "like",
+    "frequency": 3914
+  },
+  {
+    "rank": 62,
+    "word": "principle",
+    "frequency": 3911
+  },
+  {
+    "rank": 63,
+    "word": "want",
+    "frequency": 3910
+  },
+  {
+    "rank": 64,
+    "word": "create",
+    "frequency": 3836
+  },
+  {
+    "rank": 65,
+    "word": "think",
+    "frequency": 3826
+  },
+  {
+    "rank": 66,
+    "word": "contact",
+    "frequency": 3823
+  },
+  {
+    "rank": 67,
+    "word": "group",
+    "frequency": 3819
+  },
+  {
+    "rank": 68,
+    "word": "nato",
+    "frequency": 3819
+  },
+  {
+    "rank": 69,
+    "word": "west",
+    "frequency": 3808
+  },
+  {
+    "rank": 70,
+    "word": "vladimir",
+    "frequency": 3796
+  },
+  {
+    "rank": 71,
+    "word": "force",
+    "frequency": 3768
+  },
+  {
+    "rank": 72,
+    "word": "policy",
+    "frequency": 3767
+  },
+  {
+    "rank": 73,
+    "word": "position",
+    "frequency": 3711
+  },
+  {
+    "rank": 74,
+    "word": "problem",
+    "frequency": 3597
+  },
+  {
+    "rank": 75,
+    "word": "believe",
+    "frequency": 3569
+  },
+  {
+    "rank": 76,
+    "word": "good",
+    "frequency": 3565
+  },
+  {
+    "rank": 77,
+    "word": "base",
+    "frequency": 3508
+  },
+  {
+    "rank": 78,
+    "word": "area",
+    "frequency": 3476
+  },
+  {
+    "rank": 79,
+    "word": "come",
+    "frequency": 3468
+  },
+  {
+    "rank": 80,
+    "word": "organization",
+    "frequency": 3446
+  },
+  {
+    "rank": 81,
+    "word": "trade",
+    "frequency": 3420
+  },
+  {
+    "rank": 82,
+    "word": "fact",
+    "frequency": 3393
+  },
+  {
+    "rank": 83,
+    "word": "initiative",
+    "frequency": 3386
+  },
+  {
+    "rank": 84,
+    "word": "long",
+    "frequency": 3254
+  },
+  {
+    "rank": 85,
+    "word": "law",
+    "frequency": 3244
+  },
+  {
+    "rank": 86,
+    "word": "plan",
+    "frequency": 3234
+  },
+  {
+    "rank": 87,
+    "word": "union",
+    "frequency": 3234
+  },
+  {
+    "rank": 88,
+    "word": "friend",
+    "frequency": 3233
+  },
+  {
+    "rank": 89,
+    "word": "european union",
+    "frequency": 3202
+  },
+  {
+    "rank": 90,
+    "word": "global",
+    "frequency": 3176
+  },
+  {
+    "rank": 91,
+    "word": "general",
+    "frequency": 3165
+  },
+  {
+    "rank": 92,
+    "word": "iran",
+    "frequency": 3155
+  },
+  {
+    "rank": 93,
+    "word": "promote",
+    "frequency": 3122
+  },
+  {
+    "rank": 94,
+    "word": "event",
+    "frequency": 3114
+  },
+  {
+    "rank": 95,
+    "word": "national",
+    "frequency": 3103
+  },
+  {
+    "rank": 96,
+    "word": "resolution",
+    "frequency": 3085
+  },
+  {
+    "rank": 97,
+    "word": "war",
+    "frequency": 2970
+  },
+  {
+    "rank": 98,
+    "word": "belarus",
+    "frequency": 2943
+  },
+  {
+    "rank": 99,
+    "word": "china",
+    "frequency": 2936
+  },
+  {
+    "rank": 100,
+    "word": "action",
+    "frequency": 2932
+  },
+  {
+    "rank": 101,
+    "word": "decision",
+    "frequency": 2919
+  },
+  {
+    "rank": 102,
+    "word": "hope",
+    "frequency": 2905
+  },
+  {
+    "rank": 103,
+    "word": "federation",
+    "frequency": 2859
+  },
+  {
+    "rank": 104,
+    "word": "start",
+    "frequency": 2849
+  },
+  {
+    "rank": 105,
+    "word": "visit",
+    "frequency": 2845
+  },
+  {
+    "rank": 106,
+    "word": "respect",
+    "frequency": 2835
+  },
+  {
+    "rank": 107,
+    "word": "terrorist",
+    "frequency": 2834
+  },
+  {
+    "rank": 108,
+    "word": "approach",
+    "frequency": 2805
+  },
+  {
+    "rank": 109,
+    "word": "humanitarian",
+    "frequency": 2802
+  },
+  {
+    "rank": 110,
+    "word": "try",
+    "frequency": 2795
+  },
+  {
+    "rank": 111,
+    "word": "attempt",
+    "frequency": 2789
+  },
+  {
+    "rank": 112,
+    "word": "mention",
+    "frequency": 2789
+  },
+  {
+    "rank": 113,
+    "word": "peace",
+    "frequency": 2787
+  },
+  {
+    "rank": 114,
+    "word": "course",
+    "frequency": 2784
+  },
+  {
+    "rank": 115,
+    "word": "help",
+    "frequency": 2780
+  },
+  {
+    "rank": 116,
+    "word": "special",
+    "frequency": 2776
+  },
+  {
+    "rank": 117,
+    "word": "provide",
+    "frequency": 2737
+  },
+  {
+    "rank": 118,
+    "word": "america",
+    "frequency": 2736
+  },
+  {
+    "rank": 119,
+    "word": "speak",
+    "frequency": 2717
+  },
+  {
+    "rank": 120,
+    "word": "summit",
+    "frequency": 2705
+  },
+  {
+    "rank": 121,
+    "word": "place",
+    "frequency": 2703
+  },
+  {
+    "rank": 122,
+    "word": "use",
+    "frequency": 2693
+  },
+  {
+    "rank": 123,
+    "word": "ensure",
+    "frequency": 2679
+  },
+  {
+    "rank": 124,
+    "word": "day",
+    "frequency": 2670
+  },
+  {
+    "rank": 125,
+    "word": "germany",
+    "frequency": 2668
+  },
+  {
+    "rank": 126,
+    "word": "ministry",
+    "frequency": 2664
+  },
+  {
+    "rank": 127,
+    "word": "leader",
+    "frequency": 2648
+  },
+  {
+    "rank": 128,
+    "word": "affair",
+    "frequency": 2616
+  },
+  {
+    "rank": 129,
+    "word": "document",
+    "frequency": 2613
+  },
+  {
+    "rank": 130,
+    "word": "representative",
+    "frequency": 2603
+  },
+  {
+    "rank": 131,
+    "word": "statement",
+    "frequency": 2574
+  },
+  {
+    "rank": 132,
+    "word": "order",
+    "frequency": 2574
+  },
+  {
+    "rank": 133,
+    "word": "level",
+    "frequency": 2570
+  },
+  {
+    "rank": 134,
+    "word": "france",
+    "frequency": 2566
+  },
+  {
+    "rank": 135,
+    "word": "east",
+    "frequency": 2550
+  },
+  {
+    "rank": 136,
+    "word": "republic",
+    "frequency": 2547
+  },
+  {
+    "rank": 137,
+    "word": "settlement",
+    "frequency": 2533
+  },
+  {
+    "rank": 138,
+    "word": "establish",
+    "frequency": 2532
+  },
+  {
+    "rank": 139,
+    "word": "weapon",
+    "frequency": 2531
+  },
+  {
+    "rank": 140,
+    "word": "crisis",
+    "frequency": 2522
+  },
+  {
+    "rank": 141,
+    "word": "sign",
+    "frequency": 2508
+  },
+  {
+    "rank": 142,
+    "word": "step",
+    "frequency": 2504
+  },
+  {
+    "rank": 143,
+    "word": "project",
+    "frequency": 2493
+  },
+  {
+    "rank": 144,
+    "word": "sanction",
+    "frequency": 2485
+  },
+  {
+    "rank": 145,
+    "word": "bilateral",
+    "frequency": 2474
+  },
+  {
+    "rank": 146,
+    "word": "party",
+    "frequency": 2466
+  },
+  {
+    "rank": 147,
+    "word": "result",
+    "frequency": 2458
+  },
+  {
+    "rank": 148,
+    "word": "osce",
+    "frequency": 2453
+  },
+  {
+    "rank": 149,
+    "word": "conflict",
+    "frequency": 2422
+  },
+  {
+    "rank": 150,
+    "word": "joint",
+    "frequency": 2407
+  },
+  {
+    "rank": 151,
+    "word": "threat",
+    "frequency": 2407
+  },
+  {
+    "rank": 152,
+    "word": "reach",
+    "frequency": 2380
+  },
+  {
+    "rank": 153,
+    "word": "current",
+    "frequency": 2380
+  },
+  {
+    "rank": 154,
+    "word": "meet",
+    "frequency": 2353
+  },
+  {
+    "rank": 155,
+    "word": "matter",
+    "frequency": 2343
+  },
+  {
+    "rank": 156,
+    "word": "common",
+    "frequency": 2316
+  },
+  {
+    "rank": 157,
+    "word": "nuclear",
+    "frequency": 2314
+  },
+  {
+    "rank": 158,
+    "word": "implement",
+    "frequency": 2310
+  },
+  {
+    "rank": 159,
+    "word": "number",
+    "frequency": 2304
+  },
+  {
+    "rank": 160,
+    "word": "format",
+    "frequency": 2298
+  },
+  {
+    "rank": 161,
+    "word": "possible",
+    "frequency": 2294
+  },
+  {
+    "rank": 162,
+    "word": "consider",
+    "frequency": 2283
+  },
+  {
+    "rank": 163,
+    "word": "great",
+    "frequency": 2271
+  },
+  {
+    "rank": 164,
+    "word": "secretary",
+    "frequency": 2270
+  },
+  {
+    "rank": 165,
+    "word": "regional",
+    "frequency": 2254
+  },
+  {
+    "rank": 166,
+    "word": "thing",
+    "frequency": 2235
+  },
+  {
+    "rank": 167,
+    "word": "opposition",
+    "frequency": 2212
+  },
+  {
+    "rank": 168,
+    "word": "concern",
+    "frequency": 2199
+  },
+  {
+    "rank": 169,
+    "word": "tie",
+    "frequency": 2187
+  },
+  {
+    "rank": 170,
+    "word": "call",
+    "frequency": 2150
+  },
+  {
+    "rank": 171,
+    "word": "ready",
+    "frequency": 2146
+  },
+  {
+    "rank": 172,
+    "word": "role",
+    "frequency": 2143
+  },
+  {
+    "rank": 173,
+    "word": "ago",
+    "frequency": 2117
+  },
+  {
+    "rank": 174,
+    "word": "mutual",
+    "frequency": 2104
+  },
+  {
+    "rank": 175,
+    "word": "high",
+    "frequency": 2101
+  },
+  {
+    "rank": 176,
+    "word": "understand",
+    "frequency": 2091
+  },
+  {
+    "rank": 177,
+    "word": "strategic",
+    "frequency": 2052
+  },
+  {
+    "rank": 178,
+    "word": "happen",
+    "frequency": 2045
+  },
+  {
+    "rank": 179,
+    "word": "conference",
+    "frequency": 2045
+  },
+  {
+    "rank": 180,
+    "word": "remain",
+    "frequency": 2042
+  },
+  {
+    "rank": 181,
+    "word": "welcome",
+    "frequency": 2016
+  },
+  {
+    "rank": 182,
+    "word": "view",
+    "frequency": 2014
+  },
+  {
+    "rank": 183,
+    "word": "russia?s",
+    "frequency": 1983
+  },
+  {
+    "rank": 184,
+    "word": "territory",
+    "frequency": 1980
+  },
+  {
+    "rank": 185,
+    "word": "follow",
+    "frequency": 1962
+  },
+  {
+    "rank": 186,
+    "word": "agenda",
+    "frequency": 1962
+  },
+  {
+    "rank": 187,
+    "word": "end",
+    "frequency": 1960
+  },
+  {
+    "rank": 188,
+    "word": "point",
+    "frequency": 1945
+  },
+  {
+    "rank": 189,
+    "word": "goal",
+    "frequency": 1904
+  },
+  {
+    "rank": 190,
+    "word": "note",
+    "frequency": 1895
+  },
+  {
+    "rank": 191,
+    "word": "lead",
+    "frequency": 1893
+  },
+  {
+    "rank": 192,
+    "word": "term",
+    "frequency": 1892
+  },
+  {
+    "rank": 193,
+    "word": "regard",
+    "frequency": 1891
+  },
+  {
+    "rank": 194,
+    "word": "regime",
+    "frequency": 1882
+  },
+  {
+    "rank": 195,
+    "word": "fight",
+    "frequency": 1877
+  },
+  {
+    "rank": 196,
+    "word": "power",
+    "frequency": 1876
+  },
+  {
+    "rank": 197,
+    "word": "asia",
+    "frequency": 1873
+  },
+  {
+    "rank": 198,
+    "word": "case",
+    "frequency": 1867
+  },
+  {
+    "rank": 199,
+    "word": "ask",
+    "frequency": 1858
+  },
+  {
+    "rank": 200,
+    "word": "mean",
+    "frequency": 1848
+  },
+  {
+    "rank": 201,
+    "word": "future",
+    "frequency": 1834
+  },
+  {
+    "rank": 202,
+    "word": "close",
+    "frequency": 1832
+  },
+  {
+    "rank": 203,
+    "word": "primarily",
+    "frequency": 1827
+  },
+  {
+    "rank": 204,
+    "word": "resolve",
+    "frequency": 1824
+  },
+  {
+    "rank": 205,
+    "word": "turkey",
+    "frequency": 1824
+  },
+  {
+    "rank": 206,
+    "word": "charter",
+    "frequency": 1813
+  },
+  {
+    "rank": 207,
+    "word": "community",
+    "frequency": 1804
+  },
+  {
+    "rank": 208,
+    "word": "adopt",
+    "frequency": 1803
+  },
+  {
+    "rank": 209,
+    "word": "basis",
+    "frequency": 1794
+  },
+  {
+    "rank": 210,
+    "word": "forum",
+    "frequency": 1788
+  },
+  {
+    "rank": 211,
+    "word": "implementation",
+    "frequency": 1761
+  },
+  {
+    "rank": 212,
+    "word": "look",
+    "frequency": 1746
+  },
+  {
+    "rank": 213,
+    "word": "activity",
+    "frequency": 1743
+  },
+  {
+    "rank": 214,
+    "word": "system",
+    "frequency": 1741
+  },
+  {
+    "rank": 215,
+    "word": "bric",
+    "frequency": 1739
+  },
+  {
+    "rank": 216,
+    "word": "south",
+    "frequency": 1732
+  },
+  {
+    "rank": 217,
+    "word": "strengthen",
+    "frequency": 1718
+  },
+  {
+    "rank": 218,
+    "word": "tell",
+    "frequency": 1710
+  },
+  {
+    "rank": 219,
+    "word": "terrorism",
+    "frequency": 1707
+  },
+  {
+    "rank": 220,
+    "word": "diplomatic",
+    "frequency": 1704
+  },
+  {
+    "rank": 221,
+    "word": "open",
+    "frequency": 1704
+  },
+  {
+    "rank": 222,
+    "word": "framework",
+    "frequency": 1698
+  },
+  {
+    "rank": 223,
+    "word": "arab",
+    "frequency": 1696
+  },
+  {
+    "rank": 224,
+    "word": "address",
+    "frequency": 1694
+  },
+  {
+    "rank": 225,
+    "word": "give",
+    "frequency": 1690
+  },
+  {
+    "rank": 226,
+    "word": "language",
+    "frequency": 1687
+  },
+  {
+    "rank": 227,
+    "word": "main",
+    "frequency": 1682
+  },
+  {
+    "rank": 228,
+    "word": "share",
+    "frequency": 1674
+  },
+  {
+    "rank": 229,
+    "word": "build",
+    "frequency": 1648
+  },
+  {
+    "rank": 230,
+    "word": "far",
+    "frequency": 1635
+  },
+  {
+    "rank": 231,
+    "word": "opportunity",
+    "frequency": 1634
+  },
+  {
+    "rank": 232,
+    "word": "change",
+    "frequency": 1631
+  },
+  {
+    "rank": 233,
+    "word": "programme",
+    "frequency": 1626
+  },
+  {
+    "rank": 234,
+    "word": "form",
+    "frequency": 1626
+  },
+  {
+    "rank": 235,
+    "word": "middle",
+    "frequency": 1625
+  },
+  {
+    "rank": 236,
+    "word": "information",
+    "frequency": 1622
+  },
+  {
+    "rank": 237,
+    "word": "palestine",
+    "frequency": 1621
+  },
+  {
+    "rank": 238,
+    "word": "act",
+    "frequency": 1618
+  },
+  {
+    "rank": 239,
+    "word": "exchange",
+    "frequency": 1613
+  },
+  {
+    "rank": 240,
+    "word": "example",
+    "frequency": 1611
+  },
+  {
+    "rank": 241,
+    "word": "condition",
+    "frequency": 1608
+  },
+  {
+    "rank": 242,
+    "word": "achieve",
+    "frequency": 1605
+  },
+  {
+    "rank": 243,
+    "word": "americans",
+    "frequency": 1602
+  },
+  {
+    "rank": 244,
+    "word": "authority",
+    "frequency": 1602
+  },
+  {
+    "rank": 245,
+    "word": "proposal",
+    "frequency": 1597
+  },
+  {
+    "rank": 246,
+    "word": "economy",
+    "frequency": 1582
+  },
+  {
+    "rank": 247,
+    "word": "commission",
+    "frequency": 1580
+  },
+  {
+    "rank": 248,
+    "word": "find",
+    "frequency": 1578
+  },
+  {
+    "rank": 249,
+    "word": "deal",
+    "frequency": 1575
+  },
+  {
+    "rank": 250,
+    "word": "interested",
+    "frequency": 1566
+  },
+  {
+    "rank": 251,
+    "word": "history",
+    "frequency": 1561
+  },
+  {
+    "rank": 252,
+    "word": "rule",
+    "frequency": 1559
+  },
+  {
+    "rank": 253,
+    "word": "operation",
+    "frequency": 1558
+  },
+  {
+    "rank": 254,
+    "word": "set",
+    "frequency": 1557
+  },
+  {
+    "rank": 255,
+    "word": "line",
+    "frequency": 1549
+  },
+  {
+    "rank": 256,
+    "word": "maintain",
+    "frequency": 1549
+  },
+  {
+    "rank": 257,
+    "word": "recently",
+    "frequency": 1541
+  },
+  {
+    "rank": 258,
+    "word": "involve",
+    "frequency": 1540
+  },
+  {
+    "rank": 259,
+    "word": "head",
+    "frequency": 1540
+  },
+  {
+    "rank": 260,
+    "word": "key",
+    "frequency": 1536
+  },
+  {
+    "rank": 261,
+    "word": "border",
+    "frequency": 1534
+  },
+  {
+    "rank": 262,
+    "word": "specific",
+    "frequency": 1533
+  },
+  {
+    "rank": 263,
+    "word": "coordinate",
+    "frequency": 1513
+  },
+  {
+    "rank": 264,
+    "word": "negotiation",
+    "frequency": 1511
+  },
+  {
+    "rank": 265,
+    "word": "election",
+    "frequency": 1510
+  },
+  {
+    "rank": 266,
+    "word": "defense",
+    "frequency": 1503
+  },
+  {
+    "rank": 267,
+    "word": "cultural",
+    "frequency": 1488
+  },
+  {
+    "rank": 268,
+    "word": "hear",
+    "frequency": 1476
+  },
+  {
+    "rank": 269,
+    "word": "idea",
+    "frequency": 1472
+  },
+  {
+    "rank": 270,
+    "word": "direct",
+    "frequency": 1467
+  },
+  {
+    "rank": 271,
+    "word": "life",
+    "frequency": 1465
+  },
+  {
+    "rank": 272,
+    "word": "expand",
+    "frequency": 1453
+  },
+  {
+    "rank": 273,
+    "word": "nation",
+    "frequency": 1449
+  },
+  {
+    "rank": 274,
+    "word": "israel",
+    "frequency": 1448
+  },
+  {
+    "rank": 275,
+    "word": "express",
+    "frequency": 1447
+  },
+  {
+    "rank": 276,
+    "word": "present",
+    "frequency": 1447
+  },
+  {
+    "rank": 277,
+    "word": "independence",
+    "frequency": 1443
+  },
+  {
+    "rank": 278,
+    "word": "non",
+    "frequency": 1441
+  },
+  {
+    "rank": 279,
+    "word": "eurasian",
+    "frequency": 1441
+  },
+  {
+    "rank": 280,
+    "word": "bring",
+    "frequency": 1440
+  },
+  {
+    "rank": 281,
+    "word": "measure",
+    "frequency": 1439
+  },
+  {
+    "rank": 282,
+    "word": "sovereignty",
+    "frequency": 1438
+  },
+  {
+    "rank": 283,
+    "word": "mechanism",
+    "frequency": 1433
+  },
+  {
+    "rank": 284,
+    "word": "confirm",
+    "frequency": 1426
+  },
+  {
+    "rank": 285,
+    "word": "medium",
+    "frequency": 1420
+  },
+  {
+    "rank": 286,
+    "word": "interaction",
+    "frequency": 1419
+  },
+  {
+    "rank": 287,
+    "word": "clear",
+    "frequency": 1418
+  },
+  {
+    "rank": 288,
+    "word": "united kingdom",
+    "frequency": 1417
+  },
+  {
+    "rank": 289,
+    "word": "play",
+    "frequency": 1413
+  },
+  {
+    "rank": 290,
+    "word": "focus",
+    "frequency": 1412
+  },
+  {
+    "rank": 291,
+    "word": "thank",
+    "frequency": 1410
+  },
+  {
+    "rank": 292,
+    "word": "commitment",
+    "frequency": 1410
+  },
+  {
+    "rank": 293,
+    "word": "business",
+    "frequency": 1409
+  },
+  {
+    "rank": 294,
+    "word": "let",
+    "frequency": 1405
+  },
+  {
+    "rank": 295,
+    "word": "make",
+    "frequency": 1404
+  },
+  {
+    "rank": 296,
+    "word": "sco",
+    "frequency": 1404
+  },
+  {
+    "rank": 297,
+    "word": "north",
+    "frequency": 1402
+  },
+  {
+    "rank": 298,
+    "word": "attention",
+    "frequency": 1391
+  },
+  {
+    "rank": 299,
+    "word": "context",
+    "frequency": 1391
+  },
+  {
+    "rank": 300,
+    "word": "kazakhstan",
+    "frequency": 1377
+  },
+  {
+    "rank": 301,
+    "word": "energy",
+    "frequency": 1376
+  },
+  {
+    "rank": 302,
+    "word": "prime",
+    "frequency": 1372
+  },
+  {
+    "rank": 303,
+    "word": "reason",
+    "frequency": 1371
+  },
+  {
+    "rank": 304,
+    "word": "free",
+    "frequency": 1366
+  },
+  {
+    "rank": 305,
+    "word": "particular",
+    "frequency": 1358
+  },
+  {
+    "rank": 306,
+    "word": "official",
+    "frequency": 1353
+  },
+  {
+    "rank": 307,
+    "word": "prevent",
+    "frequency": 1348
+  },
+  {
+    "rank": 308,
+    "word": "allow",
+    "frequency": 1348
+  },
+  {
+    "rank": 309,
+    "word": "practical",
+    "frequency": 1344
+  },
+  {
+    "rank": 310,
+    "word": "approve",
+    "frequency": 1342
+  },
+  {
+    "rank": 311,
+    "word": "human",
+    "frequency": 1337
+  },
+  {
+    "rank": 312,
+    "word": "different",
+    "frequency": 1336
+  },
+  {
+    "rank": 313,
+    "word": "live",
+    "frequency": 1329
+  },
+  {
+    "rank": 314,
+    "word": "participant",
+    "frequency": 1329
+  },
+  {
+    "rank": 315,
+    "word": "soon",
+    "frequency": 1324
+  },
+  {
+    "rank": 316,
+    "word": "solution",
+    "frequency": 1323
+  },
+  {
+    "rank": 317,
+    "word": "washington",
+    "frequency": 1320
+  },
+  {
+    "rank": 318,
+    "word": "space",
+    "frequency": 1316
+  },
+  {
+    "rank": 319,
+    "word": "see",
+    "frequency": 1312
+  },
+  {
+    "rank": 320,
+    "word": "join",
+    "frequency": 1310
+  },
+  {
+    "rank": 321,
+    "word": "public",
+    "frequency": 1306
+  },
+  {
+    "rank": 322,
+    "word": "receive",
+    "frequency": 1305
+  },
+  {
+    "rank": 323,
+    "word": "citizen",
+    "frequency": 1304
+  },
+  {
+    "rank": 324,
+    "word": "report",
+    "frequency": 1301
+  },
+  {
+    "rank": 325,
+    "word": "opinion",
+    "frequency": 1300
+  },
+  {
+    "rank": 326,
+    "word": "necessary",
+    "frequency": 1300
+  },
+  {
+    "rank": 327,
+    "word": "decide",
+    "frequency": 1299
+  },
+  {
+    "rank": 328,
+    "word": "entire",
+    "frequency": 1290
+  },
+  {
+    "rank": 329,
+    "word": "attack",
+    "frequency": 1287
+  },
+  {
+    "rank": 330,
+    "word": "control",
+    "frequency": 1285
+  },
+  {
+    "rank": 331,
+    "word": "soviet",
+    "frequency": 1281
+  },
+  {
+    "rank": 332,
+    "word": "large",
+    "frequency": 1273
+  },
+  {
+    "rank": 333,
+    "word": "stop",
+    "frequency": 1265
+  },
+  {
+    "rank": 334,
+    "word": "aim",
+    "frequency": 1261
+  },
+  {
+    "rank": 335,
+    "word": "value",
+    "frequency": 1244
+  },
+  {
+    "rank": 336,
+    "word": "propose",
+    "frequency": 1241
+  },
+  {
+    "rank": 337,
+    "word": "begin",
+    "frequency": 1232
+  },
+  {
+    "rank": 338,
+    "word": "especially",
+    "frequency": 1227
+  },
+  {
+    "rank": 339,
+    "word": "geneva",
+    "frequency": 1227
+  },
+  {
+    "rank": 340,
+    "word": "second",
+    "frequency": 1226
+  },
+  {
+    "rank": 341,
+    "word": "increase",
+    "frequency": 1222
+  },
+  {
+    "rank": 342,
+    "word": "positive",
+    "frequency": 1207
+  },
+  {
+    "rank": 343,
+    "word": "month",
+    "frequency": 1205
+  },
+  {
+    "rank": 344,
+    "word": "legal",
+    "frequency": 1204
+  },
+  {
+    "rank": 345,
+    "word": "sphere",
+    "frequency": 1198
+  },
+  {
+    "rank": 346,
+    "word": "expert",
+    "frequency": 1196
+  },
+  {
+    "rank": 347,
+    "word": "past",
+    "frequency": 1195
+  },
+  {
+    "rank": 348,
+    "word": "wish",
+    "frequency": 1193
+  },
+  {
+    "rank": 349,
+    "word": "anniversary",
+    "frequency": 1191
+  },
+  {
+    "rank": 350,
+    "word": "launch",
+    "frequency": 1183
+  },
+  {
+    "rank": 351,
+    "word": "central",
+    "frequency": 1181
+  },
+  {
+    "rank": 352,
+    "word": "leave",
+    "frequency": 1181
+  },
+  {
+    "rank": 353,
+    "word": "expect",
+    "frequency": 1174
+  },
+  {
+    "rank": 354,
+    "word": "recent",
+    "frequency": 1171
+  },
+  {
+    "rank": 355,
+    "word": "send",
+    "frequency": 1170
+  },
+  {
+    "rank": 356,
+    "word": "turn",
+    "frequency": 1169
+  },
+  {
+    "rank": 357,
+    "word": "stability",
+    "frequency": 1166
+  },
+  {
+    "rank": 358,
+    "word": "culture",
+    "frequency": 1164
+  },
+  {
+    "rank": 359,
+    "word": "task",
+    "frequency": 1163
+  },
+  {
+    "rank": 360,
+    "word": "center",
+    "frequency": 1158
+  },
+  {
+    "rank": 361,
+    "word": "assembly",
+    "frequency": 1155
+  },
+  {
+    "rank": 362,
+    "word": "status",
+    "frequency": 1153
+  },
+  {
+    "rank": 363,
+    "word": "certain",
+    "frequency": 1147
+  },
+  {
+    "rank": 364,
+    "word": "demand",
+    "frequency": 1136
+  },
+  {
+    "rank": 365,
+    "word": "objective",
+    "frequency": 1133
+  },
+  {
+    "rank": 366,
+    "word": "impose",
+    "frequency": 1130
+  },
+  {
+    "rank": 367,
+    "word": "agency",
+    "frequency": 1128
+  },
+  {
+    "rank": 368,
+    "word": "importance",
+    "frequency": 1128
+  },
+  {
+    "rank": 369,
+    "word": "anti",
+    "frequency": 1125
+  },
+  {
+    "rank": 370,
+    "word": "return",
+    "frequency": 1124
+  },
+  {
+    "rank": 371,
+    "word": "early",
+    "frequency": 1121
+  },
+  {
+    "rank": 372,
+    "word": "stage",
+    "frequency": 1120
+  },
+  {
+    "rank": 373,
+    "word": "participation",
+    "frequency": 1119
+  },
+  {
+    "rank": 374,
+    "word": "relate",
+    "frequency": 1115
+  },
+  {
+    "rank": 375,
+    "word": "understanding",
+    "frequency": 1114
+  },
+  {
+    "rank": 376,
+    "word": "announce",
+    "frequency": 1111
+  },
+  {
+    "rank": 377,
+    "word": "detail",
+    "frequency": 1104
+  },
+  {
+    "rank": 378,
+    "word": "investment",
+    "frequency": 1103
+  },
+  {
+    "rank": 379,
+    "word": "trump",
+    "frequency": 1101
+  },
+  {
+    "rank": 380,
+    "word": "influence",
+    "frequency": 1101
+  },
+  {
+    "rank": 381,
+    "word": "response",
+    "frequency": 1101
+  },
+  {
+    "rank": 382,
+    "word": "delegation",
+    "frequency": 1099
+  },
+  {
+    "rank": 383,
+    "word": "ally",
+    "frequency": 1099
+  },
+  {
+    "rank": 384,
+    "word": "prepare",
+    "frequency": 1096
+  },
+  {
+    "rank": 385,
+    "word": "kind",
+    "frequency": 1090
+  },
+  {
+    "rank": 386,
+    "word": "face",
+    "frequency": 1088
+  },
+  {
+    "rank": 387,
+    "word": "grow",
+    "frequency": 1086
+  },
+  {
+    "rank": 388,
+    "word": "india",
+    "frequency": 1085
+  },
+  {
+    "rank": 389,
+    "word": "represent",
+    "frequency": 1085
+  },
+  {
+    "rank": 390,
+    "word": "iraq",
+    "frequency": 1084
+  },
+  {
+    "rank": 391,
+    "word": "regular",
+    "frequency": 1083
+  },
+  {
+    "rank": 392,
+    "word": "fully",
+    "frequency": 1083
+  },
+  {
+    "rank": 393,
+    "word": "priority",
+    "frequency": 1080
+  },
+  {
+    "rank": 394,
+    "word": "afghanistan",
+    "frequency": 1069
+  },
+  {
+    "rank": 395,
+    "word": "libya",
+    "frequency": 1069
+  },
+  {
+    "rank": 396,
+    "word": "potential",
+    "frequency": 1061
+  },
+  {
+    "rank": 397,
+    "word": "chemical",
+    "frequency": 1061
+  },
+  {
+    "rank": 398,
+    "word": "conversation",
+    "frequency": 1058
+  },
+  {
+    "rank": 399,
+    "word": "conduct",
+    "frequency": 1052
+  },
+  {
+    "rank": 400,
+    "word": "armed",
+    "frequency": 1050
+  },
+  {
+    "rank": 401,
+    "word": "answer",
+    "frequency": 1050
+  },
+  {
+    "rank": 402,
+    "word": "draft",
+    "frequency": 1042
+  },
+  {
+    "rank": 403,
+    "word": "contribute",
+    "frequency": 1041
+  },
+  {
+    "rank": 404,
+    "word": "major",
+    "frequency": 1037
+  },
+  {
+    "rank": 405,
+    "word": "cis",
+    "frequency": 1033
+  },
+  {
+    "rank": 406,
+    "word": "actively",
+    "frequency": 1027
+  },
+  {
+    "rank": 407,
+    "word": "zone",
+    "frequency": 1026
+  },
+  {
+    "rank": 408,
+    "word": "yesterday",
+    "frequency": 1024
+  },
+  {
+    "rank": 409,
+    "word": "invite",
+    "frequency": 1023
+  },
+  {
+    "rank": 410,
+    "word": "contribution",
+    "frequency": 1020
+  },
+  {
+    "rank": 411,
+    "word": "progress",
+    "frequency": 1016
+  },
+  {
+    "rank": 412,
+    "word": "ground",
+    "frequency": 1011
+  },
+  {
+    "rank": 413,
+    "word": "mission",
+    "frequency": 1010
+  },
+  {
+    "rank": 414,
+    "word": "administration",
+    "frequency": 1010
+  },
+  {
+    "rank": 415,
+    "word": "word",
+    "frequency": 1010
+  },
+  {
+    "rank": 416,
+    "word": "eastern",
+    "frequency": 1006
+  },
+  {
+    "rank": 417,
+    "word": "guarantee",
+    "frequency": 1004
+  },
+  {
+    "rank": 418,
+    "word": "mutually",
+    "frequency": 999
+  },
+  {
+    "rank": 419,
+    "word": "stand",
+    "frequency": 996
+  },
+  {
+    "rank": 420,
+    "word": "seek",
+    "frequency": 995
+  },
+  {
+    "rank": 421,
+    "word": "trust",
+    "frequency": 994
+  },
+  {
+    "rank": 422,
+    "word": "association",
+    "frequency": 994
+  },
+  {
+    "rank": 423,
+    "word": "asean",
+    "frequency": 991
+  },
+  {
+    "rank": 424,
+    "word": "able",
+    "frequency": 980
+  },
+  {
+    "rank": 425,
+    "word": "majority",
+    "frequency": 979
+  },
+  {
+    "rank": 426,
+    "word": "integration",
+    "frequency": 978
+  },
+  {
+    "rank": 427,
+    "word": "education",
+    "frequency": 977
+  },
+  {
+    "rank": 428,
+    "word": "later",
+    "frequency": 977
+  },
+  {
+    "rank": 429,
+    "word": "clearly",
+    "frequency": 977
+  },
+  {
+    "rank": 430,
+    "word": "comprehensive",
+    "frequency": 975
+  },
+  {
+    "rank": 431,
+    "word": "japan",
+    "frequency": 974
+  },
+  {
+    "rank": 432,
+    "word": "constructive",
+    "frequency": 973
+  },
+  {
+    "rank": 433,
+    "word": "challenge",
+    "frequency": 972
+  },
+  {
+    "rank": 434,
+    "word": "recognize",
+    "frequency": 970
+  },
+  {
+    "rank": 435,
+    "word": "accept",
+    "frequency": 968
+  },
+  {
+    "rank": 436,
+    "word": "latin",
+    "frequency": 966
+  },
+  {
+    "rank": 437,
+    "word": "diplomacy",
+    "frequency": 965
+  },
+  {
+    "rank": 438,
+    "word": "crimea",
+    "frequency": 965
+  },
+  {
+    "rank": 439,
+    "word": "exist",
+    "frequency": 964
+  },
+  {
+    "rank": 440,
+    "word": "show",
+    "frequency": 963
+  },
+  {
+    "rank": 441,
+    "word": "civilian",
+    "frequency": 961
+  },
+  {
+    "rank": 442,
+    "word": "account",
+    "frequency": 960
+  },
+  {
+    "rank": 443,
+    "word": "sure",
+    "frequency": 959
+  },
+  {
+    "rank": 444,
+    "word": "aspect",
+    "frequency": 956
+  },
+  {
+    "rank": 445,
+    "word": "participate",
+    "frequency": 955
+  },
+  {
+    "rank": 446,
+    "word": "ceasefire",
+    "frequency": 955
+  },
+  {
+    "rank": 447,
+    "word": "cause",
+    "frequency": 952
+  },
+  {
+    "rank": 448,
+    "word": "foundation",
+    "frequency": 951
+  },
+  {
+    "rank": 449,
+    "word": "comment",
+    "frequency": 944
+  },
+  {
+    "rank": 450,
+    "word": "service",
+    "frequency": 942
+  },
+  {
+    "rank": 451,
+    "word": "continent",
+    "frequency": 941
+  },
+  {
+    "rank": 452,
+    "word": "diplomat",
+    "frequency": 939
+  },
+  {
+    "rank": 453,
+    "word": "february",
+    "frequency": 939
+  },
+  {
+    "rank": 454,
+    "word": "convention",
+    "frequency": 937
+  },
+  {
+    "rank": 455,
+    "word": "violation",
+    "frequency": 934
+  },
+  {
+    "rank": 456,
+    "word": "reaffirm",
+    "frequency": 930
+  },
+  {
+    "rank": 457,
+    "word": "collective",
+    "frequency": 929
+  },
+  {
+    "rank": 458,
+    "word": "assistance",
+    "frequency": 929
+  },
+  {
+    "rank": 459,
+    "word": "absolutely",
+    "frequency": 928
+  },
+  {
+    "rank": 460,
+    "word": "reform",
+    "frequency": 925
+  },
+  {
+    "rank": 461,
+    "word": "nazi",
+    "frequency": 922
+  },
+  {
+    "rank": 462,
+    "word": "obligation",
+    "frequency": 902
+  },
+  {
+    "rank": 463,
+    "word": "review",
+    "frequency": 901
+  },
+  {
+    "rank": 464,
+    "word": "supply",
+    "frequency": 899
+  },
+  {
+    "rank": 465,
+    "word": "aware",
+    "frequency": 897
+  },
+  {
+    "rank": 466,
+    "word": "relevant",
+    "frequency": 889
+  },
+  {
+    "rank": 467,
+    "word": "settle",
+    "frequency": 880
+  },
+  {
+    "rank": 468,
+    "word": "equal",
+    "frequency": 875
+  },
+  {
+    "rank": 469,
+    "word": "coup",
+    "frequency": 869
+  },
+  {
+    "rank": 470,
+    "word": "request",
+    "frequency": 868
+  },
+  {
+    "rank": 471,
+    "word": "committee",
+    "frequency": 866
+  },
+  {
+    "rank": 472,
+    "word": "alliance",
+    "frequency": 865
+  },
+  {
+    "rank": 473,
+    "word": "appreciate",
+    "frequency": 864
+  },
+  {
+    "rank": 474,
+    "word": "carry",
+    "frequency": 862
+  },
+  {
+    "rank": 475,
+    "word": "effective",
+    "frequency": 861
+  },
+  {
+    "rank": 476,
+    "word": "technical",
+    "frequency": 859
+  },
+  {
+    "rank": 477,
+    "word": "forward",
+    "frequency": 858
+  },
+  {
+    "rank": 478,
+    "word": "require",
+    "frequency": 858
+  },
+  {
+    "rank": 479,
+    "word": "experience",
+    "frequency": 857
+  },
+  {
+    "rank": 480,
+    "word": "creation",
+    "frequency": 854
+  },
+  {
+    "rank": 481,
+    "word": "eaeu",
+    "frequency": 854
+  },
+  {
+    "rank": 482,
+    "word": "declaration",
+    "frequency": 853
+  },
+  {
+    "rank": 483,
+    "word": "attend",
+    "frequency": 850
+  },
+  {
+    "rank": 484,
+    "word": "refuse",
+    "frequency": 850
+  },
+  {
+    "rank": 485,
+    "word": "gentleman",
+    "frequency": 849
+  },
+  {
+    "rank": 486,
+    "word": "self",
+    "frequency": 847
+  },
+  {
+    "rank": 487,
+    "word": "permanent",
+    "frequency": 847
+  },
+  {
+    "rank": 488,
+    "word": "arm",
+    "frequency": 845
+  },
+  {
+    "rank": 489,
+    "word": "declare",
+    "frequency": 845
+  },
+  {
+    "rank": 490,
+    "word": "historical",
+    "frequency": 842
+  },
+  {
+    "rank": 491,
+    "word": "body",
+    "frequency": 840
+  },
+  {
+    "rank": 492,
+    "word": "topic",
+    "frequency": 839
+  },
+  {
+    "rank": 493,
+    "word": "lady",
+    "frequency": 838
+  },
+  {
+    "rank": 494,
+    "word": "sea",
+    "frequency": 835
+  },
+  {
+    "rank": 495,
+    "word": "intergovernmental",
+    "frequency": 834
+  },
+  {
+    "rank": 496,
+    "word": "equality",
+    "frequency": 832
+  },
+  {
+    "rank": 497,
+    "word": "practice",
+    "frequency": 829
+  },
+  {
+    "rank": 498,
+    "word": "side",
+    "frequency": 826
+  },
+  {
+    "rank": 499,
+    "word": "list",
+    "frequency": 825
+  },
+  {
+    "rank": 500,
+    "word": "prospect",
+    "frequency": 825
+  },
+  {
+    "rank": 501,
+    "word": "pay",
+    "frequency": 822
+  },
+  {
+    "rank": 502,
+    "word": "multilateral",
+    "frequency": 822
+  },
+  {
+    "rank": 503,
+    "word": "range",
+    "frequency": 820
+  },
+  {
+    "rank": 504,
+    "word": "hand",
+    "frequency": 815
+  },
+  {
+    "rank": 505,
+    "word": "islamic",
+    "frequency": 814
+  },
+  {
+    "rank": 506,
+    "word": "university",
+    "frequency": 812
+  },
+  {
+    "rank": 507,
+    "word": "legitimate",
+    "frequency": 811
+  },
+  {
+    "rank": 508,
+    "word": "resume",
+    "frequency": 809
+  },
+  {
+    "rank": 509,
+    "word": "neighbor",
+    "frequency": 808
+  },
+  {
+    "rank": 510,
+    "word": "external",
+    "frequency": 807
+  },
+  {
+    "rank": 511,
+    "word": "csto",
+    "frequency": 803
+  },
+  {
+    "rank": 512,
+    "word": "highly",
+    "frequency": 803
+  },
+  {
+    "rank": 513,
+    "word": "concept",
+    "frequency": 801
+  },
+  {
+    "rank": 514,
+    "word": "victory",
+    "frequency": 799
+  },
+  {
+    "rank": 515,
+    "word": "session",
+    "frequency": 799
+  },
+  {
+    "rank": 516,
+    "word": "nations",
+    "frequency": 798
+  },
+  {
+    "rank": 517,
+    "word": "trend",
+    "frequency": 798
+  },
+  {
+    "rank": 518,
+    "word": "coalition",
+    "frequency": 798
+  },
+  {
+    "rank": 519,
+    "word": "territorial",
+    "frequency": 797
+  },
+  {
+    "rank": 520,
+    "word": "advance",
+    "frequency": 796
+  },
+  {
+    "rank": 521,
+    "word": "offer",
+    "frequency": 796
+  },
+  {
+    "rank": 522,
+    "word": "certainly",
+    "frequency": 795
+  },
+  {
+    "rank": 523,
+    "word": "september",
+    "frequency": 793
+  },
+  {
+    "rank": 524,
+    "word": "active",
+    "frequency": 792
+  },
+  {
+    "rank": 525,
+    "word": "coordination",
+    "frequency": 789
+  },
+  {
+    "rank": 526,
+    "word": "unilateral",
+    "frequency": 789
+  },
+  {
+    "rank": 527,
+    "word": "infrastructure",
+    "frequency": 783
+  },
+  {
+    "rank": 528,
+    "word": "constitutional",
+    "frequency": 783
+  },
+  {
+    "rank": 529,
+    "word": "tradition",
+    "frequency": 778
+  },
+  {
+    "rank": 530,
+    "word": "benefit",
+    "frequency": 777
+  },
+  {
+    "rank": 531,
+    "word": "office",
+    "frequency": 776
+  },
+  {
+    "rank": 532,
+    "word": "consultation",
+    "frequency": 776
+  },
+  {
+    "rank": 533,
+    "word": "assessment",
+    "frequency": 775
+  },
+  {
+    "rank": 534,
+    "word": "unfortunately",
+    "frequency": 772
+  },
+  {
+    "rank": 535,
+    "word": "company",
+    "frequency": 771
+  },
+  {
+    "rank": 536,
+    "word": "preparation",
+    "frequency": 770
+  },
+  {
+    "rank": 537,
+    "word": "donbass",
+    "frequency": 769
+  },
+  {
+    "rank": 538,
+    "word": "society",
+    "frequency": 767
+  },
+  {
+    "rank": 539,
+    "word": "pacific",
+    "frequency": 767
+  },
+  {
+    "rank": 540,
+    "word": "claim",
+    "frequency": 766
+  },
+  {
+    "rank": 541,
+    "word": "doubt",
+    "frequency": 763
+  },
+  {
+    "rank": 542,
+    "word": "well",
+    "frequency": 761
+  },
+  {
+    "rank": 543,
+    "word": "feel",
+    "frequency": 761
+  },
+  {
+    "rank": 544,
+    "word": "emphasise",
+    "frequency": 756
+  },
+  {
+    "rank": 545,
+    "word": "saudi arabia",
+    "frequency": 756
+  },
+  {
+    "rank": 546,
+    "word": "isis",
+    "frequency": 756
+  },
+  {
+    "rank": 547,
+    "word": "june",
+    "frequency": 755
+  },
+  {
+    "rank": 548,
+    "word": "counter",
+    "frequency": 752
+  },
+  {
+    "rank": 549,
+    "word": "respond",
+    "frequency": 749
+  },
+  {
+    "rank": 550,
+    "word": "suggest",
+    "frequency": 748
+  },
+  {
+    "rank": 551,
+    "word": "modern",
+    "frequency": 747
+  },
+  {
+    "rank": 552,
+    "word": "draw",
+    "frequency": 746
+  },
+  {
+    "rank": 553,
+    "word": "effect",
+    "frequency": 746
+  },
+  {
+    "rank": 554,
+    "word": "organise",
+    "frequency": 745
+  },
+  {
+    "rank": 555,
+    "word": "additional",
+    "frequency": 745
+  },
+  {
+    "rank": 556,
+    "word": "leadership",
+    "frequency": 742
+  },
+  {
+    "rank": 557,
+    "word": "similar",
+    "frequency": 741
+  },
+  {
+    "rank": 558,
+    "word": "period",
+    "frequency": 739
+  },
+  {
+    "rank": 559,
+    "word": "mark",
+    "frequency": 738
+  },
+  {
+    "rank": 560,
+    "word": "promise",
+    "frequency": 736
+  },
+  {
+    "rank": 561,
+    "word": "reflect",
+    "frequency": 736
+  },
+  {
+    "rank": 562,
+    "word": "week",
+    "frequency": 735
+  },
+  {
+    "rank": 563,
+    "word": "atlantic",
+    "frequency": 733
+  },
+  {
+    "rank": 564,
+    "word": "strong",
+    "frequency": 730
+  },
+  {
+    "rank": 565,
+    "word": "democratic",
+    "frequency": 729
+  },
+  {
+    "rank": 566,
+    "word": "armenia",
+    "frequency": 729
+  },
+  {
+    "rank": 567,
+    "word": "drug",
+    "frequency": 729
+  },
+  {
+    "rank": 568,
+    "word": "convince",
+    "frequency": 727
+  },
+  {
+    "rank": 569,
+    "word": "platform",
+    "frequency": 724
+  },
+  {
+    "rank": 570,
+    "word": "late",
+    "frequency": 723
+  },
+  {
+    "rank": 571,
+    "word": "repeatedly",
+    "frequency": 721
+  },
+  {
+    "rank": 572,
+    "word": "useful",
+    "frequency": 720
+  },
+  {
+    "rank": 573,
+    "word": "integrity",
+    "frequency": 717
+  },
+  {
+    "rank": 574,
+    "word": "numerous",
+    "frequency": 717
+  },
+  {
+    "rank": 575,
+    "word": "protect",
+    "frequency": 715
+  },
+  {
+    "rank": 576,
+    "word": "refer",
+    "frequency": 715
+  },
+  {
+    "rank": 577,
+    "word": "remember",
+    "frequency": 713
+  },
+  {
+    "rank": 578,
+    "word": "structure",
+    "frequency": 704
+  },
+  {
+    "rank": 579,
+    "word": "improve",
+    "frequency": 700
+  },
+  {
+    "rank": 580,
+    "word": "consensus",
+    "frequency": 700
+  },
+  {
+    "rank": 581,
+    "word": "engage",
+    "frequency": 699
+  },
+  {
+    "rank": 582,
+    "word": "confident",
+    "frequency": 699
+  },
+  {
+    "rank": 583,
+    "word": "missile",
+    "frequency": 691
+  },
+  {
+    "rank": 584,
+    "word": "purpose",
+    "frequency": 689
+  },
+  {
+    "rank": 585,
+    "word": "g20",
+    "frequency": 688
+  },
+  {
+    "rank": 586,
+    "word": "final",
+    "frequency": 687
+  },
+  {
+    "rank": 587,
+    "word": "preserve",
+    "frequency": 686
+  },
+  {
+    "rank": 588,
+    "word": "success",
+    "frequency": 686
+  },
+  {
+    "rank": 589,
+    "word": "october",
+    "frequency": 685
+  },
+  {
+    "rank": 590,
+    "word": "subject",
+    "frequency": 685
+  },
+  {
+    "rank": 591,
+    "word": "move",
+    "frequency": 684
+  },
+  {
+    "rank": 592,
+    "word": "host",
+    "frequency": 683
+  },
+  {
+    "rank": 593,
+    "word": "illegal",
+    "frequency": 682
+  },
+  {
+    "rank": 594,
+    "word": "beneficial",
+    "frequency": 681
+  },
+  {
+    "rank": 595,
+    "word": "investigation",
+    "frequency": 681
+  },
+  {
+    "rank": 596,
+    "word": "geopolitical",
+    "frequency": 680
+  },
+  {
+    "rank": 597,
+    "word": "destroy",
+    "frequency": 679
+  },
+  {
+    "rank": 598,
+    "word": "overcome",
+    "frequency": 676
+  },
+  {
+    "rank": 599,
+    "word": "donald",
+    "frequency": 676
+  },
+  {
+    "rank": 600,
+    "word": "balance",
+    "frequency": 676
+  },
+  {
+    "rank": 601,
+    "word": "consideration",
+    "frequency": 675
+  },
+  {
+    "rank": 602,
+    "word": "john",
+    "frequency": 674
+  },
+  {
+    "rank": 603,
+    "word": "encourage",
+    "frequency": 673
+  },
+  {
+    "rank": 604,
+    "word": "financial",
+    "frequency": 673
+  },
+  {
+    "rank": 605,
+    "word": "internal",
+    "frequency": 672
+  },
+  {
+    "rank": 606,
+    "word": "broad",
+    "frequency": 672
+  },
+  {
+    "rank": 607,
+    "word": "chair",
+    "frequency": 670
+  },
+  {
+    "rank": 608,
+    "word": "reality",
+    "frequency": 669
+  },
+  {
+    "rank": 609,
+    "word": "fail",
+    "frequency": 669
+  },
+  {
+    "rank": 610,
+    "word": "combat",
+    "frequency": 669
+  },
+  {
+    "rank": 611,
+    "word": "real",
+    "frequency": 668
+  },
+  {
+    "rank": 612,
+    "word": "addition",
+    "frequency": 666
+  },
+  {
+    "rank": 613,
+    "word": "city",
+    "frequency": 666
+  },
+  {
+    "rank": 614,
+    "word": "sochi",
+    "frequency": 663
+  },
+  {
+    "rank": 615,
+    "word": "abroad",
+    "frequency": 661
+  },
+  {
+    "rank": 616,
+    "word": "probably",
+    "frequency": 659
+  },
+  {
+    "rank": 617,
+    "word": "favor",
+    "frequency": 659
+  },
+  {
+    "rank": 618,
+    "word": "violate",
+    "frequency": 659
+  },
+  {
+    "rank": 619,
+    "word": "complete",
+    "frequency": 655
+  },
+  {
+    "rank": 620,
+    "word": "sense",
+    "frequency": 654
+  },
+  {
+    "rank": 621,
+    "word": "donetsk",
+    "frequency": 654
+  },
+  {
+    "rank": 622,
+    "word": "facilitate",
+    "frequency": 652
+  },
+  {
+    "rank": 623,
+    "word": "responsibility",
+    "frequency": 652
+  },
+  {
+    "rank": 624,
+    "word": "kerry",
+    "frequency": 651
+  },
+  {
+    "rank": 625,
+    "word": "fundamental",
+    "frequency": 650
+  },
+  {
+    "rank": 626,
+    "word": "particularly",
+    "frequency": 648
+  },
+  {
+    "rank": 627,
+    "word": "social",
+    "frequency": 648
+  },
+  {
+    "rank": 628,
+    "word": "today?s",
+    "frequency": 647
+  },
+  {
+    "rank": 629,
+    "word": "lot",
+    "frequency": 646
+  },
+  {
+    "rank": 630,
+    "word": "apply",
+    "frequency": 645
+  },
+  {
+    "rank": 631,
+    "word": "market",
+    "frequency": 645
+  },
+  {
+    "rank": 632,
+    "word": "zelensky",
+    "frequency": 645
+  },
+  {
+    "rank": 633,
+    "word": "explain",
+    "frequency": 644
+  },
+  {
+    "rank": 634,
+    "word": "person",
+    "frequency": 643
+  },
+  {
+    "rank": 635,
+    "word": "april",
+    "frequency": 643
+  },
+  {
+    "rank": 636,
+    "word": "currently",
+    "frequency": 642
+  },
+  {
+    "rank": 637,
+    "word": "single",
+    "frequency": 641
+  },
+  {
+    "rank": 638,
+    "word": "young",
+    "frequency": 640
+  },
+  {
+    "rank": 639,
+    "word": "restore",
+    "frequency": 640
+  },
+  {
+    "rank": 640,
+    "word": "significant",
+    "frequency": 639
+  },
+  {
+    "rank": 641,
+    "word": "fulfil",
+    "frequency": 639
+  },
+  {
+    "rank": 642,
+    "word": "standard",
+    "frequency": 638
+  },
+  {
+    "rank": 643,
+    "word": "keep",
+    "frequency": 637
+  },
+  {
+    "rank": 644,
+    "word": "affect",
+    "frequency": 633
+  },
+  {
+    "rank": 645,
+    "word": "i?m",
+    "frequency": 631
+  },
+  {
+    "rank": 646,
+    "word": "pressure",
+    "frequency": 630
+  },
+  {
+    "rank": 647,
+    "word": "deputy",
+    "frequency": 630
+  },
+  {
+    "rank": 648,
+    "word": "serve",
+    "frequency": 629
+  },
+  {
+    "rank": 649,
+    "word": "interference",
+    "frequency": 629
+  },
+  {
+    "rank": 650,
+    "word": "capital",
+    "frequency": 626
+  },
+  {
+    "rank": 651,
+    "word": "federal",
+    "frequency": 625
+  },
+  {
+    "rank": 652,
+    "word": "true",
+    "frequency": 625
+  },
+  {
+    "rank": 653,
+    "word": "determine",
+    "frequency": 624
+  },
+  {
+    "rank": 654,
+    "word": "directly",
+    "frequency": 622
+  },
+  {
+    "rank": 655,
+    "word": "establishment",
+    "frequency": 621
+  },
+  {
+    "rank": 656,
+    "word": "century",
+    "frequency": 621
+  },
+  {
+    "rank": 657,
+    "word": "provision",
+    "frequency": 619
+  },
+  {
+    "rank": 658,
+    "word": "instead",
+    "frequency": 617
+  },
+  {
+    "rank": 659,
+    "word": "difficult",
+    "frequency": 617
+  },
+  {
+    "rank": 660,
+    "word": "get",
+    "frequency": 616
+  },
+  {
+    "rank": 661,
+    "word": "invitation",
+    "frequency": 615
+  },
+  {
+    "rank": 662,
+    "word": "lugansk",
+    "frequency": 614
+  },
+  {
+    "rank": 663,
+    "word": "december",
+    "frequency": 613
+  },
+  {
+    "rank": 664,
+    "word": "undermine",
+    "frequency": 613
+  },
+  {
+    "rank": 665,
+    "word": "friendly",
+    "frequency": 612
+  },
+  {
+    "rank": 666,
+    "word": "willing",
+    "frequency": 612
+  },
+  {
+    "rank": 667,
+    "word": "ethnic",
+    "frequency": 611
+  },
+  {
+    "rank": 668,
+    "word": "nusra",
+    "frequency": 611
+  },
+  {
+    "rank": 669,
+    "word": "desire",
+    "frequency": 610
+  },
+  {
+    "rank": 670,
+    "word": "professional",
+    "frequency": 607
+  },
+  {
+    "rank": 671,
+    "word": "gas",
+    "frequency": 607
+  },
+  {
+    "rank": 672,
+    "word": "immediately",
+    "frequency": 601
+  },
+  {
+    "rank": 673,
+    "word": "visa",
+    "frequency": 598
+  },
+  {
+    "rank": 674,
+    "word": "november",
+    "frequency": 597
+  },
+  {
+    "rank": 675,
+    "word": "unacceptable",
+    "frequency": 596
+  },
+  {
+    "rank": 676,
+    "word": "russians",
+    "frequency": 591
+  },
+  {
+    "rank": 677,
+    "word": "evidence",
+    "frequency": 591
+  },
+  {
+    "rank": 678,
+    "word": "technology",
+    "frequency": 590
+  },
+  {
+    "rank": 679,
+    "word": "escalation",
+    "frequency": 587
+  },
+  {
+    "rank": 680,
+    "word": "vote",
+    "frequency": 586
+  },
+  {
+    "rank": 681,
+    "word": "politician",
+    "frequency": 585
+  },
+  {
+    "rank": 682,
+    "word": "round",
+    "frequency": 584
+  },
+  {
+    "rank": 683,
+    "word": "raise",
+    "frequency": 584
+  },
+  {
+    "rank": 684,
+    "word": "root",
+    "frequency": 583
+  },
+  {
+    "rank": 685,
+    "word": "openly",
+    "frequency": 582
+  },
+  {
+    "rank": 686,
+    "word": "pursue",
+    "frequency": 581
+  },
+  {
+    "rank": 687,
+    "word": "ban",
+    "frequency": 578
+  },
+  {
+    "rank": 688,
+    "word": "add",
+    "frequency": 577
+  },
+  {
+    "rank": 689,
+    "word": "ministerial",
+    "frequency": 576
+  },
+  {
+    "rank": 690,
+    "word": "observer",
+    "frequency": 576
+  },
+  {
+    "rank": 691,
+    "word": "convinced",
+    "frequency": 574
+  },
+  {
+    "rank": 692,
+    "word": "conclusion",
+    "frequency": 574
+  },
+  {
+    "rank": 693,
+    "word": "scale",
+    "frequency": 572
+  },
+  {
+    "rank": 694,
+    "word": "confrontation",
+    "frequency": 571
+  },
+  {
+    "rank": 695,
+    "word": "repeat",
+    "frequency": 570
+  },
+  {
+    "rank": 696,
+    "word": "department",
+    "frequency": 569
+  },
+  {
+    "rank": 697,
+    "word": "method",
+    "frequency": 568
+  },
+  {
+    "rank": 698,
+    "word": "friendship",
+    "frequency": 567
+  },
+  {
+    "rank": 699,
+    "word": "factor",
+    "frequency": 565
+  },
+  {
+    "rank": 700,
+    "word": "journalist",
+    "frequency": 563
+  },
+  {
+    "rank": 701,
+    "word": "schedule",
+    "frequency": 563
+  },
+  {
+    "rank": 702,
+    "word": "responsible",
+    "frequency": 562
+  },
+  {
+    "rank": 703,
+    "word": "channel",
+    "frequency": 562
+  },
+  {
+    "rank": 704,
+    "word": "study",
+    "frequency": 561
+  },
+  {
+    "rank": 705,
+    "word": "crime",
+    "frequency": 561
+  },
+  {
+    "rank": 706,
+    "word": "ambassador",
+    "frequency": 560
+  },
+  {
+    "rank": 707,
+    "word": "democracy",
+    "frequency": 560
+  },
+  {
+    "rank": 708,
+    "word": "simply",
+    "frequency": 559
+  },
+  {
+    "rank": 709,
+    "word": "movement",
+    "frequency": 555
+  },
+  {
+    "rank": 710,
+    "word": "player",
+    "frequency": 555
+  },
+  {
+    "rank": 711,
+    "word": "insist",
+    "frequency": 555
+  },
+  {
+    "rank": 712,
+    "word": "nature",
+    "frequency": 554
+  },
+  {
+    "rank": 713,
+    "word": "transport",
+    "frequency": 554
+  },
+  {
+    "rank": 714,
+    "word": "korea",
+    "frequency": 553
+  },
+  {
+    "rank": 715,
+    "word": "run",
+    "frequency": 552
+  },
+  {
+    "rank": 716,
+    "word": "italy",
+    "frequency": 552
+  },
+  {
+    "rank": 717,
+    "word": "possibility",
+    "frequency": 552
+  },
+  {
+    "rank": 718,
+    "word": "institution",
+    "frequency": 551
+  },
+  {
+    "rank": 719,
+    "word": "sustainable",
+    "frequency": 551
+  },
+  {
+    "rank": 720,
+    "word": "compatriot",
+    "frequency": 550
+  },
+  {
+    "rank": 721,
+    "word": "petersburg",
+    "frequency": 549
+  },
+  {
+    "rank": 722,
+    "word": "politic",
+    "frequency": 547
+  },
+  {
+    "rank": 723,
+    "word": "obvious",
+    "frequency": 547
+  },
+  {
+    "rank": 724,
+    "word": "avoid",
+    "frequency": 546
+  },
+  {
+    "rank": 725,
+    "word": "air",
+    "frequency": 545
+  },
+  {
+    "rank": 726,
+    "word": "exception",
+    "frequency": 544
+  },
+  {
+    "rank": 727,
+    "word": "cover",
+    "frequency": 543
+  },
+  {
+    "rank": 728,
+    "word": "constitution",
+    "frequency": 543
+  },
+  {
+    "rank": 729,
+    "word": "fair",
+    "frequency": 541
+  },
+  {
+    "rank": 730,
+    "word": "hard",
+    "frequency": 540
+  },
+  {
+    "rank": 731,
+    "word": "contain",
+    "frequency": 540
+  },
+  {
+    "rank": 732,
+    "word": "emerge",
+    "frequency": 539
+  },
+  {
+    "rank": 733,
+    "word": "rely",
+    "frequency": 538
+  },
+  {
+    "rank": 734,
+    "word": "truth",
+    "frequency": 535
+  },
+  {
+    "rank": 735,
+    "word": "sector",
+    "frequency": 535
+  },
+  {
+    "rank": 736,
+    "word": "accordance",
+    "frequency": 534
+  },
+  {
+    "rank": 737,
+    "word": "aid",
+    "frequency": 534
+  },
+  {
+    "rank": 738,
+    "word": "pass",
+    "frequency": 533
+  },
+  {
+    "rank": 739,
+    "word": "consistently",
+    "frequency": 533
+  },
+  {
+    "rank": 740,
+    "word": "operate",
+    "frequency": 531
+  },
+  {
+    "rank": 741,
+    "word": "population",
+    "frequency": 530
+  },
+  {
+    "rank": 742,
+    "word": "advocate",
+    "frequency": 530
+  },
+  {
+    "rank": 743,
+    "word": "universal",
+    "frequency": 530
+  },
+  {
+    "rank": 744,
+    "word": "attitude",
+    "frequency": 530
+  },
+  {
+    "rank": 745,
+    "word": "neo",
+    "frequency": 529
+  },
+  {
+    "rank": 746,
+    "word": "guide",
+    "frequency": 529
+  },
+  {
+    "rank": 747,
+    "word": "grateful",
+    "frequency": 528
+  },
+  {
+    "rank": 748,
+    "word": "lose",
+    "frequency": 527
+  },
+  {
+    "rank": 749,
+    "word": "team",
+    "frequency": 527
+  },
+  {
+    "rank": 750,
+    "word": "happy",
+    "frequency": 527
+  },
+  {
+    "rank": 751,
+    "word": "january",
+    "frequency": 526
+  },
+  {
+    "rank": 752,
+    "word": "prove",
+    "frequency": 526
+  },
+  {
+    "rank": 753,
+    "word": "ongoing",
+    "frequency": 523
+  },
+  {
+    "rank": 754,
+    "word": "away",
+    "frequency": 523
+  },
+  {
+    "rank": 755,
+    "word": "arena",
+    "frequency": 522
+  },
+  {
+    "rank": 756,
+    "word": "presence",
+    "frequency": 521
+  },
+  {
+    "rank": 757,
+    "word": "post",
+    "frequency": 520
+  },
+  {
+    "rank": 758,
+    "word": "game",
+    "frequency": 520
+  },
+  {
+    "rank": 759,
+    "word": "package",
+    "frequency": 520
+  },
+  {
+    "rank": 760,
+    "word": "congress",
+    "frequency": 517
+  },
+  {
+    "rank": 761,
+    "word": "date",
+    "frequency": 517
+  },
+  {
+    "rank": 762,
+    "word": "write",
+    "frequency": 517
+  },
+  {
+    "rank": 763,
+    "word": "july",
+    "frequency": 516
+  },
+  {
+    "rank": 764,
+    "word": "refugee",
+    "frequency": 516
+  },
+  {
+    "rank": 765,
+    "word": "people?s",
+    "frequency": 515
+  },
+  {
+    "rank": 766,
+    "word": "outcome",
+    "frequency": 515
+  },
+  {
+    "rank": 767,
+    "word": "industry",
+    "frequency": 515
+  },
+  {
+    "rank": 768,
+    "word": "freedom",
+    "frequency": 514
+  },
+  {
+    "rank": 769,
+    "word": "building",
+    "frequency": 514
+  },
+  {
+    "rank": 770,
+    "word": "azerbaijan",
+    "frequency": 513
+  },
+  {
+    "rank": 771,
+    "word": "growth",
+    "frequency": 512
+  },
+  {
+    "rank": 772,
+    "word": "realize",
+    "frequency": 512
+  },
+  {
+    "rank": 773,
+    "word": "risk",
+    "frequency": 510
+  },
+  {
+    "rank": 774,
+    "word": "read",
+    "frequency": 510
+  },
+  {
+    "rank": 775,
+    "word": "respective",
+    "frequency": 508
+  },
+  {
+    "rank": 776,
+    "word": "food",
+    "frequency": 508
+  },
+  {
+    "rank": 777,
+    "word": "news",
+    "frequency": 508
+  },
+  {
+    "rank": 778,
+    "word": "natural",
+    "frequency": 507
+  },
+  {
+    "rank": 779,
+    "word": "remind",
+    "frequency": 507
+  },
+  {
+    "rank": 780,
+    "word": "march",
+    "frequency": 506
+  },
+  {
+    "rank": 781,
+    "word": "target",
+    "frequency": 506
+  },
+  {
+    "rank": 782,
+    "word": "gulf",
+    "frequency": 505
+  },
+  {
+    "rank": 783,
+    "word": "big",
+    "frequency": 505
+  },
+  {
+    "rank": 784,
+    "word": "introduce",
+    "frequency": 505
+  },
+  {
+    "rank": 785,
+    "word": "accuse",
+    "frequency": 504
+  },
+  {
+    "rank": 786,
+    "word": "strike",
+    "frequency": 503
+  },
+  {
+    "rank": 787,
+    "word": "search",
+    "frequency": 503
+  },
+  {
+    "rank": 788,
+    "word": "closely",
+    "frequency": 503
+  },
+  {
+    "rank": 789,
+    "word": "minority",
+    "frequency": 502
+  },
+  {
+    "rank": 790,
+    "word": "bank",
+    "frequency": 501
+  },
+  {
+    "rank": 791,
+    "word": "euro",
+    "frequency": 500
+  },
+  {
+    "rank": 792,
+    "word": "regularly",
+    "frequency": 499
+  },
+  {
+    "rank": 793,
+    "word": "productive",
+    "frequency": 499
+  },
+  {
+    "rank": 794,
+    "word": "commit",
+    "frequency": 499
+  },
+  {
+    "rank": 795,
+    "word": "urge",
+    "frequency": 499
+  },
+  {
+    "rank": 796,
+    "word": "country?s",
+    "frequency": 498
+  },
+  {
+    "rank": 797,
+    "word": "civil",
+    "frequency": 497
+  },
+  {
+    "rank": 798,
+    "word": "field",
+    "frequency": 497
+  },
+  {
+    "rank": 799,
+    "word": "depend",
+    "frequency": 497
+  },
+  {
+    "rank": 800,
+    "word": "child",
+    "frequency": 496
+  },
+  {
+    "rank": 801,
+    "word": "choose",
+    "frequency": 495
+  },
+  {
+    "rank": 802,
+    "word": "honor",
+    "frequency": 494
+  },
+  {
+    "rank": 803,
+    "word": "completely",
+    "frequency": 493
+  },
+  {
+    "rank": 804,
+    "word": "architecture",
+    "frequency": 493
+  },
+  {
+    "rank": 805,
+    "word": "previous",
+    "frequency": 492
+  },
+  {
+    "rank": 806,
+    "word": "incident",
+    "frequency": 491
+  },
+  {
+    "rank": 807,
+    "word": "decade",
+    "frequency": 490
+  },
+  {
+    "rank": 808,
+    "word": "table",
+    "frequency": 490
+  },
+  {
+    "rank": 809,
+    "word": "compliance",
+    "frequency": 490
+  },
+  {
+    "rank": 810,
+    "word": "describe",
+    "frequency": 488
+  },
+  {
+    "rank": 811,
+    "word": "venezuela",
+    "frequency": 488
+  },
+  {
+    "rank": 812,
+    "word": "connection",
+    "frequency": 487
+  },
+  {
+    "rank": 813,
+    "word": "unity",
+    "frequency": 487
+  },
+  {
+    "rank": 814,
+    "word": "consequence",
+    "frequency": 486
+  },
+  {
+    "rank": 815,
+    "word": "reiterate",
+    "frequency": 486
+  },
+  {
+    "rank": 816,
+    "word": "egypt",
+    "frequency": 485
+  },
+  {
+    "rank": 817,
+    "word": "oil",
+    "frequency": 484
+  },
+  {
+    "rank": 818,
+    "word": "link",
+    "frequency": 482
+  },
+  {
+    "rank": 819,
+    "word": "manner",
+    "frequency": 482
+  },
+  {
+    "rank": 820,
+    "word": "alternative",
+    "frequency": 481
+  },
+  {
+    "rank": 821,
+    "word": "gain",
+    "frequency": 480
+  },
+  {
+    "rank": 822,
+    "word": "submit",
+    "frequency": 480
+  },
+  {
+    "rank": 823,
+    "word": "choice",
+    "frequency": 480
+  },
+  {
+    "rank": 824,
+    "word": "acceptable",
+    "frequency": 479
+  },
+  {
+    "rank": 825,
+    "word": "normal",
+    "frequency": 478
+  },
+  {
+    "rank": 826,
+    "word": "sideline",
+    "frequency": 478
+  },
+  {
+    "rank": 827,
+    "word": "forget",
+    "frequency": 478
+  },
+  {
+    "rank": 828,
+    "word": "appeal",
+    "frequency": 478
+  },
+  {
+    "rank": 829,
+    "word": "multipolar",
+    "frequency": 477
+  },
+  {
+    "rank": 830,
+    "word": "communication",
+    "frequency": 476
+  },
+  {
+    "rank": 831,
+    "word": "scientific",
+    "frequency": 474
+  },
+  {
+    "rank": 832,
+    "word": "domestic",
+    "frequency": 474
+  },
+  {
+    "rank": 833,
+    "word": "embassy",
+    "frequency": 474
+  },
+  {
+    "rank": 834,
+    "word": "deliver",
+    "frequency": 474
+  },
+  {
+    "rank": 835,
+    "word": "actually",
+    "frequency": 473
+  },
+  {
+    "rank": 836,
+    "word": "home",
+    "frequency": 471
+  },
+  {
+    "rank": 837,
+    "word": "tension",
+    "frequency": 470
+  },
+  {
+    "rank": 838,
+    "word": "extend",
+    "frequency": 469
+  },
+  {
+    "rank": 839,
+    "word": "compromise",
+    "frequency": 469
+  },
+  {
+    "rank": 840,
+    "word": "convene",
+    "frequency": 468
+  },
+  {
+    "rank": 841,
+    "word": "interesting",
+    "frequency": 466
+  },
+  {
+    "rank": 842,
+    "word": "ignore",
+    "frequency": 466
+  },
+  {
+    "rank": 843,
+    "word": "presidential",
+    "frequency": 465
+  },
+  {
+    "rank": 844,
+    "word": "direction",
+    "frequency": 465
+  },
+  {
+    "rank": 845,
+    "word": "beginning",
+    "frequency": 463
+  },
+  {
+    "rank": 846,
+    "word": "normandy",
+    "frequency": 463
+  },
+  {
+    "rank": 847,
+    "word": "student",
+    "frequency": 462
+  },
+  {
+    "rank": 848,
+    "word": "contrary",
+    "frequency": 461
+  },
+  {
+    "rank": 849,
+    "word": "unsc",
+    "frequency": 461
+  },
+  {
+    "rank": 850,
+    "word": "achievement",
+    "frequency": 460
+  },
+  {
+    "rank": 851,
+    "word": "memory",
+    "frequency": 460
+  },
+  {
+    "rank": 852,
+    "word": "extremist",
+    "frequency": 460
+  },
+  {
+    "rank": 853,
+    "word": "concerned",
+    "frequency": 459
+  },
+  {
+    "rank": 854,
+    "word": "mgimo",
+    "frequency": 457
+  },
+  {
+    "rank": 855,
+    "word": "eye",
+    "frequency": 457
+  },
+  {
+    "rank": 856,
+    "word": "arabia",
+    "frequency": 457
+  },
+  {
+    "rank": 857,
+    "word": "korean",
+    "frequency": 457
+  },
+  {
+    "rank": 858,
+    "word": "proceed",
+    "frequency": 456
+  },
+  {
+    "rank": 859,
+    "word": "mind",
+    "frequency": 455
+  },
+  {
+    "rank": 860,
+    "word": "defeat",
+    "frequency": 455
+  },
+  {
+    "rank": 861,
+    "word": "resource",
+    "frequency": 454
+  },
+  {
+    "rank": 862,
+    "word": "religious",
+    "frequency": 454
+  },
+  {
+    "rank": 863,
+    "word": "concrete",
+    "frequency": 453
+  },
+  {
+    "rank": 864,
+    "word": "parliamentary",
+    "frequency": 452
+  },
+  {
+    "rank": 865,
+    "word": "procedure",
+    "frequency": 452
+  },
+  {
+    "rank": 866,
+    "word": "defend",
+    "frequency": 452
+  },
+  {
+    "rank": 867,
+    "word": "assume",
+    "frequency": 450
+  },
+  {
+    "rank": 868,
+    "word": "intention",
+    "frequency": 449
+  },
+  {
+    "rank": 869,
+    "word": "lay",
+    "frequency": 449
+  },
+  {
+    "rank": 870,
+    "word": "wait",
+    "frequency": 448
+  },
+  {
+    "rank": 871,
+    "word": "secretariat",
+    "frequency": 448
+  },
+  {
+    "rank": 872,
+    "word": "troop",
+    "frequency": 448
+  },
+  {
+    "rank": 873,
+    "word": "fund",
+    "frequency": 447
+  },
+  {
+    "rank": 874,
+    "word": "inter",
+    "frequency": 447
+  },
+  {
+    "rank": 875,
+    "word": "increasingly",
+    "frequency": 446
+  },
+  {
+    "rank": 876,
+    "word": "comply",
+    "frequency": 446
+  },
+  {
+    "rank": 877,
+    "word": "deep",
+    "frequency": 446
+  },
+  {
+    "rank": 878,
+    "word": "unite",
+    "frequency": 445
+  },
+  {
+    "rank": 879,
+    "word": "remove",
+    "frequency": 443
+  },
+  {
+    "rank": 880,
+    "word": "enhance",
+    "frequency": 442
+  },
+  {
+    "rank": 881,
+    "word": "wide",
+    "frequency": 442
+  },
+  {
+    "rank": 882,
+    "word": "jabhat",
+    "frequency": 442
+  },
+  {
+    "rank": 883,
+    "word": "path",
+    "frequency": 440
+  },
+  {
+    "rank": 884,
+    "word": "access",
+    "frequency": 440
+  },
+  {
+    "rank": 885,
+    "word": "percent",
+    "frequency": 440
+  },
+  {
+    "rank": 886,
+    "word": "opcw",
+    "frequency": 440
+  },
+  {
+    "rank": 887,
+    "word": "honest",
+    "frequency": 439
+  },
+  {
+    "rank": 888,
+    "word": "withdraw",
+    "frequency": 438
+  },
+  {
+    "rank": 889,
+    "word": "manage",
+    "frequency": 437
+  },
+  {
+    "rank": 890,
+    "word": "poroshenko",
+    "frequency": 434
+  },
+  {
+    "rank": 891,
+    "word": "short",
+    "frequency": 434
+  },
+  {
+    "rank": 892,
+    "word": "deploy",
+    "frequency": 433
+  },
+  {
+    "rank": 893,
+    "word": "arctic",
+    "frequency": 433
+  },
+  {
+    "rank": 894,
+    "word": "parliament",
+    "frequency": 433
+  },
+  {
+    "rank": 895,
+    "word": "outline",
+    "frequency": 431
+  },
+  {
+    "rank": 896,
+    "word": "nazism",
+    "frequency": 431
+  },
+  {
+    "rank": 897,
+    "word": "glad",
+    "frequency": 430
+  },
+  {
+    "rank": 898,
+    "word": "eurasia",
+    "frequency": 430
+  },
+  {
+    "rank": 899,
+    "word": "assad",
+    "frequency": 430
+  },
+  {
+    "rank": 900,
+    "word": "break",
+    "frequency": 429
+  },
+  {
+    "rank": 901,
+    "word": "observe",
+    "frequency": 429
+  },
+  {
+    "rank": 902,
+    "word": "publicly",
+    "frequency": 429
+  },
+  {
+    "rank": 903,
+    "word": "old",
+    "frequency": 428
+  },
+  {
+    "rank": 904,
+    "word": "expansion",
+    "frequency": 428
+  },
+  {
+    "rank": 905,
+    "word": "lie",
+    "frequency": 427
+  },
+  {
+    "rank": 906,
+    "word": "recall",
+    "frequency": 426
+  },
+  {
+    "rank": 907,
+    "word": "indivisible",
+    "frequency": 425
+  },
+  {
+    "rank": 908,
+    "word": "effectively",
+    "frequency": 423
+  },
+  {
+    "rank": 909,
+    "word": "initiate",
+    "frequency": 423
+  },
+  {
+    "rank": 910,
+    "word": "push",
+    "frequency": 423
+  },
+  {
+    "rank": 911,
+    "word": "impossible",
+    "frequency": 423
+  },
+  {
+    "rank": 912,
+    "word": "underway",
+    "frequency": 422
+  },
+  {
+    "rank": 913,
+    "word": "pleased",
+    "frequency": 421
+  },
+  {
+    "rank": 914,
+    "word": "negotiate",
+    "frequency": 421
+  },
+  {
+    "rank": 915,
+    "word": "serbia",
+    "frequency": 421
+  },
+  {
+    "rank": 916,
+    "word": "obama",
+    "frequency": 419
+  },
+  {
+    "rank": 917,
+    "word": "difference",
+    "frequency": 418
+  },
+  {
+    "rank": 918,
+    "word": "occasion",
+    "frequency": 416
+  },
+  {
+    "rank": 919,
+    "word": "undertake",
+    "frequency": 415
+  },
+  {
+    "rank": 920,
+    "word": "traditional",
+    "frequency": 415
+  },
+  {
+    "rank": 921,
+    "word": "chance",
+    "frequency": 414
+  },
+  {
+    "rank": 922,
+    "word": "successful",
+    "frequency": 414
+  },
+  {
+    "rank": 923,
+    "word": "remark",
+    "frequency": 414
+  },
+  {
+    "rank": 924,
+    "word": "libyan",
+    "frequency": 412
+  },
+  {
+    "rank": 925,
+    "word": "detailed",
+    "frequency": 412
+  },
+  {
+    "rank": 926,
+    "word": "mass",
+    "frequency": 411
+  },
+  {
+    "rank": 927,
+    "word": "small",
+    "frequency": 411
+  },
+  {
+    "rank": 928,
+    "word": "reject",
+    "frequency": 410
+  },
+  {
+    "rank": 929,
+    "word": "advantage",
+    "frequency": 410
+  },
+  {
+    "rank": 930,
+    "word": "alexander",
+    "frequency": 407
+  },
+  {
+    "rank": 931,
+    "word": "truly",
+    "frequency": 407
+  },
+  {
+    "rank": 932,
+    "word": "intend",
+    "frequency": 406
+  },
+  {
+    "rank": 933,
+    "word": "uphold",
+    "frequency": 406
+  },
+  {
+    "rank": 934,
+    "word": "block",
+    "frequency": 406
+  },
+  {
+    "rank": 935,
+    "word": "exercise",
+    "frequency": 405
+  },
+  {
+    "rank": 936,
+    "word": "afghan",
+    "frequency": 404
+  },
+  {
+    "rank": 937,
+    "word": "figure",
+    "frequency": 403
+  },
+  {
+    "rank": 938,
+    "word": "rest",
+    "frequency": 401
+  },
+  {
+    "rank": 939,
+    "word": "part",
+    "frequency": 400
+  },
+  {
+    "rank": 940,
+    "word": "cross",
+    "frequency": 400
+  },
+  {
+    "rank": 941,
+    "word": "competition",
+    "frequency": 399
+  },
+  {
+    "rank": 942,
+    "word": "determination",
+    "frequency": 399
+  },
+  {
+    "rank": 943,
+    "word": "inclusive",
+    "frequency": 398
+  },
+  {
+    "rank": 944,
+    "word": "design",
+    "frequency": 398
+  },
+  {
+    "rank": 945,
+    "word": "demonstrate",
+    "frequency": 398
+  },
+  {
+    "rank": 946,
+    "word": "brazil",
+    "frequency": 398
+  },
+  {
+    "rank": 947,
+    "word": "negative",
+    "frequency": 396
+  },
+  {
+    "rank": 948,
+    "word": "appear",
+    "frequency": 396
+  },
+  {
+    "rank": 949,
+    "word": "circumstance",
+    "frequency": 394
+  },
+  {
+    "rank": 950,
+    "word": "press",
+    "frequency": 394
+  },
+  {
+    "rank": 951,
+    "word": "school",
+    "frequency": 392
+  },
+  {
+    "rank": 952,
+    "word": "atmosphere",
+    "frequency": 392
+  },
+  {
+    "rank": 953,
+    "word": "involvement",
+    "frequency": 391
+  },
+  {
+    "rank": 954,
+    "word": "destruction",
+    "frequency": 390
+  },
+  {
+    "rank": 955,
+    "word": "message",
+    "frequency": 390
+  },
+  {
+    "rank": 956,
+    "word": "league",
+    "frequency": 389
+  },
+  {
+    "rank": 957,
+    "word": "yemen",
+    "frequency": 389
+  },
+  {
+    "rank": 958,
+    "word": "criminal",
+    "frequency": 389
+  },
+  {
+    "rank": 959,
+    "word": "sport",
+    "frequency": 388
+  },
+  {
+    "rank": 960,
+    "word": "black",
+    "frequency": 388
+  },
+  {
+    "rank": 961,
+    "word": "militant",
+    "frequency": 388
+  },
+  {
+    "rank": 962,
+    "word": "stance",
+    "frequency": 387
+  },
+  {
+    "rank": 963,
+    "word": "sit",
+    "frequency": 387
+  },
+  {
+    "rank": 964,
+    "word": "campaign",
+    "frequency": 386
+  },
+  {
+    "rank": 965,
+    "word": "one",
+    "frequency": 386
+  },
+  {
+    "rank": 966,
+    "word": "church",
+    "frequency": 386
+  },
+  {
+    "rank": 967,
+    "word": "road",
+    "frequency": 386
+  },
+  {
+    "rank": 968,
+    "word": "celebrate",
+    "frequency": 383
+  },
+  {
+    "rank": 969,
+    "word": "consistent",
+    "frequency": 382
+  },
+  {
+    "rank": 970,
+    "word": "touch",
+    "frequency": 382
+  },
+  {
+    "rank": 971,
+    "word": "oppose",
+    "frequency": 382
+  },
+  {
+    "rank": 972,
+    "word": "aleppo",
+    "frequency": 382
+  },
+  {
+    "rank": 973,
+    "word": "youth",
+    "frequency": 381
+  },
+  {
+    "rank": 974,
+    "word": "readiness",
+    "frequency": 381
+  },
+  {
+    "rank": 975,
+    "word": "gratitude",
+    "frequency": 380
+  },
+  {
+    "rank": 976,
+    "word": "voice",
+    "frequency": 380
+  },
+  {
+    "rank": 977,
+    "word": "proclaim",
+    "frequency": 379
+  },
+  {
+    "rank": 978,
+    "word": "witness",
+    "frequency": 379
+  },
+  {
+    "rank": 979,
+    "word": "patriotic",
+    "frequency": 379
+  },
+  {
+    "rank": 980,
+    "word": "caspian",
+    "frequency": 379
+  },
+  {
+    "rank": 981,
+    "word": "formation",
+    "frequency": 379
+  },
+  {
+    "rank": 982,
+    "word": "educational",
+    "frequency": 378
+  },
+  {
+    "rank": 983,
+    "word": "dear",
+    "frequency": 378
+  },
+  {
+    "rank": 984,
+    "word": "shape",
+    "frequency": 377
+  },
+  {
+    "rank": 985,
+    "word": "double",
+    "frequency": 377
+  },
+  {
+    "rank": 986,
+    "word": "orthodox",
+    "frequency": 376
+  },
+  {
+    "rank": 987,
+    "word": "entity",
+    "frequency": 375
+  },
+  {
+    "rank": 988,
+    "word": "produce",
+    "frequency": 375
+  },
+  {
+    "rank": 989,
+    "word": "referendum",
+    "frequency": 375
+  },
+  {
+    "rank": 990,
+    "word": "highlight",
+    "frequency": 374
+  },
+  {
+    "rank": 991,
+    "word": "dangerous",
+    "frequency": 374
+  },
+  {
+    "rank": 992,
+    "word": "test",
+    "frequency": 373
+  },
+  {
+    "rank": 993,
+    "word": "eliminate",
+    "frequency": 373
+  },
+  {
+    "rank": 994,
+    "word": "macron",
+    "frequency": 372
+  },
+  {
+    "rank": 995,
+    "word": "justice",
+    "frequency": 371
+  },
+  {
+    "rank": 996,
+    "word": "protection",
+    "frequency": 371
+  },
+  {
+    "rank": 997,
+    "word": "court",
+    "frequency": 370
+  },
+  {
+    "rank": 998,
+    "word": "couple",
+    "frequency": 370
+  },
+  {
+    "rank": 999,
+    "word": "upcoming",
+    "frequency": 369
+  },
+  {
+    "rank": 1000,
+    "word": "ukraine?s",
+    "frequency": 369
+  }
+]

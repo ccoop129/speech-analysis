@@ -1,0 +1,410 @@
+[
+  {
+    "rank": 1,
+    "word": "bri",
+    "tfidf_score": 0.3123062387409142,
+    "country": "China"
+  },
+  {
+    "rank": 2,
+    "word": "rejuvenation",
+    "tfidf_score": 0.2676910617779264,
+    "country": "China"
+  },
+    {
+    "rank": 3,
+    "word": "focac",
+    "tfidf_score": 0.1988285060307062,
+    "country": "China"
+  },
+  {
+    "rank": 4,
+    "word": "urbanization",
+    "tfidf_score": 0.18428007876016675,
+    "country": "China"
+  },
+  {
+    "rank": 5,
+    "word": "mekong",
+    "tfidf_score": 0.15324343391634918,
+    "country": "China"
+  },
+   {
+    "rank": 6,
+    "word": "gdi",
+    "tfidf_score": 0.13772511149444042,
+    "country": "China"
+  },
+  {
+    "rank": 7,
+    "word": "boao",
+    "tfidf_score": 0.10474867634788425,
+    "country": "China"
+  },
+   {
+    "rank": 8,
+    "word": "ipr",
+    "tfidf_score": 0.10571857149925355,
+    "country": "China"
+  },
+  {
+    "rank": 9,
+    "word": "vigor",
+    "tfidf_score": 0.09892930543966846,
+    "country": "China"
+  },
+  {
+    "rank": 10,
+    "word": "unremitting",
+    "tfidf_score": 0.09698951513692987,
+    "country": "China"
+  },
+  {
+    "rank": 11,
+    "word": "differentiated",
+    "tfidf_score": 0.08147119271502108,
+    "country": "China"
+  },
+  {
+    "rank": 12,
+    "word": "revitalization",
+    "tfidf_score": 0.08050129756365179,
+    "country": "China"
+  },
+  {
+    "rank": 13,
+    "word": "synergize",
+    "tfidf_score": 0.07468192665543599,
+    "country": "China"
+  },
+   {
+    "rank": 14,
+    "word": "gsi",
+    "tfidf_score": 0.0727421363526974,
+    "country": "China"
+  },
+  {
+    "rank": 15,
+    "word": "outbound",
+    "tfidf_score": 0.064982975141743,
+    "country": "China"
+  },
+  {
+    "rank": 16,
+    "word": "decouple",
+    "tfidf_score": 0.06013349938489651,
+    "country": "China"
+  },
+  {
+    "rank": 17,
+    "word": "colorful",
+    "tfidf_score": 0.05916360423352722,
+    "country": "China"
+  },
+  {
+    "rank": 18,
+    "word": "straits",
+    "tfidf_score": 0.051404443022572834,
+    "country": "China"
+  },
+  {
+    "rank": 19,
+    "word": "blaze",
+    "tfidf_score": 0.048494757568464934,
+    "country": "China"
+  },
+  {
+    "rank": 20,
+    "word": "innovate",
+    "tfidf_score": 0.04752486241709564,
+    "country": "China"
+  },
+  {
+    "rank": 21,
+    "word": "readjustment",
+    "tfidf_score": 0.04655496726572633,
+    "country": "China"
+  },
+  {
+    "rank": 22,
+    "word": "optimize",
+    "tfidf_score": 0.04267538666024914,
+    "country": "China"
+  },
+  {
+    "rank": 23,
+    "word": "utilization",
+    "tfidf_score": 0.04073559635751054,
+    "country": "China"
+  },
+  {
+    "rank": 24,
+    "word": "energize",
+    "tfidf_score": 0.039765701206141243,
+    "country": "China"
+  },
+  {
+    "rank": 25,
+    "word": "tortuous",
+    "tfidf_score": 0.039765701206141243,
+    "country": "China"
+  },
+  {
+    "rank": 23,
+    "word": "tazara",
+    "tfidf_score": 0.03782591090340265,
+    "country": "China"
+  },
+  {
+    "rank": 24,
+    "word": "breadth",
+    "tfidf_score": 0.035886120600664054,
+    "country": "China"
+  },
+  {
+    "rank": 25,
+    "word": "avian",
+    "tfidf_score": 0.03491622544929475,
+    "country": "China"
+  },
+  {
+    "rank": 60,
+    "word": "jia",
+    "tfidf_score": 0.03491622544929475,
+    "country": "China"
+  },
+  {
+    "rank": 61,
+    "word": "deliverable",
+    "tfidf_score": 0.03491622544929475,
+    "country": "China"
+  },
+  {
+    "rank": 62,
+    "word": "liquidity",
+    "tfidf_score": 0.03394633029792545,
+    "country": "China"
+  },
+  {
+    "rank": 63,
+    "word": "lmc",
+    "tfidf_score": 0.032976435146556154,
+    "country": "China"
+  },
+  {
+    "rank": 64,
+    "word": "sichuan",
+    "tfidf_score": 0.032976435146556154,
+    "country": "China"
+  },
+  {
+    "rank": 66,
+    "word": "desertification",
+    "tfidf_score": 0.03200653999518686,
+    "country": "China"
+  },
+  {
+    "rank": 67,
+    "word": "ftaap",
+    "tfidf_score": 0.030066749692448255,
+    "country": "China"
+  },
+  {
+    "rank": 68,
+    "word": "bingguo",
+    "tfidf_score": 0.030066749692448255,
+    "country": "China"
+  },
+  {
+    "rank": 69,
+    "word": "bangguo",
+    "tfidf_score": 0.030066749692448255,
+    "country": "China"
+  },
+  {
+    "rank": 70,
+    "word": "hubei",
+    "tfidf_score": 0.02909685454107896,
+    "country": "China"
+  },
+  {
+    "rank": 71,
+    "word": "centralize",
+    "tfidf_score": 0.02909685454107896,
+    "country": "China"
+  },
+  {
+    "rank": 72,
+    "word": "chiang",
+    "tfidf_score": 0.02909685454107896,
+    "country": "China"
+  },
+  {
+    "rank": 73,
+    "word": "que",
+    "tfidf_score": 0.02909685454107896,
+    "country": "China"
+  },
+  {
+    "rank": 74,
+    "word": "subnational",
+    "tfidf_score": 0.02909685454107896,
+    "country": "China"
+  },
+  {
+    "rank": 75,
+    "word": "cppcc",
+    "tfidf_score": 0.02812695938970966,
+    "country": "China"
+  },
+  {
+    "rank": 76,
+    "word": "decoupling",
+    "tfidf_score": 0.02812695938970966,
+    "country": "China"
+  },
+  {
+    "rank": 77,
+    "word": "geithner",
+    "tfidf_score": 0.02812695938970966,
+    "country": "China"
+  },
+  {
+    "rank": 78,
+    "word": "expressway",
+    "tfidf_score": 0.02812695938970966,
+    "country": "China"
+  },
+  {
+    "rank": 79,
+    "word": "galvanize",
+    "tfidf_score": 0.02812695938970966,
+    "country": "China"
+  },
+  {
+    "rank": 80,
+    "word": "reef",
+    "tfidf_score": 0.027157064238340363,
+    "country": "China"
+  },
+  {
+    "rank": 81,
+    "word": "regionalism",
+    "tfidf_score": 0.027157064238340363,
+    "country": "China"
+  },
+  {
+    "rank": 82,
+    "word": "ciie",
+    "tfidf_score": 0.027157064238340363,
+    "country": "China"
+  },
+  {
+    "rank": 83,
+    "word": "rebound",
+    "tfidf_score": 0.026187169086971062,
+    "country": "China"
+  },
+  {
+    "rank": 84,
+    "word": "photovoltaic",
+    "tfidf_score": 0.026187169086971062,
+    "country": "China"
+  },
+  {
+    "rank": 85,
+    "word": "pacesetter",
+    "tfidf_score": 0.026187169086971062,
+    "country": "China"
+  },
+  {
+    "rank": 86,
+    "word": "qinghai",
+    "tfidf_score": 0.025217273935601765,
+    "country": "China"
+  },
+  {
+    "rank": 87,
+    "word": "porcelain",
+    "tfidf_score": 0.025217273935601765,
+    "country": "China"
+  },
+  {
+    "rank": 88,
+    "word": "lante",
+    "tfidf_score": 0.025217273935601765,
+    "country": "China"
+  },
+  {
+    "rank": 89,
+    "word": "shorten",
+    "tfidf_score": 0.025217273935601765,
+    "country": "China"
+  },
+  {
+    "rank": 90,
+    "word": "splendor",
+    "tfidf_score": 0.024247378784232467,
+    "country": "China"
+  },
+  {
+    "rank": 91,
+    "word": "maximize",
+    "tfidf_score": 0.024247378784232467,
+    "country": "China"
+  },
+  {
+    "rank": 92,
+    "word": "must",
+    "tfidf_score": 0.024247378784232467,
+    "country": "China"
+  },
+  {
+    "rank": 93,
+    "word": "overcapacity",
+    "tfidf_score": 0.024247378784232467,
+    "country": "China"
+  },
+  {
+    "rank": 94,
+    "word": "dalian",
+    "tfidf_score": 0.024247378784232467,
+    "country": "China"
+  },
+  {
+    "rank": 95,
+    "word": "irresistible",
+    "tfidf_score": 0.024247378784232467,
+    "country": "China"
+  },
+  {
+    "rank": 96,
+    "word": "qishan",
+    "tfidf_score": 0.023277483632863166,
+    "country": "China"
+  },
+  {
+    "rank": 97,
+    "word": "diaoyu",
+    "tfidf_score": 0.023277483632863166,
+    "country": "China"
+  },
+  {
+    "rank": 98,
+    "word": "entwine",
+    "tfidf_score": 0.022307588481493872,
+    "country": "China"
+  },
+  {
+    "rank": 99,
+    "word": "pioneering",
+    "tfidf_score": 0.022307588481493872,
+    "country": "China"
+  },
+  {
+    "rank": 100,
+    "word": "digit",
+    "tfidf_score": 0.022307588481493872,
+    "country": "China"
+  }
+]

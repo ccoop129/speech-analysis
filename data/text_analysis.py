@@ -1,7 +1,7 @@
 import pandas as pd
 import spacy
 from collections import Counter
-import csv
+import json
 
 # Load spaCy model
 print("Loading spaCy model...")
@@ -442,15 +442,16 @@ for country in countries:
     print(f"  Total unique words (top 1000): {len(top_1000)}")
     print(f"  Most common words: {', '.join([w[0] for w in top_1000[:10]])}")
 
-# Save results to CSV files
+# Save results to JSON files
 print("\nSaving results...")
 for country in countries:
-    filename = f"{country.lower()}_top_1000_words.csv"
-    with open(filename, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(['rank', 'word', 'frequency'])
-        for rank, (word, freq) in enumerate(results[country], 1):
-            writer.writerow([rank, word, freq])
+    filename = f"{country.lower()}_top_1000_words.json"
+    data = [
+        {'rank': rank, 'word': word, 'frequency': freq}
+        for rank, (word, freq) in enumerate(results[country], 1)
+    ]
+    with open(filename, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
     print(f"  Saved {filename}")
 
 # Also save combined for TF-IDF analysis later
@@ -466,17 +467,22 @@ for country in countries:
         })
 
 combined_df = pd.DataFrame(all_words_data)
-combined_df.to_csv('top_1000_words_combined.csv', index=False)
-print("  Saved top_1000_words_combined.csv")
+combined_df.to_json('top_1000_words_combined.json', orient='records', indent=2)
+print("  Saved top_1000_words_combined.json")
 
 # Save processed corpus for TF-IDF analysis
 print("\nProcessing full corpus for TF-IDF analysis...")
-df['processed_text'] = df['content'].astype(str).fillna('').apply(
-    lambda text: ' '.join(process_text(text))
+processed_texts = []
+for idx, content in enumerate(df['content'].astype(str).fillna('')):
+    if idx % 50 == 0:
+        print(f"  Processing speech {idx}/{len(df)}...")
+    processed_words = process_text(content)
+    processed_texts.append(' '.join(processed_words))
+
+df['processed_text'] = processed_texts
+df[['id', 'country', 'title', 'date', 'processed_text']].to_json(
+    'CH_RU_processed_lemmatized.json', orient='records', indent=2
 )
-df[['id', 'country', 'title', 'date', 'processed_text']].to_csv(
-    'CH_RU_processed_lemmatized.csv', index=False
-)
-print("  Saved CH_RU_processed_lemmatized.csv (ready for TF-IDF)")
+print("  Saved CH_RU_processed_lemmatized.json (ready for TF-IDF)")
 
 print("\nText analysis complete!")

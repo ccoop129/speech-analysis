@@ -3,6 +3,7 @@ import spacy
 from collections import Counter
 import json
 import os
+import warnings
 
 # Get the directory where this script is located
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -450,11 +451,47 @@ ENTITIES_TO_SKIP = {
     'august', 'september', 'october', 'november', 'december',
     'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday',
     'ladies', 'gentlemen',
+    'sergey lavrov', 'lavrov', 'xi jinping', 'xi', 'hu', 'hu jintao', 'putin', 'vladimir putin',
 }
+
+# Noun chunks to filter out (non-meaningful)
+NOUN_CHUNKS_TO_SKIP = {
+    'gentleman', 'lady', 'ladies', 'gentlemen',
+    'sergey lavrov', 'president xi jinping', 'xi jinping',
+}
+
+def is_numeric(text):
+    """Check if text is primarily numeric (numbers, ordinals, etc.)."""
+    # Remove common words that might be attached to numbers
+    cleaned = text.lower().strip()
+    # Check if it's a number word or contains mostly digits
+    number_words = {'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+                    'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 
+                    'eighteen', 'nineteen', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 
+                    'eighty', 'ninety', 'hundred', 'thousand', 'million', 'billion'}
+    
+    if cleaned in number_words:
+        return True
+    
+    # Check if it contains mostly digits
+    digit_count = sum(1 for c in cleaned if c.isdigit())
+    return digit_count > len(cleaned) / 2
 
 # Load data
 print("Loading CH_RU_prime.csv...")
-df = pd.read_csv(os.path.join(data_dir, "CH_RU_prime.csv"), encoding='utf-8-sig')
+print("  (Skipping any rows with encoding issues)...")
+
+# Capture warnings during CSV load
+with warnings.catch_warnings(record=True) as w:
+    warnings.simplefilter("always")
+    df = pd.read_csv(os.path.join(data_dir, "CH_RU_prime.csv"), encoding='latin1', on_bad_lines='skip', engine='python')
+    
+    # Report any warnings
+    for warning in w:
+        if 'ParserWarning' in str(warning.category):
+            print(f"  WARNING: {warning.message}")
+
+print(f"  Successfully loaded {len(df)} rows")
 
 # Process by country
 countries = ['China', 'Russia']
@@ -490,6 +527,11 @@ for country in countries:
             lemmatized_chunk = ' '.join([token.lemma_ for token in chunk])
             # Strip leading articles
             cleaned_chunk = strip_articles(lemmatized_chunk)
+            
+            # Skip non-meaningful noun chunks
+            if cleaned_chunk.lower() in NOUN_CHUNKS_TO_SKIP:
+                continue
+            
             noun_chunks_counter[cleaned_chunk] += 1
             total_noun_chunks += 1
         
@@ -501,6 +543,10 @@ for country in countries:
             
             # Skip non-meaningful temporal/ordinal entities
             if cleaned_entity.lower() in ENTITIES_TO_SKIP:
+                continue
+            
+            # Skip numeric entities
+            if is_numeric(cleaned_entity):
                 continue
             
             normalized_entity = apply_semantic_normalization(cleaned_entity)

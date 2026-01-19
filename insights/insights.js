@@ -270,7 +270,7 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
 }
 
 async function initKeywordViz() {
-  const cache = await loadCache('../data/viz_cache.json');
+  const cache = await loadCache('viz_cache.json');
 
   const keywordMap = cache.keywords;
   const countRows = cache.counts;

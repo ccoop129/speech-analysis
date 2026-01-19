@@ -454,7 +454,7 @@ ENTITIES_TO_SKIP = {
 
 # Load data
 print("Loading CH_RU_prime.csv...")
-df = pd.read_csv(os.path.join(data_dir, "CH_RU_prime.csv"))
+df = pd.read_csv(os.path.join(data_dir, "CH_RU_prime.csv"), encoding='utf-16')
 
 # Process by country
 countries = ['China', 'Russia']

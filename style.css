@@ -28,11 +28,15 @@
 }
 
 .brand-main {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: #8fd3ff;
+  font-family: "Source Serif 4", serif;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: #eef4ff;
 }
+
+
+
 
 .brand-sub {
   display: none;
@@ -47,13 +51,16 @@
   align-items: center;
 }
 
-.nav-links a {
+.site-header .nav-links a{
+  font-family: "Source Sans 3", sans-serif; /* fix font name */
   color: #cfe9ff;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.4rem;   /* pick your size */
   font-weight: 600;
-  transition: color 0.2s ease;
+  opacity: 0.88;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
+
 
 .nav-links a:hover,
 .nav-links a.active {

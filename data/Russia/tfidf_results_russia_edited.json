@@ -35,13 +35,7 @@
     "tfidf_score": 0.1613662186646487,
     "country": "Russia"
   },
-  {
-    "rank": 7,
-    "word": "mgimo",
-    "tfidf_score": 0.12495403620622961,
-    "country": "Russia"
-  },
-  {
+{
     "rank": 8,
     "word": "normandy",
     "tfidf_score": 0.1212866221456694,
@@ -102,12 +96,6 @@
     "country": "Russia"
   },
   {
-    "rank": 18,
-    "word": "allegedly",
-    "tfidf_score": 0.08173094192105584,
-    "country": "Russia"
-  },
-  {
     "rank": 19,
     "word": "ultimatum",
     "tfidf_score": 0.07884940230204425,
@@ -115,42 +103,36 @@
   },
   {
     "rank": 20,
-    "word": "rkiye",
-    "tfidf_score": 0.07020478344500951,
-    "country": "Russia"
-  },
-  {
-    "rank": 21,
     "word": "normalise",
     "tfidf_score": 0.0683710764147294,
     "country": "Russia"
   },
   {
-    "rank": 22,
+    "rank": 21,
     "word": "primakov",
     "tfidf_score": 0.06706128567881504,
     "country": "Russia"
   },
   {
-    "rank": 23,
+    "rank": 22,
     "word": "idlib",
     "tfidf_score": 0.06627541123726644,
     "country": "Russia"
   },
   {
-    "rank": 24,
+    "rank": 23,
     "word": "polycentric",
     "tfidf_score": 0.06365582976543772,
     "country": "Russia"
   },
   {
-    "rank": 25,
+    "rank": 24,
     "word": "crimean",
     "tfidf_score": 0.061036248293609006,
     "country": "Russia"
   },
   {
-    "rank": 26,
+    "rank": 25,
     "word": "kurd",
     "tfidf_score": 0.0602503738520604,
     "country": "Russia"

@@ -330,7 +330,7 @@ a:hover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin: 18px auto 28px auto;
-  max-width: 80vw;
+  max-width: 90vw;
 }
 
 .chart-section {
@@ -356,6 +356,42 @@ a:hover {
   border-color: rgba(255,255,255,0.22);
 }
 
+.glance-card-full {
+  grid-column: 1 / -1;
+}
+
+.whats-inside-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.whats-inside-content p {
+  margin: 0;
+  line-height: 1.4;
+  display: inline;
+}
+
+.inside-text {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.15rem;
+  display: inline;
+}
+
+.inside-text-medium {
+  font-size: 1.15rem;
+}
+
+.inside-text-large {
+  font-size: 1.15rem;
+}
+
+.inside-text-largest {
+  font-size: 1.15rem;
+}
+
 .glance-number{
   font-size: 1.7rem;
   font-weight: 700;
@@ -378,12 +414,18 @@ a:hover {
 /* Info cards for sections 2–4 */
 .info-card{
   border: 1px solid rgba(255,255,255,0.14);
-  background: #1a3a4a;
-  border-left: 4px solid #4a9ba7;
+  background: rgba(255,255,255,0.06);
   border-radius: 18px;
   padding: 22px;
   margin: 14px 0;
   backdrop-filter: blur(10px);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.info-card:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.22);
 }
 
 .info-card h2{
@@ -392,6 +434,40 @@ a:hover {
 }
 
 .info-card p{
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.92;
+  color: #cfe9ff;
+}
+
+/* Screenshot container */
+.screenshot-container {
+  max-width: 90vw;
+  margin: 28px auto;
+  border: 4px solid rgba(74, 155, 167, 0.6);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1a3a4a;
+  backdrop-filter: blur(20px);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-image {
+  width: 100%;
+  height: auto;
+  flex-grow: 1;
+  display: block;
+}
+
+.screenshot-description {
+  padding: 24px;
+  background: rgba(26, 31, 58, 0.7);
+  border-top: 1px solid rgba(74, 155, 167, 0.4);
+}
+
+.screenshot-description p {
   margin: 0;
   line-height: 1.6;
   opacity: 0.92;

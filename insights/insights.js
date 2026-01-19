@@ -29,7 +29,8 @@ function createKeywordsCheckboxes(keywordMap, eventLines) {
     organizations: ['25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
     topics: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52'],
     rhetorical: ['53'],
-    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
+    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60'],
+    russianConcepts: ['62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72']
   };
 
   // Build suggested topics from event keywords
@@ -85,7 +86,8 @@ function updateSelectionCounts() {
     organizations: ['25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
     topics: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52'],
     rhetorical: ['53'],
-    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
+    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60'],
+    russianConcepts: ['62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72']
   };
 
   Object.entries(categories).forEach(([catKey, ids]) => {
@@ -270,7 +272,7 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
 }
 
 async function initKeywordViz() {
-  const cache = await loadCache('viz_cache.json');
+  const cache = await loadCache('viz_cache_new.json');
 
   const keywordMap = cache.keywords;
   const countRows = cache.counts;

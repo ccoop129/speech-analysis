@@ -4259,18 +4259,18 @@
     "58": "Peaceful Reunification",
     "59": "reunification",
     "60": "Taiwan independence",
-    "61": "\"near abroad\"",
-    "62": "\"sovreign democracy\"",
-    "63": "\"state-civilization\"",
-    "64": "\"historical unity\"",
-    "65": "\"shared historical space\"",
-    "66": "\"world majority\"",
-    "67": "\"Eurasia\"",
-    "68": "\"mulitpolar\"",
-    "69": "\"integrational processes\"",
-    "70": "\"bloc\"",
-    "71": "\"colonial\"",
-    "72": "\"collective west\""
+    "61": "Near Abroad",
+    "62": "sovereign democracy",
+    "63": "State-civilization",
+    "64": "historical unity",
+    "65": "shared historical space",
+    "66": "world majority",
+    "67": "Eurasia",
+    "68": "Multipolar",
+    "69": "integrational processes",
+    "70": "bloc",
+    "71": "colonial",
+    "72": "collective west"
   },
   "counts": [
     {
@@ -4470,6 +4470,24 @@
       "keyword": "60",
       "country": "China",
       "count": 1
+    },
+    {
+      "year": 2005.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 7
+    },
+    {
+      "year": 2005.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2005.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 2
     },
     {
       "year": 2005.0,
@@ -4695,6 +4713,30 @@
     },
     {
       "year": 2006.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2006.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2006.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 10
+    },
+    {
+      "year": 2006.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2006.0,
       "keyword": "8",
       "country": "China",
       "count": 2
@@ -4893,6 +4935,30 @@
     },
     {
       "year": 2007.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2007.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2007.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 10
+    },
+    {
+      "year": 2007.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2007.0,
       "keyword": "9",
       "country": "China",
       "count": 37
@@ -5007,12 +5073,6 @@
     },
     {
       "year": 2008.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2008.0,
       "keyword": "46",
       "country": "China",
       "count": 7
@@ -5064,6 +5124,18 @@
       "keyword": "60",
       "country": "China",
       "count": 1
+    },
+    {
+      "year": 2008.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2008.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 10
     },
     {
       "year": 2008.0,
@@ -5199,12 +5271,6 @@
     },
     {
       "year": 2009.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2009.0,
       "keyword": "46",
       "country": "China",
       "count": 9
@@ -5268,6 +5334,30 @@
       "keyword": "60",
       "country": "China",
       "count": 3
+    },
+    {
+      "year": 2009.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2009.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2009.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 12
+    },
+    {
+      "year": 2009.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 1
     },
     {
       "year": 2009.0,
@@ -5475,6 +5565,36 @@
     },
     {
       "year": 2010.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 4
+    },
+    {
+      "year": 2010.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2010.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 16
+    },
+    {
+      "year": 2010.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2010.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2010.0,
       "keyword": "9",
       "country": "China",
       "count": 60
@@ -5631,12 +5751,6 @@
     },
     {
       "year": 2011.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2011.0,
       "keyword": "46",
       "country": "China",
       "count": 30
@@ -5694,6 +5808,24 @@
       "keyword": "59",
       "country": "China",
       "count": 3
+    },
+    {
+      "year": 2011.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2011.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 5
+    },
+    {
+      "year": 2011.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 20
     },
     {
       "year": 2011.0,
@@ -5916,6 +6048,24 @@
       "keyword": "60",
       "country": "China",
       "count": 2
+    },
+    {
+      "year": 2012.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 6
+    },
+    {
+      "year": 2012.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2012.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 21
     },
     {
       "year": 2012.0,
@@ -6291,12 +6441,6 @@
     },
     {
       "year": 2013.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 3
-    },
-    {
-      "year": 2013.0,
       "keyword": "46",
       "country": "China",
       "count": 17
@@ -6417,9 +6561,69 @@
     },
     {
       "year": 2013.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2013.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 25
+    },
+    {
+      "year": 2013.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2013.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 3
+    },
+    {
+      "year": 2013.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 21
+    },
+    {
+      "year": 2013.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 35
+    },
+    {
+      "year": 2013.0,
       "keyword": "7",
       "country": "Russia",
       "count": 2
+    },
+    {
+      "year": 2013.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2013.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 8
+    },
+    {
+      "year": 2013.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2013.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 4
     },
     {
       "year": 2013.0,
@@ -6819,12 +7023,6 @@
     },
     {
       "year": 2014.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 8
-    },
-    {
-      "year": 2014.0,
       "keyword": "46",
       "country": "China",
       "count": 21
@@ -6939,9 +7137,69 @@
     },
     {
       "year": 2014.0,
+      "keyword": "64",
+      "country": "Russia",
+      "count": 1
+    },
+    {
+      "year": 2014.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 8
+    },
+    {
+      "year": 2014.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 58
+    },
+    {
+      "year": 2014.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 9
+    },
+    {
+      "year": 2014.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 26
+    },
+    {
+      "year": 2014.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 60
+    },
+    {
+      "year": 2014.0,
       "keyword": "7",
       "country": "Russia",
       "count": 35
+    },
+    {
+      "year": 2014.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2014.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 15
+    },
+    {
+      "year": 2014.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2014.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 8
     },
     {
       "year": 2014.0,
@@ -7359,18 +7617,6 @@
     },
     {
       "year": 2015.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2015.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 3
-    },
-    {
-      "year": 2015.0,
       "keyword": "46",
       "country": "China",
       "count": 19
@@ -7515,6 +7761,42 @@
     },
     {
       "year": 2015.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 11
+    },
+    {
+      "year": 2015.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 35
+    },
+    {
+      "year": 2015.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2015.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 6
+    },
+    {
+      "year": 2015.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 33
+    },
+    {
+      "year": 2015.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 42
+    },
+    {
+      "year": 2015.0,
       "keyword": "7",
       "country": "China",
       "count": 1
@@ -7524,6 +7806,24 @@
       "keyword": "7",
       "country": "Russia",
       "count": 19
+    },
+    {
+      "year": 2015.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 8
+    },
+    {
+      "year": 2015.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 7
+    },
+    {
+      "year": 2015.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 2
     },
     {
       "year": 2015.0,
@@ -7911,18 +8211,6 @@
     },
     {
       "year": 2016.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2016.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 8
-    },
-    {
-      "year": 2016.0,
       "keyword": "46",
       "country": "China",
       "count": 14
@@ -8043,9 +8331,57 @@
     },
     {
       "year": 2016.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 6
+    },
+    {
+      "year": 2016.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 34
+    },
+    {
+      "year": 2016.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2016.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 9
+    },
+    {
+      "year": 2016.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 14
+    },
+    {
+      "year": 2016.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 33
+    },
+    {
+      "year": 2016.0,
       "keyword": "7",
       "country": "Russia",
       "count": 12
+    },
+    {
+      "year": 2016.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 9
+    },
+    {
+      "year": 2016.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 2
     },
     {
       "year": 2016.0,
@@ -8403,18 +8739,6 @@
     },
     {
       "year": 2017.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 2
-    },
-    {
-      "year": 2017.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 11
-    },
-    {
-      "year": 2017.0,
       "keyword": "46",
       "country": "China",
       "count": 8
@@ -8541,9 +8865,57 @@
     },
     {
       "year": 2017.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2017.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 54
+    },
+    {
+      "year": 2017.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2017.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 13
+    },
+    {
+      "year": 2017.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 10
+    },
+    {
+      "year": 2017.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 51
+    },
+    {
+      "year": 2017.0,
       "keyword": "7",
       "country": "Russia",
       "count": 18
+    },
+    {
+      "year": 2017.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 9
+    },
+    {
+      "year": 2017.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 1
     },
     {
       "year": 2017.0,
@@ -8907,18 +9279,6 @@
     },
     {
       "year": 2018.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2018.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 10
-    },
-    {
-      "year": 2018.0,
       "keyword": "46",
       "country": "China",
       "count": 7
@@ -9039,9 +9399,63 @@
     },
     {
       "year": 2018.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2018.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 59
+    },
+    {
+      "year": 2018.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2018.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 13
+    },
+    {
+      "year": 2018.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 5
+    },
+    {
+      "year": 2018.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 41
+    },
+    {
+      "year": 2018.0,
       "keyword": "7",
       "country": "Russia",
       "count": 23
+    },
+    {
+      "year": 2018.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 9
+    },
+    {
+      "year": 2018.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 4
+    },
+    {
+      "year": 2018.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 1
     },
     {
       "year": 2018.0,
@@ -9429,18 +9843,6 @@
     },
     {
       "year": 2019.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 2
-    },
-    {
-      "year": 2019.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 13
-    },
-    {
-      "year": 2019.0,
       "keyword": "46",
       "country": "China",
       "count": 18
@@ -9585,9 +9987,69 @@
     },
     {
       "year": 2019.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 10
+    },
+    {
+      "year": 2019.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 50
+    },
+    {
+      "year": 2019.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2019.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 14
+    },
+    {
+      "year": 2019.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 15
+    },
+    {
+      "year": 2019.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 42
+    },
+    {
+      "year": 2019.0,
       "keyword": "7",
       "country": "Russia",
       "count": 18
+    },
+    {
+      "year": 2019.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 11
+    },
+    {
+      "year": 2019.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2019.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 10
+    },
+    {
+      "year": 2019.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 2
     },
     {
       "year": 2019.0,
@@ -9957,12 +10419,6 @@
     },
     {
       "year": 2020.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 10
-    },
-    {
-      "year": 2020.0,
       "keyword": "46",
       "country": "China",
       "count": 17
@@ -10107,9 +10563,81 @@
     },
     {
       "year": 2020.0,
+      "keyword": "64",
+      "country": "Russia",
+      "count": 1
+    },
+    {
+      "year": 2020.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2020.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 22
+    },
+    {
+      "year": 2020.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2020.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 13
+    },
+    {
+      "year": 2020.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 11
+    },
+    {
+      "year": 2020.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 20
+    },
+    {
+      "year": 2020.0,
       "keyword": "7",
       "country": "Russia",
       "count": 7
+    },
+    {
+      "year": 2020.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2020.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 2
+    },
+    {
+      "year": 2020.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2020.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 8
+    },
+    {
+      "year": 2020.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 1
     },
     {
       "year": 2020.0,
@@ -10497,12 +11025,6 @@
     },
     {
       "year": 2021.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 19
-    },
-    {
-      "year": 2021.0,
       "keyword": "46",
       "country": "China",
       "count": 15
@@ -10635,9 +11157,69 @@
     },
     {
       "year": 2021.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2021.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 44
+    },
+    {
+      "year": 2021.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2021.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 21
+    },
+    {
+      "year": 2021.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 12
+    },
+    {
+      "year": 2021.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 31
+    },
+    {
+      "year": 2021.0,
       "keyword": "7",
       "country": "Russia",
       "count": 21
+    },
+    {
+      "year": 2021.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2021.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 17
+    },
+    {
+      "year": 2021.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 7
+    },
+    {
+      "year": 2021.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 4
     },
     {
       "year": 2021.0,
@@ -11031,18 +11613,6 @@
     },
     {
       "year": 2022.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2022.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 24
-    },
-    {
-      "year": 2022.0,
       "keyword": "46",
       "country": "China",
       "count": 23
@@ -11175,9 +11745,75 @@
     },
     {
       "year": 2022.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 6
+    },
+    {
+      "year": 2022.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 27
+    },
+    {
+      "year": 2022.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2022.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 27
+    },
+    {
+      "year": 2022.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 18
+    },
+    {
+      "year": 2022.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 18
+    },
+    {
+      "year": 2022.0,
       "keyword": "7",
       "country": "Russia",
       "count": 36
+    },
+    {
+      "year": 2022.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 18
+    },
+    {
+      "year": 2022.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 21
+    },
+    {
+      "year": 2022.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2022.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 18
+    },
+    {
+      "year": 2022.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 24
     },
     {
       "year": 2022.0,
@@ -11595,18 +12231,6 @@
     },
     {
       "year": 2023.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 1
-    },
-    {
-      "year": 2023.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 58
-    },
-    {
-      "year": 2023.0,
       "keyword": "46",
       "country": "China",
       "count": 15
@@ -11727,9 +12351,81 @@
     },
     {
       "year": 2023.0,
+      "keyword": "63",
+      "country": "Russia",
+      "count": 1
+    },
+    {
+      "year": 2023.0,
+      "keyword": "66",
+      "country": "Russia",
+      "count": 6
+    },
+    {
+      "year": 2023.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2023.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 56
+    },
+    {
+      "year": 2023.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 3
+    },
+    {
+      "year": 2023.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 59
+    },
+    {
+      "year": 2023.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 18
+    },
+    {
+      "year": 2023.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 32
+    },
+    {
+      "year": 2023.0,
       "keyword": "7",
       "country": "Russia",
       "count": 27
+    },
+    {
+      "year": 2023.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 15
+    },
+    {
+      "year": 2023.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 21
+    },
+    {
+      "year": 2023.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 44
+    },
+    {
+      "year": 2023.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 51
     },
     {
       "year": 2023.0,
@@ -12135,18 +12831,6 @@
     },
     {
       "year": 2024.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 26
-    },
-    {
-      "year": 2024.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 58
-    },
-    {
-      "year": 2024.0,
       "keyword": "46",
       "country": "China",
       "count": 22
@@ -12279,9 +12963,81 @@
     },
     {
       "year": 2024.0,
+      "keyword": "66",
+      "country": "Russia",
+      "count": 12
+    },
+    {
+      "year": 2024.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 5
+    },
+    {
+      "year": 2024.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 66
+    },
+    {
+      "year": 2024.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 26
+    },
+    {
+      "year": 2024.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 67
+    },
+    {
+      "year": 2024.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 10
+    },
+    {
+      "year": 2024.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 44
+    },
+    {
+      "year": 2024.0,
       "keyword": "7",
       "country": "Russia",
       "count": 46
+    },
+    {
+      "year": 2024.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 15
+    },
+    {
+      "year": 2024.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 35
+    },
+    {
+      "year": 2024.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2024.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 44
+    },
+    {
+      "year": 2024.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 40
     },
     {
       "year": 2024.0,
@@ -12651,18 +13407,6 @@
     },
     {
       "year": 2025.0,
-      "keyword": "45",
-      "country": "China",
-      "count": 8
-    },
-    {
-      "year": 2025.0,
-      "keyword": "45",
-      "country": "Russia",
-      "count": 71
-    },
-    {
-      "year": 2025.0,
       "keyword": "46",
       "country": "China",
       "count": 4
@@ -12777,9 +13521,87 @@
     },
     {
       "year": 2025.0,
+      "keyword": "61",
+      "country": "Russia",
+      "count": 3
+    },
+    {
+      "year": 2025.0,
+      "keyword": "66",
+      "country": "Russia",
+      "count": 13
+    },
+    {
+      "year": 2025.0,
+      "keyword": "67",
+      "country": "China",
+      "count": 1
+    },
+    {
+      "year": 2025.0,
+      "keyword": "67",
+      "country": "Russia",
+      "count": 82
+    },
+    {
+      "year": 2025.0,
+      "keyword": "68",
+      "country": "China",
+      "count": 9
+    },
+    {
+      "year": 2025.0,
+      "keyword": "68",
+      "country": "Russia",
+      "count": 87
+    },
+    {
+      "year": 2025.0,
+      "keyword": "69",
+      "country": "China",
+      "count": 6
+    },
+    {
+      "year": 2025.0,
+      "keyword": "69",
+      "country": "Russia",
+      "count": 59
+    },
+    {
+      "year": 2025.0,
       "keyword": "7",
       "country": "Russia",
       "count": 51
+    },
+    {
+      "year": 2025.0,
+      "keyword": "70",
+      "country": "China",
+      "count": 4
+    },
+    {
+      "year": 2025.0,
+      "keyword": "70",
+      "country": "Russia",
+      "count": 22
+    },
+    {
+      "year": 2025.0,
+      "keyword": "71",
+      "country": "China",
+      "count": 2
+    },
+    {
+      "year": 2025.0,
+      "keyword": "71",
+      "country": "Russia",
+      "count": 55
+    },
+    {
+      "year": 2025.0,
+      "keyword": "72",
+      "country": "Russia",
+      "count": 25
     },
     {
       "year": 2025.0,

@@ -1,0 +1,1022 @@
+{
+  "China": {
+    "total_noun_chunks": 443915,
+    "unique_noun_chunks": 85374,
+    "top_50_noun_chunks": [
+      {
+        "rank": 1,
+        "noun_chunk": "china",
+        "frequency": 17746
+      },
+      {
+        "rank": 2,
+        "noun_chunk": "development",
+        "frequency": 4902
+      },
+      {
+        "rank": 3,
+        "noun_chunk": "cooperation",
+        "frequency": 4877
+      },
+      {
+        "rank": 4,
+        "noun_chunk": "world",
+        "frequency": 4195
+      },
+      {
+        "rank": 5,
+        "noun_chunk": "people",
+        "frequency": 3399
+      },
+      {
+        "rank": 6,
+        "noun_chunk": "peace",
+        "frequency": 2550
+      },
+      {
+        "rank": 7,
+        "noun_chunk": "country",
+        "frequency": 2109
+      },
+      {
+        "rank": 8,
+        "noun_chunk": "africa",
+        "frequency": 1725
+      },
+      {
+        "rank": 9,
+        "noun_chunk": "stability",
+        "frequency": 1629
+      },
+      {
+        "rank": 10,
+        "noun_chunk": "develop country",
+        "frequency": 1523
+      },
+      {
+        "rank": 11,
+        "noun_chunk": "reform",
+        "frequency": 1273
+      },
+      {
+        "rank": 12,
+        "noun_chunk": "all country",
+        "frequency": 1264
+      },
+      {
+        "rank": 13,
+        "noun_chunk": "region",
+        "frequency": 1257
+      },
+      {
+        "rank": 14,
+        "noun_chunk": "international community",
+        "frequency": 1239
+      },
+      {
+        "rank": 15,
+        "noun_chunk": "united states",
+        "frequency": 1034
+      },
+      {
+        "rank": 16,
+        "noun_chunk": "asia",
+        "frequency": 1026
+      },
+      {
+        "rank": 17,
+        "noun_chunk": "two side",
+        "frequency": 990
+      },
+      {
+        "rank": 18,
+        "noun_chunk": "dialogue",
+        "frequency": 976
+      },
+      {
+        "rank": 19,
+        "noun_chunk": "principle",
+        "frequency": 967
+      },
+      {
+        "rank": 20,
+        "noun_chunk": "time",
+        "frequency": 941
+      },
+      {
+        "rank": 21,
+        "noun_chunk": "common development",
+        "frequency": 934
+      },
+      {
+        "rank": 22,
+        "noun_chunk": "friendship",
+        "frequency": 933
+      },
+      {
+        "rank": 23,
+        "noun_chunk": "history",
+        "frequency": 931
+      },
+      {
+        "rank": 24,
+        "noun_chunk": "chinese people",
+        "frequency": 925
+      },
+      {
+        "rank": 25,
+        "noun_chunk": "growth",
+        "frequency": 908
+      },
+      {
+        "rank": 26,
+        "noun_chunk": "other country",
+        "frequency": 897
+      },
+      {
+        "rank": 27,
+        "noun_chunk": "challenge",
+        "frequency": 877
+      },
+      {
+        "rank": 28,
+        "noun_chunk": "trade",
+        "frequency": 866
+      },
+      {
+        "rank": 29,
+        "noun_chunk": "share future",
+        "frequency": 864
+      },
+      {
+        "rank": 30,
+        "noun_chunk": "exchange",
+        "frequency": 863
+      },
+      {
+        "rank": 31,
+        "noun_chunk": "security",
+        "frequency": 862
+      },
+      {
+        "rank": 32,
+        "noun_chunk": "interest",
+        "frequency": 834
+      },
+      {
+        "rank": 33,
+        "noun_chunk": "mankind",
+        "frequency": 818
+      },
+      {
+        "rank": 34,
+        "noun_chunk": "climate change",
+        "frequency": 808
+      },
+      {
+        "rank": 35,
+        "noun_chunk": "friend",
+        "frequency": 798
+      },
+      {
+        "rank": 36,
+        "noun_chunk": "prosperity",
+        "frequency": 793
+      },
+      {
+        "rank": 37,
+        "noun_chunk": "coordination",
+        "frequency": 784
+      },
+      {
+        "rank": 38,
+        "noun_chunk": "two country",
+        "frequency": 768
+      },
+      {
+        "rank": 39,
+        "noun_chunk": "opening",
+        "frequency": 765
+      },
+      {
+        "rank": 40,
+        "noun_chunk": "community",
+        "frequency": 748
+      },
+      {
+        "rank": 41,
+        "noun_chunk": "world peace",
+        "frequency": 739
+      },
+      {
+        "rank": 42,
+        "noun_chunk": "year",
+        "frequency": 720
+      },
+      {
+        "rank": 43,
+        "noun_chunk": "chinese government",
+        "frequency": 718
+      },
+      {
+        "rank": 44,
+        "noun_chunk": "future",
+        "frequency": 716
+      },
+      {
+        "rank": 45,
+        "noun_chunk": "world economy",
+        "frequency": 696
+      },
+      {
+        "rank": 46,
+        "noun_chunk": "investment",
+        "frequency": 690
+      },
+      {
+        "rank": 47,
+        "noun_chunk": "europe",
+        "frequency": 689
+      },
+      {
+        "rank": 48,
+        "noun_chunk": "-",
+        "frequency": 686
+      },
+      {
+        "rank": 49,
+        "noun_chunk": "mutual benefit",
+        "frequency": 675
+      },
+      {
+        "rank": 50,
+        "noun_chunk": "international relation",
+        "frequency": 664
+      }
+    ],
+    "total_entities": 92220,
+    "unique_entities": 9104,
+    "top_50_entities": [
+      {
+        "rank": 1,
+        "entity": "china",
+        "frequency": 33525
+      },
+      {
+        "rank": 2,
+        "entity": "africa",
+        "frequency": 3308
+      },
+      {
+        "rank": 3,
+        "entity": "asia",
+        "frequency": 2194
+      },
+      {
+        "rank": 4,
+        "entity": "united states",
+        "frequency": 2143
+      },
+      {
+        "rank": 5,
+        "entity": "united nations",
+        "frequency": 1935
+      },
+      {
+        "rank": 6,
+        "entity": "europe",
+        "frequency": 1128
+      },
+      {
+        "rank": 7,
+        "entity": "japan",
+        "frequency": 1112
+      },
+      {
+        "rank": 8,
+        "entity": "russia",
+        "frequency": 847
+      },
+      {
+        "rank": 9,
+        "entity": "this year",
+        "frequency": 812
+      },
+      {
+        "rank": 10,
+        "entity": "china - africa",
+        "frequency": 792
+      },
+      {
+        "rank": 11,
+        "entity": "covid-19",
+        "frequency": 660
+      },
+      {
+        "rank": 12,
+        "entity": "asia - pacific",
+        "frequency": 620
+      },
+      {
+        "rank": 13,
+        "entity": "india",
+        "frequency": 564
+      },
+      {
+        "rank": 14,
+        "entity": "year",
+        "frequency": 547
+      },
+      {
+        "rank": 15,
+        "entity": "afghanistan",
+        "frequency": 530
+      },
+      {
+        "rank": 16,
+        "entity": "european_union",
+        "frequency": 530
+      },
+      {
+        "rank": 17,
+        "entity": "france",
+        "frequency": 471
+      },
+      {
+        "rank": 18,
+        "entity": "last year",
+        "frequency": 467
+      },
+      {
+        "rank": 19,
+        "entity": "arab",
+        "frequency": 464
+      },
+      {
+        "rank": 20,
+        "entity": "east asia",
+        "frequency": 369
+      },
+      {
+        "rank": 21,
+        "entity": "taiwan",
+        "frequency": 364
+      },
+      {
+        "rank": 22,
+        "entity": "pakistan",
+        "frequency": 354
+      },
+      {
+        "rank": 23,
+        "entity": "recent year",
+        "frequency": 343
+      },
+      {
+        "rank": 24,
+        "entity": "china - eu",
+        "frequency": 338
+      },
+      {
+        "rank": 25,
+        "entity": "germany",
+        "frequency": 319
+      },
+      {
+        "rank": 26,
+        "entity": "shanghai",
+        "frequency": 313
+      },
+      {
+        "rank": 27,
+        "entity": "syria",
+        "frequency": 294
+      },
+      {
+        "rank": 28,
+        "entity": "brazil",
+        "frequency": 286
+      },
+      {
+        "rank": 29,
+        "entity": "palestine",
+        "frequency": 285
+      },
+      {
+        "rank": 30,
+        "entity": "korean",
+        "frequency": 284
+      },
+      {
+        "rank": 31,
+        "entity": "middle_east",
+        "frequency": 283
+      },
+      {
+        "rank": 32,
+        "entity": "iran",
+        "frequency": 273
+      },
+      {
+        "rank": 33,
+        "entity": "annual",
+        "frequency": 244
+      },
+      {
+        "rank": 34,
+        "entity": "21st century",
+        "frequency": 242
+      },
+      {
+        "rank": 35,
+        "entity": "united_kingdom",
+        "frequency": 241
+      },
+      {
+        "rank": 36,
+        "entity": "latin america",
+        "frequency": 225
+      },
+      {
+        "rank": 37,
+        "entity": "cpc central committee",
+        "frequency": 214
+      },
+      {
+        "rank": 38,
+        "entity": "hong_kong",
+        "frequency": 213
+      },
+      {
+        "rank": 39,
+        "entity": "vietnam",
+        "frequency": 213
+      },
+      {
+        "rank": 40,
+        "entity": "next year",
+        "frequency": 202
+      },
+      {
+        "rank": 41,
+        "entity": "afghan",
+        "frequency": 201
+      },
+      {
+        "rank": 42,
+        "entity": "wen",
+        "frequency": 197
+      },
+      {
+        "rank": 43,
+        "entity": "u.s .",
+        "frequency": 195
+      },
+      {
+        "rank": 44,
+        "entity": "indonesia",
+        "frequency": 186
+      },
+      {
+        "rank": 45,
+        "entity": "past year",
+        "frequency": 184
+      },
+      {
+        "rank": 46,
+        "entity": "caribbean",
+        "frequency": 172
+      },
+      {
+        "rank": 47,
+        "entity": "century",
+        "frequency": 170
+      },
+      {
+        "rank": 48,
+        "entity": "early date",
+        "frequency": 169
+      },
+      {
+        "rank": 49,
+        "entity": "wang yi",
+        "frequency": 168
+      },
+      {
+        "rank": 50,
+        "entity": "li keqiang",
+        "frequency": 168
+      }
+    ]
+  },
+  "Russia": {
+    "total_noun_chunks": 898920,
+    "unique_noun_chunks": 171107,
+    "top_50_noun_chunks": [
+      {
+        "rank": 1,
+        "noun_chunk": "russia",
+        "frequency": 15528
+      },
+      {
+        "rank": 2,
+        "noun_chunk": "question",
+        "frequency": 6288
+      },
+      {
+        "rank": 3,
+        "noun_chunk": "ukraine",
+        "frequency": 5590
+      },
+      {
+        "rank": 4,
+        "noun_chunk": "united states",
+        "frequency": 4475
+      },
+      {
+        "rank": 5,
+        "noun_chunk": "syria",
+        "frequency": 3619
+      },
+      {
+        "rank": 6,
+        "noun_chunk": "president",
+        "frequency": 3610
+      },
+      {
+        "rank": 7,
+        "noun_chunk": "situation",
+        "frequency": 3517
+      },
+      {
+        "rank": 8,
+        "noun_chunk": "west",
+        "frequency": 3180
+      },
+      {
+        "rank": 9,
+        "noun_chunk": "agreement",
+        "frequency": 3056
+      },
+      {
+        "rank": 10,
+        "noun_chunk": "country",
+        "frequency": 3018
+      },
+      {
+        "rank": 11,
+        "noun_chunk": "people",
+        "frequency": 2905
+      },
+      {
+        "rank": 12,
+        "noun_chunk": "europe",
+        "frequency": 2759
+      },
+      {
+        "rank": 13,
+        "noun_chunk": "cooperation",
+        "frequency": 2722
+      },
+      {
+        "rank": 14,
+        "noun_chunk": "fact",
+        "frequency": 2620
+      },
+      {
+        "rank": 15,
+        "noun_chunk": "state",
+        "frequency": 2577
+      },
+      {
+        "rank": 16,
+        "noun_chunk": "moscow",
+        "frequency": 2538
+      },
+      {
+        "rank": 17,
+        "noun_chunk": "russian federation",
+        "frequency": 2456
+      },
+      {
+        "rank": 18,
+        "noun_chunk": "course",
+        "frequency": 2374
+      },
+      {
+        "rank": 19,
+        "noun_chunk": "interest",
+        "frequency": 2331
+      },
+      {
+        "rank": 20,
+        "noun_chunk": "-",
+        "frequency": 2080
+      },
+      {
+        "rank": 21,
+        "noun_chunk": "principle",
+        "frequency": 2040
+      },
+      {
+        "rank": 22,
+        "noun_chunk": "region",
+        "frequency": 2013
+      },
+      {
+        "rank": 23,
+        "noun_chunk": "iran",
+        "frequency": 2009
+      },
+      {
+        "rank": 24,
+        "noun_chunk": "place",
+        "frequency": 1995
+      },
+      {
+        "rank": 25,
+        "noun_chunk": "un",
+        "frequency": 1976
+      },
+      {
+        "rank": 26,
+        "noun_chunk": "meeting",
+        "frequency": 1922
+      },
+      {
+        "rank": 27,
+        "noun_chunk": "our country",
+        "frequency": 1884
+      },
+      {
+        "rank": 28,
+        "noun_chunk": "china",
+        "frequency": 1865
+      },
+      {
+        "rank": 29,
+        "noun_chunk": "way",
+        "frequency": 1844
+      },
+      {
+        "rank": 30,
+        "noun_chunk": "talk",
+        "frequency": 1843
+      },
+      {
+        "rank": 31,
+        "noun_chunk": "world",
+        "frequency": 1841
+      },
+      {
+        "rank": 32,
+        "noun_chunk": "eu",
+        "frequency": 1827
+      },
+      {
+        "rank": 33,
+        "noun_chunk": "development",
+        "frequency": 1787
+      },
+      {
+        "rank": 34,
+        "noun_chunk": "security",
+        "frequency": 1767
+      },
+      {
+        "rank": 35,
+        "noun_chunk": "issue",
+        "frequency": 1756
+      },
+      {
+        "rank": 36,
+        "noun_chunk": "need",
+        "frequency": 1746
+      },
+      {
+        "rank": 37,
+        "noun_chunk": "nato",
+        "frequency": 1743
+      },
+      {
+        "rank": 38,
+        "noun_chunk": "effort",
+        "frequency": 1739
+      },
+      {
+        "rank": 39,
+        "noun_chunk": "number",
+        "frequency": 1654
+      },
+      {
+        "rank": 40,
+        "noun_chunk": "un security council",
+        "frequency": 1578
+      },
+      {
+        "rank": 41,
+        "noun_chunk": "relation",
+        "frequency": 1553
+      },
+      {
+        "rank": 42,
+        "noun_chunk": "americans",
+        "frequency": 1527
+      },
+      {
+        "rank": 43,
+        "noun_chunk": "international law",
+        "frequency": 1463
+      },
+      {
+        "rank": 44,
+        "noun_chunk": "time",
+        "frequency": 1379
+      },
+      {
+        "rank": 45,
+        "noun_chunk": "minsk agreement",
+        "frequency": 1363
+      },
+      {
+        "rank": 46,
+        "noun_chunk": "result",
+        "frequency": 1359
+      },
+      {
+        "rank": 47,
+        "noun_chunk": "government",
+        "frequency": 1351
+      },
+      {
+        "rank": 48,
+        "noun_chunk": "right",
+        "frequency": 1320
+      },
+      {
+        "rank": 49,
+        "noun_chunk": "terrorism",
+        "frequency": 1319
+      },
+      {
+        "rank": 50,
+        "noun_chunk": "order",
+        "frequency": 1306
+      }
+    ],
+    "total_entities": 201490,
+    "unique_entities": 14545,
+    "top_50_entities": [
+      {
+        "rank": 1,
+        "entity": "russia",
+        "frequency": 34538
+      },
+      {
+        "rank": 2,
+        "entity": "united states",
+        "frequency": 10403
+      },
+      {
+        "rank": 3,
+        "entity": "syria",
+        "frequency": 8235
+      },
+      {
+        "rank": 4,
+        "entity": "united nations",
+        "frequency": 6322
+      },
+      {
+        "rank": 5,
+        "entity": "ukraine",
+        "frequency": 5195
+      },
+      {
+        "rank": 6,
+        "entity": "europe",
+        "frequency": 4911
+      },
+      {
+        "rank": 7,
+        "entity": "european_union",
+        "frequency": 3462
+      },
+      {
+        "rank": 8,
+        "entity": "nato",
+        "frequency": 3357
+      },
+      {
+        "rank": 9,
+        "entity": "iran",
+        "frequency": 2950
+      },
+      {
+        "rank": 10,
+        "entity": "china",
+        "frequency": 2757
+      },
+      {
+        "rank": 11,
+        "entity": "un security council",
+        "frequency": 2605
+      },
+      {
+        "rank": 12,
+        "entity": "france",
+        "frequency": 2513
+      },
+      {
+        "rank": 13,
+        "entity": "germany",
+        "frequency": 2409
+      },
+      {
+        "rank": 14,
+        "entity": "africa",
+        "frequency": 2099
+      },
+      {
+        "rank": 15,
+        "entity": "americans",
+        "frequency": 1587
+      },
+      {
+        "rank": 16,
+        "entity": "palestine",
+        "frequency": 1476
+      },
+      {
+        "rank": 17,
+        "entity": "middle_east",
+        "frequency": 1470
+      },
+      {
+        "rank": 18,
+        "entity": "united_kingdom",
+        "frequency": 1431
+      },
+      {
+        "rank": 19,
+        "entity": "arab",
+        "frequency": 1327
+      },
+      {
+        "rank": 20,
+        "entity": "israel",
+        "frequency": 1151
+      },
+      {
+        "rank": 21,
+        "entity": "russia?s",
+        "frequency": 1126
+      },
+      {
+        "rank": 22,
+        "entity": "iraq",
+        "frequency": 1081
+      },
+      {
+        "rank": 23,
+        "entity": "india",
+        "frequency": 1046
+      },
+      {
+        "rank": 24,
+        "entity": "afghanistan",
+        "frequency": 1044
+      },
+      {
+        "rank": 25,
+        "entity": "libya",
+        "frequency": 1031
+      },
+      {
+        "rank": 26,
+        "entity": "eurasian",
+        "frequency": 1026
+      },
+      {
+        "rank": 27,
+        "entity": "japan",
+        "frequency": 926
+      },
+      {
+        "rank": 28,
+        "entity": "turkey",
+        "frequency": 920
+      },
+      {
+        "rank": 29,
+        "entity": "this year",
+        "frequency": 851
+      },
+      {
+        "rank": 30,
+        "entity": "asia",
+        "frequency": 768
+      },
+      {
+        "rank": 31,
+        "entity": "kazakhstan",
+        "frequency": 758
+      },
+      {
+        "rank": 32,
+        "entity": "geneva",
+        "frequency": 681
+      },
+      {
+        "rank": 33,
+        "entity": "islamic",
+        "frequency": 672
+      },
+      {
+        "rank": 34,
+        "entity": "last year",
+        "frequency": 641
+      },
+      {
+        "rank": 35,
+        "entity": "saudi_arabia",
+        "frequency": 614
+      },
+      {
+        "rank": 36,
+        "entity": "russians",
+        "frequency": 591
+      },
+      {
+        "rank": 37,
+        "entity": "year",
+        "frequency": 587
+      },
+      {
+        "rank": 38,
+        "entity": "soviet union",
+        "frequency": 573
+      },
+      {
+        "rank": 39,
+        "entity": "latin america",
+        "frequency": 559
+      },
+      {
+        "rank": 40,
+        "entity": "north africa",
+        "frequency": 551
+      },
+      {
+        "rank": 41,
+        "entity": "john kerry",
+        "frequency": 544
+      },
+      {
+        "rank": 42,
+        "entity": "state",
+        "frequency": 541
+      },
+      {
+        "rank": 43,
+        "entity": "today?s",
+        "frequency": 525
+      },
+      {
+        "rank": 44,
+        "entity": "soviet",
+        "frequency": 502
+      },
+      {
+        "rank": 45,
+        "entity": "donald trump",
+        "frequency": 496
+      },
+      {
+        "rank": 46,
+        "entity": "italy",
+        "frequency": 495
+      },
+      {
+        "rank": 47,
+        "entity": "al - nusra",
+        "frequency": 493
+      },
+      {
+        "rank": 48,
+        "entity": "azerbaijan",
+        "frequency": 485
+      },
+      {
+        "rank": 49,
+        "entity": "egypt",
+        "frequency": 483
+      },
+      {
+        "rank": 50,
+        "entity": "council of europe",
+        "frequency": 469
+      }
+    ]
+  }
+}

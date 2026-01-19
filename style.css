@@ -330,7 +330,7 @@ a:hover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin: 18px auto 28px auto;
-  max-width: 80vw;
+  max-width: 90vw;
 }
 
 .chart-section {
@@ -354,6 +354,42 @@ a:hover {
   transform: translateY(-3px);
   background: rgba(255,255,255,0.09);
   border-color: rgba(255,255,255,0.22);
+}
+
+.glance-card-full {
+  grid-column: 1 / -1;
+}
+
+.whats-inside-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.whats-inside-content p {
+  margin: 0;
+  line-height: 1.4;
+  display: inline;
+}
+
+.inside-text {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.15rem;
+  display: inline;
+}
+
+.inside-text-medium {
+  font-size: 1.15rem;
+}
+
+.inside-text-large {
+  font-size: 1.15rem;
+}
+
+.inside-text-largest {
+  font-size: 1.15rem;
 }
 
 .glance-number{

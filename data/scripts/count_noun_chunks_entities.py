@@ -478,13 +478,13 @@ def is_numeric(text):
     return digit_count > len(cleaned) / 2
 
 # Load data
-print("Loading CH_RU_prime.csv...")
+print("Loading China_Russia_Speeches.csv...")
 print("  (Skipping any rows with encoding issues)...")
 
 # Capture warnings during CSV load
 with warnings.catch_warnings(record=True) as w:
     warnings.simplefilter("always")
-    df = pd.read_csv(os.path.join(data_dir, "CH_RU_prime.csv"), encoding='latin1', on_bad_lines='skip', engine='python')
+    df = pd.read_csv(os.path.join(data_dir, "China_Russia_Speeches.csv"), encoding='latin1', on_bad_lines='skip', engine='python')
     
     # Report any warnings
     for warning in w:

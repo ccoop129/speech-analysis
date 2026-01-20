@@ -409,8 +409,8 @@ def process_text(text):
     return processed_words
 
 # Load data
-print("Loading CH_RU.csv...")
-df = pd.read_csv("CH_RU.csv", encoding="latin1")
+print("Loading China_Russia_Speeches.csv...")
+df = pd.read_csv("China_Russia_Speeches.csv", encoding="latin1")
 
 # Process by country
 countries = ['China', 'Russia']

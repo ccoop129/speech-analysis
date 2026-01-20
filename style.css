@@ -341,6 +341,101 @@ html {
     transform: translateX(2px);
 }
 
+/* Duplicate hero styling for -data variants */
+.hero-container-data {
+    display: flex;
+    gap: 24px;
+    max-width: 80vw;
+    margin: 22px auto 36px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-data {
+    position: relative;
+    max-width: 80vw;
+    height: 500px;
+    margin: 22px auto 36px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(2,6,23,0.5);
+    background: linear-gradient(180deg, rgba(10,14,39,0.6), rgba(10,14,39,0.75));
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-card-data {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    margin: 0;
+    min-height: 450px;
+}
+
+.hero-buttons-data {
+  margin-top: 12px;
+}
+
+.hero-bg-wrap-data { position: absolute; inset: 0; z-index: 0; }
+.hero-bg-data { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; display: block; filter: brightness(0.6) contrast(1.05); }
+.hero-overlay-data { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,36,0.45) 10%, rgba(8,12,36,0.7) 65%); }
+
+.hero-inner-data {
+    position: relative;
+    z-index: 1;
+    padding: 40px 30px;
+    color: #e9eef8;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.hero-eyebrow-data { color: #9fb0d9; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 10px; } 
+.hero-title-data { font-family: "Source Serif 4", serif; font-size: 2rem; line-height: 1.08; margin: 0 0 12px 0; font-weight: 800; color: #ffffff; word-wrap: break-word; overflow-wrap: break-word; }
+.hero-desc-data {
+  color: rgba(255,255,255,0.9);
+  font-family: "Source Serif 4", serif;
+  font-size: 1rem;     /* bigger */
+  line-height: 1.55;      /* more readable */
+  max-width: 100%;        /* spread across the hero */
+  margin: 45px 0 0;
+  font-weight: 500;
+}
+
+.hero-ctas-data {
+  display: flex;
+  gap: 24px;
+  margin-top: 140px;
+  align-items: center;
+}
+
+.hero-downloads-data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.hero-download-link-data {
+    display: inline-block;
+    padding: 8px 12px;
+    background: rgba(47, 156, 255, 0.15);
+    border: 1px solid rgba(47, 156, 255, 0.3);
+    border-radius: 6px;
+    color: #5dd3ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: fit-content;
+}
+
+.hero-download-link-data:hover {
+    background: rgba(47, 156, 255, 0.25);
+    border-color: rgba(47, 156, 255, 0.5);
+    transform: translateX(2px);
+}
+
 .team-member h3 {
     color: #ffffff;
     margin-top: 20px;

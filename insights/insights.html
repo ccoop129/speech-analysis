@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geopolitical Speech Lab - Insights</title>
 
+  <!-- Font Awesome for icons -->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- Your single stylesheet -->
   <link rel="stylesheet" href="../style.css" />
 
@@ -16,13 +27,10 @@
   <!-- Header / Nav -->
   <header class="site-header">
     <nav class="nav">
-      <!-- Brand (2 lines) -->
       <a class="brand" href="../index.html">
         <span class="brand-main">Geopolitical Speech Lab</span>
-        <span class="brand-sub">Decoding Great Power Speech</span>
       </a>
 
-      <!-- Right-side nav -->
       <ul class="nav-links">
         <li><a href="../index.html">Home</a></li>
         <li><a class="active" href="insights.html">Insights</a></li>
@@ -34,19 +42,19 @@
   </header>
 
   <main class="main-content">
-    <h1>Insights</h1>
+    <h1 id="page-header">Insights</h1>
+    <h1 id="visualization-section" style="font-size: 2rem; text-decoration: underline;">Part 1: Vizualizations</h1>
 
 <!-- Dataset Description -->
 <section class="chart-section">
   <div class="chart-card info-card">
     <h2>About This Tool</h2>
-    <p>
-      <p>This tool creates visualization of diplomatic speech trends over time by illustrating our dataset of over 4,000 scraped speeches from the Chinese and Russian Ministries of Foreign Affairs' websites.</p>
-      <p>Our team tagged keywords of geopolitical relevance, but you can search for your own <a href="../data-page/alldata.html">on our data page</a>. </p>
-      <p>Below you'll see the number of speeches per year that contain selected keywords for each country. </p>
-      <p>The adjusted analysis function allows for comparison of tagged speeches as a percent of total speeches given that year.</p>
-      <p>By visualizing keyword frequency relative to total speech volume, you can identify how the two great powers prioritize and discuss key geopolitical issues in context with global events.</p>
-    </p>
+    <ul></ul>
+      <li>This tool visualizes trends in diplomatic rhetoric over time using more than 4,000 official speeches from the Chinese and Russian Ministries of Foreign Affairs.</li>
+      <li>Keywords of geopolitical relevance are pre-tagged; custom searches are available <a href="../data-page/alldata.html">on our data page</a>. </li>
+      <li>The charts show the number of speeches per year containing selected keywords for each country, with an option to view results as a share of total speeches in a given year.</li>
+      <li>This allows users to compare how China and Russia prioritize and discuss key geopolitical issues over time.</li>
+    </ul>
   </div>
 </section>
 
@@ -192,13 +200,322 @@
     <!-- Technical Notes -->
     <div class="usage-notes">
       <strong>Usage Notes:</strong> 
-      <br>*As Russia's MFA publishes articles with greater frequency, using the adjusted button is recommended for comparative analysis. This demonstrates the number of speeches containing the keyword as a a percent of total speeches from that year.</br>
+      <p>*As Russia's MFA publishes articles with greater frequency, using the adjusted button is recommended for comparative analysis. This demonstrates the number of speeches containing the keyword as a a percent of total speeches from that year.</p>
       <br>**Visualization of Russian data begins at 2014.</br>
     </div>
   </div>
 </section>
+<br>
+<main class = "main-content">
+  <h1 id="tfidf-section" style="font-size: 2rem; text-decoration: underline;">Part 2: Term Frequency-Inverse Document Frequency</h1>
 
-<script src="./insights.js"></script>
- 
-</body>
-</html>
+  <div class="info-card">
+    <p>TF-IDF (Term Frequency-Inverse Document Frequency) measures the importance of terms in each country's speeches relative to the entire corpus. Higher scores indicate terms that are distinctive to that country's diplomatic discourse.</p>
+  </div>
+
+  <section class="chart-section">
+    <h2>Top 20 Terms by TF-IDF Score</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+      <!-- China TF-IDF Table -->
+      <div>
+        <h3 style="text-align: center; color: #2f9cff; margin-bottom: 15px;">China</h3>
+        <table class="data-preview-table">
+          <thead>
+            <tr style="background: rgba(47, 156, 255, 0.15); border-bottom: 2px solid rgba(47, 156, 255, 0.3);">
+              <th style="padding: 10px; text-align: left; border-right: 1px solid rgba(255,255,255,0.1);">Rank</th>
+              <th style="padding: 10px; text-align: left; border-right: 1px solid rgba(255,255,255,0.1);">Term</th>
+              <th style="padding: 10px; text-align: right;">TF-IDF Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">1</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">bri</td>
+              <td style="padding: 8px; text-align: right;">0.312</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">2</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">rejuvenation</td>
+              <td style="padding: 8px; text-align: right;">0.268</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">3</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">urbanization</td>
+              <td style="padding: 8px; text-align: right;">0.184</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">4</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">mekong</td>
+              <td style="padding: 8px; text-align: right;">0.153</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">5</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">boao</td>
+              <td style="padding: 8px; text-align: right;">0.105</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">6</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">vigor</td>
+              <td style="padding: 8px; text-align: right;">0.099</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">7</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">unremitting</td>
+              <td style="padding: 8px; text-align: right;">0.097</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">8</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">differentiated</td>
+              <td style="padding: 8px; text-align: right;">0.081</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">9</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">revitalization</td>
+              <td style="padding: 8px; text-align: right;">0.081</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">10</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">synergize</td>
+              <td style="padding: 8px; text-align: right;">0.075</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">11</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">outbound</td>
+              <td style="padding: 8px; text-align: right;">0.065</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">12</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">decouple</td>
+              <td style="padding: 8px; text-align: right;">0.060</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">13</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">colorful</td>
+              <td style="padding: 8px; text-align: right;">0.059</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">14</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">straits</td>
+              <td style="padding: 8px; text-align: right;">0.051</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">15</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">blaze</td>
+              <td style="padding: 8px; text-align: right;">0.048</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">16</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">innovate</td>
+              <td style="padding: 8px; text-align: right;">0.048</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">17</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">readjustment</td>
+              <td style="padding: 8px; text-align: right;">0.047</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">18</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">optimize</td>
+              <td style="padding: 8px; text-align: right;">0.043</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">19</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">utilization</td>
+              <td style="padding: 8px; text-align: right;">0.041</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">20</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">energize</td>
+              <td style="padding: 8px; text-align: right;">0.040</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">52</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">tortuous</td>
+              <td style="padding: 8px; text-align: right;">0.040</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">53</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">plenum</td>
+              <td style="padding: 8px; text-align: right;">0.039</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">54</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">hainan</td>
+              <td style="padding: 8px; text-align: right;">0.039</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">55</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">tazara</td>
+              <td style="padding: 8px; text-align: right;">0.038</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">56</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">luncheon</td>
+              <td style="padding: 8px; text-align: right;">0.037</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Russia TF-IDF Table -->
+      <div>
+        <h3 style="text-align: center; color: #2f9cff; margin-bottom: 15px;">Russia</h3>
+        <table class="data-preview-table">
+          <thead>
+            <tr style="background: rgba(47, 156, 255, 0.15); border-bottom: 2px solid rgba(47, 156, 255, 0.3);">
+              <th style="padding: 10px; text-align: left; border-right: 1px solid rgba(255,255,255,0.1);">Rank</th>
+              <th style="padding: 10px; text-align: left; border-right: 1px solid rgba(255,255,255,0.1);">Term</th>
+              <th style="padding: 10px; text-align: right;">TF-IDF Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">1</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">osce</td>
+              <td style="padding: 8px; text-align: right;">0.672</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">2</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">zelensky</td>
+              <td style="padding: 8px; text-align: right;">0.203</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">3</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">donbass</td>
+              <td style="padding: 8px; text-align: right;">0.202</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">4</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">donetsk</td>
+              <td style="padding: 8px; text-align: right;">0.172</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">5</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">nusra</td>
+              <td style="padding: 8px; text-align: right;">0.163</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">6</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">lugansk</td>
+              <td style="padding: 8px; text-align: right;">0.161</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">7</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">mgimo</td>
+              <td style="padding: 8px; text-align: right;">0.125</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">8</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">normandy</td>
+              <td style="padding: 8px; text-align: right;">0.121</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">9</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">poroshenko</td>
+              <td style="padding: 8px; text-align: right;">0.120</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">10</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">jabhat</td>
+              <td style="padding: 8px; text-align: right;">0.116</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">11</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">alexander</td>
+              <td style="padding: 8px; text-align: right;">0.107</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">12</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">church</td>
+              <td style="padding: 8px; text-align: right;">0.102</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">13</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">militant</td>
+              <td style="padding: 8px; text-align: right;">0.102</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">14</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">orthodox</td>
+              <td style="padding: 8px; text-align: right;">0.098</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">15</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">kosovo</td>
+              <td style="padding: 8px; text-align: right;">0.096</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">16</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">armenian</td>
+              <td style="padding: 8px; text-align: right;">0.095</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">17</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">georgia</td>
+              <td style="padding: 8px; text-align: right;">0.082</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">18</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">allegedly</td>
+              <td style="padding: 8px; text-align: right;">0.082</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">19</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">ultimatum</td>
+              <td style="padding: 8px; text-align: right;">0.079</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">20</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">rkiye</td>
+              <td style="padding: 8px; text-align: right;">0.070</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">21</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">normalise</td>
+              <td style="padding: 8px; text-align: right;">0.068</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">22</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">primakov</td>
+              <td style="padding: 8px; text-align: right;">0.067</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">23</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">idlib</td>
+              <td style="padding: 8px; text-align: right;">0.066</td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">24</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">polycentric</td>
+              <td style="padding: 8px; text-align: right;">0.064</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">25</td>
+              <td style="padding: 8px; border-right: 1px solid rgba(255,255,255,0.05);">crimean</td>
+              <td style="padding: 8px; text-align: right;">0.061</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="usage-notes">
+      <strong>Data Notes:</strong> 
+      <p>A small number of acronyms and domestic political figures have been removed from this preview for presentation purposes. A link to download the unedited dataset is  available <a href="../data-page/alldata.html">on our data page</a>. </p>
+      
+
+  <!-- Left Side Navigation -->
+  <nav id="section-nav" class="section-nav">
+    <a href="#visualization-section" class="nav-item active" data-section="visualization">
+      <span class="nav-label">Visualization</span>
+    </a>
+    <a href="#tfidf-section" class="nav-item" data-section="tfidf">
+      <span class="nav-label">TF-IDF</span>
+    </a>
+  </nav>
+
+  <script src="./insights.js"></script>
+  <script src="../index.js"></script>
+ </body>

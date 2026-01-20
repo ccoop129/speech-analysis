@@ -1948,18 +1948,21 @@ a:hover {
 /* ===== POLITICO-style Audience Section ===== */
 
 .audience-pro{
-  background: #ffffff;
+  background: linear-gradient(rgba(255, 255, 255, 0.285), rgba(255, 255, 255, 0.75)), url('text.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #0b1220;
   text-align: center;
-  padding: 120px 20px 120px;
+  padding: 60px 20px 60px;
 }
 
 .audience-eyebrow{
   font-size: 0.85rem;
   letter-spacing: 3px;
   font-weight: 700;
-  color: #2f9cff; /* BLUE accent */
-  margin-bottom: 26px;
+  color: #164c7f; /* BLUE accent */
+  margin-bottom: -30px;
 }
 
 .audience-title{
@@ -1974,7 +1977,7 @@ a:hover {
   width: 180px;
   height: 6px;
   background: #2f9cff; /* BLUE underline */
-  margin: 22px auto 34px;
+  margin: 12px auto 18px;
   border-radius: 4px;
 }
 
@@ -1984,6 +1987,59 @@ a:hover {
   font-size: 1.15rem;
   line-height: 1.65;
   color: #1f2937;
+}
+
+/* Three-box grid for "What this makes possible" */
+.three-box-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1300px;
+  margin: 18px auto 0;
+  padding: 0 20px;
+}
+
+.three-box{
+  background: rgba(1, 1, 79, 0.201);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(35, 30, 114, 0.15);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.three-box-title{
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.three-box-desc{
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+@media (max-width: 1100px){
+  .three-box-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 600px){
+  .three-box-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }
 /* =========================
    POLITICO-style dataset banner

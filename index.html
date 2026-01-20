@@ -1,7 +1,4 @@
-
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -14,7 +11,12 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=2" />
 
   <!-- Plotly (only include if you actually use it on this page) -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -26,7 +28,6 @@
     <nav class="nav">
       <a class="brand" href="index.html">
         <span class="brand-main">Geopolitical Speech Lab</span>
-        
       </a>
 
       <ul class="nav-links">
@@ -48,10 +49,10 @@
 
     <div class="hero-inner">
       <h1 class="hero-title">What governments say—and don’t say—matters.</h1>
-    <h3 class="hero-desc">
-  We turn official speeches from China and Russia into searchable data and visual insights—<br>
-  so you can analyze keywords, entities, and narrative shifts over time.
-</h3>
+      <h3 class="hero-desc">
+        We turn official speeches from China and Russia into searchable data and visual insights—so you can analyze
+        keywords, entities, and narrative shifts over time.
+      </h3>
 
       <div class="hero-ctas">
         <a class="btn primary" href="insights/insights.html">Explore Insights →</a>
@@ -60,89 +61,126 @@
     </div>
   </header>
 
-  <!-- Overview Cards -->
-   <!-- At a Glance -->
   <main>
-    <section class="landing-cards" id="overview">
-      <div class="section-header">
-        <h2>At a Glance</h2>
-    
-      </div>
 
-      <!-- ONE grid: 3 cards on top, 2 cards on bottom -->
-      <div class="glance-grid">
-        <!-- Full width "What's inside" block -->
-        <div class="glance-card glance-card-full">
-          <div class="glance-number">What's inside:</div>
-          <div class="whats-inside-content">
-            <p><span class="inside-text inside-text-large">993 dated speeches from the Chinese Foreign Ministry, spanning 2005-2025.</span></p>
-            <p><span class="inside-text inside-text-largest">3,204 dated speeches, interviews, and public appearances of Russian Minister of Foreign Affairs Sergei Lavrov, spanning late 2013-2025.</span></p>
-            <p><span class="inside-text inside-text-medium">Curated insights and visualizations</span></p>
-            <p><span class="inside-text inside-text-large">An interactive visualization tool to generate your own insights</span></p>
+   
+
+   <section class="pp-band" id="overview">
+  <div class="pp-wrap">
+    <div class="pp-left">
+      <div class="pp-kicker">OVERVIEW</div>
+      <h2 class="pp-title">
+        Curated insights and tools<br />
+        to generate your own.
+      </h2>
+      <p class="pp-lede">
+        Geopolitical Speech Lab transforms thousands of official speeches into structured,
+        searchable data and interactive visualizations—so you can trace language patterns
+        over time with clarity and consistency.
+      </p>
+      <p class="pp-lede">
+        Rather than reading speeches one by one, you can compare how China and Russia
+        prioritize key issues, track shifts in emphasis across years, and interpret rhetorical
+        change in the context of global events.
+      </p>
+
+    </div>
+
+    <div class="pp-right">
+      <div class="pp-metrics">
+        <div class="pp-metric">
+          <div class="pp-num">4,000+</div>
+          <div class="pp-label">speeches analyzed</div>
+        </div>
+
+        <div class="pp-metric">
+          <div class="pp-num">2</div>
+          <div class="pp-label">countries covered</div>
+        </div>
+
+        <div class="pp-metric">
+          <div class="pp-num">67</div>
+          <div class="pp-label">keywords tracked</div>
+        </div>
+
+        <div class="pp-metric">
+          <div class="pp-num">2005–2025</div>
+          <div class="pp-label">coverage window</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- 2) Dataset scale -->
+   
+<section class="pro-banner" aria-label="Dataset scale">
+  <div class="pro-banner__inner">
+    <p class="pro-banner__eyebrow">OFFICIAL SPEECHES, STRUCTURED FOR ANALYSIS</p>
+
+    <h2 class="pro-banner__headline">
+      <span class="u-underline">993 </span> China Ministry of Foreign Affairs speeches (2005–2025) and
+      <span class="u-underline">3,204 </span> Russia Foreign Minister speeches, interviews, and appearances
+      (late 2013–2025), transformed into searchable data.
+    </h2>
+
+  </div>
+</section>
+
+    <!-- 4) Audience section -->
+    <section class="audience-pro">
+  <p class="audience-eyebrow">MADE FOR POLICY THINKERS</p>
+
+  <h2 class="audience-title">
+    <br> FIND YOUR PLACE IN GLOBAL RHETORIC
+  </h2>
+
+  <div class="accent-bar"></div>
+
+  <p class="audience-desc">
+    Whether you’re a policy student, researcher, analyst, journalist, or engaged enthusiast, Geopolitical Speech Lab helps you examine how governments frame priorities and signal strategic intent—across time and major global events.
+  </p>
+</section>
+
+
+    <!-- 5) Example / proof section (re-using your screenshot block) -->
+    <section class="band band-proof" id="example">
+      <div class="band-inner">
+        <p class="band-kicker">Example</p>
+        <h2 class="band-title">One pattern, surfaced at scale</h2>
+
+        <div class="screenshot-container">
+          <img src="RUBRICS.png" alt="Platform screenshot" class="screenshot-image">
+          <div class="screenshot-description">
+            <p>
+              After the full-scale invasion of Ukraine, BRICS featured significantly more prominently in the speeches of
+              Russian Foreign Minister Sergei Lavrov. By 2024, roughly 30 percent of his speeches and public appearances
+              featured references to BRICS, potentially reflecting Russia’s priority of promoting alternatives to
+              Western-led institutions and aligning itself with other emerging powers representative of the “global
+              majority” in an emerging multipolar international system.
+            </p>
           </div>
         </div>
       </div>
-
-      <!-- Screenshot image container -->
-      <div class="screenshot-container">
-        <img src="RUBRICS.png" alt="Platform screenshot" class="screenshot-image">
-        <div class="screenshot-description">
-          <p>After the full-scale invasion of Ukraine, BRICS featured significantly more prominently in the speeches of Russian Foreign Minister Sergei Lavrov. By 2024, roughly 30 percent of his speeches and public appearances featured references to BRICS, potentially reflecting Russia's priority of promoting alternatives to Western-led institutions and aligning itself with other emerging powers representative of the "global majority" in an emerging multipolar international system.</p>
-        </div>
-      </div>
-
-      <!-- Info cards row -->
-      <div class="glance-grid">
-        <div class="info-card info-card--wide" id="what-this-does">
-
-          <h2>What this platform does</h2>
-          <p>
-            Geopolitical Speech Lab brings together over 4,000 speeches from Russia and China (2005–2025) and turns
-            them into searchable, structured data. The platform enables users to track keywords, entities, and narrative shifts over time.
-          </p>
-        </div>
-
-           <div class="info-card info-card--wide" id="why-this-matters">
-
-          <h2>Why this analysis matters</h2>
-          <p>
-           Official speeches are a primary way governments signal priorities, justify actions, and shape international narratives. By systematically analyzing rhetoric over time, this dataset helps reveal how China and Russia respond to global events, frame strategic interests, and communicate shifts in foreign policy emphasis.
-          </p>
-        </div>
-
-        <div class="info-card info-card--wide" id="how-to-use">
-          <h2>Choose how you want to explore:</h2>
-          <div class="howto-features">
-            <a href="insights/insights.html" class="howto-feature howto-link">
-              <div class="howto-feature__top">
-                <span class="howto-feature__icon" aria-hidden="true">🔎</span>
-                <span class="howto-feature__title">Insights</span>
-                <span class="howto-feature__cta" aria-hidden="true">→</span>
-              </div>
-              <div class="howto-feature__desc">
-                Curated findings with interactive, guided views.
-              </div>
-            </a>
-
-            <a href="data-page/alldata.html" class="howto-feature howto-link">
-              <div class="howto-feature__top">
-                <span class="howto-feature__icon" aria-hidden="true">⬇️</span>
-                <span class="howto-feature__title">Data</span>
-                <span class="howto-feature__cta" aria-hidden="true">→</span>
-              </div>
-              <div class="howto-feature__desc">
-                Downloadable datasets for further analysis and reuse.
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
     </section>
+
+   <section class="white-band">
+  <div class="white-band__inner">
+    <div class="white-band__eyebrow">WHY IT MATTERS</div>
+    <h2 class="white-band__title">Why analyzing official rhetoric matters</h2>
+
+    <p class="white-band__body">
+      Important diplomatic signals are often embedded in foreign languages, lengthy speeches, and fragmented official sources.
+      By focusing on primary source material—official government speeches—Geopolitical Speech Lab reduces the time and language
+      barriers involved in understanding how governments frame policy issues over time and across regions.
+    </p>
+
+    <p class="white-band__body">
+      Rather than offering editorial interpretation, the platform enables users to conduct their own analysis, emphasizing
+      patterns, trends, and language usage—supporting independent, evidence-based conclusions.
+    </p>
+  </div>
+</section>
+
   </main>
 </body>
 </html>
-
-     
-
-

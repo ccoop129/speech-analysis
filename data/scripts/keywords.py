@@ -1,9 +1,13 @@
 import re
 import pandas as pd
 import json
+import os
 
-SPEECHES_PATH = "CH_RU.csv"
-KEYWORDS_PATH = "keywords.csv"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.dirname(SCRIPT_DIR)
+
+SPEECHES_PATH = os.path.join(DATA_DIR, "CH_RU_prime.csv")
+KEYWORDS_PATH = os.path.join(DATA_DIR, "keywords.csv")
 
 # ----------------------------
 # Helpers
@@ -132,7 +136,7 @@ cache = {
     "total_speeches": totals_list
 }
 
-with open("viz_cache.json", "w") as f:
+with open("viz_cache_new.json", "w") as f:
     json.dump(cache, f, indent=2)
 
-print("viz_cache.json generated successfully")
+print("viz_cache_new.json generated successfully")

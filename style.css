@@ -24,7 +24,10 @@
 
 /* POLITICO-Pro style band */
 .pp-band{
-  background: var(--pp-bg);
+  background: linear-gradient(rgba(246, 247, 249, 0.85), rgba(246, 247, 249, 0.85)), url('party.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--pp-text);
   padding: 70px 24px;
   margin-top: 36px;
@@ -2032,7 +2035,7 @@ a:hover {
 .pro-banner__eyebrow{
   margin: 0 0 16px;
   font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size: 0.90rem;
+  font-size: 0.80;
   letter-spacing: 0.22em;
   color: rgba(255,255,255,0.78);
 }
@@ -2042,7 +2045,7 @@ a:hover {
   max-width: 980px;
   font-family: "Source Serif 4", Georgia, serif;
   font-weight: 600;
-  font-size: clamp(1.55rem, 2.2vw, 2.25rem);
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
   line-height: 1.25;
   color: #ffffff;
 }

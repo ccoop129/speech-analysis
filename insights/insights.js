@@ -21,15 +21,15 @@ function parseEventsCsv(csvText) {
   return events;
 }
 
-function createKeywordsCheckboxes(keywordMap, eventLines) {
+function createKeywordsCheckboxes(keywordMap, eventLines, keywordsWithData) {
   // Define keyword categories by ID
   const categories = {
     continents: ['1', '2', '3', '4', '5'],
-    areas: ['6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
+    areas: ['6', '9', '7', '8', '65', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
     organizations: ['25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
-    topics: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52'],
-    rhetorical: ['53'],
-    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
+    topics: ['67', '76', '51', '72', '69', '68', '74', '73', '38', '75', '66', '78', '40', '41', '42', '43', '44', '45', '71', '70', '46', '47', '48', '49', '79', '77'],
+    chineseConcepts: ['52', '53', '54', '55', '56', '57', '58'],
+    russianConcepts: ['37', '39', '62', '59', '63', '60', '61', '64']
   };
 
   // Build suggested topics from event keywords
@@ -42,7 +42,12 @@ function createKeywordsCheckboxes(keywordMap, eventLines) {
       }
     });
   });
-  categories.suggested = Array.from(suggestedKeywords);
+  // Sort suggested keywords alphabetically by name
+  categories.suggested = Array.from(suggestedKeywords).sort((a, b) => {
+    const nameA = keywordMap[a] || '';
+    const nameB = keywordMap[b] || '';
+    return nameA.localeCompare(nameB);
+  });
 
   function createCheckbox(id, label) {
     const idSafe = 'kw_' + id;
@@ -66,7 +71,7 @@ function createKeywordsCheckboxes(keywordMap, eventLines) {
     const container = document.getElementById(`kw-${catKey}`);
     if (!container) return;
     ids.forEach(id => {
-      if (keywordMap[id]) {
+      if (keywordMap[id] && keywordsWithData.has(id)) {
         container.appendChild(createCheckbox(id, keywordMap[id]));
       }
     });
@@ -77,15 +82,19 @@ function getSelectedKeywordIds() {
   return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
 }
 
+function getSelectedKeywordIds() {
+  return Array.from(document.querySelectorAll('#keywords-list input[type=checkbox]:checked')).map(i => i.value);
+}
+
 function updateSelectionCounts() {
   const categories = {
     suggested: [],  // Will be populated dynamically
     continents: ['1', '2', '3', '4', '5'],
-    areas: ['6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
+    areas: ['6', '9', '7', '8', '65', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'],
     organizations: ['25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35'],
-    topics: ['36', '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52'],
-    rhetorical: ['53'],
-    chineseConcepts: ['54', '55', '56', '57', '58', '59', '60']
+    topics: ['67', '76', '51', '72', '69', '68', '74', '73', '38', '75', '66', '78', '40', '41', '42', '43', '44', '45', '71', '70', '46', '47', '48', '49', '79', '77'],
+    chineseConcepts: ['52', '53', '54', '55', '56', '57', '58'],
+    russianConcepts: ['37', '39', '62', '59', '63', '60', '61', '64']
   };
 
   Object.entries(categories).forEach(([catKey, ids]) => {
@@ -279,7 +288,13 @@ async function initKeywordViz() {
   const eventsResponse = await fetch('./events.csv').then(r => r.text());
   const eventLines = parseEventsCsv(eventsResponse);
 
-  createKeywordsCheckboxes(keywordMap, eventLines);
+  // Build set of keywords that have at least one occurrence in data
+  const keywordsWithData = new Set();
+  countRows.forEach(row => {
+    keywordsWithData.add(row.keyword);
+  });
+
+  createKeywordsCheckboxes(keywordMap, eventLines, keywordsWithData);
 
   // Build total speeches per year per country from cache
   const totalSpeechesByYearCountry = { China: {}, Russia: {} };
@@ -305,6 +320,7 @@ async function initKeywordViz() {
   const yearMinInput = document.getElementById('year-min');
   const yearMaxInput = document.getElementById('year-max');
   const deselectAllBtn = document.getElementById('deselect-all-btn');
+  const collapseAllBtn = document.getElementById('collapse-all-btn');
   
   function updateButtonStyles() {
     if (selectedCountries.China) {
@@ -368,6 +384,12 @@ async function initKeywordViz() {
     });
     updateSelectionCounts();
     refresh();
+  });
+
+  collapseAllBtn.addEventListener('click', () => {
+    document.querySelectorAll('#keywords-list details').forEach(details => {
+      details.removeAttribute('open');
+    });
   });
 
   function refresh() {

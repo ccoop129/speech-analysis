@@ -2124,7 +2124,7 @@ a:hover {
 .entities-section .entities-title{
   margin: 0;
   font-family: "Source Sans 3", sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 750;
   color: #0b1220;
   display: inline;
@@ -2148,7 +2148,7 @@ a:hover {
 
 .entities-section .entities-select{
   font-family: "Source Sans 3", sans-serif;
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 650;
   color: #0b1220;
   padding: 4px 8px;
@@ -2172,10 +2172,15 @@ a:hover {
   gap: 6px;
 }
 
+.entities-section .entities-country[data-country="china"]{
+  border-right: 1px solid rgba(11, 18, 32, 0.15);
+  padding-right: 22px;
+}
+
 .entities-section .country-title{
   margin: 0;
   font-family: "Source Sans 3", sans-serif;
-  font-size: 0.85rem;
+  font-size: 01rem;
   font-weight: 750;
   color: rgba(11,18,32,0.78);
 }
@@ -2200,7 +2205,7 @@ a:hover {
 .entities-section .entity-label{
   margin: 0;
   font-family: "Source Sans 3", sans-serif;
-  font-size: 0.78rem;
+  font-size: .9rem;
   font-weight: 550;
   color:#0b1220;
   line-height: 1.1;

@@ -56,14 +56,7 @@
   font-weight: 700;
 }
 
-.pp-title::after{
-  content: "";
-  display: block;
-  width: 92px;
-  height: 6px;
-  background: var(--pp-red);
-  margin-top: 14px;
-}
+
 
 .pp-lede{
   font-family: "Source Sans 3", sans-serif;
@@ -88,9 +81,9 @@
   text-decoration: none;
   font-weight: 700;
   font-family: "Source Sans 3", sans-serif;
-  background: var(--pp-red);
-  color: white;
-  border: 1px solid var(--pp-red);
+  background: var(--pp-accent);
+border-color: var(--pp-accent);
+color: var(--pp-accent);
   transition: transform 160ms ease, filter 160ms ease;
 }
 .pp-btn:hover{ transform: translateY(-2px); filter: brightness(0.96); }
@@ -2096,7 +2089,6 @@ a:hover {
   border: 1px solid rgba(255,255,255,0.0);
 }
 
-}
 
 .pro-btn:hover{
   transform: translateY(-2px);
@@ -2106,3 +2098,5 @@ a:hover {
   .pro-banner__inner{ padding: 32px 18px; }
   .pro-banner__eyebrow{ letter-spacing: 0.18em; }
 }
+/* =========================
+   WHITE POLITICO-STYLE BAND

@@ -24,7 +24,7 @@
 
 /* POLITICO-Pro style band */
 .pp-band{
-  background: linear-gradient(rgba(246, 247, 249, 0.85), rgba(246, 247, 249, 0.85)), url('party.jpg');
+  background: linear-gradient(rgba(246, 247, 249, 0.85), rgba(246, 247, 249, 0.85)), url('images/party.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -219,6 +219,15 @@ html {
     justify-content: center;
 }
 
+.hero-container-data {
+    display: flex;
+    gap: 24px;
+    max-width: 80vw;
+    margin: 22px auto 36px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .hero {
     position: relative;
     max-width: 80vw;
@@ -240,7 +249,19 @@ html {
     min-height: 450px;
 }
 
+.hero-card-data {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    margin: 0;
+    min-height: 450px;
+}
+
 .hero-buttons {
+  margin-top: 12px;
+}
+
+.hero-buttons-data {
   margin-top: 12px;
 }
 
@@ -248,7 +269,21 @@ html {
 .hero-bg { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; display: block; filter: brightness(0.6) contrast(1.05); }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,36,0.45) 10%, rgba(8,12,36,0.7) 65%); }
 
+.hero-bg-wrap-data { position: absolute; inset: 0; z-index: 0; }
+.hero-bg-data { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; display: block; filter: brightness(0.6) contrast(1.05); }
+.hero-overlay-data { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,36,0.45) 10%, rgba(8,12,36,0.7) 65%); }
+
 .hero-inner {
+    position: relative;
+    z-index: 1;
+    padding: 40px 30px;
+    color: #e9eef8;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.hero-inner-data {
     position: relative;
     z-index: 1;
     padding: 40px 30px;
@@ -269,8 +304,28 @@ html {
   margin: 45px 0 0;
   font-weight: 500;
 }
+
+/* Data page hero variants - smaller fonts */
+.hero-eyebrow-data { color: #9fb0d9; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 10px; }
+.hero-title-data { font-family: "Source Serif 4", serif; font-size: 2rem; line-height: 1.08; margin: 0 0 12px 0; font-weight: 800; color: #ffffff; word-wrap: break-word; overflow-wrap: break-word; }
+.hero-desc-data {
+  color: rgba(255,255,255,0.9);
+  font-family: "Source Serif 4", serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 100%;
+  margin: 45px 0 0;
+  font-weight: 500;
+}
 /* HERO CTA — same size, bigger */
 .hero-ctas{
+  display: flex;
+  gap: 24px;
+  margin-top: 140px;
+  align-items: center;
+}
+
+.hero-ctas-data {
   display: flex;
   gap: 24px;
   margin-top: 140px;
@@ -321,6 +376,13 @@ html {
     margin-top: 20px;
 }
 
+.hero-downloads-data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
 .hero-download-link {
     display: inline-block;
     padding: 8px 12px;
@@ -339,81 +401,6 @@ html {
     background: rgba(47, 156, 255, 0.25);
     border-color: rgba(47, 156, 255, 0.5);
     transform: translateX(2px);
-}
-
-/* Duplicate hero styling for -data variants */
-.hero-container-data {
-    display: flex;
-    gap: 24px;
-    max-width: 80vw;
-    margin: 22px auto 36px auto;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.hero-data {
-    position: relative;
-    max-width: 80vw;
-    height: 500px;
-    margin: 22px auto 36px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 12px 28px rgba(2,6,23,0.5);
-    background: linear-gradient(180deg, rgba(10,14,39,0.6), rgba(10,14,39,0.75));
-    display: flex;
-    flex-direction: column;
-}
-
-.hero-card-data {
-    flex: 1;
-    min-width: 300px;
-    max-width: 350px;
-    margin: 0;
-    min-height: 450px;
-}
-
-.hero-buttons-data {
-  margin-top: 12px;
-}
-
-.hero-bg-wrap-data { position: absolute; inset: 0; z-index: 0; }
-.hero-bg-data { width: 100%; height: 100%; object-fit: cover; object-position: center 10%; display: block; filter: brightness(0.6) contrast(1.05); }
-.hero-overlay-data { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,36,0.45) 10%, rgba(8,12,36,0.7) 65%); }
-
-.hero-inner-data {
-    position: relative;
-    z-index: 1;
-    padding: 40px 30px;
-    color: #e9eef8;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.hero-eyebrow-data { color: #9fb0d9; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 10px; } 
-.hero-title-data { font-family: "Source Serif 4", serif; font-size: 2rem; line-height: 1.08; margin: 0 0 12px 0; font-weight: 800; color: #ffffff; word-wrap: break-word; overflow-wrap: break-word; }
-.hero-desc-data {
-  color: rgba(255,255,255,0.9);
-  font-family: "Source Serif 4", serif;
-  font-size: 1rem;     /* bigger */
-  line-height: 1.55;      /* more readable */
-  max-width: 100%;        /* spread across the hero */
-  margin: 45px 0 0;
-  font-weight: 500;
-}
-
-.hero-ctas-data {
-  display: flex;
-  gap: 24px;
-  margin-top: 140px;
-  align-items: center;
-}
-
-.hero-downloads-data {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: auto;
 }
 
 .hero-download-link-data {
@@ -435,6 +422,8 @@ html {
     border-color: rgba(47, 156, 255, 0.5);
     transform: translateX(2px);
 }
+
+
 
 .team-member h3 {
     color: #ffffff;
@@ -519,6 +508,11 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 1200px;
     width: 100%;
+    background: rgba(47, 156, 255, 0.12);
+    border: 1px solid rgba(47, 156, 255, 0.35);
+    border-radius: 14px;
+    padding: 10px;
+    margin-top: 24px;
 }
 
 .data-preview-table {
@@ -533,24 +527,48 @@ html {
     border-bottom: 2px solid rgba(47, 156, 255, 0.3);
 }
 
+.data-preview-table thead tr {
+    background: rgba(47, 156, 255, 0.15);
+}
+
 .data-preview-table th {
     padding: 12px 15px;
     text-align: left;
     font-weight: 600;
     color: #8fd3ff;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.data-preview-table th:last-child {
+    text-align: right;
+    border-right: none;
+}
+
+.data-preview-table tbody tr {
+    background: rgba(47, 156, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.data-preview-table tbody tr + tr {
+    border-top: 1px solid rgba(47, 156, 255, 0.15);
+}
+
+.data-preview-table tbody tr:hover {
+    background-color: rgba(47, 156, 255, 0.14);
+    transition: background-color 0.2s ease;
 }
 
 .data-preview-table td {
     padding: 10px 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     color: #c9d6ee;
     word-wrap: break-word;
     max-width: 300px;
+    border-right: 1px solid rgba(255,255,255,0.05);
 }
 
-.data-preview-table tbody tr:hover {
-    background-color: rgba(47, 156, 255, 0.08);
-    transition: background-color 0.2s ease;
+.data-preview-table td:last-child {
+    text-align: right;
+    border-right: none;
 }
 
 
@@ -581,16 +599,7 @@ a:hover {
 }
 
 
-.section-header {
-  max-width: 80vw;
-  margin: 0 auto;
-  text-align: center;
-}
 
-.section-header h2{
-  margin: 0 0 8px 0;
-  font-size: 1.6rem;
-}
 
 .muted{
   margin: 0 auto;
@@ -1841,33 +1850,7 @@ a:hover {
 .faq-page .team-member li{
   margin: 2px 0;
 }
-/* =========================
-   Data Preview – Highlight Rows
-========================= */
 
-.data-preview-table tbody tr {
-  background: rgba(47, 156, 255, 0.08);   /* soft light blue */
-}
-
-.data-preview-table tbody tr + tr {
-  border-top: 1px solid rgba(47, 156, 255, 0.15);
-}
-
-/* Hover state slightly brighter */
-.data-preview-table tbody tr:hover {
-  background: rgba(47, 156, 255, 0.14);
-}
-/* =========================
-   Data Preview – Section Break Highlight
-========================= */
-
-.data-preview-container {
-  background: rgba(47, 156, 255, 0.12);   /* noticeably lighter */
-  border: 1px solid rgba(47, 156, 255, 0.35);
-  border-radius: 14px;
-  padding: 10px;
-  margin-top: 24px;
-}
 /* =========================
    HOMEPAGE "BANDS" SYSTEM (POLITICO-style)
    Paste this at the END of style.css
@@ -2036,7 +2019,7 @@ a:hover {
 /* ===== POLITICO-style Audience Section ===== */
 
 .audience-pro{
-  background: linear-gradient(rgba(255, 255, 255, 0.285), rgba(255, 255, 255, 0.75)), url('text.png');
+  background: linear-gradient(rgba(255, 255, 255, 0.285), rgba(255, 255, 255, 0.75)), url('images/text.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -2585,5 +2568,36 @@ a:hover {
   .nav-label {
     display: inline;
   }
+}
+
+/* =========================
+   TF-IDF Table Styles
+========================= */
+.tfidf-tables-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.tfidf-table-wrapper h3 {
+  text-align: center;
+  color: #2f9cff;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   Section Header Styles
+========================= */
+.section-header {
+  max-width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-header h2{
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  text-decoration: underline;
 }
 

@@ -1958,11 +1958,19 @@ a:hover {
 }
 
 .audience-eyebrow{
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   letter-spacing: 3px;
   font-weight: 700;
   color: #164c7f; /* BLUE accent */
   margin-bottom: -30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .audience-title{
@@ -2320,5 +2328,47 @@ a:hover {
   .entities-section .entities-header{
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* =========================
+   Back to Top Button
+========================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(90deg, #2f9cff, #5dd3ff);
+  color: #042033;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(47, 156, 255, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  box-shadow: 0 6px 20px rgba(47, 156, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
   }
 }

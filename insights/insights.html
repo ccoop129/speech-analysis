@@ -42,7 +42,8 @@
   </header>
 
   <main class="main-content">
-    <h1>Vizualizations</h1>
+    <h1 id="page-header">Insights</h1>
+    <h1 id="visualization-section" style="font-size: 2rem; text-decoration: underline;">Part 1: Vizualizations</h1>
 
 <!-- Dataset Description -->
 <section class="chart-section">
@@ -199,14 +200,14 @@
     <!-- Technical Notes -->
     <div class="usage-notes">
       <strong>Usage Notes:</strong> 
-      <br>*As Russia's MFA publishes articles with greater frequency, using the adjusted button is recommended for comparative analysis. This demonstrates the number of speeches containing the keyword as a a percent of total speeches from that year.</br>
+      <p>*As Russia's MFA publishes articles with greater frequency, using the adjusted button is recommended for comparative analysis. This demonstrates the number of speeches containing the keyword as a a percent of total speeches from that year.</p>
       <br>**Visualization of Russian data begins at 2014.</br>
     </div>
   </div>
 </section>
-
+<br>
 <main class = "main-content">
-  <h1>Term Frequency-Inverse Document Frequency</h1>
+  <h1 id="tfidf-section" style="font-size: 2rem; text-decoration: underline;">Part 2: Term Frequency-Inverse Document Frequency</h1>
 
   <div class="info-card">
     <p>TF-IDF (Term Frequency-Inverse Document Frequency) measures the importance of terms in each country's speeches relative to the entire corpus. Higher scores indicate terms that are distinctive to that country's diplomatic discourse.</p>
@@ -500,6 +501,20 @@
     </div>
   </section>
 
+  <div class="usage-notes">
+      <strong>Data Notes:</strong> 
+      <p>A small number of acronyms and domestic political figures have been removed from this preview for presentation purposes. A link to download the unedited dataset is  available <a href="../data-page/alldata.html">on our data page</a>. </p>
+      
+
+  <!-- Left Side Navigation -->
+  <nav id="section-nav" class="section-nav">
+    <a href="#visualization-section" class="nav-item active" data-section="visualization">
+      <span class="nav-label">Visualization</span>
+    </a>
+    <a href="#tfidf-section" class="nav-item" data-section="tfidf">
+      <span class="nav-label">TF-IDF</span>
+    </a>
+  </nav>
 
   <script src="./insights.js"></script>
   <script src="../index.js"></script>

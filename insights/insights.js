@@ -433,3 +433,62 @@ async function initKeywordViz() {
 }
 
 window.addEventListener('load', initKeywordViz);
+// Section Navigation Functionality
+document.addEventListener("DOMContentLoaded", function() {
+  const sectionNav = document.getElementById("section-nav");
+  if (!sectionNav) return;
+
+  // Show navigation after initial page load
+  setTimeout(() => {
+    sectionNav.classList.add("show");
+  }, 500);
+
+  // Get all navigation items
+  const navItems = document.querySelectorAll(".nav-item");
+
+  // Handle smooth scrolling and active state updates
+  navItems.forEach(item => {
+    item.addEventListener("click", function(e) {
+      e.preventDefault();
+      const section = this.getAttribute("data-section");
+      const target = document.getElementById(section + "-section");
+      
+      if (target) {
+        // Update active state
+        navItems.forEach(navItem => navItem.classList.remove("active"));
+        this.classList.add("active");
+
+        // Smooth scroll to section
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+  // Update active state based on scroll position
+  window.addEventListener("scroll", function() {
+    let currentSection = null;
+
+    // Check which section is currently in view
+    navItems.forEach(item => {
+      const sectionId = item.getAttribute("data-section");
+      const section = document.getElementById(sectionId + "-section");
+      
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        // If section is in the upper half of viewport, mark as current
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+          currentSection = sectionId;
+        }
+      }
+    });
+
+    // Update active styling
+    if (currentSection) {
+      navItems.forEach(item => item.classList.remove("active"));
+      const activeItem = document.querySelector(`.nav-item[data-section="${currentSection}"]`);
+      if (activeItem) {
+        activeItem.classList.add("active");
+      }
+    }
+  });
+});

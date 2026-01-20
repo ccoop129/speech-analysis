@@ -2098,5 +2098,130 @@ a:hover {
   .pro-banner__inner{ padding: 32px 18px; }
   .pro-banner__eyebrow{ letter-spacing: 0.18em; }
 }
+
+/* =========================
+   ENTITIES VISUALIZATION
+========================= */
+.entities-section {
+  background: #f6f7f9;
+  padding: 16px 24px;
+  margin: 0;
+}
+
+.entities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.entities-country {
+  display: flex;
+  flex-direction: column;
+}
+
+.entities-title {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0b1220;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.entity-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entity-bar {
+  display: grid;
+  grid-template-columns: 110px 1fr 55px;
+  gap: 10px;
+  align-items: center;
+}
+
+.entity-label {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0b1220;
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-wrapper {
+  background: rgba(11, 18, 32, 0.08);
+  border-radius: 3px;
+  height: 28px;
+  overflow: hidden;
+}
+
+.bar {
+  background: linear-gradient(90deg, #2f9cff, #5dd3ff);
+  height: 200%;
+  border-radius: 3px;
+  transition: width 300ms ease;
+}
+
+.entity-count {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0b1220;
+  text-align: right;
+}
+
+@media (max-width: 968px) {
+  .entities-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .entity-bar {
+    grid-template-columns: 100px 1fr 50px;
+  }
+
+  .entity-label {
+    font-size: 0.85rem;
+  }
+
+  .entity-count {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .entities-section {
+    padding: 14px 18px;
+  }
+
+  .entities-title {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .entity-bars {
+    gap: 2px;
+  }
+
+  .entity-bar {
+    grid-template-columns: 90px 1fr 45px;
+    gap: 8px;
+  }
+
+  .entity-label {
+    font-size: 0.8rem;
+  }
+
+  .entity-count {
+    font-size: 0.8rem;
+  }
+}
+
 /* =========================
    WHITE POLITICO-STYLE BAND

@@ -156,17 +156,10 @@ color: var(--pp-accent);
 
 .brand-main {
   font-family: "Source Serif 4", serif;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   font-weight: 600;
   letter-spacing: 0.4px;
   color: #eef4ff;
-}
-
-
-
-
-.brand-sub {
-  display: none;
 }
 
 .nav-links {
@@ -182,7 +175,7 @@ color: var(--pp-accent);
   font-family: "Source Sans 3", sans-serif; /* fix font name */
   color: #cfe9ff;
   text-decoration: none;
-  font-size: 1.4rem;   /* pick your size */
+  font-size: 1.2rem;   /* pick your size */
   font-weight: 600;
   opacity: 0.88;
   transition: color 0.2s ease, opacity 0.2s ease;

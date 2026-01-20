@@ -182,7 +182,7 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
   
   Object.keys(countsByKwAndCountry).forEach(kid => {
     selectedCountries.forEach(country => {
-      // For Russia, only plot years where it has actual data to avoid gaps
+      // For both China and Russia, only plot years where there is actual data to avoid gaps
       let xData = years;
       let yData = years.map(y => {
         let count = countsByKwAndCountry[kid][country][String(y)] || 0;
@@ -193,14 +193,12 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
         return count;
       });
       
-      if (country === 'Russia') {
-        // Filter to only include years with data
-        const dataPoints = years
-          .map((y, i) => ({ year: y, count: yData[i] }))
-          .filter(p => p.count > 0);
-        xData = dataPoints.map(p => p.year);
-        yData = dataPoints.map(p => p.count);
-      }
+      // Filter to only include years with data
+      const dataPoints = years
+        .map((y, i) => ({ year: y, count: yData[i] }))
+        .filter(p => p.count > 0);
+      xData = dataPoints.map(p => p.year);
+      yData = dataPoints.map(p => p.count);
       
       const lineColor = getLineColor(kid, country);
       
@@ -212,7 +210,8 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
         line: { width: 2, color: lineColor },
         marker: { size: 6, color: lineColor },
         legendgroup: kid,
-        legendgrouptitle: { text: keywordMap[kid] }
+        legendgrouptitle: { text: keywordMap[kid] },
+        showlegend: true
       });
     });
   });
@@ -270,7 +269,7 @@ function drawPlot(years, countsByKwAndCountry, keywordMap, selectedCountries, to
     yaxis: { title: normalized ? 'Percentage of speeches (%)' : 'Number of speeches' },
     hovermode: 'x unified',
     margin: { b: 50, l: 60, r: 20, t: 140 },
-    legend: { orientation: 'v', xanchor: 'left', x: 1.02 },
+    legend: { orientation: 'v', xanchor: 'left', x: 1.02, showlegend: true },
     autosize: true,
     shapes: shapes,
     annotations: annotations

@@ -40,7 +40,7 @@
 
         <div class="team-member data-overview">
             <h2>Our Data</h2>
-            <p> Our data includes speeches and public appearances from the Ministries of Foreign Affairs of the People's Republic of China and Russian Federation. Our dataset spans from 2005 to 2025, depending on the country, and provides coverage of major and minor diplomatic statements and addresses. For a more detailed description of our data visit our <a href="../data/Data_Dictionary_011626.pdf">data dictionary</a>. For the code we used to scrape the data check out our gitbub repositories for the <a href="https://github.com/ccoop129/speech-scrapers">China</a> and <a href="https://github.com/jlennon509/RU-speech-scraper">Russia</a> scrapers.</p>
+            <p> Our data includes speeches and public appearances from the Ministries of Foreign Affairs of the <a href="https://www.fmprc.gov.cn/eng/xw/zyjh/">People's Republic of China</a> and <a href="https://mid.ru/en/press_service/minister_speeches/2064879/">Russian Federation</a>. Our dataset spans from 2005 to 2025, depending on the country, and provides coverage of major and minor diplomatic statements and addresses. For a more detailed description of our data visit our <a href="../data/Data_Dictionary_011626.pdf">data dictionary</a>. For the code we used to scrape the data check out our gitbub repositories for the <a href="https://github.com/ccoop129/speech-scrapers">China</a> and <a href="https://github.com/jlennon509/RU-speech-scraper">Russia</a> scrapers.</p>
             
             <h3>Data Preview</h3>
             <div class="data-preview-container">
@@ -130,56 +130,58 @@
             
         </div>
 
-        <div class="hero-container">
-            <header class="hero hero-card">
-                <div class="hero-bg-wrap" aria-hidden="true">
+        <div class="hero-container-data">
+            <header class="hero hero-card-data">
+                <div class="hero-bg-wrap-data" aria-hidden="true">
                     <!-- Place an appropriately licensed photo at images/xi_speech.jpg -->
                     <img src="../Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg">
-                    <div class="hero-overlay"></div>
+                    <div class="hero-overlay-data"></div>
                 </div>
-                <div class="hero-inner">
-                    <div class="hero-eyebrow"></div>
-                    <h1 class="hero-title">Understand China in its own words.</h1>
-                    <h3 class="hero-desc">Governments choose their words carefully. Learn the words, places, and topics that shape Chinese foreign policy.</h3>
+                <div class="hero-inner-data">
+                    <div class="hero-eyebrow-data"></div>
+                    <h1 class="hero-title-data">Understand China in its own words.</h1>
+                    <h3 class="hero-desc-data">Governments choose their words carefully. Learn the words, places, and topics that shape Chinese foreign policy.</h3>
 
-                    <div class="hero-downloads">
-                        <a href="../data/china_speeches_processed.csv" class="hero-download-link">Download Our China Data CSV</a>
-                        <a href="../data/china_speeches_processed.json" class="hero-download-link">Download Our China Data JSON</a>
+                    <div class="hero-downloads-data">
+                        <a href="../data/china/china_speeches.csv" class="hero-download-link">Download Our China Data CSV</a>
                     </div>
                 </div>
             </header>
 
-            <header class="hero hero-card">
-                <div class="hero-bg-wrap" aria-hidden="true">
+            <header class="hero hero-card-data">
+                <div class="hero-bg-wrap-data" aria-hidden="true">
                     <img src="LandP.jpg" alt="Sergei Lavrov making a speech" class="hero-bg">
-                    <div class="hero-overlay"></div>
+                    <div class="hero-overlay-data"></div>
                 </div>
-                <div class="hero-inner">
-                    <div class="hero-eyebrow"></div>
-                    <h1 class="hero-title">See Russia's foreign policy through the eyes of Lavrov.</h1>
-                    <h3 class="hero-desc">Understand the rhetoric and diplomatic priorities of Russian foreign policy through the words of Russia's Foreign Minister.</h3>
+                <div class="hero-inner-data">
+                    <div class="hero-eyebrow-data"></div>
+                    <h1 class="hero-title-data">See Russia's foreign policy through the eyes of Lavrov.</h1>
+                    <h3 class="hero-desc-data">Understand the rhetoric and diplomatic priorities of Russian foreign policy through the words of Russia's Foreign Minister.</h3>
 
-                    <div class="hero-downloads">
+                    <div class="hero-downloads-data">
                         <a href="../data/Russia/Lavrov_2026_2014_D4P.csv" class="hero-download-link">Download Our Russia Data CSV</a>
                         <a href="../data/Russia/Lavrov_Speeches_D4P.json" class="hero-download-link">Download Our Russia Data JSON</a>
                     </div>
                 </div>
             </header>
 
-            <header class="hero hero-card">
-                <div class="hero-bg-wrap" aria-hidden="true">
+            <header class="hero hero-card-data">
+                <div class="hero-bg-wrap-data" aria-hidden="true">
                     <img src="ChinaRussiaFlags.png" alt="China and Russia flags" class="hero-bg">
-                    <div class="hero-overlay"></div>
+                    <div class="hero-overlay-data"></div>
                 </div>
-                <div class="hero-inner">
-                    <div class="hero-eyebrow"></div>
-                    <h1 class="hero-title">The Combined Data Set</h1>
-                    <h3 class="hero-desc">Access our combined China and Russia data, which includes speeches from China's Ministry of Foreign Affairs and Sergei Lavrov's speeches and public appearances.</h3>
+                <div class="hero-inner-data">
+                    <div class="hero-eyebrow-data"></div>
+                    <h1 class="hero-title-data">The Combined Data Set</h1>
+                    <h3 class="hero-desc-data">Combined China and Russia data</h3>
 
-                    <div class="hero-downloads">
-                        <a href="../data/CH_RU_clean.csv" class="hero-download-link">Download Combined CSV</a>
-                        <a href="../data/CH_RU_clean.json" class="hero-download-link">Download Combined Data JSON</a>
-                        <a href="../data/Data_Dictionary_011626.pdf" class="hero-download-link">Download Our Data Dictionary</a>
+                    <div class="hero-downloads-data">
+                        <a href="../data/China_Russia_Speeches.csv" class="hero-download-link">Download Combined CSV</a>
+                        <a href="../data/China_Russia_speeches.json" class="hero-download-link">Download Combined Data JSON</a>
+                        <a href="../data/top_1000_words_combined.json" class="hero-download-link">Raw Word Counts</a>
+                        <a href="../data/noun_chunks_entities_count.json" class="hero-download-link">SpaCy Noun Chunks and Entities</a>
+                        <a href="../data/tfidf_results.json" class="hero-download-link">NLTK TF/IDF Stats</a>
+                        <a href="../data/Data_Dictionary.pdf" class="hero-download-link">Download Our Data Dictionary</a>
                     </div>
                 </div>
             </header>
@@ -195,7 +197,7 @@
             const resultsPerPage = 4;
             async function loadData() {
                 try {
-                    const response = await fetch('../data/CH_RU_clean.json');
+                    const response = await fetch('../data/China_Russia_speeches.json');
                     allData = await response.json();
                 } catch (error) {
                     console.error('Error loading data:', error);

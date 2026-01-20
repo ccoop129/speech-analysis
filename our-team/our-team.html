@@ -1,204 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geopolitical Speech Lab</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
+    <title>About | Geopolitical Speech Lab</title>
 
-  <!-- Fonts (recommended) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Global site styles (shared header + theme) -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
 
-  <link rel="stylesheet" href="style.css" />
+  <body>
+    <!-- NEW HEADER / NAV (for subfolder page, use ../ links) -->
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="../index.html">
+          <span class="brand-main">Geopolitical Speech Lab</span>
+          <span class="brand-sub">Decoding Great Power Speech</span>
+        </a>
 
-  <!-- Plotly -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-
-<body>
-  <!-- Header / Nav -->
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="index.html">
-        <span class="brand-main">Geopolitical Speech Lab</span>
-        <span class="brand-sub">Navigating Great Power Rhetoric</span>
-      </a>
-
-      <ul class="nav-links">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="insights/insights.html">Insights</a></li>
-        <li><a href="data-page/alldata.html">Data</a></li>
-        <li><a href="faq/faq.html">FAQ</a></li>
-        <li><a href="our-team/our-team.html">The Team</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-bg-wrap" aria-hidden="true">
-      <img src="Xi.jpg" alt="Xi Jinping making a speech" class="hero-bg">
-      <div class="hero-overlay"></div>
-    </div>
-
-    <div class="hero-inner">
-      <h1 class="hero-title">What governments say—and don’t say—matters.</h1>
-      <h3 class="hero-desc">
-        We turn official diplomatic speeches from China and Russia into searchable data and visual insights—so you can
-        analyze keywords, entities, and narrative shifts over time.
-      </h3>
-
-      <div class="hero-ctas">
-        <a class="btn primary" href="insights/insights.html">Explore Insights →</a>
-        <a class="btn ghost" href="data-page/alldata.html">See the Data →</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Comparative keyword universe -->
-    <section class="band band-keywords" id="keywords">
-      <div class="band-inner">
-        <p class="band-kicker">Rhetoric at a glance</p>
-        <h2 class="band-title">What governments emphasize in official rhetoric</h2>
-        <p class="band-lede">
-          A snapshot of recurring themes in Chinese and Russian foreign-policy speeches, highlighting how each government
-          frames priorities and international issues over time.
-        </p>
-
-        <!-- Replace the src with your final keyword visual asset -->
-        <div class="keyword-visual">
-          <img
-            src="keyword-universe.png"
-            alt="Comparative keyword themes: China and Russia"
-            class="keyword-visual-img"
-          />
-        </div>
-
-        <p class="band-footnote">
-          Keywords shown represent high-frequency themes across official speeches.
-        </p>
-      </div>
-    </section>
-
-    <!-- Dataset scale -->
-    <section class="band band-scale" id="dataset">
-      <div class="band-inner">
-        <p class="band-kicker">Dataset</p>
-        <h2 class="band-title">Official speeches, structured for analysis</h2>
-
-        <p class="band-lede">
-          <strong>China:</strong> 993 dated speeches from the Chinese Ministry of Foreign Affairs, spanning 2005–2025.
-        </p>
-
-        <p class="band-lede">
-          <strong>Russia:</strong> 3,204 dated speeches, interviews, and public appearances by the Russian Minister of
-          Foreign Affairs, spanning late 2013–2025.
-        </p>
-      </div>
-    </section>
-
-    <!-- Overview + stats -->
-    <section class="band band-overview" id="overview">
-      <div class="band-inner band-split">
-        <div>
-          <p class="band-kicker">Overview</p>
-          <h2 class="band-title">Curated insights and tools to generate your own</h2>
-
-          <p class="band-lede">
-            Official speeches are a primary way governments signal priorities, justify actions, and shape international
-            narratives. This platform systematically analyzes rhetoric over time, transforming thousands of speeches into
-            structured data and interactive visualizations.
-          </p>
-
-          <p class="band-lede">
-            By examining keyword frequency, entities, and trends in context, users can identify how China and Russia
-            prioritize and discuss key geopolitical issues in response to global events—at a scale not possible through
-            manual reading alone.
-          </p>
-        </div>
-
-        <aside class="stats-stack" aria-label="Key metrics">
-          <div class="stat">
-            <div class="stat-number">4,000+</div>
-            <div class="stat-label">speeches analyzed</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">67</div>
-            <div class="stat-label">keywords tracked</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">2</div>
-            <div class="stat-label">countries covered</div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Audience -->
-    <section class="band band-audience" id="audience">
-      <div class="band-inner">
-        <p class="band-kicker">Who it’s for</p>
-        <h2 class="band-title">Made for policy students, researchers, and analysts</h2>
-
-        <ul class="band-bullets">
-          <li>Foreign policy analysts</li>
-          <li>Academic researchers</li>
-          <li>Journalists</li>
-          <li>Students of international relations</li>
-          <li>Anyone interested in geopolitical discourse who may not speak the original language of the source material</li>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../insights/insights.html">Insights</a></li>
+          <li><a href="../data-page/alldata.html">Data</a></li>
+          <li><a href="../faq/faq.html">FAQ</a></li>
+          <li><a class="active" href="our-team.html">The Team</a></li>
         </ul>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <!-- Proof / example -->
-    <section class="band band-proof" id="example">
-      <div class="band-inner">
-        <p class="band-kicker">Example</p>
-        <h2 class="band-title">One pattern, surfaced at scale</h2>
+    <!-- Page content -->
+    <main class="team-main">
+      <h1 class="team-title">
+        About Our Team
+      </h1>
 
-        <!-- Reuse your existing screenshot block -->
-        <div class="screenshot-container">
-          <img src="RUBRICS.png" alt="Platform screenshot" class="screenshot-image">
-          <div class="screenshot-description">
-            <p>
-              After the full-scale invasion of Ukraine, BRICS featured significantly more prominently in the speeches of
-              Russian Foreign Minister Sergei Lavrov. By 2024, roughly 30 percent of his speeches and public appearances
-              featured references to BRICS, potentially reflecting Russia’s priority of promoting alternatives to
-              Western-led institutions and aligning itself with other emerging powers representative of the “global
-              majority” in an emerging multipolar international system.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <p class="team-intro">
+        We are a group of passionate graduate students dedicated to advancing research and
+        understanding in global affairs, public health, and technology. Our project is made
+        possible by the support of our professors and teaching fellows.<br />
+        <span class="team-heart">&#10084;&#65039;</span>
+        Special thanks to Dhrumil Mehta, Aarushi Sahejpal, and Asa Royal.
+        <span class="team-heart">&#10084;&#65039;</span>
+      </p>
 
-    <!-- Why this analysis matters -->
-    <section class="band band-why" id="why">
-      <div class="band-inner">
-        <p class="band-kicker">Why it matters</p>
-        <h2 class="band-title">Why analyzing official rhetoric matters</h2>
+      <hr class="team-divider" />
 
-        <p class="band-lede">
-          Important diplomatic signals are often embedded in foreign languages, lengthy speeches, and fragmented official
-          sources. By focusing on primary source material—official government speeches—this project reduces the time and
-          language barriers involved in understanding how leaders frame policy issues over time and across regions.
-        </p>
+      <div class="team-container">
+        <div class="team-member">
+             <img            src="ChrisCooperHeadShot.jpg"            alt="Chris"            class="team-member-img"          />          <h2 class="team-member-name">Chris Cooper</h2>          <p>            MPP Candidate at the Harvard Kennedy School focused on US-Asia foreign policy,            cross-strait relations, and emerging technologies in great power competition.            Former Fulbright grantee in Taiwan; BA in Political Science from UC Berkeley.          </p>          <p class="team-member-contact">            <a href="mailto:chriscooper@hks.harvard.edu" class="team-member-link">              <i class="fas fa-envelope"></i> chriscooper@hks.harvard.edu            </a>          </p>          <p class="team-member-contact-secondary">            <a href="https://www.linkedin.com/in/chriscoop99/" class="team-member-link">           
+                 <i class="fab fa-linkedin"></i> LinkedIn            </a>          </p>        </div>        <div class="team-member">          <img            src="Mandy Tao headshot.jpg"            alt="Mandy Tao"            class="team-member-img mandy-img"          />          <h2 class="team-member-name">Mandy Tao</h2>          <p>            MPH candidate at the School of Public Health. Over a decade of healthcare            experience across Asia, Europe, and North America. Passionate about innovative            solutions and cutting-edge technology.          </p>          <p class="team-member-contact">            <a href="mailto:mandytao@hsph.harvard.edu" class="team-member-link">              <i class="fas fa-envelope"></i> mandytao@hsph.harvard.edu            </a>          </p>          <p class="team-member-contact-secondary">            <a href="https://www.linkedin.com/in/mandytao/" class="team-member-link">              <i class="fab fa-linkedin"></i> LinkedIn            </a>          </p>        </div>        <div class="team-member">          <img            src="Lennon_AL_Headshot.jpg"            alt="Jack"            class="team-member-img"          />          <h2 class="team-member-name">Jack Lennon</h2>          <p>            G1 in the Davis Center's REECA MA program, focusing on post-Cold War U.S.-Russian            relations. Researches Russian and Ukrainian participation in NATO-led peace            enforcement missions in Bosnia and Kosovo. Student associate with Belfer Center's            Russia Matters project.          </p>          <p class="team-member-contact">            <a href="mailto:jlennon@g.harvard.edu" class="team-member-link">              <i class="fas fa-envelope"></i> jlennon@g.harvard.edu            </a>          </p>          <p class="team-member-contact-secondary">            
+                  <a href="https://linkedin.com/in/jack" class="team-member-link">            </a>          </p>        </div>      </div>      <p class="faq-footer">     
+       
+      </p>    </main>  </body></html>
 
-        <p class="band-lede">
-          Rather than offering editorial interpretation, the platform enables users to conduct their own analysis,
-          emphasizing patterns, trends, and language usage to support independent, evidence-based conclusions.
-        </p>
-      </div>
-    </section>
 
-  </main>
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

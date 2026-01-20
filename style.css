@@ -226,7 +226,7 @@ html {
 .hero {
     position: relative;
     max-width: 80vw;
-    min-height: 400px;
+    min-height: 500px;
     margin: 22px auto 36px auto;
     border-radius: 12px;
     overflow: hidden;
@@ -261,6 +261,7 @@ html {
 .hero-title { font-size: 3rem; line-height: 1.08; margin: 0 0 12px 0; font-weight: 800; color: #ffffff; word-wrap: break-word; overflow-wrap: break-word; }
 .hero-desc {
   color: rgba(255,255,255,0.9);
+  font-family: "Source Serif 4", serif;
   font-size: 1.35rem;     /* bigger */
   line-height: 1.55;      /* more readable */
   max-width: 100%;        /* spread across the hero */
@@ -2094,14 +2095,19 @@ a:hover {
    ENTITIES VISUALIZATION (Ultra-compact, 10 rows, no scroll)
 ========================= */
 .entities-section{
-  background:#f6f7f9;
-  padding: 12px 16px;   /* smaller band padding */
-  margin: 0;
+  background: rgba(26, 31, 58, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  margin: 42px auto 0;
+  max-width: 80vw;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 /* 2-column grid */
 .entities-section .entities-container{
-  max-width: 1400px;
+  max-width: 1260px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2113,12 +2119,13 @@ a:hover {
 /* Header row */
 .entities-section .entities-header{
   grid-column: 1 / -1;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 6px;
-  margin: 0;
-  padding: 0 0 6px 0;
+  margin: 0 0 16px 0;
+  padding: 0;
+  width: 100%;
 }
 
 .entities-section .entities-title{
@@ -2126,7 +2133,7 @@ a:hover {
   font-family: "Source Sans 3", sans-serif;
   font-size: 1.2rem;
   font-weight: 750;
-  color: #0b1220;
+  color: #ffffff;
   display: inline;
 }
 
@@ -2182,7 +2189,7 @@ a:hover {
   font-family: "Source Sans 3", sans-serif;
   font-size: 01rem;
   font-weight: 750;
-  color: rgba(11,18,32,0.78);
+  color: rgba(190, 190, 190, 0.78);
 }
 
 /* Bars list */
@@ -2207,7 +2214,7 @@ a:hover {
   font-family: "Source Sans 3", sans-serif;
   font-size: .9rem;
   font-weight: 550;
-  color:#0b1220;
+  color: #ffffff;
   line-height: 1.1;
   text-transform: capitalize;
   white-space: nowrap;
@@ -2219,7 +2226,7 @@ a:hover {
 .entities-section .bar-wrapper{
   height: 25px;        /* key lever */
   border-radius: 999px;
-  background: rgba(11,18,32,0.10);
+  background: rgba(255, 255, 255, 0.06);
   overflow:hidden;
 }
 
@@ -2237,7 +2244,7 @@ a:hover {
   font-weight: 700;
   line-height: 1.1;
   text-align:right;    /* cancels global center */
-  color: rgba(11,18,32,0.75);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Responsive */
